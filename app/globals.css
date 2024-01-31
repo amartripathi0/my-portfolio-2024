@@ -1,7 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+ 
 body{
-  background: #1D1A18;
+  background: #1D1A18;  
+  color : white
+}
+
+@layer utilities {
+  .flex-center{
+    @apply flex justify-center items-center
+  }
 }
