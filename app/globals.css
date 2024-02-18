@@ -3,7 +3,7 @@
 @tailwind utilities;
  
 body{
-  background: #1D1A18;  
+  background-color: black;
   color : white
 }
 
@@ -11,4 +11,10 @@ body{
   .flex-center{
     @apply flex justify-center items-center
   }
-}
+  .flex-col-center{
+    @apply flex flex-col items-center
+  }
+  .flex-between{
+    @apply flex justify-between items-center
+  }
+}       
