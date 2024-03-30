@@ -1,9 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
+
+*{
+  scroll-behavior: smooth;
+}
 body{
-  background-color: black;
+  background-color: #0c0910;
   color : white
 }
 
@@ -16,5 +20,8 @@ body{
   }
   .flex-between{
     @apply flex justify-between items-center
+  }
+  .flex-around-center{
+    @apply flex justify-around items-center
   }
 }       

@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 const page = () => {
 
   return (
-    <div className="h-full" >
+    <div className="h-full"  id="skills">
       overview Lorem ipsum dolor sit amet consectetur, adipisicing elit.
       Nesciunt officiis eum id quas quidem ipsam quaerat repudiandae a
       reprehenderit maiores repellat placeat culpa, dolorum impedit nulla labore

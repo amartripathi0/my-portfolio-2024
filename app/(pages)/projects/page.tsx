@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 const page = () => {
 
   return (
-<></>
+    <></>
   );
 };
 

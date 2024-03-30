@@ -4,27 +4,26 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { navbarItems, socialMediaLinks } from "@/constants";
 import WrapperContainer from "./shared/WrapperContainer";
 import Link from "next/link";
-import Image from "next/image";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseOutline } from "react-icons/io5";
 import { easeInOut, motion, stagger } from "framer-motion";
-import { usePathname , useSelectedLayoutSegment } from "next/navigation";
 import SocialHandles from "./shared/SocialHandles";
 import useScrollTop from "@/hooks/use-scroll-top";
+import usePageScroll from "@/hooks/use-page-scroll";
 
 const Navbar = () => {
-  // const router = useRouter()
-  const [menubarOpen, setMenubarOpen] = useState(false);
-  const { scrolled } = useScrollTop();
-  const pathname = useSelectedLayoutSegment();
-  console.log(pathname);
   
+  const [menubarOpen, setMenubarOpen] = useState(false);
+  const { scrolled} = useScrollTop();
+  const { pageSectionOnViewport} = usePageScroll();
+
 
   return (
     <motion.nav
       initial={{ opacity: 0, y: -15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ ease: "easeInOut", duration: 1 }}
+      
       className={`flex-between fixed top-0 left-0 w-screen h-28  max-mobile:h-20
     px-8 max-mobile:px-4 py-4 max-mobile:py-2 backdrop-blur-md ${
       scrolled && "border-b-2 border-violet-700"
@@ -48,16 +47,19 @@ const Navbar = () => {
       <WrapperContainer additionalStyle="flex-center gap-8 rounded-full px-3  max-mobile:hidden w-1/3">
         {navbarItems.map((item) => (
           <Link
+        
             scroll = {true}
             key={item.label}
             href={item.link}
             className={`${
-              pathname === item.link
-                ? "bg-gradient-to-r from-indigo-800 to-violet-500 border border-rum-300"
+            pageSectionOnViewport === item.label
+                ? "bg-gradient-to-r from-indigo-800 to-violet-500  transition-all duration-300 ease-in-out"
                 : "bg-grey-800"
             } 
             w-1/3 h-3/4 font-medium hover:bg-rum-600 hover:border  flex-center rounded-full transition-all duration-150`}
           >
+  
+                
             {item.label}
           </Link>
         ))}
@@ -99,8 +101,8 @@ const Navbar = () => {
                 key={item.label}
                 href={item.link}
                 className={`${
-                  pathname ===  item.link
-                    ? "bg-gradient-to-r bg-violet-700"
+                  pageSectionOnViewport === item.label
+                  ? "bg-gradient-to-r bg-violet-700"
                     : "bg-rum-800" }
                   text-xl w-2/3 p-4 h-12 hover:bg-rum-600 border-rum-500 flex-center rounded-full transition-all duration-150
 
@@ -109,7 +111,7 @@ const Navbar = () => {
                   <motion.div
                     initial={{ opacity: 0, scale: 0.7 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ ease: "easeInOut", duration: 1 }}
+                     transition={{ ease: "easeInOut", duration: 1 }}
                   >
                     {item.label}
                   </motion.div>
