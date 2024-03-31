@@ -32,7 +32,7 @@ const Navbar = () => {
     >
       {/* Left: Avatar and Name section */}
       <WrapperContainer additionalStyle="flex-center  gap-4 px-4  w-40 max-mobile:w-auto max-sm:px-1">
-        <Link href={"/"} className="flex-between w-full  ">
+        <Link href={"/"}  className="flex-between w-full  ">
           <Avatar>
             <AvatarImage src={"/assets/profile-photo.jpeg"} alt="profile-pic" />
           </Avatar>

@@ -1,10 +1,10 @@
 "use client"
 import { useEffect, useState } from 'react'
-
 function usePageScroll() {
   const [pageSectionOnViewport, setPageSectionOnViewport] = useState("home");
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+  const [windowHeight, setWindowHeight] = useState(0);
   useEffect(() => {
+    setWindowHeight(window.innerHeight)
     function handlePageScroll() {
       if (window.scrollY <= windowHeight) {
         setPageSectionOnViewport("home");
