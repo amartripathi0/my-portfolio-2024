@@ -2,16 +2,22 @@ import Landing from "./_landing/page";
 import About from "./_about/page";
 import Skills from "./_skills/page";
 import Projects from "./_projects/page";
+import Contact from "./_contact/page";
 
-function page() {
+function MainPage() {
+
+
+
+  
   return (
     <div>
       <Landing />
       <About />
       <Skills />
       <Projects />
+      <Contact />
     </div>
   );
 }
 
-export default page;
+export default MainPage;

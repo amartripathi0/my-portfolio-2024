@@ -7,32 +7,35 @@ import Link from "next/link";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseOutline } from "react-icons/io5";
 import { easeInOut, motion, stagger } from "framer-motion";
-import SocialHandles from "./shared/SocialHandles";
 import useScrollTop from "@/hooks/use-scroll-top";
 import usePageScroll from "@/hooks/use-page-scroll";
+import LocomotiveScroll from "locomotive-scroll";
 
-const Navbar = () => {
-  
+const Navbar = ({
+  locomotiveScroll,
+}: {
+  locomotiveScroll: LocomotiveScroll;
+}) => {
   const [menubarOpen, setMenubarOpen] = useState(false);
-  const { scrolled} = useScrollTop();
-  const { pageSectionOnViewport} = usePageScroll();
+  const { scrolled } = useScrollTop();
+  const { pageSectionOnViewport } = usePageScroll();
 
+  console.log(locomotiveScroll);
 
   return (
     <motion.nav
       initial={{ opacity: 0, y: -15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ ease: "easeInOut", duration: 1 }}
-      
       className={`flex-between fixed top-0 left-0 w-screen h-28  max-mobile:h-20
-    px-8 max-mobile:px-4 py-4 max-mobile:py-2 backdrop-blur-md ${
-      scrolled && "border-b-2 border-violet-700"
+    px-10 max-mobile:px-4 py-4 max-mobile:py-2 backdrop-blur-md ${
+      scrolled && "border-b border-violet-700"
     }
     `}
     >
       {/* Left: Avatar and Name section */}
       <WrapperContainer additionalStyle="flex-center  gap-4 px-4  w-40 max-mobile:w-auto max-sm:px-1">
-        <Link href={"/"}  className="flex-between w-full  ">
+        <Link href={"/"} className="flex-between w-full  ">
           <Avatar>
             <AvatarImage src={"/assets/profile-photo.jpeg"} alt="profile-pic" />
           </Avatar>
@@ -47,29 +50,31 @@ const Navbar = () => {
       <WrapperContainer additionalStyle="flex-center gap-8 rounded-full px-3  max-mobile:hidden w-1/3">
         {navbarItems.map((item) => (
           <Link
-        
-            scroll = {true}
             key={item.label}
             href={item.link}
+            onClick={() => locomotiveScroll.scrollTo(item.link)}
             className={`${
-            pageSectionOnViewport === item.label
+              pageSectionOnViewport === item.label
                 ? "bg-gradient-to-r from-indigo-800 to-violet-500  transition-all duration-300 ease-in-out"
                 : "bg-grey-800"
             } 
             w-1/3 h-3/4 font-medium hover:bg-rum-600 hover:border  flex-center rounded-full transition-all duration-150`}
           >
-  
-                
             {item.label}
           </Link>
         ))}
       </WrapperContainer>
 
       <div className="flex items-center gap-3 relative">
-        {/* Github and Linkedin Icon */}
+        {/* Contact  */}
 
-        <WrapperContainer additionalStyle="flex-center max-mobile:w-4/5 py-4 px-3 max-mobile:py-3 w-40 ">
-          <SocialHandles additionalStyle="flex-around-center w-full max-mobile:flex-between" />
+        <WrapperContainer>
+          <Link
+            href={"#contact"}
+            className="font-medium flex-center max-mobile:w-4/5  max-mobile:py-3 w-40 py-4 px-3"
+          >
+            Contact Me
+          </Link>
         </WrapperContainer>
 
         {/* Hamberger menubar */}
@@ -97,13 +102,14 @@ const Navbar = () => {
 
               {navbarItems.map((item) => (
                 <Link
-                scroll = {true}  
-                key={item.label}
-                href={item.link}
-                className={`${
-                  pageSectionOnViewport === item.label
-                  ? "bg-gradient-to-r bg-violet-700"
-                    : "bg-rum-800" }
+                  scroll={true}
+                  key={item.label}
+                  href={item.link}
+                  className={`${
+                    pageSectionOnViewport === item.label
+                      ? "bg-gradient-to-r bg-violet-700"
+                      : "bg-rum-800"
+                  }
                   text-xl w-2/3 p-4 h-12 hover:bg-rum-600 border-rum-500 flex-center rounded-full transition-all duration-150
 
             `}
@@ -111,7 +117,7 @@ const Navbar = () => {
                   <motion.div
                     initial={{ opacity: 0, scale: 0.7 }}
                     animate={{ opacity: 1, scale: 1 }}
-                     transition={{ ease: "easeInOut", duration: 1 }}
+                    transition={{ ease: "easeInOut", duration: 1 }}
                   >
                     {item.label}
                   </motion.div>

@@ -1,10 +1,10 @@
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaTwitter } from "react-icons/fa";
 import { IconType } from "react-icons";
 import { FaLinkedin } from "react-icons/fa";
 export const navbarItems: { label: string; link: string }[] = [
   {
     label: "home",
-    link: "#/",
+    link: "#home",
   },
   { label: "about", link: "#about" },
   { label: "skills", link: "#skills" },
@@ -22,4 +22,5 @@ export const socialMediaLinks: {
     icon: FaLinkedin,
   },
   { label: "GitHub", url: "https://github.com/amartripathi0", icon: FaGithub },
+  { label: "Twitter", url: "https://github.com/amartripathi0", icon: FaTwitter },
 ];

@@ -1,11 +1,22 @@
+"use client";
+
 import Navbar from "@/components/Navbar";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Home = ({ children }: { children: React.ReactNode }) => {
+  const [locomotiveScroll, setLocomotiveScroll] = useState<LocomotiveScroll>();
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const scroll = new LocomotiveScroll();
+      setLocomotiveScroll(scroll);
+    })();
+  }, []);
+
   return (
-    <div className="">
-      <Navbar />
-      {children}
+    <div>
+      {locomotiveScroll && <Navbar locomotiveScroll={locomotiveScroll} />}
+      <div className="px-10">{children}</div>
     </div>
   );
 };
