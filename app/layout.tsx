@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
 const montserrat  =  Montserrat( {subsets : ["latin"] , 
 weight : [ "100" , "200" , "300" , "400" , "500" , "600" , "700" , "800" , "900",]})
 
 export const metadata: Metadata = {
   title: "Amar's Portfolio",
-  description: "This is a website protofilo of Amar Tripathi made using NextJS",
+  description: "This is a fullstack web developer portfilo of Amar Tripathi.",
+  icons : {
+    icon : '/favicon/favicon.ico'
+  }
 };
 
 export default function RootLayout({

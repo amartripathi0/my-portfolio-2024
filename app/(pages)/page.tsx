@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 const MainPage = () => {
   return (
     <>
+
       <div
         id="/ "
         className=" mx-44 gap-6 h-screen  flex-between max-tablet:flex max-tablet:flex-col max-tablet:flex-center"
@@ -22,7 +23,7 @@ const MainPage = () => {
         "
         >
           <Image
-            src={"/assets/8a06122a-216f-4197-acb3-5bad9770561e_2k-modified.png"}
+            src={"/assets/amar-img.png"}
             alt="Main Profile picture"
             fill
             className="object-cover  "

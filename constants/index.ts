@@ -1,8 +1,6 @@
-import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { IconType } from "react-icons";
 import { FaLinkedin } from "react-icons/fa";
-
 export const navbarItems: { label: string; link: string }[] = [
   {
     label: "home",
