@@ -8,10 +8,10 @@ function MainPage() {
   return (
     <div>
       <Landing />
-      <About />
-      <Skills />
+      {/* <About /> */}
+      {/* <Skills />
       <Projects />
-      <Contact />
+      <Contact /> */}
     </div>
   );
 }
