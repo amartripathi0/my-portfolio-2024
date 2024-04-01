@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 
@@ -44,7 +45,7 @@ const TextUnderline = ({
         }}
         animate={controls}
         transition={{ duration: 0.4, ease: "easeInOut" }}
-        className={`absolute bottom-0 left-0  h-[10%] w-full bg-white ${underLineStyle} `}
+        className={`absolute bottom-0 left-0  h-[10%] w-full  ${underLineStyle ? underLineStyle : "bg-white" } `}
       ></motion.div>
     </motion.div>
   );
