@@ -5,17 +5,13 @@ import Projects from "./_projects/page";
 import Contact from "./_contact/page";
 
 function MainPage() {
-
-
-
-  
   return (
     <div>
       <Landing />
-       <About />
+      <About />
       <Skills />
       <Projects />
-      <Contact /> 
+      <Contact />
     </div>
   );
 }

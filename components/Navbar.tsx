@@ -10,6 +10,7 @@ import { easeInOut, motion, stagger } from "framer-motion";
 import useScrollTop from "@/hooks/use-scroll-top";
 import usePageScroll from "@/hooks/use-page-scroll";
 import LocomotiveScroll from "locomotive-scroll";
+import TextUnderline from "./shared/TextUnderline";
 
 const Navbar = ({
   locomotiveScroll,
@@ -33,14 +34,12 @@ const Navbar = ({
     >
       {/* Left: Avatar and Name section */}
       <WrapperContainer additionalStyle="flex-center  gap-4 px-4  w-40 max-mobile:w-auto max-sm:px-1">
-        <Link href={"/"} className="flex-between w-full  ">
+        <Link href={"/"} className="flex-around-center w-full  ">
           <Avatar>
             <AvatarImage src={"/assets/profile-photo.jpeg"} alt="profile-pic" />
           </Avatar>
-
-          <h1 className="font-medium opacity-90 hover:opacity-100 max-mobile:hidden">
-            Amar
-          </h1>
+          
+          <TextUnderline text="Amar" additionalStyles="font-medium opacity-90 hover:opacity-100 max-mobile:hidden"/>
         </Link>
       </WrapperContainer>
 
@@ -56,7 +55,7 @@ const Navbar = ({
                 ? "transition-all duration-300 ease-in-out"
                 : "bg-slate-900"
             } 
-           relative z-30 w-1/3 h-3/4 font-medium hover:bg-rum-500  flex-center rounded-full transition-all duration-150`}
+           relative z-30 w-1/3 h-3/4 font-medium hover:bg-slate-700  flex-center rounded-full transition-all duration-150`}
           >
             { pageSectionOnViewport === item.label && (
             <motion.span
@@ -68,21 +67,20 @@ const Navbar = ({
               
             </motion.span>
             )}
-
-            {item.label}
+            <TextUnderline text={item.label}/>
           </Link>
         ))}
       </WrapperContainer>
 
       <div className="flex items-center gap-3 relative">
-        {/* Contact  */}
+        {/* Contact Me */}
 
         <WrapperContainer>
           <Link
             href={"#contact"}
             className="font-medium flex-center  w-40 py-4 max-tablet:py-3 max-sm:w-32 max-sm:px-2 px-3"
           >
-            Contact Me
+            <TextUnderline text="Contact Me"/>
           </Link>
         </WrapperContainer>
 

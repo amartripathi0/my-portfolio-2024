@@ -9,7 +9,7 @@ const Landing = () => {
   return (
       <div
         id="home"
-        className=" mx-40 gap-6 h-screen flex-between  max-tablet:flex-col max-tablet:flex-center max-sm:mx-0"
+        className=" mx-40 gap-6 h-screen flex-between  max-tablet:flex-col max-tablet:flex-center max-sm:mx-0 border"
       >
 
         {/* left image and social handles*/}
