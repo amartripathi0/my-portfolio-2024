@@ -7,13 +7,12 @@ import SocialHandles from "@/components/shared/SocialHandles";
 
 const Landing = () => {
   return (
-    <>
       <div
         id="home"
-        className=" mx-44 gap-6 h-screen  flex-between max-tablet:flex max-tablet:flex-col max-tablet:flex-center"
+        className=" mx-40 gap-6 h-screen flex-between  max-tablet:flex-col max-tablet:flex-center max-sm:mx-0"
       >
-        {/* left image and social handles*/}
 
+        {/* left image and social handles*/}
         <motion.div
           className=" flex-between flex-col gap-10
         
@@ -47,9 +46,9 @@ const Landing = () => {
             />
           </div>
 
-          <div className="w-4/5 flex-col-center gap-6">
-            <h1 className="text-[1.3vw]">Hey!! 👋, Let&apos;s connect</h1>
-            <SocialHandles additionalStyle="flex-center gap-6 border rounded-xl  p-4  " />
+          <div className="w-4/5 max-sm:w-full flex-col-center gap-2">
+            <h1 className="text-[1.3vw] max-tablet:text-base">Hey! 👋, Let&apos;s connect🚀</h1>
+            <SocialHandles additionalStyle="flex-center gap-6 max-sm:gap-2 rounded-xl  p-4 max-sm:w-40 " />
           </div>
         </motion.div>
 
@@ -97,7 +96,7 @@ const Landing = () => {
           </motion.div>
         </motion.div>
       </div>
-    </>
+    
   );
 };
 

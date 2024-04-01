@@ -20,15 +20,13 @@ const Navbar = ({
   const { scrolled } = useScrollTop();
   const { pageSectionOnViewport } = usePageScroll();
 
-  console.log(locomotiveScroll);
-
   return (
     <motion.nav
       initial={{ opacity: 0, y: -15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ ease: "easeInOut", duration: 1 }}
       className={`flex-between fixed top-0 left-0 w-screen h-28  max-mobile:h-20
-    px-10 max-mobile:px-4 py-4 max-mobile:py-2 backdrop-blur-md ${
+    px-10 max-mobile:px-4 py-4 max-mobile:py-2 backdrop-blur-md z-50 ${
       scrolled && "border-b border-violet-700"
     }
     `}
@@ -47,7 +45,7 @@ const Navbar = ({
       </WrapperContainer>
 
       {/* Middle */}
-      <WrapperContainer additionalStyle="flex-center gap-8 rounded-full px-3  max-mobile:hidden w-1/3">
+      <WrapperContainer additionalStyle="flex-center gap-8 rounded-full px-3  max-tablet:hidden w-1/3">
         {navbarItems.map((item) => (
           <Link
             key={item.label}
@@ -55,11 +53,22 @@ const Navbar = ({
             onClick={() => locomotiveScroll.scrollTo(item.link)}
             className={`${
               pageSectionOnViewport === item.label
-                ? "bg-gradient-to-r from-indigo-800 to-violet-500  transition-all duration-300 ease-in-out"
-                : "bg-grey-800"
+                ? "transition-all duration-300 ease-in-out"
+                : "bg-slate-900"
             } 
-            w-1/3 h-3/4 font-medium hover:bg-rum-600 hover:border  flex-center rounded-full transition-all duration-150`}
+           relative z-30 w-1/3 h-3/4 font-medium hover:bg-rum-500  flex-center rounded-full transition-all duration-150`}
           >
+            { pageSectionOnViewport === item.label && (
+            <motion.span
+              layoutId="bubble"
+              className="bg-gradient-to-r from-indigo-800 to-violet-500  h-full w-full absolute top-0 left-0 -z-10 "
+              style={{ borderRadius: 9999 }}
+              transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+            >
+              
+            </motion.span>
+            )}
+
             {item.label}
           </Link>
         ))}
@@ -71,7 +80,7 @@ const Navbar = ({
         <WrapperContainer>
           <Link
             href={"#contact"}
-            className="font-medium flex-center max-mobile:w-4/5  max-mobile:py-3 w-40 py-4 px-3"
+            className="font-medium flex-center  w-40 py-4 max-tablet:py-3 max-sm:w-32 max-sm:px-2 px-3"
           >
             Contact Me
           </Link>
@@ -79,7 +88,7 @@ const Navbar = ({
 
         {/* Hamberger menubar */}
         <AiOutlineMenu
-          className="mobile:hidden"
+          className="tablet:hidden"
           size={30}
           onClick={() => setMenubarOpen((prev) => !prev)}
         />

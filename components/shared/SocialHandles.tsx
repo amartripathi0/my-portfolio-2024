@@ -11,14 +11,14 @@ function SocialHandles({
 }) {
   return (
     <div className={`${additionalStyle} `}>
-      {socialMediaLinks.map((socialLink) => (
+      {socialMediaLinks.map(({label , url , icon : SocialIcon}) => (
         <Link
-          key={socialLink.label}
+          key={label}
           target="_blank"
-          href={socialLink.url}
+          href={url}
           className="px-2 hover:scale-105 transition-all duration-200 ease-in-out opacity-85 hover:opacity-100"
         >
-          {socialLink.icon({ size:size })}
+          {<SocialIcon className={`h-8 w-8 max-sm:h-7`} />}
         </Link>
       ))}
     </div>
