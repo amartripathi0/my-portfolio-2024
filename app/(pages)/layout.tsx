@@ -14,9 +14,12 @@ const Home = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
   return (
-    <div>
+    <div className="relative">
       {locomotiveScroll && <Navbar locomotiveScroll={locomotiveScroll} />}
-      <div className="px-10">{children}</div>
+      <div className="px-10 ">{children}</div>
+      <div className=" bottom-10 left-[83%] sticky border-2 p-3 flex-center w-80 rounded-xl  ">
+      Website is currently under construction. Please check back soon!
+      </div>
     </div>
   );
 };
