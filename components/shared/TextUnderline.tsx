@@ -4,12 +4,14 @@ import { motion, useAnimation } from "framer-motion";
 
 const TextUnderline = ({
   text,
-  additionalStyles,
-  underLineStyle
+  textStyles,
+  underlineStyles,
+  containerDivStyles
 }: {
   text: string;
-  additionalStyles?: string;
-  underLineStyle?: string;
+  textStyles?: string;
+  underlineStyles?: string;
+  containerDivStyles?: string;
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const controls = useAnimation();
@@ -36,16 +38,16 @@ const TextUnderline = ({
     <motion.div
       onHoverStart={handleHoverStart}
       onHoverEnd={handleHoverEnd}
-      className=" inline-block relative"
+      className={`inline-block relative ${containerDivStyles} `}
     >
-      <h1 className={`${additionalStyles}`}>{text}</h1>
+      <h1 className={`${textStyles} inline-block relative`}>{text}</h1>
       <motion.div
         initial={{
             scaleX:0
         }}
         animate={controls}
         transition={{ duration: 0.4, ease: "easeInOut" }}
-        className={`absolute bottom-0 left-0  h-[10%] w-full  ${underLineStyle ? underLineStyle : "bg-white" } `}
+        className={`absolute bottom-0 left-0  h-[10%] w-full  ${underlineStyles ? underlineStyles : "bg-white" } `}
       ></motion.div>
     </motion.div>
   );

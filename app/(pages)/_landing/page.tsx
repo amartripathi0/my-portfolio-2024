@@ -87,8 +87,8 @@ const Landing = () => {
             I&apos;m a{" "}
             <TextUnderline
               text="Full-Stack Web Developer"
-              additionalStyles="text-purple-300 font-medium hover:text-purple-400 transition-colors duration-500"
-              underLineStyle="bg-purple-400"
+              textStyles="text-purple-300 font-medium hover:text-purple-400 transition-colors duration-500"
+              underlineStyles="bg-purple-400"
             />
             , turning your ideas into reality.
           </div>

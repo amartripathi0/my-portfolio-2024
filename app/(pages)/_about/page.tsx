@@ -6,13 +6,16 @@ const About = () => {
   return (
     <div
       id="about"
-      className=" mx-40 h-screen  pt-36 flex flex-col gap-14 relative border "
+      className=" mx-40 h-screen  pt-36 flex flex-col gap-14 relative"
     >
-     <TextUnderline text= "About Me" additionalStyles="text-7xl" />
+     <TextUnderline text= "About Me" additionalStyles="text-7xl font-medium w-2/6 bg-blue-800" />
+
+      {/* bg gradient purple */}
       <div className="absolute top-1/6  opacity-80 left-16 h-60  aspect-square  blur-[80px] rounded-full
       bg-gradient-to-r from-indigo-400 to-cyan-400   
       "></div>
-      <BackgroundGradient
+      
+      {/* <BackgroundGradient
         className=" bg-[#0c0910] text-xl text-justify rounded-3xl p-10 flex-col flex-center gap-4 "
         containerClassName="w-3/5 opacity-90 hover:opacity-100 transition-all duration-200"
       >
@@ -46,7 +49,7 @@ const About = () => {
             to my professional endeavors.
           </p>
    
-      </BackgroundGradient>
+      </BackgroundGradient> */}
     </div>
   );
 };
