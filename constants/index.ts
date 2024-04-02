@@ -6,8 +6,8 @@ export const navbarItems: { label: string; link: string }[] = [
     label: "home",
     link: "#home",
   },
-  { label: "about", link: "#about" },
-  { label: "skills", link: "#skills" },
+  { label: "about-me", link: "#about-me" },
+  // { label: "skills", link: "#skills" },
   { label: "projects", link: "#projects" },
 ];
 
