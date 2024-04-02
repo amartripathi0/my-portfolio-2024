@@ -2,22 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  background-color: #0c0910;
-  color : white
+body {
+  background-color: hsl(266, 28%, 5%);
+  color: white;
+  margin-right: 2px;
+}
+
+/* while scrolling: scrollbar styles */
+.on-scroll::-webkit-scrollbar {
+  width: 6px !important;
+  background-color: transparent;
+}
+
+.on-scroll::-webkit-scrollbar-thumb {
+  background-color: hsl(266, 55%, 64%);
+  border-radius: 10px;
+}
+
+.on-scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+/* while not scrolling: scrollbar styles */
+body.on-not-scroll::-webkit-scrollbar {
+  width: 6px;
+  opacity: 0;
+  -webkit-box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.on-not-scroll::-webkit-scrollbar-thumb {
+  background-color: #acacac;
+  border-radius: 10px;
 }
 
 @layer utilities {
-  .flex-center{
-    @apply flex justify-center items-center
+  .flex-center {
+    @apply flex justify-center items-center;
   }
-  .flex-col-center{
-    @apply flex flex-col items-center
+  .flex-col-center {
+    @apply flex flex-col items-center;
   }
-  .flex-between{
-    @apply flex justify-between items-center
+  .flex-between {
+    @apply flex justify-between items-center;
   }
-  .flex-around-center{
-    @apply flex justify-around items-center
+  .flex-around-center {
+    @apply flex justify-around items-center;
   }
-}       
+}

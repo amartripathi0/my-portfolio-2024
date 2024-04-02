@@ -9,9 +9,9 @@ function MainPage() {
     <div>
       <Landing />
       {/* <About /> */}
-      {/* <Skills />
-      <Projects />
-      <Contact /> */}
+      {/* <Skills /> */}
+       {/* <Projects /> */}
+      {/* <Contact /> */}
     </div>
   );
 }

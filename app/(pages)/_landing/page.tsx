@@ -82,7 +82,7 @@ const Landing = () => {
           transition={{ ease: "easeInOut", duration: 1.5, delay: 3 }}
           className="text-[1.3vw] text-right max-tablet:text-center max-tablet:text-sm max-sm:mt-6"
         >
-          <p>
+          <div>
             {" "}
             I&apos;m a{" "}
             <TextUnderline
@@ -91,7 +91,7 @@ const Landing = () => {
               underLineStyle="bg-purple-400"
             />
             , turning your ideas into reality.
-          </p>
+          </div>
           <TextGenerateEffect
             className="text-[1.3vw] text-right max-tablet:text-center max-tablet:text-sm"
             words="Passionate about Coding 👨‍💻, Music  🎵, Video 🎥 ."
