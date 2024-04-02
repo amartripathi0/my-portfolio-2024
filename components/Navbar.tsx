@@ -39,7 +39,7 @@ const Navbar = ({
             <AvatarImage src={"/assets/profile-photo.jpeg"} alt="profile-pic" />
           </Avatar>
           
-          <TextUnderline text="Amar" additionalStyles="font-medium opacity-90 hover:opacity-100 max-mobile:hidden"/>
+          <TextUnderline text="Amar" textStyles="font-medium opacity-90 hover:opacity-100 max-mobile:hidden"/>
         </Link>
       </WrapperContainer>
 

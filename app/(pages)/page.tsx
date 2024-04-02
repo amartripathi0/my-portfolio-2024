@@ -8,7 +8,7 @@ function MainPage() {
   return (
     <div>
       <Landing />
-      {/* <About /> */}
+      <About />
       {/* <Skills /> */}
        {/* <Projects /> */}
       {/* <Contact /> */}
