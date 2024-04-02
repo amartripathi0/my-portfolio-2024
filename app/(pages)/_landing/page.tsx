@@ -10,11 +10,11 @@ const Landing = () => {
   return (
     <div
       id="home"
-      className="mx-40 pt-28 max-sm:pt-0 max-sm:pb-20 h-screen flex-between  max-tablet:flex-col max-sm:flex-center max-sm:mx-0 max-sm:gap-10 "
+      className=" h-screen flex-between max-tablet:flex-col max-sm:flex-center"
     >
       {/* left image and social handles*/}
       <motion.div
-        className=" flex-between flex-col gap-10  "
+        className=" flex-between flex-col gap-10 max-sm:gap-4"
         initial={{ opacity: 0, scale: 0.7 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ ease: "easeInOut", duration: 1, delay: 0.4 }}
@@ -44,7 +44,7 @@ const Landing = () => {
           />
         </div>
 
-        <div className="w-5/6 max-sm:w-full flex-col-center gap-2">
+        <div className="w-5/6 max-sm:w-full flex-col-center gap-2 max-sm:gap-0">
           <h1 className="text-[1.3vw] max-tablet:text-base px-0 w-full">
             Hey! 👋, Let&apos;s connect 🚀
           </h1>
@@ -53,7 +53,7 @@ const Landing = () => {
       </motion.div>
 
       {/* right side */}
-      <motion.div className="flex justify-between items-end flex-col max-sm:items-center gap-[1vw]  h-[28vw] mr-2 max-sm:mr-0">
+      <motion.div className="flex justify-between items-end flex-col max-sm:items-center max-sm:flex-center gap-[1vw]  h-[28vw] max-sm:h-80 mr-2 max-sm:mr-0">
         <div
           className="flex flex-col text-[10vw]  items-end max-tablet:flex-center 
             max-tablet:text-6xl  font-bold"
