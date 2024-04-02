@@ -10,7 +10,7 @@ const Landing = () => {
   return (
     <div
       id="home"
-      className=" h-screen flex-between max-tablet:flex-col max-sm:flex-center"
+      className="h-[calc(100vh-7rem)] flex-between max-tablet:flex-col max-sm:flex-center "
     >
       {/* left image and social handles*/}
       <motion.div

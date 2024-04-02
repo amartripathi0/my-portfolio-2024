@@ -5,7 +5,7 @@ import Link from "next/link";
 
 function Projects() {
   return (
-    <div className=" mx-40 h-screen  pt-28" id="projects">
+    <div className=" mx-40 h-[calc(100vh-7rem)]  pt-28" id="projects">
     <h1 className="text-6xl">Projects</h1>
 
     <CardContainer className="inter-var">

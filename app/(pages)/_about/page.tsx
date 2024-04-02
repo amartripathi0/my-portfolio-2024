@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div
       id="about-me"
-      className="h-screen  flex flex-col  gap-14 relative"
+      className="h-[calc(100vh-7rem)]  pt-28  max-sm:pt-20 flex flex-col  gap-14 relative "
     >
       <TextUnderline
         text="About Me"
