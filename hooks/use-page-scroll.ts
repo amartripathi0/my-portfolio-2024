@@ -35,21 +35,21 @@ function usePageScroll() {
       scrollTimer = setTimeout(() => setIsScrolling(false), 100);
     }
     function handlePageNavigation() {
-      if (window.scrollY <= windowHeight) {
+      if (window.scrollY <= windowHeight * 0.8) {
         setPageSectionOnViewport("home");
       } else if (
-        window.scrollY >= windowHeight &&
-        window.scrollY < 2 * windowHeight
+        window.scrollY >= windowHeight * 0.8 &&
+        window.scrollY < windowHeight * 1.7
       ) {
-        setPageSectionOnViewport("about");
+        setPageSectionOnViewport("about-me");
       } else if (
-        window.scrollY >= 2 * windowHeight &&
-        window.scrollY < 3 * windowHeight
+        window.scrollY >= windowHeight * 1.7 &&
+        window.scrollY < 2.6 * windowHeight
       ) {
         setPageSectionOnViewport("skills");
       } else if (
-        window.scrollY >= 3 * windowHeight &&
-        window.scrollY < 4 * windowHeight
+        window.scrollY >= 2.6 * windowHeight &&
+        window.scrollY < 3.6 * windowHeight
       ) {
         setPageSectionOnViewport("projects");
       }
