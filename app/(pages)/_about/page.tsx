@@ -14,13 +14,13 @@ const About = () => {
         text="About Me"
         textStyles="text-[3.2vw] max-sm:text-4xl font-medium "
         containerDivStyles="w-1/5 max-sm:w-full  max-sm:flex-center"
-        underlineStyles=" bg-gradient-to-r from-indigo-600 to-cyan-400"
+        underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-cyan-600"
       />
 
-      {/* bg gradient purple */}
+      {/* bg gradient indigo cyan */}
       <div
-        className="absolute opacity-80 left-10 h-1/5  aspect-square  blur-[100px] rounded-full
-      bg-gradient-to-r from-indigo-600 to-cyan-400   
+        className="absolute opacity-80 left-10 h-1/4  aspect-square  blur-[100px] rounded-full
+      bg-gradient-to-r from-indigo-600  to-cyan-400    
       "
       ></div>
 
@@ -92,15 +92,5 @@ const About = () => {
     </motion.div>
   );
 };
-import React from "react";
-
-function TextContainer({ heading, para }: { heading: string; para: string }) {
-  return (
-    <div>
-      <h3 className="text-2xl">{heading}</h3>
-      <p>{para}</p>
-    </div>
-  );
-}
 
 export default About;
