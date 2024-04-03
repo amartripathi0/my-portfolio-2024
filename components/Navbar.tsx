@@ -49,7 +49,7 @@ const Navbar = ({
           <Link
             key={item.label}
             href={item.link}
-            onClick={() => locomotiveScroll.scrollTo(item.link)}
+            onClick={() => locomotiveScroll.scrollTo(item.link, {offset : -83} )}
             className={`${
               pageSectionOnViewport === item.label
                 ? "transition-all duration-300 ease-in-out"

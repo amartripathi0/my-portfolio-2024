@@ -9,8 +9,8 @@ function MainPage() {
     <div>
       <Landing />
       <About />
-      {/* <Skills /> */}
-       {/* <Projects /> */}
+      <Skills />
+       <Projects />
       {/* <Contact /> */}
     </div>
   );

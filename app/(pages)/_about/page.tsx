@@ -1,12 +1,14 @@
 "use client";
 import TextUnderline from "@/components/shared/TextUnderline";
 import { BackgroundGradient } from "@/components/ui/BackgroundGradient";
-
+import { motion } from "framer-motion";
+motion
 const About = () => {
   return (
-    <div
+    <motion.div
       id="about-me"
       className="h-[calc(100vh-7rem)]  pt-28  max-sm:pt-20 flex flex-col  gap-14 relative "
+      
     >
       <TextUnderline
         text="About Me"
@@ -87,7 +89,7 @@ const About = () => {
           </p>
    
       </BackgroundGradient> */}
-    </div>
+    </motion.div>
   );
 };
 import React from "react";
