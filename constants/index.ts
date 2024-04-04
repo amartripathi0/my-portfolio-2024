@@ -22,7 +22,7 @@ export const socialMediaLinks: {
     icon: FaLinkedin,
   },
   { label: "GitHub", url: "https://github.com/amartripathi0", icon: FaGithub },
-  { label: "Twitter", url: "https://github.com/amartripathi0", icon: FaTwitter },
+  { label: "Twitter", url: "https://twitter.com/amartripathi_", icon: FaTwitter },
 ];
 
 export type ProjectContainerProps = {
