@@ -9,8 +9,9 @@ const Home = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const scroll = new LocomotiveScroll({ scrollbarClass: "scrollbar" });
+      const scroll = new LocomotiveScroll({ scrollbarClass: "scrollbar"  } );
       setLocomotiveScroll(scroll);
+      
     })();
   }, []);
 

@@ -37,6 +37,7 @@ body.on-not-scroll::-webkit-scrollbar {
   border-radius: 10px;
 }
 
+
 @layer utilities {
   .flex-center {
     @apply flex justify-center items-center;
