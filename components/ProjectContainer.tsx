@@ -9,22 +9,28 @@ import Link from "next/link";
 
  const ProjectContainer = ({ projectDetail ,  projectTitle , projectBio , projectThumbnailSrc, projectGithubLink , projectDeployedLink ,}: ProjectContainerProps) => {
     return (
-      <div className="flex justify-between min-h-screen border-b">
+      <div className="flex justify-between min-h-[calc(100vh-7rem)] w-full border-l ">
       {/* Sticky Image */}
-      <div className="w-1/3 sticky top-">
+      <div className="w-[30%] sticky  ">
+      <div
+        className="absolute opacity-80 top-1/4 left-10 h-1/2  aspect-square  blur-[100px] rounded-full
+        bg-gradient-to-r from-violet-600 to-indigo-700  
+      "
+      ></div>
+
         <CardContainer        
         data-scroll-sticky	
-         containerClassName="sticky top-40   "
+         containerClassName="sticky top-20 left-1/2  "
          className=""
        >
-         <CardBody className="bg-gray-800 relative group/card h-full rounded-xl p-6 border  ">
-           <CardItem translateZ="50" className="text-xl font-bold text-white">
+         <CardBody className="bg-slate-900 relative group/card h-full rounded-xl p-6 border  ">
+           <CardItem translateZ="50" className="text-3xl font-bold text-white">
              {projectTitle}
            </CardItem>
            <CardItem
              as="p"
              translateZ="60"
-             className="text-white text-sm max-w-sm mt-2 dark:text-neutral-300"
+             className="text-white text-md max-w-sm mt-2 dark:text-neutral-300"
            >
              {projectBio}
            </CardItem>
@@ -63,11 +69,8 @@ import Link from "next/link";
       </div>
 
       {/* Project Details */}
-      <div className="w-2/3 flex flex-col p-8">
-        <div className="bg-black-900 p-6 rounded-xl shadow-md h-[calc(100vh-7rem)]">{projectDetail} /</div>
-       
-        {/* <div className="bg-black-900 p-6 rounded-xl shadow-md h-[calc(100vh-7rem)]">Detail 2 of {projectDetail}</div>
-        <div className="bg-black-900 p-6 rounded-xl shadow-md h-[calc(100vh-7rem)]">Detail 3 of {projectDetail}</div> */}
+      <div className="w-[70%] flex flex-col  ">
+        <div className=" p-10 pt-20 rounded-xl shadow-md h-full text-lg text-justify">{projectDetail} /</div>
       </div>
     </div>
     );
