@@ -6,12 +6,13 @@ import Contact from "./_contact/page";
 
 function MainPage() {
   return (
-    <div>
-      <Landing />
+    <div className="relative ">
+      {/* <Landing /> */}
       <About />
       <Skills />
-       <Projects />
-      {/* <Contact /> */}
+      <Projects />
+      <Contact />
+      <div className="h-screen"></div>
     </div>
   );
 }
