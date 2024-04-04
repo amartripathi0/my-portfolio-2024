@@ -24,7 +24,7 @@ function Skills() {
       ></div>
 
       <div className="text-2xl max-sm:text-sm max-sm:px-2 text-justify  flex-col flex-center gap-4">
-          <h2>{"// "}Skills page is yet to be implemented {";)"}</h2>
+          <h2>{"// "}skills page is yet to be implemented {";)"}</h2>
       </div>
 
      
