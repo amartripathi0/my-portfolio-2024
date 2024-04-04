@@ -5,7 +5,7 @@ import React from 'react'
 function Skills() {
   return (
     <motion.div
-      id="about-me"
+      id="skills"
       className="h-[calc(100vh-7rem)]  pt-28  max-sm:pt-20 flex flex-col  gap-14 relative "
       
     >
