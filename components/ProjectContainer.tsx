@@ -3,17 +3,10 @@ import {
   CardContainer,
   CardItem,
 } from "@/components/ui/3d-container";
+import { ProjectContainerProps } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
-type ProjectContainerProps = {
-  projectDetail : string ;
-  projectTitle : string;
-  projectBio : string;
-  projectGithubLink : string;
-  projectDeployedLink ?: string;
-  projectThumbnailSrc : string;
-  
-}
+
  const ProjectContainer = ({ projectDetail ,  projectTitle , projectBio , projectThumbnailSrc, projectGithubLink , projectDeployedLink ,}: ProjectContainerProps) => {
     return (
       <div className="flex justify-between min-h-screen border-b">
