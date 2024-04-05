@@ -25,6 +25,8 @@ export const socialMediaLinks: {
   { label: "Twitter", url: "https://twitter.com/amartripathi_", icon: FaTwitter },
 ];
 
+export const resumeLink : string = "https://drive.google.com/file/d/1pzhRz_U4GPml2qQMDWewn6uE0Ugl9N5K/view"
+
 export type ProjectContainerProps = {
   projectDetail : string ;
   projectTitle : string;
