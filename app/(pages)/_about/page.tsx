@@ -4,32 +4,54 @@ import TextUnderline from "@/components/shared/TextUnderline";
 import { BackgroundGradient } from "@/components/ui/BackgroundGradient";
 import { Button } from "@/components/ui/button";
 import { resumeLink } from "@/constants";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 import { FaArrowCircleRight } from "react-icons/fa";
-motion;
 const About = () => {
+  const ref = useRef(null)
+  const isInView = useInView(ref , {once : true})
   return (
     <motion.div
+    initial={{ opacity: 0 }}
+     whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{duration : 1}}
       id="about-me"
       className="h-[calc(100vh-7rem)] max-sm:pt-20 flex-between relative  "
     >
       {/* Left section */}
-      <div className="flex flex-col w-3/4 h-4/5 gap-10 ">
+      <motion.div 
+      className="flex flex-col w-3/4 h-4/5 gap-10 ">
         {/* bg gradient indigo cyan */}
         <IndigoBlurBackground height="1/5" />
 
         {/* About Me heading */}
+        <motion.div 
+              initial={{ x : -100 , opacity : 0  }}
+              whileInView={{ x : 0 ,  opacity : 1  }}
+              transition={{duration : 1.5}}
+              viewport={{ once: true }}
+
+        className="w-1/3">
+
         <TextUnderline
           text="About Me"
           textStyles="text-[3.2vw] max-sm:text-4xl font-medium "
-          containerDivStyles="w-1/3 max-sm:w-full  max-sm:flex-center"
+          containerDivStyles="w-full max-sm:w-full  max-sm:flex-center"
           underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-cyan-600"
         />
+        </motion.div>
 
         {/* About me paragraphs */}
-        <div className="text-xl p-4 w-full max-sm:text-sm max-sm:px-2 text-justify  flex-col flex-center gap-4">
+        <motion.div 
+              initial={{ opacity : 0  }}
+              whileInView={{ opacity : 1  }}
+              transition={{duration : 1.5}}
+              viewport={{ once: true }}
+
+        className="text-xl p-4 w-full max-sm:text-sm max-sm:px-2 text-justify  flex-col flex-center gap-4">
           <p>
             I&apos;m a third-year Computer Science Engineering student from
             India, deeply passionate about coding, technology and web. My
@@ -58,16 +80,20 @@ const About = () => {
             web. These activities recharge my batteries and bring a fresh
             perspective to my professional endeavors.
           </p>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* Right section */}
-      <div
+      <motion.div
+      initial={{ opacity : 0  }}
+      whileInView={{ opacity : 1  }}
+      transition={{duration : 1.5}}
+      viewport={{ once: true }}
         className="h-4/5 rounded-4xl w-1/3 flex-center flex-col gap-10 relative  
           max-tablet:h-40 max-tablet:w-40 flex-center
         "
       >
-        <IndigoBlurBackground height="2/5" />
+        <IndigoBlurBackground height="1/2" />
 
         <Image
           src={"/assets/amar-image-2.jpg"}
@@ -100,7 +126,7 @@ const About = () => {
             </Button>
           </Link>
         </motion.div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 };
