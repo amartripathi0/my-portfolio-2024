@@ -8,6 +8,10 @@ body {
   margin-right: 2px;
 }
 
+body ::selection{
+  background: rgb(73, 0, 107);
+}
+
 /* while scrolling: scrollbar styles */
 .on-scroll::-webkit-scrollbar {
   width: 6px !important;
