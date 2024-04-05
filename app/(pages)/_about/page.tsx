@@ -48,7 +48,7 @@ const About = () => {
         <motion.div 
               initial={{ opacity : 0  }}
               whileInView={{ opacity : 1  }}
-              transition={{duration : 1.5}}
+              transition={{duration : 2}}
               viewport={{ once: true }}
 
         className="text-xl p-4 w-full max-sm:text-sm max-sm:px-2 text-justify  flex-col flex-center gap-4">
@@ -87,7 +87,7 @@ const About = () => {
       <motion.div
       initial={{ opacity : 0  }}
       whileInView={{ opacity : 1  }}
-      transition={{duration : 1.5}}
+      transition={{duration : 2}}
       viewport={{ once: true }}
         className="h-4/5 rounded-4xl w-1/3 flex-center flex-col gap-10 relative  
           max-tablet:h-40 max-tablet:w-40 flex-center
