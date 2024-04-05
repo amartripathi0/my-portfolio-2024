@@ -14,7 +14,7 @@ const Landing = () => {
     >
       {/* left image and social handles*/}
       <motion.div
-        className=" flex-between flex-col gap-10 max-sm:gap-4"
+        className=" flex-between flex-col gap-10 max-sm:gap-4 ml-[2vw]"
         initial={{ opacity: 0, scale: 0.7 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ ease: "easeInOut", duration: 1, delay: 0.4 }}
