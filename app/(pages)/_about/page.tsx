@@ -74,7 +74,7 @@ const About = () => {
           alt="Main Profile picture"
           height={1000}
           width={1000}
-          className="object-cover h-3/5 w-3/5 aspect-auto rounded-3xl z-10  backdrop:blur-sm "
+          className="object-cover h-3/5 w-3/5 aspect-auto rounded-3xl z-10  backdrop:blur-sm opacity-80"
         />
 
         <motion.div
