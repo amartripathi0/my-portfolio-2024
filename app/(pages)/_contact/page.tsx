@@ -3,7 +3,7 @@ import TextUnderline from '@/components/shared/TextUnderline'
 function Contact() {
   return (
     <div  className="h-[calc(100vh-7rem)]  pt-28  max-sm:pt-20 flex flex-col  gap-14 relative "
-      
+    id= "contact-me"
     >
       <TextUnderline
         text="Contact me"
