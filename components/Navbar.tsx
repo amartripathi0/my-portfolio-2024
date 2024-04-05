@@ -77,8 +77,10 @@ const Navbar = ({
 
         <WrapperContainer>
           <Link
-            href={"#contact"}
-            className="font-medium flex-center  w-40 py-4 max-tablet:py-3 max-sm:w-32 max-sm:px-2 px-3"
+            href={"#contact-me"}
+            onClick={() => locomotiveScroll.scrollTo("#contact-me", {offset : 0} )}
+
+            className={`${pageSectionOnViewport === 'contact-me' && "shadow-md shadow-violet-500 rounded-full"} font-medium flex-center  w-40 py-4 max-tablet:py-3 max-sm:w-32 max-sm:px-2 px-3`}
           >
             <TextUnderline text="Contact Me"/>
           </Link>

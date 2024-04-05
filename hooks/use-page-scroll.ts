@@ -49,9 +49,13 @@ function usePageScroll() {
         setPageSectionOnViewport("skills");
       } else if (
         window.scrollY >= 2.6 * windowHeight &&
-        window.scrollY < 3.6 * windowHeight
+        window.scrollY < 4.6 * windowHeight
       ) {
         setPageSectionOnViewport("projects");
+      }
+      else if(window.scrollY > 4.6 * windowHeight){
+        setPageSectionOnViewport("contact-me");
+
       }
     }
     window.addEventListener("scroll", (e) => handlePageScroll());
