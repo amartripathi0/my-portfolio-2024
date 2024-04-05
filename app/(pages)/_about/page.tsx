@@ -4,54 +4,51 @@ import TextUnderline from "@/components/shared/TextUnderline";
 import { BackgroundGradient } from "@/components/ui/BackgroundGradient";
 import { Button } from "@/components/ui/button";
 import { resumeLink } from "@/constants";
-import { motion, useInView } from "framer-motion";
+import { inView, motion, useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { FaArrowCircleRight } from "react-icons/fa";
 const About = () => {
-  const ref = useRef(null)
-  const isInView = useInView(ref , {once : true})
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const animationVariant = {
+    beforeView: { opacity: 0 },
+    inView: { opacity: 1, transition: { duration: 1/5 }, viewport: {once : true} },
+  };
   return (
-    <motion.div
-    initial={{ opacity: 0 }}
-     whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{duration : 1}}
+    <div
       id="about-me"
       className="h-[calc(100vh-7rem)] max-sm:pt-20 flex-between relative  "
     >
       {/* Left section */}
-      <motion.div 
-      className="flex flex-col w-3/4 h-4/5 gap-10 ">
+      <div className="flex flex-col w-3/4 h-4/5 gap-10 ">
+
         {/* bg gradient indigo cyan */}
         <IndigoBlurBackground height="1/5" />
-
         {/* About Me heading */}
-        <motion.div 
-              initial={{ x : -100 , opacity : 0  }}
-              whileInView={{ x : 0 ,  opacity : 1  }}
-              transition={{duration : 1.5}}
-              viewport={{ once: true }}
-
-        className="w-1/3">
-
-        <TextUnderline
-          text="About Me"
-          textStyles="text-[3.2vw] max-sm:text-4xl font-medium "
-          containerDivStyles="w-full max-sm:w-full  max-sm:flex-center"
-          underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-cyan-600"
-        />
+        <motion.div
+          initial={{ x: -100 }}
+          whileInView={{ x: 0 }}
+          transition={{ duration: 1 }}
+          className="w-1/3"
+        >
+          <TextUnderline
+            text="About Me"
+            textStyles="text-[3.2vw] max-sm:text-4xl font-medium "
+            containerDivStyles="w-full max-sm:w-full  max-sm:flex-center"
+            underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-cyan-600"
+          />
         </motion.div>
 
         {/* About me paragraphs */}
-        <motion.div 
-              initial={{ opacity : 0  }}
-              whileInView={{ opacity : 1  }}
-              transition={{duration : 2}}
-              viewport={{ once: true }}
-
-        className="text-xl p-4 w-full max-sm:text-sm max-sm:px-2 text-justify  flex-col flex-center gap-4">
+        <motion.div
+          initial={"beforeView"}
+          whileInView={"inView"}
+          variants={animationVariant}
+          className="text-xl p-4 w-full max-sm:text-sm max-sm:px-2 text-justify  flex-col flex-center gap-4"
+        >
           <p>
             I&apos;m a third-year Computer Science Engineering student from
             India, deeply passionate about coding, technology and web. My
@@ -81,14 +78,13 @@ const About = () => {
             perspective to my professional endeavors.
           </p>
         </motion.div>
-      </motion.div>
+      </div>
 
       {/* Right section */}
       <motion.div
-      initial={{ opacity : 0  }}
-      whileInView={{ opacity : 1  }}
-      transition={{duration : 2}}
-      viewport={{ once: true }}
+        initial={"beforeView"}
+        whileInView={"inView"}
+        variants={animationVariant}
         className="h-4/5 rounded-4xl w-1/3 flex-center flex-col gap-10 relative  
           max-tablet:h-40 max-tablet:w-40 flex-center
         "
@@ -116,7 +112,7 @@ const About = () => {
             repeatType: "reverse",
             ease: "easeInOut",
           }}
-        > 
+        >
           <Link href={resumeLink} target="_blank">
             <Button className="relative inline-flex h-16 w-40 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
               <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
@@ -127,7 +123,7 @@ const About = () => {
           </Link>
         </motion.div>
       </motion.div>
-    </motion.div>
+    </div>
   );
 };
 
