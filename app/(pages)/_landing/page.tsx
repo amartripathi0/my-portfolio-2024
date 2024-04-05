@@ -25,7 +25,7 @@ const Landing = () => {
         "
         >
           <motion.div
-            className="bg-purple-400 rounded-full h-full w-full
+            className="bg-purple-400 rounded-full h-5/6 w-5/6
           blur-[70px] opacity-90
           "
             initial={{

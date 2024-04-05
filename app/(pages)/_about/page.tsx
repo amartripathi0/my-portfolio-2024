@@ -1,70 +1,41 @@
 "use client";
+import IndigoBlurBackground from "@/components/shared/IndigoBlurBackground";
 import TextUnderline from "@/components/shared/TextUnderline";
 import { BackgroundGradient } from "@/components/ui/BackgroundGradient";
+import { Button } from "@/components/ui/button";
+import { resumeLink } from "@/constants";
 import { motion } from "framer-motion";
-motion
+import Image from "next/image";
+import Link from "next/link";
+import { FaArrowCircleRight } from "react-icons/fa";
+motion;
 const About = () => {
   return (
     <motion.div
       id="about-me"
-      className="h-[calc(100vh-7rem)]  pt-28  max-sm:pt-20 flex flex-col  gap-14 relative "
-      
+      className="h-[calc(100vh-7rem)] max-sm:pt-20 flex-between relative  "
     >
-      <TextUnderline
-        text="About Me"
-        textStyles="text-[3.2vw] max-sm:text-4xl font-medium "
-        containerDivStyles="w-1/5 max-sm:w-full  max-sm:flex-center"
-        underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-cyan-600"
-      />
+      {/* Left section */}
+      <div className="flex flex-col w-3/4 h-4/5 gap-10 ">
+        {/* bg gradient indigo cyan */}
+        <IndigoBlurBackground height="1/5" />
 
-      {/* bg gradient indigo cyan */}
-      <div
-        className="absolute opacity-80 left-10 h-1/4  aspect-square  blur-[100px] rounded-full
-      bg-gradient-to-r from-indigo-600  to-cyan-400    
-      "
-      ></div>
+        {/* About Me heading */}
+        <TextUnderline
+          text="About Me"
+          textStyles="text-[3.2vw] max-sm:text-4xl font-medium "
+          containerDivStyles="w-1/3 max-sm:w-full  max-sm:flex-center"
+          underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-cyan-600"
+        />
 
-      <div className="text-2xl max-sm:text-sm max-sm:px-2 text-justify  flex-col flex-center gap-4">
-        <p>
-          I&apos;m a third-year Computer Science Engineering student from India,
-          deeply passionate about coding, technology and web. My journey into
-          Full-Stack web development has been exhilarating, constantly pushing
-          the boundaries of what&apos;s possible.
-        </p>
-
-        <p>
-          My adventure began during my first year of college, and since then,
-          I&apos;ve worked on diverse web development projects, honing my skills
-          and seeking innovative solutions. I take pride in my work&apos;s
-          ability to make a difference and create impactful results.
-        </p>
-
-        <p>
-          At the heart of my work is a simple philosophy: to deliver
-          high-quality solutions with a user-centric approach. This belief
-          drives every project I undertake, ensuring timely delivery and
-          creative problem-solving.
-        </p>
-
-        <p>
-          When I&apos;m not coding, you can find me exploring new music and
-          producing hip hop beats, cooking and eating food, or surfing the web.
-          These activities recharge my batteries and bring a fresh perspective
-          to my professional endeavors.
-        </p>
-      </div>
-
-      {/* <BackgroundGradient
-        className=" bg-[#0c0910] text-xl text-justify rounded-3xl p-10 flex-col flex-center gap-4 "
-        containerClassName="w-3/5 opacity-90 hover:opacity-100 transition-all duration-200"
-      >
-        
-          <h2 className="">
+        {/* About me paragraphs */}
+        <div className="text-xl p-4 w-full max-sm:text-sm max-sm:px-2 text-justify  flex-col flex-center gap-4">
+          <p>
             I&apos;m a third-year Computer Science Engineering student from
             India, deeply passionate about coding, technology and web. My
             journey into Full-Stack web development has been exhilarating,
             constantly pushing the boundaries of what&apos;s possible.
-          </h2>
+          </p>
 
           <p>
             My adventure began during my first year of college, and since then,
@@ -83,12 +54,53 @@ const About = () => {
 
           <p>
             When I&apos;m not coding, you can find me exploring new music and
-            producing hip hop beats, cooking and eating food, or surrfing web.
-            These activities recharge my batteries and bring a fresh perspective
-            to my professional endeavors.
+            producing hip hop beats, cooking and eating food, or surfing the
+            web. These activities recharge my batteries and bring a fresh
+            perspective to my professional endeavors.
           </p>
-   
-      </BackgroundGradient> */}
+        </div>
+      </div>
+
+      {/* Right section */}
+      <div
+        className="h-4/5 rounded-4xl w-1/3 flex-center flex-col gap-10 relative  
+          max-tablet:h-40 max-tablet:w-40 flex-center
+        "
+      >
+        <IndigoBlurBackground height="2/5" />
+
+        <Image
+          src={"/assets/amar-image-2.jpg"}
+          alt="Main Profile picture"
+          height={1000}
+          width={1000}
+          className="object-cover h-3/5 w-3/5 aspect-auto rounded-3xl z-10  backdrop:blur-sm "
+        />
+
+        <motion.div
+          initial={{
+            y: 0,
+          }}
+          animate={{
+            y: 20,
+          }}
+          transition={{
+            duration: 0.8,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut",
+          }}
+        > 
+          <Link href={resumeLink} target="_blank">
+            <Button className="relative inline-flex h-16 w-40 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+              <span className="flex justify-around  h-full w-full cursor-pointer items-center  rounded-full bg-slate-950 px-3 py-1 text-lg font-medium text-white backdrop-blur-3xl">
+                Resume <FaArrowCircleRight size={16} />{" "}
+              </span>
+            </Button>
+          </Link>
+        </motion.div>
+      </div>
     </motion.div>
   );
 };
