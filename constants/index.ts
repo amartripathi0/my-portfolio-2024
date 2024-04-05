@@ -59,19 +59,19 @@ export const projectsArray: ProjectContainerProps[] = [
         "Through this project, I unraveled the efficiencies of React and its component-based architecture, along with the styling capabilities of Tailwind CSS. React Hook Form was a revelation, teaching me about client-side form validation that significantly reduces page re-renders compared to traditional validation methods.",
         "Moreover, the project was a deep dive into Authentication and Authorization, employing libraries such as bcrypt, JWT, and cookies. The concept of hashing passwords before storing them in the database was fascinating, illustrating a level of security and privacy that ensures even developers cannot access user passwords. This project was not just a technical journey but an enlightening experience that broadened my understanding and skills in full-stack web development.",
         "To truly embrace the cloud, deployed the frontend on Vercel and the backend on Cyclic.sh, with the database hosted on MongoDB Atlas cloud. This approach allowed me to experience the seamless integration and advantages of cloud-based development.",
-        "This project is an ongoing adventure, with major parts still under development. I invite you to keep an eye on this project as it evolves. For a glimpse into its current state and to follow its progress, click on the live deployed link and visit the GitHub repository for the source code. This journey has been more than just a technical endeavor; it has been a profound learning experience that has expanded my knowledge and skill set in full-stack web development."
+        "This project is an ongoing adventure, with major parts still under development. I invite you to keep an eye on this project as it evolves. For a glimpse into its current state and to follow its progress, click on the live deployed link and visit the GitHub repository for the source code. This journey has been more than just a technical endeavor; it has been a profound learning experience that has expanded my knowledge and skill set in full-stack web development.",
       ],
     },
     projectTools: [
-      "React",
+      "React JS",
       "React Hook Form",
       "React Router DOM",
       "Redux Toolkit",
       "Axios",
       "React Toastify",
-      "TailwindCSS",
-      "NodeJS",
-      "ExpressJs",
+      "Tailwind CSS",
+      "Node JS",
+      "Express JS",
       "MongoDB Atlas",
       "Mongoose",
       "Multer",
@@ -86,14 +86,28 @@ export const projectsArray: ProjectContainerProps[] = [
     projectTitle: "Youtube Playlist Analyzer",
     projectDetail: {
       topPara:
-        "A simple project to analyze the time required to watch a youtube playlist in various available speed.",
+        "As a regular YouTube viewer, I've always been curious about the total time required to watch all the videos in my favorite youtube playlists which led me to conceive this project. Beyond its practical utility, my primary motivation was to learn and apply new skills in a real-world scenario, specifically:-",
+      parasArray: [
+        "Youtube Playlist Analyzer is a web application to calculate the total watch time of YouTube playlists at various playback speeds such as 1x, 1.25x , 1.5x, 1.75x and 2x.It simplifies playlist consumption by calculating the total duration of videos within a given YouTube playlist.",
+        "The 'Youtube Playlist Analyzer' fetches details from the Google YouTube API, accessing information about each video within the playlist, including its duration and playback speed. Using this data, the application calculates the total watch time for the playlist, accommodating various playback speeds ranging from 1x to 2x.",
+        "'Youtube Playlist Analyzer' currently supports playlists with a maximum of 50 videos. However, I'm planning to increase this upper limit in future updates to accommodate larger playlists. Stay tuned for further developments as I continue to enhance the application's capabilities. For the latest updates, you can check out the code on GitHub and access the deployed application."
+      ],
     },
     projectBio:
       "A simple project to analyze the time required to watch a youtube playlist in various available speed.",
+
     projectGithubLink:
       "https://github.com/amartripathi0/youtube-playlist-analyzer",
     projectDeployedLink: "https://youtube-playlist-analyzer-teal.vercel.app/",
     projectThumbnailSrc: "/assets/yt-playlist-analyzer.png",
-    projectTools: [],
+    projectTools: [
+      "React",
+      "Vite",
+      "Axios",
+      "React Toastify",
+      "Tailwind CSS",
+      "Google YouTube API",
+      "Vercel",
+    ],
   },
 ];
