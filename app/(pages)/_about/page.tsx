@@ -1,22 +1,17 @@
 "use client";
 import IndigoBlurBackground from "@/components/shared/IndigoBlurBackground";
 import TextUnderline from "@/components/shared/TextUnderline";
-import { BackgroundGradient } from "@/components/ui/BackgroundGradient";
 import { Button } from "@/components/ui/button";
-import { resumeLink } from "@/constants";
+import {
+  fadeAnimationVariant,
+  resumeLink,
+  underlineAnimationVariant,
+} from "@/constants";
 import { inView, motion, useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
 import { FaArrowCircleRight } from "react-icons/fa";
 const About = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  const animationVariant = {
-    beforeView: { opacity: 0 },
-    inView: { opacity: 1, transition: { duration: 1/5 }, viewport: {once : true} },
-  };
   return (
     <div
       id="about-me"
@@ -24,15 +19,14 @@ const About = () => {
     >
       {/* Left section */}
       <div className="flex flex-col w-3/4 h-4/5 gap-10 ">
-
         {/* bg gradient indigo cyan */}
         <IndigoBlurBackground height="1/5" />
         {/* About Me heading */}
         <motion.div
-          initial={{ x: -100 }}
-          whileInView={{ x: 0 }}
-          transition={{ duration: 1 }}
-          className="w-1/3"
+          initial={"intitial"}
+          whileInView={"inview"}
+          variants={underlineAnimationVariant}
+          className="w-[29%]"
         >
           <TextUnderline
             text="About Me"
@@ -46,7 +40,8 @@ const About = () => {
         <motion.div
           initial={"beforeView"}
           whileInView={"inView"}
-          variants={animationVariant}
+          variants={fadeAnimationVariant}
+          viewport={{ once: true }}
           className="text-xl p-4 w-full max-sm:text-sm max-sm:px-2 text-justify  flex-col flex-center gap-4"
         >
           <p>
@@ -84,7 +79,8 @@ const About = () => {
       <motion.div
         initial={"beforeView"}
         whileInView={"inView"}
-        variants={animationVariant}
+        variants={fadeAnimationVariant}
+        viewport={{ once: true }}
         className="h-4/5 rounded-4xl w-1/3 flex-center flex-col gap-10 relative  
           max-tablet:h-40 max-tablet:w-40 flex-center
         "

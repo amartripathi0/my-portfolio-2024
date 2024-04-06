@@ -111,3 +111,18 @@ export const projectsArray: ProjectContainerProps[] = [
     ],
   },
 ];
+
+
+// animation variants
+
+
+export const fadeAnimationVariant = {
+  beforeView: { opacity: 0 },
+  inView: { opacity: 1, transition: { duration: 1.5 }},
+};
+
+export const underlineAnimationVariant = {
+      initial : {x : -100} ,
+      inView : { x: 0  , transition : { duration: 1 , bounce : 1 }
+    }
+} 
