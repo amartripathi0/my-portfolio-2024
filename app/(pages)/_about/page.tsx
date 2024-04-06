@@ -7,7 +7,7 @@ import {
   resumeLink,
   underlineAnimationVariant,
 } from "@/constants";
-import { inView, motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowCircleRight } from "react-icons/fa";
@@ -23,8 +23,8 @@ const About = () => {
         <IndigoBlurBackground height="1/5" />
         {/* About Me heading */}
         <motion.div
-          initial={"intitial"}
-          whileInView={"inview"}
+          initial={"initial"}
+          whileInView={"inView"}
           variants={underlineAnimationVariant}
           className="w-[29%]"
         >
