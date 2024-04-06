@@ -39,21 +39,21 @@ function usePageScroll() {
         setPageSectionOnViewport("home");
       } else if (
         window.scrollY >= windowHeight * 0.8 &&
-        window.scrollY < windowHeight * 1.7
+        window.scrollY < windowHeight * 1.6
       ) {
         setPageSectionOnViewport("about-me");
       } else if (
-        window.scrollY >= windowHeight * 1.7 &&
-        window.scrollY < 2.6 * windowHeight
+        window.scrollY >= windowHeight * 1.6 &&
+        window.scrollY < 2.4 * windowHeight
       ) {
         setPageSectionOnViewport("skills");
       } else if (
-        window.scrollY >= 2.6 * windowHeight &&
-        window.scrollY < 4.6 * windowHeight
+        window.scrollY >= 2.4 * windowHeight &&
+        window.scrollY < 4.4 * windowHeight
       ) {
         setPageSectionOnViewport("projects");
       }
-      else if(window.scrollY > 4.6 * windowHeight){
+      else if(window.scrollY > 4.4 * windowHeight){
         setPageSectionOnViewport("contact-me");
 
       }
