@@ -12,17 +12,17 @@ function Skills() {
   const targetRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
-    target : targetRef,
-    offset: ["end center", "start end"],
+    target: targetRef,
+    offset: ["end", "start"],
   });
 
-  const leftSlide = useTransform(scrollYProgress, [0,2], ["0%", "-100vw"]);
-  const rightSlide = useTransform(scrollYProgress, [0, 2], ["0%", "100vw"]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.2]);
+  const leftSlide = useTransform(scrollYProgress, [0, 10], ["0%", "-100vw"]);
+  const rightSlide = useTransform(scrollYProgress, [0, 10], ["0%", "100vw"]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
   return (
     <motion.div
       id="skills"
-      className="h-[calc(100vh-7rem)] pt-10 -mx-40 max-sm:pt-20 flex flex-col gap-14 relative "
+      className="h-[calc(100vh-7rem)] pt-10 -mx-40 max-sm:pt-20 flex justify-between flex-col gap-14 relative "
     >
       <motion.div
         initial={"initial"}
@@ -44,16 +44,12 @@ function Skills() {
       "
       ></div>
 
-      <div     
-        className="text-sm max-sm:text-sm max-sm:px-2 text-justify h-4/5 overflow-x-hidden   flex-col gap-4 ">
-        <h2>
+        <h2 className="absolute top-20 left-1/2">
           {"// "}skills page is yet to be implemented {";)"}
         </h2>
 
-
-
-      
-          
+      <div className="text-sm max-sm:text-sm max-sm:px-2 text-justify h-4/5 overflow-x-hidden  flex items-center justify-evenly flex-col gap-4 relative">
+       
         <motion.div
           ref={targetRef}
           style={{ translateX: leftSlide, opacity: opacity }}
@@ -63,18 +59,15 @@ function Skills() {
             <Skill key={name} name={name} imageSrc={imageSrc} />
           ))}
         </motion.div>
-        {/* <motion.div
+        <motion.div
           ref={targetRef}
           style={{ translateX: rightSlide, opacity: opacity }}
-          className=" flex gap-4  bg-blue-600  p-10 "
+          className=" flex gap-4 p-10 "
         >
-          {backendSkills.map((skill) => (
-            <div key={skill} className="h-20 aspect-square bg-purple-300">
-              {skill}
-            </div>
+          {backendSkills.map(({ name, imageSrc }) => (
+            <Skill key={name} name={name} imageSrc={imageSrc} />
           ))}
-        </motion.div> */}
-
+        </motion.div>
       </div>
     </motion.div>
   );
