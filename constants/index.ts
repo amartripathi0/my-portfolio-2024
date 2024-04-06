@@ -112,6 +112,32 @@ export const projectsArray: ProjectContainerProps[] = [
   },
 ];
 
+export const frontendSkills = [
+  "HTML",
+  "CSS",
+  'JavaScript',
+  'TypeScript',
+  "React JS",
+  "React Hook Form",
+  "React Router DOM",
+  "Redux Toolkit",
+  "Axios",
+  "React Toastify",
+  "Tailwind CSS",
+
+]
+export const backendSkills = [
+  "Node JS",
+  "Express JS",
+  "MongoDB Atlas",
+  "Mongoose",
+  "Multer",
+  "Postman",
+  "bcrypt",
+  "jsonwebtoken",
+  "Vercel",
+  "Cyclic.sh",
+]
 
 // animation variants
 

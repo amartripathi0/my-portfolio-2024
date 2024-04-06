@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 function Contact() {
   return (
     <div
-      className="h-[calc(100vh-7rem)]  pt-28  max-sm:pt-20 flex flex-col  gap-14 relative "
+      className="h-[calc(100vh-7rem)]  pt-28 max-sm:pt-20 flex flex-col  gap-14 relative "
       id="contact-me"
     >
       <motion.div
@@ -17,7 +17,7 @@ function Contact() {
         <TextUnderline
           text="Contact me"
           textStyles="text-[3.2vw] max-sm:text-4xl font-medium "
-          containerDivStyles="w-1/4 max-sm:w-full  max-sm:flex-center"
+          containerDivStyles="w-[24%] max-sm:w-full  max-sm:flex-center"
           underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-yellow-500   "
         />
       </motion.div>
