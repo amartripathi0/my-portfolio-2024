@@ -115,9 +115,8 @@ export const projectsArray: ProjectContainerProps[] = [
 export const frontendSkills =  [
   { name: "HTML", imageSrc: "/logos/html5-logo-31813.png" },
   { name: "CSS", imageSrc: "/logos/css.png" },
-  { name: "JavaScript", imageSrc: "/logos/js.png" },
-  { name: "TypeScript", imageSrc: "/logos/typescript.png" },
   { name: "React JS", imageSrc: "/logos/react.png" },
+  { name: "Next JS", imageSrc: "/logos/Next.js.png" },
   { name: "React Hook Form", imageSrc: "/logos/reacthookform.jpeg" },
   { name: "React Router DOM", imageSrc: "/logos/react-router-dom.png" },
   { name: "Redux Toolkit", imageSrc: "/logos/rtk.png" },
@@ -125,18 +124,20 @@ export const frontendSkills =  [
   // { name: "React Toastify", imageSrc: "/public/logos/" },
   { name: "Tailwind CSS", imageSrc: "/logos/Tailwind.png" }
 ];
-export const backendSkills = [
-  "Node JS",
-  "Express JS",
-  "MongoDB Atlas",
-  "Mongoose",
-  "Multer",
-  "Postman",
-  "bcrypt",
-  "jsonwebtoken",
-  "Vercel",
-  "Cyclic.sh",
-]
+export const backendSkills =  [
+  { name: "JavaScript", imageSrc: "/logos/js.png" },
+  { name: "TypeScript", imageSrc: "/logos/typescript.png" },
+  { name: "Node JS", imageSrc: "/logos/node.png" },
+  { name: "Express JS", imageSrc: "/logos/express.png" },
+  { name: "MongoDB Atlas", imageSrc : "/logos/mongo.png" },
+  // { name: "Mongoose", imageSrc: "/public/logos" },
+  // { name: "Multer", imageSrc: "/public/logos" },
+  { name: "Postman", imageSrc: "/logos/postman.png" },
+  // { name: "bcrypt", imageSrc: "/public/logos" },
+  // { name: "jsonwebtoken", imageSrc: "/public/logos" },
+  { name: "Vercel", imageSrc: "/logos/vercel.png" },
+  // { name: "Cyclic.sh", imageSrc: "/public/logos" }
+];
 
 // animation variants
 
