@@ -112,20 +112,19 @@ export const projectsArray: ProjectContainerProps[] = [
   },
 ];
 
-export const frontendSkills = [
-  "HTML",
-  "CSS",
-  'JavaScript',
-  'TypeScript',
-  "React JS",
-  "React Hook Form",
-  "React Router DOM",
-  "Redux Toolkit",
-  "Axios",
-  "React Toastify",
-  "Tailwind CSS",
-
-]
+export const frontendSkills =  [
+  { name: "HTML", imageSrc: "/logos/html5-logo-31813.png" },
+  { name: "CSS", imageSrc: "/logos/css.png" },
+  { name: "JavaScript", imageSrc: "/logos/js.png" },
+  { name: "TypeScript", imageSrc: "/logos/typescript.png" },
+  { name: "React JS", imageSrc: "/logos/react.png" },
+  { name: "React Hook Form", imageSrc: "/logos/reacthookform.jpeg" },
+  { name: "React Router DOM", imageSrc: "/logos/react-router-dom.png" },
+  { name: "Redux Toolkit", imageSrc: "/logos/rtk.png" },
+  { name: "Axios", imageSrc: "/logos/axios.png" },
+  // { name: "React Toastify", imageSrc: "/public/logos/" },
+  { name: "Tailwind CSS", imageSrc: "/logos/Tailwind.png" }
+];
 export const backendSkills = [
   "Node JS",
   "Express JS",
