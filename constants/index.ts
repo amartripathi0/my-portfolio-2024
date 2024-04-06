@@ -120,13 +120,14 @@ export const frontendSkills =  [
   { name: "React Hook Form", imageSrc: "/logos/reacthookform.jpeg" },
   { name: "React Router DOM", imageSrc: "/logos/react-router-dom.png" },
   { name: "Redux Toolkit", imageSrc: "/logos/rtk.png" },
-  { name: "Axios", imageSrc: "/logos/axios.png" },
   // { name: "React Toastify", imageSrc: "/public/logos/" },
-  { name: "Tailwind CSS", imageSrc: "/logos/Tailwind.png" }
+  { name: "Tailwind CSS", imageSrc: "/logos/Tailwind.png" },
+  { name: "Framer Motion", imageSrc: "/logos/framer.jpg" }
 ];
 export const backendSkills =  [
   { name: "JavaScript", imageSrc: "/logos/js.png" },
   { name: "TypeScript", imageSrc: "/logos/typescript.png" },
+  { name: "Axios", imageSrc: "/logos/axios.png" },
   { name: "Node JS", imageSrc: "/logos/node.png" },
   { name: "Express JS", imageSrc: "/logos/express.png" },
   { name: "MongoDB Atlas", imageSrc : "/logos/mongo.png" },
