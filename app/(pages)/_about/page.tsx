@@ -26,12 +26,11 @@ const About = () => {
           initial={"initial"}
           whileInView={"inView"}
           variants={underlineAnimationVariant}
-          className="w-[29%]"
         >
           <TextUnderline
             text="About Me"
             textStyles="text-[3.2vw] max-sm:text-4xl font-medium "
-            containerDivStyles="w-full max-sm:w-full  max-sm:flex-center"
+            containerDivStyles="w-[29%] max-sm:w-full  max-sm:flex-center"
             underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-cyan-600"
           />
         </motion.div>
