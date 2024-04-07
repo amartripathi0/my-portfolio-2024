@@ -22,7 +22,7 @@ function Skills() {
   return (
     <motion.div
       id="skills"
-      className="h-[calc(100vh-7rem)] pt-10 -mx-40 max-sm:mx-0  flex justify-between  flex-col gap-14 max-sm:gap-4 relative  "
+      className="h-[calc(100vh-7rem)] pt-10 -mx-40 max-sm:mx-0  flex justify-around  flex-col gap-14 max-sm:gap-0 relative "
     >
       <motion.div
         initial={"initial"}
@@ -39,12 +39,12 @@ function Skills() {
 
       {/* bg gradient purple */}
       <div
-        className="absolute opacity-80 left-36 h-1/5 top-4  max-sm:top-20 max-sm:left-28 aspect-square  blur-[100px] rounded-full
+        className="absolute opacity-80 left-36 h-1/5 top-4  max-sm:top-10 max-sm:left-28 aspect-square  blur-[100px] rounded-full
       bg-gradient-to-r from-indigo-600 via-yellow-300 to-purple-400    
       "
-      ></div>
+      />
 
-      <div className="text-sm max-sm:text-sm max-sm:px-5 text-justify max-sm:h-[90%] max-sm:rounded-3xl w-full  overflow-hidden  flex items-center justify-evenly  max-sm:justify-end   flex-col relative">
+      <div className="text-sm max-sm:text-sm max-sm:px-5 text-justify max-sm:h-5/6 max-sm:rounded-3xl w-full  overflow-hidden  flex items-center justify-evenly  max-sm:justify-end   flex-col relative">
         <motion.div
           ref={targetRef}
           style={{ translateX: leftSlide, opacity: opacity }}
