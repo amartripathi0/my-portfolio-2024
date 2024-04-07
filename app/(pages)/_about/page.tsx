@@ -20,7 +20,7 @@ const About = () => {
       {/* Left section */}
       <div className="flex flex-col w-3/4 sm:h-4/5 max-sm:w-full gap-10 max-sm:gap-2  ">
         {/* bg gradient indigo cyan */}
-        <IndigoBlurBackground height="1/5" />
+        <IndigoBlurBackground height="1/5" additionalStyles="max-sm:left-1/4" />
         {/* About Me heading */}
         <motion.div
           initial={"initial"}
