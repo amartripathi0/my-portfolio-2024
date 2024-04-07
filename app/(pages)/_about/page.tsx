@@ -15,7 +15,7 @@ const   About = () => {
   return (
     <div
       id="about-me"
-      className="h-[calc(100vh-7rem)] max-sm:h-[calc(100vh)] max-sm:pt-0 flex-between relative  max-sm:flex-col "
+      className="h-[calc(100vh-7rem)] max-sm:h-[calc(100vh-5rem)] max-sm:pt-0 flex-between relative  max-sm:flex-col"
     >
       {/* Left section */}
       <div className="flex flex-col w-3/4 sm:h-4/5 max-sm:w-full gap-10 max-sm:gap-2">
