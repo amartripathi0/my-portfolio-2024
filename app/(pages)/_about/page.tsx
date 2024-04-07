@@ -15,10 +15,10 @@ const About = () => {
   return (
     <div
       id="about-me"
-      className="h-[calc(100vh-7rem)] max-sm:pt-10 flex-between relative  max-sm:flex-col  "
+      className="h-[calc(100vh-7rem)] max-sm:h-[calc(100vh)] max-sm:pt-0 flex-between relative  max-sm:flex-col "
     >
       {/* Left section */}
-      <div className="flex flex-col w-3/4 sm:h-4/5 max-sm:w-full gap-10 max-sm:gap-2  ">
+      <div className="flex flex-col w-3/4 sm:h-4/5 max-sm:w-full gap-10 max-sm:gap-2">
         {/* bg gradient indigo cyan */}
         <IndigoBlurBackground height="1/5" additionalStyles="max-sm:left-1/4" />
         {/* About Me heading */}
@@ -71,6 +71,32 @@ const About = () => {
             web. These activities recharge my batteries and bring a fresh
             perspective to my professional endeavors.
           </p>
+
+          <motion.div
+          initial={{
+            y: 0,
+          }}
+          animate={{
+            y: 20,
+          }}
+          transition={{
+            duration: 0.8,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut",
+          }}
+
+          className="sm:hidden"
+        >
+          <Link href={resumeLink} target="_blank" >
+            <Button className="relative inline-flex h-16 w-40 max-sm:h-12 max-sm:w-32 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+              <span className="flex justify-around  h-full w-full cursor-pointer items-center  rounded-full bg-slate-950 px-3 py-1 text-lg max-sm:text-base font-medium text-white backdrop-blur-3xl">
+                Resume <FaArrowCircleRight size={16} />{" "}
+              </span>
+            </Button>
+          </Link>
+        </motion.div>
         </motion.div>
       </div>
 
@@ -81,7 +107,7 @@ const About = () => {
         variants={fadeAnimationVariant}
         viewport={{ once: true }}
         className="h-4/5 rounded-4xl w-1/3 flex-center flex-col gap-10 relative  
-          max-tablet:h-40 max-tablet:w-40 flex-center
+          max-tablet:h-40 max-tablet:w-40 flex-center max-sm:hidden
         "
       >
         <IndigoBlurBackground height="1/2" />
