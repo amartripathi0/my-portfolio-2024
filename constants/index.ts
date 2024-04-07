@@ -127,6 +127,7 @@ export const frontendSkills =  [
 export const backendSkills =  [
   { name: "JavaScript", imageSrc: "/logos/js.png" },
   { name: "TypeScript", imageSrc: "/logos/typescript.png" },
+  { name: "Java", imageSrc: "/logos/java.png" },
   { name: "Axios", imageSrc: "/logos/axios.png" },
   { name: "Node JS", imageSrc: "/logos/node.png" },
   { name: "Express JS", imageSrc: "/logos/express.png" },
