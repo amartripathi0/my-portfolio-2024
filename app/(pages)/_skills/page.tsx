@@ -22,7 +22,7 @@ function Skills() {
   return (
     <motion.div
       id="skills"
-      className="h-[calc(100vh-7rem)] pt-10 -mx-40 max-sm:mx-0  flex justify-end  flex-col gap-14 max-sm:gap-4 relative border "
+      className="h-[calc(100vh-7rem)] pt-10 -mx-40 max-sm:mx-0  flex justify-between  flex-col gap-14 max-sm:gap-4 relative  "
     >
       <motion.div
         initial={"initial"}
@@ -44,7 +44,7 @@ function Skills() {
       "
       ></div>
 
-      <div className="text-sm max-sm:text-sm max-sm:px-5 text-justify h-4/5 max-sm:rounded-3xl w-full  overflow-hidden  flex items-center justify-evenly  max-sm:justify-end   flex-col relative">
+      <div className="text-sm max-sm:text-sm max-sm:px-5 text-justify max-sm:h-[90%] max-sm:rounded-3xl w-full  overflow-hidden  flex items-center justify-evenly  max-sm:justify-end   flex-col relative">
         <motion.div
           ref={targetRef}
           style={{ translateX: leftSlide, opacity: opacity }}
