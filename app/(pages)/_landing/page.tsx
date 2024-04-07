@@ -70,7 +70,9 @@ const Landing = () => {
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ease: "easeInOut", duration: 1, delay: 2 }}
-            className="  text-[#A9A9A9] max-tablet:m-0  leading-[100px] max-tablet:leading-none"
+            className="   max-tablet:m-0  leading-[100px] max-tablet:leading-none
+            bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  
+            "
           >
             TRIPATHI
           </motion.h1>

@@ -9,7 +9,7 @@ body {
 }
 
 body ::selection{
-  background: rgb(73, 0, 107);
+  background: #49006b;
 }
 
 /* while scrolling: scrollbar styles */
