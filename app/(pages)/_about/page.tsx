@@ -15,10 +15,10 @@ const About = () => {
   return (
     <div
       id="about-me"
-      className="h-[calc(100vh-7rem)] max-sm:pt-20 flex-between relative  "
+      className="h-[calc(100vh-7rem)] max-sm:pt-10 flex-between relative  max-sm:flex-col  "
     >
       {/* Left section */}
-      <div className="flex flex-col w-3/4 h-4/5 gap-10 ">
+      <div className="flex flex-col w-3/4 sm:h-4/5 max-sm:w-full gap-10 max-sm:gap-2  ">
         {/* bg gradient indigo cyan */}
         <IndigoBlurBackground height="1/5" />
         {/* About Me heading */}
@@ -91,7 +91,7 @@ const About = () => {
           alt="Main Profile picture"
           height={1000}
           width={1000}
-          className="object-cover h-3/5 w-3/5 aspect-auto rounded-3xl z-10  backdrop:blur-sm opacity-80"
+          className="object-cover h-3/5 w-3/5 aspect-auto rounded-3xl z-10  backdrop:blur-sm opacity-80 max-sm:hidden"
         />
 
         <motion.div

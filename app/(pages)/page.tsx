@@ -7,11 +7,11 @@ import Contact from "./_contact/page";
 function MainPage() {
   return (
     <div className="relative ">
-      <Landing />
+      {/* <Landing /> */}
       <About />
-      <Skills />
+      {/* <Skills />
       <Projects />
-      <Contact />
+      <Contact /> */}
     </div>
   );
 }
