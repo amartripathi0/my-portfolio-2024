@@ -48,7 +48,7 @@ export const projectsArray: ProjectContainerProps[] = [
   {
     projectTitle: "Placement Nexus",
     projectBio:
-      "Placement Nexus is an ongoing MERN stack-based projectstreamlining college hiring. It connects students, recruiters, andcolleges for efficient recruitment. Stay tuned for major frontendand backend enhancements.",
+      "Placement Nexus is an ongoing MERN stack-based project streamlining college hiring. It connects students, recruiters, andcolleges for efficient recruitment. Stay tuned for major frontendand backend enhancements.",
     projectThumbnailSrc: "/assets/placement-nexus.png",
     projectGithubLink: "https://github.com/amartripathi0/Web_Placement_Portal",
     projectDeployedLink: "https://placement-nexus.vercel.app/",

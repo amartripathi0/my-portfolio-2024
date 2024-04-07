@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowCircleRight } from "react-icons/fa";
-const About = () => {
+const   About = () => {
   return (
     <div
       id="about-me"
