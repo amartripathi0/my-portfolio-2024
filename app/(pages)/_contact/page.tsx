@@ -32,7 +32,7 @@ function Contact() {
 
       <div className="text-2xl max-sm:text-sm max-sm:px-2 text-justify  flex-col flex-center gap-4">
         <h2 className="mb-20">
-          {"// "}Contact Me page is yet to be implemented 👨‍💻."     </h2>
+          {"// "}Contact Me page is yet to be implemented 👨‍💻    </h2>
         <h2>
          Let&apos;s connect! I&apos;ll get back to you within 24 hours.</h2>
 
