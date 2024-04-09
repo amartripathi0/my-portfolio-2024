@@ -40,7 +40,7 @@ const TextUnderline = ({
       onHoverEnd={handleHoverEnd}
       className={`inline-block relative ${containerDivStyles}`}
     >
-      <h1 className={`${textStyles} inline-block relative`}>{text}</h1>
+      <h1 className={`${textStyles} inline-block relative text-sm`}>{text}</h1>
       <motion.div
         initial={{
             scaleX:0
