@@ -26,17 +26,17 @@ const Navbar = ({
       initial={{ opacity: 0, y: -15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ ease: "easeInOut", duration: 1 }}
-      className={`flex-between fixed top-0 left-0 w-screen h-20   max-mobile:h-20
-    px-10 max-mobile:px-4 py-2 max-mobile:py-2 backdrop-blur-md z-50${
+      className={`flex-between fixed top-0 left-0 w-screen h-20
+    px-10 max-mobile:px-4 py-2 max-mobile:py-2 backdrop-blur-md z-50 ${
       scrolled && "border-b border-violet-700"
     }
     `}
     >
       {/* Left: Avatar and Name section */}
-      <WrapperContainer additionalStyle="flex-center  w-28 max-mobile:w-auto px-1">
+      <WrapperContainer additionalStyle="flex-center  w-28 max-mobile:w-auto max-sm:px-1 sm:pr-1">
         <Link href={"/"} className="flex-around-center w-full  ">
-          <Avatar>
-            <AvatarImage src={"/assets/profile-photo.jpeg"} alt="profile-pic" />
+          <Avatar className="h-2/3 aspect-square">
+            <AvatarImage src={"/assets/profile-photo.jpeg"} alt="profile-pic"/>
           </Avatar>
           
           <TextUnderline text="Amar" textStyles="font-medium opacity-90 hover:opacity-100 max-mobile:hidden"/>
