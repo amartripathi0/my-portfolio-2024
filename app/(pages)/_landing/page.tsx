@@ -10,17 +10,17 @@ const Landing = () => {
   return (
     <div
       id="home"
-      className="h-[calc(100vh-5rem)] flex-between  max-tablet:flex-col max-sm:flex-center"
+      className="h-[calc(100vh-5rem)] flex-between  max-tablet:flex-col max-sm:justify-start  max-sm:pt-10 "
     >
       {/* left image and social handles*/}
       <motion.div
-        className=" flex-between flex-col gap-10 max-sm:gap-4 ml-[2vw]"
+        className=" flex-between flex-col max-sm:justify-end gap-10 max-sm:gap-4 w-[30%] h-[28vw] max-sm:h-2/5 max-sm:w-full sm:pt-4 pb-2 "
         initial={{ opacity: 0, scale: 0.7 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ ease: "easeInOut", duration: 1, delay: 0.4 }}
       >
         <div
-          className=" rounded-full h-[20vw] w-[20vw] relative -z-10 
+          className=" rounded-full h-[17vw] w-[17vw] relative -z-10 
           max-tablet:h-40 max-tablet:w-40 flex-center 
         "
         >
@@ -44,16 +44,16 @@ const Landing = () => {
           />
         </div>
 
-        <div className="w-5/6 max-sm:w-full flex-col-center gap-2 max-sm:gap-0">
-          <h1 className="text-[1.3vw] max-tablet:text-base px-0 w-full">
+        <div className="w-5/6 max-sm:w-full flex flex-col justify-end items-center gap-2 ">
+          <p className="text-[1.3vw] max-tablet:text-base w-full text-center">
             Hey! 👋, Let&apos;s connect 🚀
-          </h1>
-          <SocialHandles additionalStyle="flex-center gap-6 max-sm:gap-2 rounded-xl  p-4 max-sm:w-40 " />
+          </p>
+          <SocialHandles additionalStyle="flex-center gap-4 max-sm:gap-2 rounded-xl   max-sm:w-40 " />
         </div>
       </motion.div>
 
       {/* right side */}
-      <motion.div className="flex justify-between items-end flex-col max-sm:items-center max-sm:flex-center gap-[1vw]  h-[28vw] max-sm:h-80 mr-2 max-sm:mr-0">
+      <motion.div className="flex justify-between items-end flex-col max-sm:items-center max-sm:flex-center gap-[1vw]  h-[28vw] max-sm:h-80 mr-2 max-sm:mr-0 ">
         <div
           className="flex flex-col text-[10vw]  items-end max-tablet:flex-center 
             max-tablet:text-6xl  font-bold"
