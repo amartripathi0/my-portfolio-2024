@@ -8,8 +8,8 @@ function MainPage() {
   return (
     <div className="relative ">
       <Landing />
-      {/* <About />
-      <Skills />
+      <About />
+      {/* <Skills />
       <Projects />
       <Contact /> */}
     </div>

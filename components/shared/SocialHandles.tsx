@@ -4,7 +4,7 @@ import React from "react";
 
 function SocialHandles({
   additionalStyle,
-  size = 25,
+  size = 20,
 }: {
   additionalStyle?: string;
   size?: number;
@@ -18,7 +18,7 @@ function SocialHandles({
           href={url}
           className="px-2 hover:scale-105 transition-all duration-200 ease-in-out opacity-85 hover:opacity-100"
         >
-          {<SocialIcon className={`h-8 w-8 max-sm:h-7`} />}
+          {<SocialIcon className={`h-6 w-6 `} />}
         </Link>
       ))}
     </div>
