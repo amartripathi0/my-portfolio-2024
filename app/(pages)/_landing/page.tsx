@@ -10,7 +10,7 @@ const Landing = () => {
   return (
     <div
       id="home"
-      className="h-[calc(100vh-7rem)] flex-between  max-tablet:flex-col max-sm:flex-center "
+      className="h-[calc(100vh-5rem)] flex-between  max-tablet:flex-col max-sm:flex-center"
     >
       {/* left image and social handles*/}
       <motion.div
@@ -70,7 +70,7 @@ const Landing = () => {
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ease: "easeInOut", duration: 1, delay: 2 }}
-            className="   max-tablet:m-0  leading-[100px] max-tablet:leading-none
+            className="   max-tablet:m-0  leading-[110px] max-tablet:leading-none
             bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  
             "
           >
@@ -89,7 +89,7 @@ const Landing = () => {
             I&apos;m a{" "}
             <TextUnderline
               text="Full-Stack Web Developer"
-              textStyles="text-purple-300 font-medium hover:text-purple-400 transition-colors duration-500"
+              textStyles="text-purple-300 font-medium hover:text-purple-400 transition-colors duration-500 text-xl max-sm:text-sm"
               underlineStyles="bg-purple-400"
             />
             , turning your ideas into reality.
