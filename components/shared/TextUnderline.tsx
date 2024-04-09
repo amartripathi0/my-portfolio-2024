@@ -47,7 +47,7 @@ const TextUnderline = ({
         }}
         animate={controls}
         transition={{ duration: 0.4, ease: "easeInOut" }}
-        className={`absolute bottom-0 left-0  h-[10%] w-full rounded-2xl drop-shadow-lg ${underlineStyles ? underlineStyles : "bg-white" } `}
+        className={`absolute bottom-0 left-0  h-[8%] w-full rounded-2xl drop-shadow-lg ${underlineStyles ? underlineStyles : "bg-white" } `}
       ></motion.div>
     </motion.div>
   );
