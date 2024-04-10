@@ -8,7 +8,7 @@ import { IoMail } from "react-icons/io5";
 function Contact() {
   return (
     <div
-      className="h-[calc(100vh-7rem)]  pt-28 max-sm:pt-20 flex flex-col  gap-14 relative "
+      className="h-[calc(100vh-5rem)]  pt-10 max-sm:pt-20 flex flex-col  gap-14 relative "
       id="contact-me"
     >
       <motion.div
@@ -17,6 +17,7 @@ function Contact() {
         variants={underlineAnimationVariant}
       >
         <TextUnderline
+          isHeading = {true}
           text="Contact me"
           textStyles="text-[3.2vw] max-sm:text-4xl font-medium "
           containerDivStyles="w-[24%] max-sm:w-full  max-sm:flex-center"
