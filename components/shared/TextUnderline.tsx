@@ -7,13 +7,15 @@ const TextUnderline = ({
   textStyles,
   underlineStyles,
   containerDivStyles,
-  isHeading
+  isHeading,
+  isSkill
 }: {
   text: string;
   textStyles?: string;
   underlineStyles?: string;
   containerDivStyles?: string;
   isHeading ?: boolean
+  isSkill?: boolean
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const controls = useAnimation();
@@ -42,7 +44,7 @@ const TextUnderline = ({
       onHoverEnd={handleHoverEnd}
       className={`inline-block relative ${containerDivStyles}`}
     >
-      <h1 className={`${textStyles} inline-block relative ${isHeading ? "text-[3.2vw]" : "text-sm"}`}>{text}</h1>
+      <h1 className={`${textStyles} inline-block relative ${isHeading ? "text-[3.2vw]" : "text-sm"} ${isSkill && "text-[9px]"}` }>{text}</h1>
       <motion.div
         initial={{
             scaleX:0

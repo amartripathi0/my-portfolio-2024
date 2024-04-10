@@ -9,9 +9,9 @@ function MainPage() {
     <div className="relative ">
       <Landing />
       <About />
-      {/* <Skills />
+      <Skills />
       <Projects />
-      <Contact /> */}
+      <Contact />
     </div>
   );
 }
