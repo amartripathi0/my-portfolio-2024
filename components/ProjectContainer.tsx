@@ -85,10 +85,10 @@ const ProjectContainer = ({
           <div className="flex gap-6 max-sm:gap-2 flex-wrap">
             {projectTools.map((eachTool) => (
               <Badge
-                className=" text-sm max-sm:text-[3vw] max-sm:px-2 max-sm:py-1 p-2 px-4 bg-prelude-900"
+                className="max-sm:text-[3vw] max-sm:px-2 max-sm:py-1 p-2 px-4 bg-prelude-900"
                 key={eachTool}
               >
-                <TextUnderline text={eachTool} />
+                <TextUnderline text={eachTool} textStyles="text-xs"/>
               </Badge>
             ))}
           </div>
