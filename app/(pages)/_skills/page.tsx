@@ -22,7 +22,7 @@ function Skills() {
   return (
     <motion.div
       id="skills"
-      className="h-[calc(100vh-7rem)] pt-10 -mx-40 max-sm:mx-0  flex justify-around  flex-col gap-14 max-sm:gap-0 relative "
+      className="h-[calc(100vh-rem)] pt-10 -mx-28 max-sm:mx-0  flex justify-around  flex-col gap-14 max-sm:gap-0 relative "
     >
       <motion.div
         initial={"initial"}
@@ -30,6 +30,7 @@ function Skills() {
         variants={underlineAnimationVariant}
       >
         <TextUnderline
+          isHeading={true}
           text="Skills"
           textStyles="text-[3.2vw] max-sm:text-4xl font-medium "
           containerDivStyles="w-[10%] max-sm:w-full  max-sm:flex-center mx-40 max-sm:mx-0 "
@@ -48,7 +49,7 @@ function Skills() {
         <motion.div
           ref={targetRef}
           style={{ translateX: leftSlide, opacity: opacity }}
-          className=" flex flex-wrap gap-4  p-10  max-sm:p-2  max-sm:justify-around "
+          className=" flex flex-wrap gap-4  p-10  max-sm:p-2  max-sm:justify-around"
         >
           {frontendSkills.map(({ name, imageSrc }) => (
             <Skill key={name} name={name} imageSrc={imageSrc} />
