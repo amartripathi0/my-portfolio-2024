@@ -25,16 +25,16 @@ function Skills() {
       className="h-[calc(100vh-rem)] pt-10 -mx-28 max-sm:mx-0  flex justify-around  flex-col gap-14 max-sm:gap-0 relative "
     >
       <motion.div
-        initial={"initial"}
-        whileInView={"inView"}
-        variants={underlineAnimationVariant}
+        initial={{ x: -100 }}
+        whileInView={{ x: 110 }}
+        transition={{ duration: 1, bounce: 1 }}
       >
         <TextUnderline
           isHeading={true}
-          text="Skills"
-          textStyles="text-[3.2vw] max-sm:text-4xl font-medium "
-          containerDivStyles="w-[10%] max-sm:w-full  max-sm:flex-center mx-40 max-sm:mx-0 "
-          underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-yellow-500   "
+          text="Skills & Tools"
+          textStyles="max-sm:text-4xl font-medium "
+          containerDivStyles="max-sm:w-full  max-sm:flex-center  max-sm:mx-0 "
+          underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-yellow-500"
         />
       </motion.div>
 

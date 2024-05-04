@@ -31,7 +31,7 @@ const   About = () => {
             isHeading = {true}
             text="About Me"
             textStyles=" max-sm:text-4xl font-medium "
-            containerDivStyles="w-[29%] max-sm:w-full  max-sm:flex-center"
+            containerDivStyles="max-sm:w-full  max-sm:flex-center"
             underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-cyan-600"
           />
         </motion.div>

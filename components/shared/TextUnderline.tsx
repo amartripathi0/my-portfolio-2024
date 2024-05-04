@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 
@@ -8,14 +8,14 @@ const TextUnderline = ({
   underlineStyles,
   containerDivStyles,
   isHeading,
-  isSkill
+  isSkill,
 }: {
   text: string;
   textStyles?: string;
   underlineStyles?: string;
   containerDivStyles?: string;
-  isHeading ?: boolean
-  isSkill?: boolean
+  isHeading?: boolean;
+  isSkill?: boolean;
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const controls = useAnimation();
@@ -25,7 +25,7 @@ const TextUnderline = ({
     controls.start({
       scaleX: 1,
       originX: "left",
-      opacity :1,
+      opacity: 1,
     });
   };
 
@@ -34,7 +34,7 @@ const TextUnderline = ({
     controls.start({
       scaleX: 0,
       originX: "right",
-      opacity :1
+      opacity: 1,
     });
   };
 
@@ -42,16 +42,24 @@ const TextUnderline = ({
     <motion.div
       onHoverStart={handleHoverStart}
       onHoverEnd={handleHoverEnd}
-      className={`inline-block relative ${containerDivStyles}`}
+      className={`inline-block relative w-fit ${containerDivStyles}`}
     >
-      <h1 className={`${textStyles} inline-block relative ${isHeading ? "text-[3.2vw]" : ( isSkill ? "text-[9.1px]" : "text-sm")} ` }>{text}</h1>
+      <h1
+        className={`${textStyles} inline-block relative ${
+          isHeading ? "text-[3.2vw]" : isSkill ? "text-[9.1px]" : "text-sm"
+        } `}
+      >
+        {text}
+      </h1>
       <motion.div
         initial={{
-            scaleX:0
+          scaleX: 0,
         }}
         animate={controls}
         transition={{ duration: 0.4, ease: "easeInOut" }}
-        className={`absolute bottom-0 left-0  h-[8%] w-full rounded-2xl drop-shadow-lg ${underlineStyles ? underlineStyles : "bg-white" } `}
+        className={`absolute bottom-0 left-0  h-[8%] w-full rounded-2xl drop-shadow-lg ${
+          underlineStyles ? underlineStyles : "bg-white"
+        } `}
       ></motion.div>
     </motion.div>
   );
