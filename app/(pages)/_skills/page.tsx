@@ -26,14 +26,14 @@ function Skills() {
     >
       <motion.div
         initial={{ x: -100 }}
-        whileInView={{ x: 110 }}
+        whileInView={{ x: 0 }}
         transition={{ duration: 1, bounce: 1 }}
       >
         <TextUnderline
           isHeading={true}
           text="Skills & Tools"
           textStyles="max-sm:text-4xl font-medium "
-          containerDivStyles="max-sm:w-full  max-sm:flex-center  max-sm:mx-0 "
+          containerDivStyles="max-sm:w-full  max-sm:flex-center  max-sm:mx-0 mx-24"
           underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-yellow-500"
         />
       </motion.div>
