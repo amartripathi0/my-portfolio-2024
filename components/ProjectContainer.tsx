@@ -3,11 +3,11 @@ import {
   CardContainer,
   CardItem,
 } from "@/components/ui/3d-container";
-import { ProjectContainerProps } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "./ui/badge";
 import TextUnderline from "./shared/TextUnderline";
+import { ProjectContainerProps } from "@/types";
 
 const ProjectContainer = ({
   projectDetail,

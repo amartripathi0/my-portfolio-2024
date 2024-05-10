@@ -1,7 +1,7 @@
 import { FaGithub, FaTwitter } from "react-icons/fa";
-import { IconType } from "react-icons";
 import { FaLinkedin } from "react-icons/fa";
-export const navbarItems: { label: string; link: string }[] = [
+import { NavbarItemType, ProjectContainerProps, SocialMediaLinkType } from "@/types";
+export const navbarItems: NavbarItemType[] = [
   {
     label: "home",
     link: "#home",
@@ -11,11 +11,7 @@ export const navbarItems: { label: string; link: string }[] = [
   { label: "projects", link: "#projects" },
 ];
 
-export const socialMediaLinks: {
-  label: string;
-  url: string;
-  icon: IconType;
-}[] = [
+export const socialMediaLinks: SocialMediaLinkType[] = [
   {
     label: "LinkedIn",
     url: "https://www.linkedin.com/in/amar-tripathi",
@@ -32,18 +28,7 @@ export const socialMediaLinks: {
 export const resumeLink: string =
   "https://drive.google.com/file/d/1pzhRz_U4GPml2qQMDWewn6uE0Ugl9N5K/view";
 
-export type ProjectContainerProps = {
-  projectDetail: {
-    topPara: string;
-    parasArray?: string[];
-  };
-  projectTitle: string;
-  projectBio: string;
-  projectGithubLink: string;
-  projectTools: string[];
-  projectDeployedLink?: string;
-  projectThumbnailSrc: string;
-};
+
 export const projectsArray: ProjectContainerProps[] = [
   {
     projectTitle: "Placement Nexus",
