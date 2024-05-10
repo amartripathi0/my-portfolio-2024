@@ -45,7 +45,7 @@ export function ContactMeForm() {
 
         <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
 
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center justify-between gap-4 max-sm:flex-col max-sm:gap-2">
           {
             socialMediaLinks.map(({label , url , icon : SocialIcon}) => (
               <Link
