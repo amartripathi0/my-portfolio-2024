@@ -19,7 +19,7 @@ const clientAction = async (formData: FormData) => {
 };
 export function ContactMeForm() {
   return (
-    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input border">
+    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input">
       <form action={clientAction}>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="name">Name</Label>

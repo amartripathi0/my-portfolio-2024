@@ -40,6 +40,7 @@ const Landing = () => {
             src={"/assets/amar-img.png"}
             alt="Main Profile picture"
             fill
+            sizes="2000"
             className="object-cover  backdrop:blur-sm "
           />
         </div>
