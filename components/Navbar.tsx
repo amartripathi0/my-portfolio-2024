@@ -36,7 +36,7 @@ const Navbar = ({
       <WrapperContainer additionalStyle="flex-center  w-28 max-mobile:w-auto max-sm:px-1 sm:pr-1">
         <Link href={"/"} className="flex-around-center w-full  ">
           <Avatar className="h-2/3 aspect-square">
-            <AvatarImage src={"/assets/profile-photo.jpeg"} alt="profile-pic"/>
+            <AvatarImage src={"/assets/profile-photo.jpeg"} alt="profile-pic" sizes={"2000"}/>
           </Avatar>
           
           <TextUnderline text="Amar" textStyles="font-medium opacity-90 hover:opacity-100 max-mobile:hidden"/>
