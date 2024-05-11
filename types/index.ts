@@ -25,5 +25,5 @@ export type ProjectContainerProps = {
 export type ContactMeFormData = {
     name : string;
     email : string;
-    message ?: string
+    message : string
 }
