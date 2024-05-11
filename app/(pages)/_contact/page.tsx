@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 function Contact() {
   return (
     <div
-      className="h-[calc(100vh-5rem)] pt-10 max-sm:pt-20 flex flex-col  gap-6 relative "
+      className="h-[calc(100vh-4rem)] py-10 max-sm:pt-20 flex flex-col  gap-2 relative "
       id="contact-me"
     >
       <motion.div
@@ -29,6 +29,7 @@ function Contact() {
       "
       />
       <ContactMeForm />
+      <p className="mt-4 flex items-center gap-2"><span className="font-bold text-lg">&copy;</span> 2024 Amar Tripathi</p>
     </div>
   );
 }
