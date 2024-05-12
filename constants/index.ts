@@ -26,7 +26,7 @@ export const socialMediaLinks: SocialMediaLinkType[] = [
 ];
 
 export const resumeLink: string =
-  "https://drive.google.com/file/d/1pzhRz_U4GPml2qQMDWewn6uE0Ugl9N5K/view";
+  "https://drive.google.com/file/d/1A79bw16EdzywBRp93TCnhfF6rKUghXUE/view";
 
 
 export const projectsArray: ProjectContainerProps[] = [
