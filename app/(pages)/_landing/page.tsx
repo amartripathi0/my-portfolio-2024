@@ -41,6 +41,7 @@ const Landing = () => {
             alt="Main Profile picture"
             fill
             sizes="2000"
+            priority
             className="object-cover  backdrop:blur-sm "
           />
         </div>
