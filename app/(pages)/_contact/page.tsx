@@ -29,7 +29,7 @@ function Contact() {
       "
       />
       <ContactMeForm />
-      <p className="mt-4 flex items-center gap-2"><span className="font-bold text-lg">&copy;</span> 2024 Amar Tripathi</p>
+      <p className="mt-4 max-sm:text-sm flex items-center gap-2 max-sm:gap-1"><span className="font-bold text-lg">&copy;</span> 2024 Amar Tripathi</p>
     </div>
   );
 }
