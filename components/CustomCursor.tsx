@@ -3,16 +3,37 @@ import { useEffect, useRef, useState } from "react";
 
 function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
+  // console.log(cursorRef.current?.classList);
 
   const [currentCursorPos, setCurrentCursorPos] = useState({ x: -20, y: -20 });
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setCurrentCursorPos({ x: e.clientX - 10, y: e.clientY - 10 });
     };
-    window.addEventListener("mousemove", handleMouseMove);
+    const handleMouseLeave = () => {
+      console.log("mouseleave");
+      
+      if (cursorRef.current) {
+        cursorRef.current.classList.remove("opacity-100");
+        cursorRef.current.classList.add("opacity-0");
+      }
+    };
 
+    const handleMouseEnter = () => {
+      console.log("mouseenter");
+
+      if (cursorRef.current) {
+        cursorRef.current.classList.remove("opacity-0");
+        cursorRef.current.classList.add("opacity-100");
+      }
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mouseleave", handleMouseLeave);
+    window.addEventListener("mouseenter", handleMouseEnter);
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseleave", handleMouseLeave);
+      window.removeEventListener("mouseenter", handleMouseEnter);
     };
   }, []);
 

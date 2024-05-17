@@ -6,7 +6,7 @@ import WrapperContainer from "./shared/WrapperContainer";
 import Link from "next/link";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseOutline } from "react-icons/io5";
-import { easeInOut, motion, stagger } from "framer-motion";
+import { easeInOut, motion, spring, stagger } from "framer-motion";
 import useScrollTop from "@/hooks/use-scroll-top";
 import usePageScroll from "@/hooks/use-page-scroll";
 import LocomotiveScroll from "locomotive-scroll";
@@ -36,10 +36,17 @@ const Navbar = ({
       <WrapperContainer additionalStyle="flex-center  w-28 max-mobile:w-auto max-sm:px-1 sm:pr-1">
         <Link href={"/"} className="flex-around-center w-full  ">
           <Avatar className="h-2/3 aspect-square">
-            <AvatarImage src={"/assets/profile-photo.jpeg"} alt="profile-pic" sizes={"2000"}/>
+            <AvatarImage
+              src={"/assets/profile-photo.jpeg"}
+              alt="profile-pic"
+              sizes={"2000"}
+            />
           </Avatar>
-          
-          <TextUnderline text="Amar" textStyles="font-medium opacity-90 hover:opacity-100 max-mobile:hidden"/>
+
+          <TextUnderline
+            text="Amar"
+            textStyles="font-medium opacity-90 hover:opacity-100 max-mobile:hidden"
+          />
         </Link>
       </WrapperContainer>
 
@@ -49,7 +56,9 @@ const Navbar = ({
           <Link
             key={item.label}
             href={item.link}
-            onClick={() => locomotiveScroll.scrollTo(item.link, {offset : -83} )}
+            onClick={() =>
+              locomotiveScroll.scrollTo(item.link, { offset: -83 })
+            }
             className={`${
               pageSectionOnViewport === item.label
                 ? "transition-all duration-300 ease-in-out"
@@ -57,17 +66,15 @@ const Navbar = ({
             } 
            relative z-30 w-1/3 h-3/4 font-medium hover:bg-slate-700  flex-center rounded-full transition-all duration-150`}
           >
-            { pageSectionOnViewport === item.label && (
-            <motion.span
-              layoutId="bubble"
-              className="bg-gradient-to-r from-indigo-800 to-violet-500  h-full w-full absolute top-0 left-0 -z-10 "
-              style={{ borderRadius: 9999 }}
-              transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-            >
-              
-            </motion.span>
+            {pageSectionOnViewport === item.label && (
+              <motion.span
+                layoutId="bubble"
+                className="bg-gradient-to-r from-indigo-800 to-violet-500  h-full w-full absolute top-0 left-0 -z-10 "
+                style={{ borderRadius: 9999 }}
+                transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+              ></motion.span>
             )}
-            <TextUnderline text={item.label}/>
+            <TextUnderline text={item.label} />
           </Link>
         ))}
       </WrapperContainer>
@@ -78,11 +85,15 @@ const Navbar = ({
         <WrapperContainer>
           <Link
             href={"#contact-me"}
-            onClick={() => locomotiveScroll.scrollTo("#contact-me", {offset : 0} )}
-
-            className={`${pageSectionOnViewport === 'contact-me' && "shadow-md shadow-violet-500 rounded-full"} font-medium flex-center  w-28 py-2 max-tablet:py-3 max-sm:w-32 max-sm:px-2 `}
+            onClick={() =>
+              locomotiveScroll.scrollTo("#contact-me", { offset: 0 })
+            }
+            className={`${
+              pageSectionOnViewport === "contact-me" &&
+              "shadow-md shadow-violet-500 rounded-full"
+            } font-medium flex-center  w-28 py-2 max-tablet:py-3 max-sm:w-32 max-sm:px-2 `}
           >
-            <TextUnderline text="Contact Me"/>
+            <TextUnderline text="Contact Me" />
           </Link>
         </WrapperContainer>
 
@@ -110,27 +121,29 @@ const Navbar = ({
               />
 
               {navbarItems.map((item) => (
-                <Link
-                  scroll={true}
-                  key={item.label}
-                  href={item.link}
+                <motion.div
+                key={item.label}
+                initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1,transition : spring }}
+                  transition={{ease: "easeInOut", duration: 1 }}
                   className={`${
                     pageSectionOnViewport === item.label
-                      ? "bg-gradient-to-r bg-violet-700"
-                      : "bg-rum-800"
+                      ? "bg-gradient-to-r from-indigo-800 to-violet-500"
+                      : "bg-slate-900"
                   }
-                  text-xl w-2/3 p-4 h-12 hover:bg-rum-600 border-rum-500 flex-center rounded-full transition-all duration-150
+                  text-sm w-2/3 p-4 h-12  hover:bg-rum-600 border-rum-500 flex-center rounded-full
 
-            `}
+                 `}
                 >
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.7 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ ease: "easeInOut", duration: 1 }}
+                  <Link
+                    scroll={true}
+                    href={item.link}
+                    onClick={() => setMenubarOpen((prev) => !prev)}                  
+
                   >
                     {item.label}
-                  </motion.div>
-                </Link>
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </motion.div>
