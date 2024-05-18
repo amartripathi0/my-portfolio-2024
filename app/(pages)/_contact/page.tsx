@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 function Contact() {
   return (
     <div
-      className="h-[calc(100vh-4rem)] max-sm:h-[calc(100vh-3rem)] max-sm:pt-24  py-10 flex flex-col  gap-2 max-sm:gap-4 relative "
+      className="h-[calc(100vh-4rem)] max-sm:h-[calc(100vh-3rem)] max-sm:pt-10  py-10 flex flex-col  gap-2 max-sm:gap-4 relative "
       id="contact-me"
     >
       <motion.div

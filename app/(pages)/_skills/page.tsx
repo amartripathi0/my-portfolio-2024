@@ -22,7 +22,7 @@ function Skills() {
   return (
     <motion.div
       id="skills"
-      className="h-[calc(100vh-rem)] pt-10 -mx-28 max-sm:mx-0  flex justify-around  flex-col gap-14 max-sm:gap-0 relative "
+      className="h-[calc(100vh-rem)] pt-10 -mx-28 max-sm:mx-0 max-sm:pt-20  flex justify-around  flex-col gap-14 max-sm:gap-10 relative "
     >
       <motion.div
         initial={{ x: -100 }}
