@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 function Contact() {
   return (
     <div
-      className="h-[calc(100vh-4rem)] py-10 max-sm:pt-20 flex flex-col  gap-2 relative "
+      className="h-[calc(100vh-4rem)] max-sm:h-[calc(100vh-3rem)] max-sm:pt-24  py-10 flex flex-col  gap-2 max-sm:gap-4 relative "
       id="contact-me"
     >
       <motion.div
@@ -26,7 +26,8 @@ function Contact() {
       </motion.div>
       <IndigoBlurBackground
         height="1/5"
-        additionalStyles="left-10 max-sm:left-1/3"
+        mobHeight="5"
+        additionalStyles="left-10 max-sm:left-1/3 -max-sm:top-20"
       />
 
       {/* <div
@@ -40,6 +41,6 @@ function Contact() {
       </p>
     </div>
   );
-}
+} 
 
 export default Contact;
