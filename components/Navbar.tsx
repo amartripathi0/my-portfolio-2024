@@ -124,8 +124,9 @@ const Navbar = ({
                 <motion.div
                 key={item.label}
                 initial={{ opacity: 0, scale: 0.5 }}
-                  animate={{ opacity: 1, scale: 1,transition : spring }}
-                  transition={{ease: "easeInOut", duration: 1 }}
+                  animate={{ opacity: 1, scale: 1}}
+                  transition={{ease: "easeInOut",duration : 1.5,  staggerChildren : 1 , dealay : 1 
+                   }}
                   className={`${
                     pageSectionOnViewport === item.label
                       ? "bg-gradient-to-r from-indigo-800 to-violet-500"
@@ -134,6 +135,7 @@ const Navbar = ({
                   text-sm w-2/3 p-4 h-12  hover:bg-rum-600 border-rum-500 flex-center rounded-full
 
                  `}
+                 
                 >
                   <Link
                     scroll={true}

@@ -7,6 +7,7 @@ import Link from "next/link";
 import { socialMediaLinks } from "@/constants";
 import { sendEmail } from "@/actions/sendEmail";
 import { toast } from "sonner";
+import { Button } from "./ui/moving-border";
 
 const clientAction = async (formData: FormData) => {
   const emailResponse = await sendEmail(formData);
@@ -19,7 +20,12 @@ const clientAction = async (formData: FormData) => {
 };
 export function ContactMeForm() {
   return (
-    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input">
+    <Button 
+    duration={10000}
+    borderClassName="h-12 w-12 blur-[24px]"
+    borderRadius="6px"
+    containerClassName="mx-auto border border-slate-800 p-6 md:p-8 shadow-input">
+
       <form action={clientAction}>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="name">Name</Label>
@@ -46,7 +52,8 @@ export function ContactMeForm() {
           <textarea
             id="message"
             name="message"
-            className="w-full min-h-20 border-none bg-zinc-800 text-white shadow-input rounded-md px-3 py-2 text-sm  file:border-0 file:bg-transparent 
+            placeholder="Please enter your message here"
+            className="w-full min-h-20 border-none bg-zinc-800 text-white shadow-input rounded-[6px] px-3 py-2 text-sm  file:border-0 file:bg-transparent 
           file:text-sm file:font-medium placeholder:text-neutral-400 dark:placeholder-text-neutral-600 
           focus-visible:outline-none focus-visible:ring-[2px]  focus-visible:ring-neutral-400 dark:focus-visible:ring-neutral-600
            disabled:cursor-not-allowed disabled:opacity-50
@@ -56,14 +63,14 @@ export function ContactMeForm() {
         </LabelInputContainer>
 
         <button
-          className="my-8 bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+          className="my-6 bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
           type="submit"
         >
           Let&apos;s Connect
           <BottomGradient />
         </button>
 
-        <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
+        <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-6 h-[1px] w-full" />
 
         <div className="flex items-center justify-between gap-4 max-sm:flex-col max-sm:gap-2">
           {socialMediaLinks.map(({ label, url, icon: SocialIcon }) => (
@@ -79,16 +86,16 @@ export function ContactMeForm() {
           ))}
         </div>
       </form>
-    </div>
+    </Button>
   );
 }
 
 const BottomGradient = () => {
   return (
-    <>
+    <div>
       <span className="group-hover/btn:opacity-100 block transition duration-500 opacity-0 absolute h-px w-full -bottom-px inset-x-0 bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
       <span className="group-hover/btn:opacity-100 blur-sm block transition duration-500 opacity-0 absolute h-px w-1/2 mx-auto -bottom-px inset-x-10 bg-gradient-to-r from-transparent via-indigo-500 to-transparent" />
-    </>
+    </div>
   );
 };
 

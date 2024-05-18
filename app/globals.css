@@ -41,7 +41,13 @@ body.on-not-scroll::-webkit-scrollbar {
   border-radius: 10px;
 }
 
-
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+    background-color: transparent !important;
+}
 @layer utilities {
   .flex-center {
     @apply flex justify-center items-center;
