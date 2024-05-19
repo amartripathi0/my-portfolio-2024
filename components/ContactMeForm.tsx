@@ -21,8 +21,8 @@ const clientAction = async (formData: FormData) => {
 export function ContactMeForm() {
   return (
     <Button 
-    duration={10000}
-    borderClassName="h-12 w-12 blur-[24px]"
+    duration={15000}
+    borderClassName="h-16 w-16 blur-[20px]"
     borderRadius="6px"
     containerClassName="mx-auto border border-slate-800 p-6 max-sm:w-full shadow-input">
 
