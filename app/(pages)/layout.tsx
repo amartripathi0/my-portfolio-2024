@@ -5,8 +5,10 @@ import React, { useEffect, useState } from "react";
 import "../globals.css";
 const Home = ({ children }: { children: React.ReactNode }) => {
   const [locomotiveScroll, setLocomotiveScroll] = useState<LocomotiveScroll>();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
       const scroll = new LocomotiveScroll({ scrollbarClass: "scrollbar"  } );
@@ -15,8 +17,8 @@ const Home = ({ children }: { children: React.ReactNode }) => {
     })();
   }, []);
 
-  return (
-    <div className={`relative} max-sm:overflow-x-hidden`}>
+  return  mounted && (
+    <div className={`relative max-sm:overflow-x-hidden`}>
       {locomotiveScroll && <Navbar locomotiveScroll={locomotiveScroll} />}
       <div className="px-10 mx-28 max-sm:mx-0 max-sm:px-4 pt-20 max-sm:pt-20">
         {children}
