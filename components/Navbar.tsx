@@ -26,8 +26,8 @@ const Navbar = ({
       initial={{ opacity: 0, y: -15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ ease: "easeInOut", duration: 1 }}
-      className={`flex-between fixed top-0 left-0 w-screen h-20
-    px-10 max-mobile:px-4 py-2 max-mobile:py-2 backdrop-blur-md z-50 ${
+      className={`flex-between fixed top-0 left-0 w-screen h-20 max-tablet:h-[70px]
+    px-10 max-mobile:px-4 py-2 max-mobile:py-1 backdrop-blur-md z-50 ${
       scrolled && "border-b border-violet-700"
     }
     `}
@@ -82,7 +82,7 @@ const Navbar = ({
       <div className="flex items-center gap-3 relative">
         {/* Contact Me */}
 
-        <WrapperContainer>
+        <WrapperContainer  additionalStyle="max-tablet:hidden">
           <Link
             href={"#contact-me"}
             onClick={() =>
@@ -100,33 +100,34 @@ const Navbar = ({
         {/* Hamberger menubar */}
         <AiOutlineMenu
           className="tablet:hidden"
-          size={30}
+          size={36}
           onClick={() => setMenubarOpen((prev) => !prev)}
         />
 
         {menubarOpen && (
-          <motion.div
-            initial={{ opacity: 0, x: "100vw" }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ ease: "easeInOut", duration: 0.5 }}
-            className="w-screen h-screen absolute -top-2 -right-4  bg-[#0C0404]  bg-opacity-75 
-            
-              "
+          <div
+            className="w-screen h-screen absolute -top-2 -right-4  bg-[#0C0404]  bg-opacity-75"
           >
-            <div className="flex-col-center justify-center gap-10 rounded-3xl px-6 w-full h-1/2 mt-32 ">
+            <motion.div 
+            animate={{   transition: {
+                staggerChildren : 0.5, delayChildren:0.5
+            }}}
+            className="flex-col-center justify-center gap-10 rounded-3xl px-6 w-full h-1/2 mt-32 "
+            >
               <IoCloseOutline
-                className="absolute top-5 right-5"
+                className="absolute top-1 right-3 bg-slate-900 rounded-full text-purple-500 border border-gray-700"
                 onClick={() => setMenubarOpen((prev) => !prev)}
-                size={35}
+                size={45}
               />
 
               {navbarItems.map((item) => (
                 <motion.div
                 key={item.label}
-                initial={{ opacity: 0, scale: 0.5 }}
-                  animate={{ opacity: 1, scale: 1}}
-                  transition={{ease: "easeInOut",duration : 1.5,  staggerChildren : 1 , dealay : 1 
-                   }}
+                initial={{ opacity: 0, x: -60 }}
+                animate={{ opacity: 1, x: 0, transition:{
+                  duration:0.5, staggerChildren:0.4, 
+                } }}
+                
                   className={`${
                     pageSectionOnViewport === item.label
                       ? "bg-gradient-to-r from-indigo-800 to-violet-500"
@@ -147,8 +148,8 @@ const Navbar = ({
                   </Link>
                 </motion.div>
               ))}
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         )}
       </div>
     </motion.nav>
