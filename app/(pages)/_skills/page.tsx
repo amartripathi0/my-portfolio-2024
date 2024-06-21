@@ -13,7 +13,7 @@ function Skills() {
 
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ["end", "start"],
+    offset: ["start 0.8", "start end"]
   });
 
   const leftSlide = useTransform(scrollYProgress, [0, 10], ["0%", "-100vw"]);
@@ -45,11 +45,11 @@ function Skills() {
       "
       />
 
-      <div className="text-sm max-sm:text-sm max-sm:px-5 text-justify max-sm:h-5/6 max-sm:rounded-3xl w-full  overflow-hidden  flex items-center justify-evenly  max-sm:justify-end   flex-col relative">
+      <div className="text-sm max-sm:text-sm max-sm:px-5 text-justify max-sm:h-5/6 max-sm:rounded-3xl w-full  overflow-hidden  flex items-center gap-20  max-sm:justify-end   flex-col relative">
         <motion.div
           ref={targetRef}
           style={{ translateX: leftSlide, opacity: opacity }}
-          className=" flex flex-wrap gap-4  p-10  max-sm:p-2  max-sm:justify-around"
+          className=" flex flex-wrap gap-4  px-10  max-sm:p-2  max-sm:justify-around"
         >
           {frontendSkills.map(({ name, imageSrc }) => (
             <Skill key={name} name={name} imageSrc={imageSrc} />
@@ -58,7 +58,7 @@ function Skills() {
         <motion.div
           ref={targetRef}
           style={{ translateX: rightSlide, opacity: opacity }}
-          className=" flex flex-wrap gap-4  p-10  max-sm:p-2  max-sm:justify-around -max-sm:ml-10"
+          className=" flex flex-wrap gap-4  px-10  max-sm:p-2  max-sm:justify-around -max-sm:ml-10"
         >
           {backendSkills.map(({ name, imageSrc }) => (
             <Skill key={name} name={name} imageSrc={imageSrc} />
