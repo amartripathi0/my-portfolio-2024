@@ -4,7 +4,6 @@ import TextUnderline from "@/components/shared/TextUnderline";
 import {
   backendSkills,
   frontendSkills,
-  underlineAnimationVariant,
 } from "@/constants";
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
@@ -13,12 +12,12 @@ function Skills() {
 
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ["start 0.8", "start end"]
+    offset: ["start 0.68", "start end"]
   });
 
-  const leftSlide = useTransform(scrollYProgress, [0, 10], ["0%", "-150vw"]);
-  const rightSlide = useTransform(scrollYProgress, [0, 10], ["0%", "150vw"]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+  const leftSlide = useTransform(scrollYProgress, [0, 10], ["0%", "-100vw"]);
+  const rightSlide = useTransform(scrollYProgress, [0, 10], ["0%", "100vw"]);
+  const opacity = useTransform(scrollYProgress, [0.3, 1], [1, 0]);
   return (
     <motion.div
       id="skills"
@@ -45,7 +44,7 @@ function Skills() {
       "
       />
 
-      <div className="text-sm max-sm:text-sm max-sm:px-5 text-justify max-sm:h-5/6 max-sm:rounded-3xl w-full  overflow-hidden flex items-center  gap-20  max-sm:justify-end  flex-col relative">
+      <div className="h-full text-sm max-sm:text-sm max-sm:px-5 text-justify max-sm:h-5/6 max-sm:rounded-3xl w-full  overflow-hidden flex items-center  gap-20  max-sm:justify-end  flex-col relative">
         <motion.div
           ref={targetRef}
           style={{ translateX: leftSlide, opacity: opacity }}
