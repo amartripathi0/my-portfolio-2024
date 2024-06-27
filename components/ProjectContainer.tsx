@@ -29,7 +29,7 @@ const ProjectContainer = ({
           data-scroll-sticky
           containerClassName="sm:sticky sm:top-40 max-sm:h-full max-sm:w-full w-5/6 m-auto"
         >
-          <CardBody className="bg-slate-900 relative group/card h-full w-full rounded-xl p-6 border  ">
+          <CardBody className="bg-gradient-to-b from-zinc-950 via-indigo-950 relative group/card h-full w-full rounded-xl p-6 border border-violet-950  ">
             <CardItem
               translateZ="50"
               className="text-2xl max-sm:text-xl font-bold text-white"
@@ -82,13 +82,13 @@ const ProjectContainer = ({
         <div className="flex flex-col gap-6 p-10 pt-20 max-sm:p-2 pr-0 rounded-xl shadow-md h-full max-sm:text-sm text-justify">
           <p>{projectDetail.topPara}</p>
 
-          <div className="flex gap-6 max-sm:gap-2 flex-wrap">
+          <div className="flex gap-4 max-sm:gap-2 flex-wrap">
             {projectTools.map((eachTool) => (
               <Badge
                 className="max-sm:text-[3vw] max-sm:px-2 max-sm:py-1 p-2 px-4 bg-prelude-900"
                 key={eachTool}
               >
-                <TextUnderline text={eachTool} textStyles="text-xs"/>
+                <TextUnderline text={eachTool} textStyles="text-xs" />
               </Badge>
             ))}
           </div>
