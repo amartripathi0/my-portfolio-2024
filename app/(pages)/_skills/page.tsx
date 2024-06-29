@@ -31,7 +31,7 @@ function Skills() {
         <TextUnderline
           isHeading={true}
           text="Skills & Tools"
-          textStyles="max-sm:text-4xl font-medium "
+          textStyles="max-sm:text-4xl font-bold"
           containerDivStyles="max-sm:w-full  max-sm:flex-center  max-sm:mx-0 mx-24"
           underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-yellow-500"
         />
