@@ -19,15 +19,15 @@ const ProjectContainer = ({
   projectTools,
 }: ProjectContainerProps) => {
   return (
-    <div className="flex justify-between min-h-[calc(100vh-5rem)] w-full border-l border-purple-600 max-sm:flex-col max-sm:flex-center max-sm:mt-10 max-sm:gap-10 ">
+    <div className="flex justify-between min-h-[calc(100vh-5rem)] w-full border-l border-purple-600 max-sm:flex-col max-sm:flex-center max-sm:mt-10 max-sm:gap-10 mt-10">
       {/* Sticky Image */}
 
-      <div className="w-[30%] sm:sticky sm:top-40  max-sm:w-[90%]  max-sm:h-96">
+      <div className="w-[30%] sm:sticky sm:top-40 max-sm:w-[90%] max-sm:h-96">
         {/* <IndigoVioletBlur /> */}
 
         <CardContainer
           data-scroll-sticky
-          containerClassName="sm:sticky sm:top-40 max-sm:h-full max-sm:w-full w-5/6 m-auto"
+          containerClassName="sm:sticky sm:top-40 max-sm:h-full max-sm:w-full w-5/6 m-auto py-6"
         >
           <CardBody className="bg-gradient-to-b from-zinc-950 via-indigo-950 relative group/card h-full w-full rounded-xl p-6 border border-violet-950  ">
             <CardItem
@@ -78,8 +78,8 @@ const ProjectContainer = ({
       </div>
 
       {/* Project Details */}
-      <div className="w-[70%] max-sm:w-full flex flex-col text-sm ">
-        <div className="flex flex-col gap-6 p-10 pt-20 max-sm:p-2 pr-0 rounded-xl shadow-md h-full max-sm:text-sm text-justify">
+      <div className="w-[70%] max-sm:w-full flex flex-col text-sm">
+        <div className="flex flex-col gap-6 p-10 pt-6 max-sm:p-2 pr-0 rounded-xl shadow-md h-full max-sm:text-sm text-justify">
           <p>{projectDetail.topPara}</p>
 
           <div className="flex gap-4 max-sm:gap-2 flex-wrap">
@@ -88,7 +88,7 @@ const ProjectContainer = ({
                 className="max-sm:text-[3vw] max-sm:px-2 max-sm:py-1 p-2 px-4 bg-prelude-900"
                 key={eachTool}
               >
-                <TextUnderline text={eachTool} textStyles="text-xs" />
+                <TextUnderline text={eachTool} textStyles="text-xs"/>
               </Badge>
             ))}
           </div>
