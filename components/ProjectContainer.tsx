@@ -8,6 +8,7 @@ import Link from "next/link";
 import { Badge } from "./ui/badge";
 import TextUnderline from "./shared/TextUnderline";
 import { ProjectContainerProps } from "@/types";
+import { FaGithub } from "react-icons/fa";
 
 const ProjectContainer = ({
   projectDetail,
@@ -48,7 +49,7 @@ const ProjectContainer = ({
                 src={projectThumbnailSrc}
                 height="1000"
                 width="1000"
-                className="h-3/5 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                className="h-3/5 w-full object-cover rounded-[5px] group-hover/card:shadow-xl opacity-90 hover:opacity-100 transition-opacity duration-100"
                 alt="thumbnail"
               />
             </CardItem>
@@ -58,9 +59,10 @@ const ProjectContainer = ({
                 as={Link}
                 href={projectGithubLink}
                 target="__blank"
-                className="px-4 py-2 rounded-xl text-sm font-normal  max-sm:text-xs  dark:text-white"
+                className="flex items-center gap-1 px-4 py-2 rounded-xl text-sm font-normal  max-sm:text-xs  dark:text-white opacity-80 hover:opacity-100"
               >
                 Source Code
+                <FaGithub/>
               </CardItem>
 
               <CardItem
@@ -68,9 +70,9 @@ const ProjectContainer = ({
                 as={Link}
                 href={projectDeployedLink}
                 target="__blank"
-                className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-sm  max-sm:text-xs font-bold"
+                className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-sm  max-sm:text-xs font-bold opacity-80 hover:opacity-100"
               >
-                See it live →
+                See it live ↗
               </CardItem>
             </div>
           </CardBody>
