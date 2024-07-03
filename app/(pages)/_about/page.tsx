@@ -107,18 +107,18 @@ const   About = () => {
         whileInView={"inView"}
         variants={fadeAnimationVariant}
         viewport={{ once: true }}
-        className="h-4/5 rounded-4xl w-1/3 flex-center flex-col gap-6 relative  
-          max-tablet:h-40 max-tablet:w-40 flex-center max-sm:hidden
+        className="rounded-4xl w-[30%] flex-center flex-col gap-6 relative  
+          max-tablet:h-40 max-tablet:w-40 max-sm:hidden mb-14
         "
       >
         <IndigoBlurBackground height="1/2" />
 
         <Image
-          src={"/assets/amar-image-2.jpg"}
+          src={"/assets/amarImgPool2.jpg"}
           alt="Main Profile picture"
-          height={1000}
-          width={1000}
-          className="object-cover h-1/2 w-1/2 aspect-auto rounded-3xl z-10  backdrop:blur-sm opacity-80 max-sm:hidden"
+          height={2844}
+          width={1680}
+          className="object-cover w-[65%] aspect-auto rounded-xl z-10  backdrop:blur-sm opacity-80 max-sm:hidden"
         />
 
         <motion.div
