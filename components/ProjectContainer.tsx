@@ -59,7 +59,7 @@ const ProjectContainer = ({
                 as={Link}
                 href={projectGithubLink}
                 target="__blank"
-                className="flex items-center gap-1 px-4 py-2 rounded-xl text-sm font-normal  max-sm:text-xs  dark:text-white opacity-80 hover:opacity-100"
+                className="flex items-center gap-1 px-3 py-2 rounded-xl text-sm font-normal  max-sm:text-xs  dark:text-white opacity-80 hover:opacity-100"
               >
                 Source Code
                 <FaGithub/>
