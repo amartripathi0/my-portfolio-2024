@@ -37,12 +37,12 @@ const Landing = () => {
           ></motion.div>
 
           <Image
-            src={"/assets/amar-img.png"}
+            src={"/assets/amarHome.jpg"}
             alt="Main Profile picture"
+            sizes="3464"
             fill
-            sizes="2000"
             priority
-            className="object-cover  backdrop:blur-sm "
+            className="rounded-full"
           />
         </div>
 

@@ -37,7 +37,7 @@ const Navbar = ({
         <Link href={"/"} className="flex-around-center w-full  ">
           <Avatar className="h-2/3 aspect-square">
             <AvatarImage
-              src={"/assets/profile-photo.jpeg"}
+              src={"/assets/amar-img.png"}
               alt="profile-pic"
               sizes={"2000"}
             />
