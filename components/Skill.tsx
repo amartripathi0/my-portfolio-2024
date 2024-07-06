@@ -12,8 +12,8 @@ function Skill({ name, imageSrc }: { name: string; imageSrc: string }) {
       <Image
         src={imageSrc}
         alt={name}
-        width={1000}
-        height={1000}
+        width={200}
+        height={200}
         className="h-2/3 max-sm:h-full object-contain aspect square rounded-2xl"
       />
       <Badge className="max-sm:hidden h-6  w-full flex-center bg-prelude-900" >
