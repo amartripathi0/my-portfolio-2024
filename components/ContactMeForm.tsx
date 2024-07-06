@@ -20,11 +20,11 @@ const clientAction = async (formData: FormData) => {
 };
 export function ContactMeForm() {
   return (
-    <Button 
-    duration={15000}
-    borderClassName="h-16 w-16 blur-[20px]"
-    borderRadius="6px"
-    containerClassName="mx-auto border border-slate-800 p-6 max-sm:w-full shadow-input">
+    <Button
+      duration={15000}
+      borderClassName="h-16 w-16 blur-[20px]"
+      borderRadius="6px"
+      containerClassName="mx-auto border border-slate-800 p-6 max-sm:w-full shadow-input">
 
       <form action={clientAction}>
         <LabelInputContainer className="mb-4">
@@ -53,12 +53,12 @@ export function ContactMeForm() {
             id="message"
             name="message"
             placeholder="Please enter your message here"
-            className="w-full min-h-20 border-none bg-zinc-800 text-white shadow-input rounded-[6px] px-3 py-2 text-sm  file:border-0 file:bg-transparent 
+            className="w-full min-h-20 max-h-[135px] max-sm:max-h-24 border-none bg-zinc-800 text-white shadow-input rounded-[6px] px-3 py-2 text-sm  file:border-0 file:bg-transparent 
           file:text-sm file:font-medium placeholder:text-neutral-400 dark:placeholder-text-neutral-600 
           focus-visible:outline-none focus-visible:ring-[2px]  focus-visible:ring-neutral-400 dark:focus-visible:ring-neutral-600
-           disabled:cursor-not-allowed disabled:opacity-50
-           dark:shadow-[0px_0px_1px_1px_var(--neutral-700)]
-           group-hover/input:shadow-none transition duration-400"
+          disabled:cursor-not-allowed disabled:opacity-50
+          dark:shadow-[0px_0px_1px_1px_var(--neutral-700)]
+          group-hover/input:shadow-none transition duration-400"
           ></textarea>
         </LabelInputContainer>
 
