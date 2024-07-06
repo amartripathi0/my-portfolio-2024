@@ -1,16 +1,16 @@
-"use client";
-import ProjectContainer from "@/components/ProjectContainer";
-import TextUnderline from "@/components/shared/TextUnderline";
-import { projectsArray, underlineAnimationVariant } from "@/constants";
-import { motion } from "framer-motion";
+'use client'
+import ProjectContainer from '@/components/ProjectContainer'
+import TextUnderline from '@/components/shared/TextUnderline'
+import { projectsArray, underlineAnimationVariant } from '@/constants'
+import { motion } from 'framer-motion'
 
 function Projects() {
   return (
     <div id="projects" className="min-h-screen " data-scroll-container>
       <div className="pt-10 shadow-md relative">
         <motion.div
-          initial={"initial"}
-          whileInView={"inView"}
+          initial={'initial'}
+          whileInView={'inView'}
           variants={underlineAnimationVariant}
         >
           <TextUnderline
@@ -33,7 +33,7 @@ function Projects() {
             projectGithubLink,
             projectDeployedLink,
             projectDetail,
-            projectTools
+            projectTools,
           }) => (
             <ProjectContainer
               key={projectTitle}
@@ -45,14 +45,14 @@ function Projects() {
               projectDeployedLink={projectDeployedLink}
               projectDetail={projectDetail}
             />
-          )
+          ),
         )}
       </div>
     </div>
-  );
+  )
 }
 
-export default Projects;
+export default Projects
 
 const CyanVioletBlur = () => {
   return (
@@ -61,5 +61,5 @@ const CyanVioletBlur = () => {
         bg-gradient-to-r from-cyan-400 to-violet-600
       "
     />
-  );
-};
+  )
+}

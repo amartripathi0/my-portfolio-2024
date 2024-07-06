@@ -1,17 +1,17 @@
-"use client";
-import IndigoBlurBackground from "@/components/shared/IndigoBlurBackground";
-import TextUnderline from "@/components/shared/TextUnderline";
-import { Button } from "@/components/ui/button";
+'use client'
+import IndigoBlurBackground from '@/components/shared/IndigoBlurBackground'
+import TextUnderline from '@/components/shared/TextUnderline'
+import { Button } from '@/components/ui/button'
 import {
   fadeAnimationVariant,
   resumeLink,
   underlineAnimationVariant,
-} from "@/constants";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
-import { FaArrowCircleRight } from "react-icons/fa";
-const   About = () => {
+} from '@/constants'
+import { motion } from 'framer-motion'
+import Image from 'next/image'
+import Link from 'next/link'
+import { FaArrowCircleRight } from 'react-icons/fa'
+const About = () => {
   return (
     <div
       id="about-me"
@@ -23,12 +23,12 @@ const   About = () => {
         <IndigoBlurBackground height="1/5" additionalStyles="max-sm:left-1/4" />
         {/* About Me heading */}
         <motion.div
-          initial={"initial"}
-          whileInView={"inView"}
+          initial={'initial'}
+          whileInView={'inView'}
           variants={underlineAnimationVariant}
         >
           <TextUnderline
-            isHeading = {true}
+            isHeading={true}
             text="About Me"
             textStyles=" max-sm:text-4xl font-bold"
             containerDivStyles="max-sm:w-full  max-sm:flex-center"
@@ -38,8 +38,8 @@ const   About = () => {
 
         {/* About me paragraphs */}
         <motion.div
-          initial={"beforeView"}
-          whileInView={"inView"}
+          initial={'beforeView'}
+          whileInView={'inView'}
           variants={fadeAnimationVariant}
           viewport={{ once: true }}
           className="text-base p-4 w-full max-sm:text-sm max-sm:px-2 text-justify  flex-col flex-center gap-4"
@@ -74,37 +74,36 @@ const   About = () => {
           </p>
 
           <motion.div
-          initial={{
-            y: 0,
-          }}
-          animate={{
-            y: 20,
-          }}
-          transition={{
-            duration: 0.8,
-            repeat: Infinity,
-            repeatType: "reverse",
-            ease: "easeInOut",
-          }}
-
-          className="sm:hidden"
-        >
-          <Link href={resumeLink} target="_blank" >
-            <Button className="relative inline-flex h-16 w-40 max-sm:h-12 max-sm:w-32 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-              <span className="flex justify-around  h-full w-full cursor-pointer items-center  rounded-full bg-slate-950 px-3 py-1 text-lg max-sm:text-base font-medium text-white backdrop-blur-3xl">
-                Resume <FaArrowCircleRight size={16} />{" "}
-              </span>
-            </Button>
-          </Link>
-        </motion.div>
+            initial={{
+              y: 0,
+            }}
+            animate={{
+              y: 20,
+            }}
+            transition={{
+              duration: 0.8,
+              repeat: Infinity,
+              repeatType: 'reverse',
+              ease: 'easeInOut',
+            }}
+            className="sm:hidden"
+          >
+            <Link href={resumeLink} target="_blank">
+              <Button className="relative inline-flex h-16 w-40 max-sm:h-12 max-sm:w-32 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                <span className="flex justify-around  h-full w-full cursor-pointer items-center  rounded-full bg-slate-950 px-3 py-1 text-lg max-sm:text-base font-medium text-white backdrop-blur-3xl">
+                  Resume <FaArrowCircleRight size={16} />{' '}
+                </span>
+              </Button>
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
 
       {/* Right section */}
       <motion.div
-        initial={"beforeView"}
-        whileInView={"inView"}
+        initial={'beforeView'}
+        whileInView={'inView'}
         variants={fadeAnimationVariant}
         viewport={{ once: true }}
         className="rounded-4xl w-[30%] flex-center flex-col gap-6 relative  
@@ -114,7 +113,7 @@ const   About = () => {
         <IndigoBlurBackground height="1/2" />
 
         <Image
-          src={"/assets/amarImgPool2.jpg"}
+          src={'/assets/amarImgPool2.jpg'}
           alt="Main Profile picture"
           height={2844}
           width={1680}
@@ -131,22 +130,22 @@ const   About = () => {
           transition={{
             duration: 0.8,
             repeat: Infinity,
-            repeatType: "reverse",
-            ease: "easeInOut",
+            repeatType: 'reverse',
+            ease: 'easeInOut',
           }}
         >
           <Link href={resumeLink} target="_blank">
             <Button className="relative inline-flex h-12 w-32 max-sm:h-12 max-sm:w-32 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
               <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
               <span className="flex justify-around  h-full w-full cursor-pointer items-center  rounded-full bg-slate-950 px-3 py-1 text-md max-sm:text-base font-medium text-white backdrop-blur-3xl">
-                Resume <FaArrowCircleRight size={16} />{" "}
+                Resume <FaArrowCircleRight size={16} />{' '}
               </span>
             </Button>
           </Link>
         </motion.div>
       </motion.div>
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default About

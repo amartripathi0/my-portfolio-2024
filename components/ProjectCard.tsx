@@ -1,11 +1,7 @@
-import {
-  CardBody,
-  CardContainer,
-  CardItem,
-} from "@/components/ui/3d-container";
+import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-container'
 
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image'
+import Link from 'next/link'
 function ProjectCard() {
   return (
     <CardContainer
@@ -25,7 +21,7 @@ function ProjectCard() {
           Placement Nexus is an ongoing MERN stack-based project streamlining
           college hiring. It connects students, recruiters, and colleges for
           efficient recruitment. Stay tuned for major frontend and backend
-          enhancements.{" "}
+          enhancements.{' '}
         </CardItem>
         <CardItem translateZ="100" className="w-full mt-4">
           <Image
@@ -59,7 +55,7 @@ function ProjectCard() {
         </div>
       </CardBody>
     </CardContainer>
-  );
+  )
 }
 
-export default ProjectCard;
+export default ProjectCard

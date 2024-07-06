@@ -1,14 +1,10 @@
-import {
-  CardBody,
-  CardContainer,
-  CardItem,
-} from "@/components/ui/3d-container";
-import Image from "next/image";
-import Link from "next/link";
-import { Badge } from "./ui/badge";
-import TextUnderline from "./shared/TextUnderline";
-import { ProjectContainerProps } from "@/types";
-import { FaGithub } from "react-icons/fa";
+import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-container'
+import Image from 'next/image'
+import Link from 'next/link'
+import { Badge } from './ui/badge'
+import TextUnderline from './shared/TextUnderline'
+import { ProjectContainerProps } from '@/types'
+import { FaGithub } from 'react-icons/fa'
 
 const ProjectContainer = ({
   projectDetail,
@@ -62,7 +58,7 @@ const ProjectContainer = ({
                 className="flex items-center gap-1 px-3 py-2 rounded-xl text-sm font-normal  max-sm:text-xs  dark:text-white opacity-80 hover:opacity-100"
               >
                 Source Code
-                <FaGithub/>
+                <FaGithub />
               </CardItem>
 
               <CardItem
@@ -90,7 +86,7 @@ const ProjectContainer = ({
                 className="max-sm:text-[3vw] max-sm:px-2 max-sm:py-1 p-2 px-4 bg-prelude-900"
                 key={eachTool}
               >
-                <TextUnderline text={eachTool} textStyles="text-xs"/>
+                <TextUnderline text={eachTool} textStyles="text-xs" />
               </Badge>
             ))}
           </div>
@@ -102,9 +98,9 @@ const ProjectContainer = ({
         </div>
       </div>
     </div>
-  );
-};
-export default ProjectContainer;
+  )
+}
+export default ProjectContainer
 
 function IndigoVioletBlur() {
   return (
@@ -113,5 +109,5 @@ function IndigoVioletBlur() {
         bg-gradient-to-r from-violet-600 to-indigo-700  
       "
     />
-  );
+  )
 }

@@ -1,23 +1,20 @@
-"use client";
-import Skill from "@/components/Skill";
-import TextUnderline from "@/components/shared/TextUnderline";
-import {
-  backendSkills,
-  frontendSkills,
-} from "@/constants";
-import { motion, useScroll, useTransform } from "framer-motion";
-import React, { useRef } from "react";
+'use client'
+import Skill from '@/components/Skill'
+import TextUnderline from '@/components/shared/TextUnderline'
+import { backendSkills, frontendSkills } from '@/constants'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import React, { useRef } from 'react'
 function Skills() {
-  const targetRef = useRef(null);
+  const targetRef = useRef(null)
 
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ["start 0.68", "start end"]
-  });
+    offset: ['start 0.68', 'start end'],
+  })
 
-  const leftSlide = useTransform(scrollYProgress, [0, 10], ["0%", "-100vw"]);
-  const rightSlide = useTransform(scrollYProgress, [0, 10], ["0%", "100vw"]);
-  const opacity = useTransform(scrollYProgress, [0.3, 1], [1, 0]);
+  const leftSlide = useTransform(scrollYProgress, [0, 10], ['0%', '-100vw'])
+  const rightSlide = useTransform(scrollYProgress, [0, 10], ['0%', '100vw'])
+  const opacity = useTransform(scrollYProgress, [0.3, 1], [1, 0])
   return (
     <motion.div
       id="skills"
@@ -65,7 +62,7 @@ function Skills() {
         </motion.div>
       </div>
     </motion.div>
-  );
+  )
 }
 
-export default Skills;
+export default Skills

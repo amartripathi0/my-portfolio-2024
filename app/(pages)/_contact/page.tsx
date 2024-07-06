@@ -1,9 +1,9 @@
-"use client";
-import { ContactMeForm } from "@/components/ContactMeForm";
-import IndigoBlurBackground from "@/components/shared/IndigoBlurBackground";
-import TextUnderline from "@/components/shared/TextUnderline";
-import { underlineAnimationVariant } from "@/constants";
-import { motion } from "framer-motion";
+'use client'
+import { ContactMeForm } from '@/components/ContactMeForm'
+import IndigoBlurBackground from '@/components/shared/IndigoBlurBackground'
+import TextUnderline from '@/components/shared/TextUnderline'
+import { underlineAnimationVariant } from '@/constants'
+import { motion } from 'framer-motion'
 
 function Contact() {
   return (
@@ -12,8 +12,8 @@ function Contact() {
       id="contact-me"
     >
       <motion.div
-        initial={"initial"}
-        whileInView={"inView"}
+        initial={'initial'}
+        whileInView={'inView'}
         variants={underlineAnimationVariant}
       >
         <TextUnderline
@@ -40,7 +40,7 @@ function Contact() {
         <span className="font-bold text-lg">&copy;</span> 2024 Amar Tripathi
       </p>
     </div>
-  );
-} 
+  )
+}
 
-export default Contact;
+export default Contact

@@ -1,29 +1,29 @@
-import { IconType } from "react-icons";
+import { IconType } from 'react-icons'
 export type SocialMediaLinkType = {
-  label: string;
-  url: string;
-  icon: IconType;
-};
+  label: string
+  url: string
+  icon: IconType
+}
 export type NavbarItemType = {
-  label: string;
-  link: string;
-};
+  label: string
+  link: string
+}
 
 export type ProjectContainerProps = {
   projectDetail: {
-    topPara: string;
-    parasArray?: string[];
-  };
-  projectTitle: string;
-  projectBio: string;
-  projectGithubLink: string;
-  projectTools: string[];
-  projectDeployedLink?: string;
-  projectThumbnailSrc: string;
-};
+    topPara: string
+    parasArray?: string[]
+  }
+  projectTitle: string
+  projectBio: string
+  projectGithubLink: string
+  projectTools: string[]
+  projectDeployedLink?: string
+  projectThumbnailSrc: string
+}
 
 export type ContactMeFormData = {
-  name: string;
-  email: string;
-  message: string;
-};
+  name: string
+  email: string
+  message: string
+}

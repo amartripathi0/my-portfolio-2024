@@ -1,13 +1,13 @@
-import { socialMediaLinks } from "@/constants";
-import Link from "next/link";
-import React from "react";
+import { socialMediaLinks } from '@/constants'
+import Link from 'next/link'
+import React from 'react'
 
 function SocialHandles({
   additionalStyle,
   size = 20,
 }: {
-  additionalStyle?: string;
-  size?: number;
+  additionalStyle?: string
+  size?: number
 }) {
   return (
     <div className={`${additionalStyle} `}>
@@ -23,7 +23,7 @@ function SocialHandles({
         </Link>
       ))}
     </div>
-  );
+  )
 }
 
-export default SocialHandles;
+export default SocialHandles

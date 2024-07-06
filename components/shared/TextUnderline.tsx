@@ -1,6 +1,6 @@
-"use client";
-import React, { useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+'use client'
+import React, { useState } from 'react'
+import { motion, useAnimation } from 'framer-motion'
 
 const TextUnderline = ({
   text,
@@ -10,33 +10,33 @@ const TextUnderline = ({
   isHeading,
   isSkill,
 }: {
-  text: string;
-  textStyles?: string;
-  underlineStyles?: string;
-  containerDivStyles?: string;
-  isHeading?: boolean;
-  isSkill?: boolean;
+  text: string
+  textStyles?: string
+  underlineStyles?: string
+  containerDivStyles?: string
+  isHeading?: boolean
+  isSkill?: boolean
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const controls = useAnimation();
+  const [isHovered, setIsHovered] = useState(false)
+  const controls = useAnimation()
 
   const handleHoverStart = () => {
-    setIsHovered(true);
+    setIsHovered(true)
     controls.start({
       scaleX: 1,
-      originX: "left",
+      originX: 'left',
       opacity: 1,
-    });
-  };
+    })
+  }
 
   const handleHoverEnd = () => {
-    setIsHovered(false);
+    setIsHovered(false)
     controls.start({
       scaleX: 0,
-      originX: "right",
+      originX: 'right',
       opacity: 1,
-    });
-  };
+    })
+  }
 
   return (
     <motion.div
@@ -46,7 +46,7 @@ const TextUnderline = ({
     >
       <h1
         className={`${textStyles} inline-block relative ${
-          isHeading ? "text-[3.2vw]" : isSkill ? "text-[9.1px]" : "text-sm"
+          isHeading ? 'text-[3.2vw]' : isSkill ? 'text-[9.1px]' : 'text-sm'
         } `}
       >
         {text}
@@ -56,13 +56,13 @@ const TextUnderline = ({
           scaleX: 0,
         }}
         animate={controls}
-        transition={{ duration: 0.4, ease: "easeInOut" }}
+        transition={{ duration: 0.4, ease: 'easeInOut' }}
         className={`absolute bottom-0 left-0  h-[8%] w-full rounded-2xl drop-shadow-lg ${
-          underlineStyles ? underlineStyles : "bg-white"
+          underlineStyles ? underlineStyles : 'bg-white'
         } `}
       ></motion.div>
     </motion.div>
-  );
-};
+  )
+}
 
-export default TextUnderline;
+export default TextUnderline

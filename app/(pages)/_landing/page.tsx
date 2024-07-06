@@ -1,10 +1,10 @@
-"use client";
-import Spotlight from "@/components/ui/Spotlight";
-import Image from "next/image";
-import { TextGenerateEffect } from "@/components/ui/TextGenEffect";
-import { motion } from "framer-motion";
-import SocialHandles from "@/components/shared/SocialHandles";
-import TextUnderline from "@/components/shared/TextUnderline";
+'use client'
+import Spotlight from '@/components/ui/Spotlight'
+import Image from 'next/image'
+import { TextGenerateEffect } from '@/components/ui/TextGenEffect'
+import { motion } from 'framer-motion'
+import SocialHandles from '@/components/shared/SocialHandles'
+import TextUnderline from '@/components/shared/TextUnderline'
 
 const Landing = () => {
   return (
@@ -17,7 +17,7 @@ const Landing = () => {
         className=" flex-between flex-col max-sm:justify-end gap-10 max-sm:gap-4 w-[30%] h-[28vw] max-sm:h-2/5 max-sm:w-full sm:pt-4 pb-2 "
         initial={{ opacity: 0, scale: 0.7 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ ease: "easeInOut", duration: 1, delay: 0.4 }}
+        transition={{ ease: 'easeInOut', duration: 1, delay: 0.4 }}
       >
         <div
           className=" rounded-full h-[17vw] w-[17vw] relative -z-10 
@@ -33,11 +33,11 @@ const Landing = () => {
               scale: 0,
             }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: "circInOut" }}
+            transition={{ duration: 1, ease: 'circInOut' }}
           ></motion.div>
 
           <Image
-            src={"/assets/amarHome.jpg"}
+            src={'/assets/amarHome.jpg'}
             alt="Main Profile picture"
             sizes="3464"
             fill
@@ -64,15 +64,15 @@ const Landing = () => {
           <motion.h1
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ ease: "easeInOut", duration: 1, delay: 1.5 }}
+            transition={{ ease: 'easeInOut', duration: 1, delay: 1.5 }}
             className=" tracking-wider leading-none"
           >
-            AMAR{" "}
+            AMAR{' '}
           </motion.h1>
           <motion.h1
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ ease: "easeInOut", duration: 1, delay: 2 }}
+            transition={{ ease: 'easeInOut', duration: 1, delay: 2 }}
             className="   max-tablet:m-0  leading-[110px] max-tablet:leading-none
             bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-700
             "
@@ -84,12 +84,12 @@ const Landing = () => {
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ ease: "easeInOut", duration: 1.5, delay: 3 }}
+          transition={{ ease: 'easeInOut', duration: 1.5, delay: 3 }}
           className="text-[1.3vw] text-right max-tablet:text-center max-tablet:text-sm max-sm:mt-6"
         >
           <div>
-            {" "}
-            I&apos;m a{" "}
+            {' '}
+            I&apos;m a{' '}
             <TextUnderline
               text="Full-Stack Web Developer"
               textStyles="text-purple-300 font-medium hover:text-purple-400 transition-colors duration-500 text-xl max-sm:text-sm"
@@ -104,7 +104,7 @@ const Landing = () => {
         </motion.div>
       </motion.div>
     </div>
-  );
-};
+  )
+}
 
-export default Landing;
+export default Landing

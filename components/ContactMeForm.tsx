@@ -1,31 +1,31 @@
-"use client";
-import React from "react";
-import { cn } from "@/utils/cn";
-import { Label } from "./ui/label";
-import { Input } from "./ui/input";
-import Link from "next/link";
-import { socialMediaLinks } from "@/constants";
-import { sendEmail } from "@/actions/sendEmail";
-import { toast } from "sonner";
-import { Button } from "./ui/moving-border";
+'use client'
+import React from 'react'
+import { cn } from '@/utils/cn'
+import { Label } from './ui/label'
+import { Input } from './ui/input'
+import Link from 'next/link'
+import { socialMediaLinks } from '@/constants'
+import { sendEmail } from '@/actions/sendEmail'
+import { toast } from 'sonner'
+import { Button } from './ui/moving-border'
 
 const clientAction = async (formData: FormData) => {
-  const emailResponse = await sendEmail(formData);
+  const emailResponse = await sendEmail(formData)
 
   if (emailResponse?.error) {
-    toast.error(emailResponse?.error.toString());
+    toast.error(emailResponse?.error.toString())
   } else {
-    toast.success("Message sent, I'll reach out to you soon.");
+    toast.success("Message sent, I'll reach out to you soon.")
   }
-};
+}
 export function ContactMeForm() {
   return (
     <Button
       duration={15000}
       borderClassName="h-16 w-16 blur-[20px]"
       borderRadius="6px"
-      containerClassName="mx-auto border border-slate-800 p-6 max-sm:w-full shadow-input">
-
+      containerClassName="mx-auto border border-slate-800 p-6 max-sm:w-full shadow-input"
+    >
       <form action={clientAction}>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="name">Name</Label>
@@ -87,7 +87,7 @@ export function ContactMeForm() {
         </div>
       </form>
     </Button>
-  );
+  )
 }
 
 const BottomGradient = () => {
@@ -96,19 +96,19 @@ const BottomGradient = () => {
       <span className="group-hover/btn:opacity-100 block transition duration-500 opacity-0 absolute h-px w-full -bottom-px inset-x-0 bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
       <span className="group-hover/btn:opacity-100 blur-sm block transition duration-500 opacity-0 absolute h-px w-1/2 mx-auto -bottom-px inset-x-10 bg-gradient-to-r from-transparent via-indigo-500 to-transparent" />
     </div>
-  );
-};
+  )
+}
 
 const LabelInputContainer = ({
   children,
   className,
 }: {
-  children: React.ReactNode;
-  className?: string;
+  children: React.ReactNode
+  className?: string
 }) => {
   return (
-    <div className={cn("flex flex-col space-y-2 w-full", className)}>
+    <div className={cn('flex flex-col space-y-2 w-full', className)}>
       {children}
     </div>
-  );
-};
+  )
+}
