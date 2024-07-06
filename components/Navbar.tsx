@@ -11,6 +11,7 @@ import useScrollTop from "@/hooks/use-scroll-top";
 import usePageScroll from "@/hooks/use-page-scroll";
 import LocomotiveScroll from "locomotive-scroll";
 import TextUnderline from "./shared/TextUnderline";
+import Image from "next/image";
 
 const Navbar = ({
   locomotiveScroll,
@@ -27,22 +28,20 @@ const Navbar = ({
       animate={{ opacity: 1, y: 0 }}
       transition={{ ease: "easeInOut", duration: 1 }}
       className={`flex-between fixed top-0 left-0 w-screen h-20 max-tablet:h-[70px]
-    px-10 max-mobile:px-4 py-2 max-mobile:py-1 backdrop-blur-md z-50 ${
-      scrolled && "border-b border-violet-700"
-    }
+    px-10 max-mobile:px-4 py-2 max-mobile:py-1 backdrop-blur-md z-50 ${scrolled && "border-b border-violet-700"
+        }
     `}
     >
       {/* Left: Avatar and Name section */}
       <WrapperContainer additionalStyle="flex-center  w-28 max-mobile:w-auto max-sm:px-1 sm:pr-1">
-        <Link href={"/"} className="flex-around-center w-full  ">
-          <Avatar className="h-2/3 aspect-square">
-            <AvatarImage
-              src={"/assets/amar-img.png"}
-              alt="profile-pic"
-              sizes={"2000"}
+        <Link href={"/"} className="flex-around-center w-full ">
+          <Image
+            src={"/assets/amar-img.png"}
+            height={1000}
+            width={1000}
+            alt={'amar-avatar'}
+            className="h-10 w-10" 
             />
-          </Avatar>
-
           <TextUnderline
             text="Amar"
             textStyles="font-medium opacity-90 hover:opacity-100 max-mobile:hidden"
@@ -59,11 +58,10 @@ const Navbar = ({
             onClick={() =>
               locomotiveScroll.scrollTo(item.link, { offset: -83 })
             }
-            className={`${
-              pageSectionOnViewport === item.label
-                ? "transition-all duration-300 ease-in-out"
-                : "bg-slate-900"
-            } 
+            className={`${pageSectionOnViewport === item.label
+              ? "transition-all duration-300 ease-in-out"
+              : "bg-slate-900"
+              } 
            relative z-30 w-1/3 h-3/4 font-medium hover:bg-slate-700  flex-center rounded-full transition-all duration-150`}
           >
             {pageSectionOnViewport === item.label && (
@@ -82,16 +80,15 @@ const Navbar = ({
       <div className="flex items-center gap-3 relative">
         {/* Contact Me */}
 
-        <WrapperContainer  additionalStyle="max-tablet:hidden">
+        <WrapperContainer additionalStyle="max-tablet:hidden">
           <Link
             href={"#contact-me"}
             onClick={() =>
               locomotiveScroll.scrollTo("#contact-me", { offset: 0 })
             }
-            className={`${
-              pageSectionOnViewport === "contact-me" &&
+            className={`${pageSectionOnViewport === "contact-me" &&
               "shadow-md shadow-violet-500 rounded-full"
-            } font-medium flex-center  w-28 py-2 max-tablet:py-3 max-sm:w-32 max-sm:px-2 `}
+              } font-medium flex-center  w-28 py-2 max-tablet:py-3 max-sm:w-32 max-sm:px-2 `}
           >
             <TextUnderline text="Contact Me" />
           </Link>
@@ -108,11 +105,13 @@ const Navbar = ({
           <div
             className="w-screen h-screen absolute -top-2 -right-4  bg-[#0C0404]  bg-opacity-75"
           >
-            <motion.div 
-            animate={{   transition: {
-                staggerChildren : 0.5, delayChildren:0.5
-            }}}
-            className="flex-col-center justify-center gap-10 rounded-3xl px-6 w-full h-1/2 mt-32 "
+            <motion.div
+              animate={{
+                transition: {
+                  staggerChildren: 0.5, delayChildren: 0.5
+                }
+              }}
+              className="flex-col-center justify-center gap-10 rounded-3xl px-6 w-full h-1/2 mt-32 "
             >
               <IoCloseOutline
                 className="absolute top-1 right-3 bg-slate-900 rounded-full text-purple-500 border border-gray-700"
@@ -122,26 +121,27 @@ const Navbar = ({
 
               {navbarItems.map((item) => (
                 <motion.div
-                key={item.label}
-                initial={{ opacity: 0, x: -60 }}
-                animate={{ opacity: 1, x: 0, transition:{
-                  duration:0.5, staggerChildren:0.4, 
-                } }}
-                
-                  className={`${
-                    pageSectionOnViewport === item.label
-                      ? "bg-gradient-to-r from-indigo-800 to-violet-500"
-                      : "bg-slate-900"
-                  }
+                  key={item.label}
+                  initial={{ opacity: 0, x: -60 }}
+                  animate={{
+                    opacity: 1, x: 0, transition: {
+                      duration: 0.5, staggerChildren: 0.4,
+                    }
+                  }}
+
+                  className={`${pageSectionOnViewport === item.label
+                    ? "bg-gradient-to-r from-indigo-800 to-violet-500"
+                    : "bg-slate-900"
+                    }
                   text-sm w-2/3 p-4 h-12  hover:bg-rum-600 border-rum-500 flex-center rounded-full
 
                  `}
-                 
+
                 >
                   <Link
                     scroll={true}
                     href={item.link}
-                    onClick={() => setMenubarOpen((prev) => !prev)}                  
+                    onClick={() => setMenubarOpen((prev) => !prev)}
 
                   >
                     {item.label}

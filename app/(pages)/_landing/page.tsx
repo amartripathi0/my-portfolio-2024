@@ -42,6 +42,7 @@ const Landing = () => {
             sizes="3464"
             fill
             priority
+            loading="eager"
             className="rounded-full"
           />
         </div>
@@ -73,7 +74,7 @@ const Landing = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ ease: "easeInOut", duration: 1, delay: 2 }}
             className="   max-tablet:m-0  leading-[110px] max-tablet:leading-none
-            bg-clip-text text-transparent select-none  bg-gradient-to-b from-neutral-200 to-neutral-600
+            bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-700
             "
           >
             TRIPATHI
