@@ -27,3 +27,8 @@ export type ContactMeFormData = {
   email: string
   message: string
 }
+
+export type SkillType = {
+  name: string,
+  imageSrc: string 
+}

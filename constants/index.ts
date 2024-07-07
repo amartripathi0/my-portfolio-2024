@@ -3,6 +3,7 @@ import { FaLinkedin } from 'react-icons/fa'
 import {
   NavbarItemType,
   ProjectContainerProps,
+  SkillType,
   SocialMediaLinkType,
 } from '@/types'
 export const navbarItems: NavbarItemType[] = [
@@ -100,7 +101,7 @@ export const projectsArray: ProjectContainerProps[] = [
   },
 ]
 
-export const frontendSkills = [
+export const frontendSkills: SkillType[] = [
   { name: 'HTML', imageSrc: '/logos/html5-logo-31813.png' },
   { name: 'CSS', imageSrc: '/logos/css.png' },
   { name: 'React JS', imageSrc: '/logos/react.png' },
@@ -112,7 +113,7 @@ export const frontendSkills = [
   { name: 'Tailwind CSS', imageSrc: '/logos/Tailwind.png' },
   { name: 'Framer Motion', imageSrc: '/logos/framer.jpg' },
 ]
-export const backendSkills = [
+export const backendSkills: SkillType[] = [
   { name: 'JavaScript', imageSrc: '/logos/js.png' },
   { name: 'TypeScript', imageSrc: '/logos/typescript.png' },
   { name: 'Java', imageSrc: '/logos/java.png' },
