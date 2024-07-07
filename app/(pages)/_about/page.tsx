@@ -107,6 +107,8 @@ const About = () => {
         <Image
           src={'/assets/amarImgPool2.jpg'}
           alt="Main Profile picture"
+          priority
+          loading='eager'
           height={2844}
           width={1680}
           className="object-cover w-[65%] aspect-auto rounded-xl z-10  backdrop:blur-sm opacity-80 max-sm:hidden"
