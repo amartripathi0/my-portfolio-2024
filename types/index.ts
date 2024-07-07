@@ -29,6 +29,6 @@ export type ContactMeFormData = {
 }
 
 export type SkillType = {
-  name: string,
-  imageSrc: string 
+  name: string
+  imageSrc: string
 }

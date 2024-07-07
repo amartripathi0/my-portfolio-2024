@@ -1,27 +1,17 @@
-'use client'
 import ProjectContainer from '@/components/ProjectContainer'
-import TextUnderline from '@/components/shared/TextUnderline'
-import { projectsArray, underlineAnimationVariant } from '@/constants'
-import { motion } from 'framer-motion'
+import PageTitle from '@/components/shared/PageTitle'
+import { projectsArray } from '@/constants'
 
 function Projects() {
   return (
     <div id="projects" className="min-h-screen " data-scroll-container>
       <div className="pt-10 shadow-md relative">
-        <motion.div
-          initial={'initial'}
-          whileInView={'inView'}
-          variants={underlineAnimationVariant}
-        >
-          <TextUnderline
-            isHeading={true}
-            text="My Projects"
-            textStyles=" max-sm:text-4xl font-bold"
-            containerDivStyles="w-[24%] max-sm:w-full  max-sm:flex-center"
-            underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-cyan-600"
-          />
-        </motion.div>
-
+        <PageTitle
+          pageTitle="My Projects"
+          textStyles=" max-sm:text-4xl font-bold"
+          containerDivStyles="w-[24%] max-sm:w-full  max-sm:flex-center"
+          underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-cyan-600"
+        />
         {/* bg gradient Violet cyan */}
         <CyanVioletBlur />
 

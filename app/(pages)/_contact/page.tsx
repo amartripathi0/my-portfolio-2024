@@ -1,9 +1,6 @@
-'use client'
 import { ContactMeForm } from '@/components/ContactMeForm'
 import IndigoBlurBackground from '@/components/shared/IndigoBlurBackground'
-import TextUnderline from '@/components/shared/TextUnderline'
-import { underlineAnimationVariant } from '@/constants'
-import { motion } from 'framer-motion'
+import PageTitle from '@/components/shared/PageTitle'
 
 function Contact() {
   return (
@@ -11,19 +8,13 @@ function Contact() {
       className="h-[calc(100vh-4rem)] max-sm:h-[calc(100vh-3rem)] max-sm:pt-10  py-10 flex flex-col  gap-2 max-sm:gap-4 relative "
       id="contact-me"
     >
-      <motion.div
-        initial={'initial'}
-        whileInView={'inView'}
-        variants={underlineAnimationVariant}
-      >
-        <TextUnderline
-          isHeading={true}
-          text="Contact me"
-          textStyles="text-[3.2vw] max-sm:text-4xl font-bold"
-          containerDivStyles="w-[24%] max-sm:w-full  max-sm:flex-center"
-          underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-yellow-500   "
-        />
-      </motion.div>
+      <PageTitle
+        pageTitle="Contact me"
+        textStyles="text-[3.2vw] max-sm:text-4xl font-bold"
+        containerDivStyles="w-[24%] max-sm:w-full  max-sm:flex-center"
+        underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-yellow-500"
+      />
+
       <IndigoBlurBackground
         height="1/5"
         mobHeight="5"

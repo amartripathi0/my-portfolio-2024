@@ -1,11 +1,10 @@
 'use client'
 import IndigoBlurBackground from '@/components/shared/IndigoBlurBackground'
-import TextUnderline from '@/components/shared/TextUnderline'
+import PageTitle from '@/components/shared/PageTitle'
 import { Button } from '@/components/ui/button'
 import {
   fadeAnimationVariant,
   resumeLink,
-  underlineAnimationVariant,
 } from '@/constants'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
@@ -22,19 +21,12 @@ const About = () => {
         {/* bg gradient indigo cyan */}
         <IndigoBlurBackground height="1/5" additionalStyles="max-sm:left-1/4" />
         {/* About Me heading */}
-        <motion.div
-          initial={'initial'}
-          whileInView={'inView'}
-          variants={underlineAnimationVariant}
-        >
-          <TextUnderline
-            isHeading={true}
-            text="About Me"
-            textStyles=" max-sm:text-4xl font-bold"
-            containerDivStyles="max-sm:w-full  max-sm:flex-center"
-            underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-cyan-600"
-          />
-        </motion.div>
+        <PageTitle
+          pageTitle="About Me"
+          textStyles=" max-sm:text-4xl font-bold"
+          containerDivStyles="w-[24%] max-sm:w-full  max-sm:flex-center"
+          underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-cyan-600"
+        />
 
         {/* About me paragraphs */}
         <motion.div
