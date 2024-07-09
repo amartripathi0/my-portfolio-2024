@@ -51,7 +51,7 @@ const Navbar = ({
       </WrapperContainer>
 
       {/* Middle */}
-      <WrapperContainer additionalStyle="flex-center gap-8 rounded-full px-2  max-tablet:hidden w-1/3">
+      <WrapperContainer additionalStyle="flex-center gap-8 rounded-full px-[7px] max-tablet:hidden w-1/3">
         {navbarItems.map((item) => (
           <Link
             key={item.label}
@@ -62,14 +62,14 @@ const Navbar = ({
             className={`${
               pageSectionOnViewport === item.label
                 ? 'transition-all duration-300 ease-in-out'
-                : 'bg-slate-900'
+                : ''
             } 
-           relative z-30 w-1/3 h-3/4 font-medium hover:bg-slate-700  flex-center rounded-full transition-all duration-150`}
+           relative z-30 w-1/3 h-3/4 font-medium flex-center rounded-full transition-all duration-150`}
           >
             {pageSectionOnViewport === item.label && (
               <motion.span
                 layoutId="bubble"
-                className="bg-gradient-to-r from-indigo-800 to-violet-500  h-full w-full absolute top-0 left-0 -z-10 "
+                className="bg-gradient-to-r from-indigo-800 to-violet-500 h-full w-full absolute top-0 left-0 -z-10 "
                 style={{ borderRadius: 9999 }}
                 transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
               ></motion.span>
