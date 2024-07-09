@@ -19,6 +19,7 @@ function PageTitle({
     <motion.div
       initial={'initial'}
       whileInView={'inView'}
+      viewport={{ once: true }}
       variants={underlineAnimationVariant}
     >
       <TextUnderline
