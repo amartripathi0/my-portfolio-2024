@@ -34,7 +34,7 @@ const About = () => {
           whileInView={'inView'}
           variants={fadeAnimationVariant}
           viewport={{ once: true }}
-          className="text-base p-4 w-full max-sm:text-sm max-sm:px-2 text-justify  flex-col flex-center gap-4"
+          className="text-base py-4 w-full max-sm:text-sm max-sm:px-2 text-justify  flex-col flex-center gap-4"
         >
           <p>
             I&apos;m a third-year Computer Science Engineering student from
