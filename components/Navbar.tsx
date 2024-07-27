@@ -61,10 +61,10 @@ const Navbar = ({
             }
             className={`${
               pageSectionOnViewport === item.label
-                ? 'transition-all duration-300 ease-in-out'
+                ? 'transition-all duration-300 ease-in-out '
                 : ''
             } 
-           relative z-30 w-1/3 h-3/4 font-medium flex-center rounded-full transition-all duration-150`}
+           relative z-30 w-1/3 h-3/4 font-medium flex-center rounded-full transition-all duration-150 hover:bg-slate-900 hover:border-transparent`}
           >
             {pageSectionOnViewport === item.label && (
               <motion.span
