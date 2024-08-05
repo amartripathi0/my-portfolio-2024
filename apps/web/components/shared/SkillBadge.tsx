@@ -19,13 +19,13 @@ const SkillBadgeVariant = cva(
         }
     }
 )
-function SkillBadge({ badgeText }: { badgeText: string }) {
+function SkillBadge({ badgeType }: { badgeType: "skillBadge" | "projectTool" }) {
     return (
         <Badge
             className={cn('', SkillBadgeVariant({badgeType}))} 
 
         >
-            <TextUnderline text={badgeText} />
+            <TextUnderline text={badgeType} />
         </Badge>
     )
 }
