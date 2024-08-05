@@ -18,6 +18,11 @@ export const aboutPageType = defineType({
       description: 'About page hero image',
     }),
     defineField({
+      name: 'resume',
+      title: 'Resume Link',
+      type: 'url',
+    }),
+    defineField({
       name: 'aboutContent',
       title: 'About Page Content',
       type: 'array',
