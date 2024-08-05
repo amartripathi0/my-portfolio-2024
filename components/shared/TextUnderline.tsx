@@ -1,21 +1,50 @@
 'use client'
 import React, { useState } from 'react'
 import { motion, useAnimation } from 'framer-motion'
+import { cn } from '@/lib/utils'
+import { cva } from "class-variance-authority";
 
+type textVariant = "skill" | "pageHeading"
+
+type TextUnderlineProps = {
+  textVariant: textVariant,
+  text: string
+}
+
+type TextUnderlineVariantFunction = (props: TextUnderlineProps) => string;
+
+const TextUnderlineVariants = cva(
+  "inline-block relative w-fit",
+  {
+    variants: {
+      textType: {
+        pageHeading: 'text-4xl sm:text-[3.2vw] font-bold',
+        skill: 'text-[9.1px]',
+        default: 'text-sm'
+      },
+      containerType: {
+        pageHeading: 'w-full flex-center sm:w-fit',
+      },
+    },
+    defaultVariants: {
+      textType: "default"
+    }
+  }
+)
 const TextUnderline = ({
   text,
+  textType,
   textStyles,
+  containerType,
   underlineStyles,
   containerDivStyles,
-  isHeading,
-  isSkill,
 }: {
   text: string
+  textType?: "skill" | "pageHeading"
   textStyles?: string
+  containerType?: "skill" | "pageHeading"
   underlineStyles?: string
   containerDivStyles?: string
-  isHeading?: boolean
-  isSkill?: boolean
 }) => {
   const [isHovered, setIsHovered] = useState(false)
   const controls = useAnimation()
@@ -42,12 +71,10 @@ const TextUnderline = ({
     <motion.div
       onHoverStart={handleHoverStart}
       onHoverEnd={handleHoverEnd}
-      className={`inline-block relative w-fit ${containerDivStyles}`}
+      className={cn("inline-block relative", containerDivStyles)}
     >
       <h1
-        className={`${textStyles} inline-block relative ${
-          isHeading ? 'text-[3.2vw]' : isSkill ? 'text-[9.1px]' : 'text-sm'
-        } `}
+        className={cn("inline-block relative", TextUnderlineVariants({ textType }), textStyles)}
       >
         {text}
       </h1>
@@ -57,9 +84,13 @@ const TextUnderline = ({
         }}
         animate={controls}
         transition={{ duration: 0.4, ease: 'easeInOut' }}
-        className={`absolute bottom-0 left-0  h-[8%] w-full rounded-2xl drop-shadow-lg ${
-          underlineStyles ? underlineStyles : 'bg-white'
-        } `}
+        className={cn("absolute bottom-0 mb-1 left-0 h-[7%] w-full rounded-xl drop-shadow-lg bg-white ",
+          underlineStyles,
+          {
+            'h-[12%] -mb-1 -z-10' :  textType === 'pageHeading',
+            'h-[9%] mb-0' :  textType === 'skill',
+          }
+        )} 
       ></motion.div>
     </motion.div>
   )

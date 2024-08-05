@@ -8,8 +8,7 @@ function Projects() {
       <div className="pt-10 shadow-md relative">
         <PageTitle
           pageTitle="My Projects"
-          textStyles=" max-sm:text-4xl font-bold"
-          containerDivStyles="w-[24%] max-sm:w-full  max-sm:flex-center"
+          
           underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-cyan-600"
         />
         {/* bg gradient Violet cyan */}

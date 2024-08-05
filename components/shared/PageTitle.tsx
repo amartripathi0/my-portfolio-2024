@@ -5,13 +5,11 @@ import TextUnderline from './TextUnderline'
 
 interface PageTitleProps {
   pageTitle: string
-  textStyles: string
-  containerDivStyles: string
+  containerDivStyles?: string
   underlineStyles: string
 }
 function PageTitle({
   pageTitle,
-  textStyles,
   containerDivStyles,
   underlineStyles,
 }: PageTitleProps) {
@@ -23,10 +21,10 @@ function PageTitle({
       variants={underlineAnimationVariant}
     >
       <TextUnderline
-        isHeading={true}
+        textType='pageHeading'
         text={pageTitle}
-        textStyles={textStyles}
-        containerDivStyles={containerDivStyles}
+        containerType='pageHeading'
+        containerDivStyles={containerDivStyles} 
         underlineStyles={underlineStyles}
       />
     </motion.div>

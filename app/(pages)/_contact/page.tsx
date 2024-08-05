@@ -10,8 +10,6 @@ function Contact() {
     >
       <PageTitle
         pageTitle="Contact Me"
-        textStyles="text-[3.2vw] max-sm:text-4xl font-bold"
-        containerDivStyles="w-[24%] max-sm:w-full  max-sm:flex-center"
         underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-yellow-500"
       />
 
