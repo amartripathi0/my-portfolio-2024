@@ -4,4 +4,4 @@ export const HOMEPAGE_QUERY = `
     lastName,
     userDescription,
     heroImage,
-}`;
+}[0]`;
