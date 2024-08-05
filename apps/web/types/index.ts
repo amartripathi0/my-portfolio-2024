@@ -39,3 +39,10 @@ export type HomepageDataType = {
   userDescription: string
   heroImage: any
 }
+
+export type AboutPageDataType = {
+  title: string
+  resume: string
+  heroImage: any
+  aboutContent: any
+}
