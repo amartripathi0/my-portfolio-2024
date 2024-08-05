@@ -9,7 +9,7 @@ import Link from 'next/link'
 import { Button } from './ui/button'
 import { urlFor } from '@/utils/urlFor'
 
-function AboutPageRight({ heroImage, resumeUrl }) {
+function AboutPageRight({ heroImage, resumeUrl }: { heroImage: any, resumeUrl: string }) {
     return (
         <motion.div
             initial={'beforeView'}
