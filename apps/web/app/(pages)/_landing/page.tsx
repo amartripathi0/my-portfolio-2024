@@ -5,8 +5,13 @@ import { TextGenerateEffect } from '@/components/ui/TextGenEffect'
 import { motion } from 'framer-motion'
 import SocialHandles from '@/components/shared/SocialHandles'
 import TextUnderline from '@/components/shared/TextUnderline'
+import { SanityDocument } from "next-sanity";
+import { sanityFetch } from "@/sanity/client";
+import { HOMEPAGE_QUERY } from '@/sanity/queries'
 
-const Landing = () => {
+const Landing =  () => {
+  const homepageData = await sanityFetch<SanityDocument[]>({ query: HOMEPAGE_QUERY });
+
   return (
     <div
       id="home"
@@ -67,7 +72,7 @@ const Landing = () => {
             transition={{ ease: 'easeInOut', duration: 1, delay: 1.5 }}
             className=" tracking-wider leading-none"
           >
-            AMAR{' '}
+            {homepageData?.firstname}{' '}
           </motion.h1>
           <motion.h1
             initial={{ opacity: 0, y: -30 }}

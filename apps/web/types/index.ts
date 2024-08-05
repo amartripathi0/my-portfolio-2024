@@ -32,3 +32,10 @@ export type SkillType = {
   name: string
   imageSrc: string
 }
+
+export type HomepageDataType = {
+  firstName: string,
+  lastName: string,
+    userDescription: string,
+    heroImage,
+}
