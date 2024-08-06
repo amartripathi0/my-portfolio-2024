@@ -15,10 +15,10 @@ function HomePageLeft({ heroImage }: { heroImage: any }) {
     >
       {/* Image with Purple Filter */}
       <div
-        className=" rounded-full h-40 aspect-square tablet:size-[17vw] relative -z-10 flex-center"
+        className=" rounded-full h-40 aspect-square tablet:size-[17vw] relative -z-10 flex-center custom-cursor-hidden"
       >
         <motion.div
-          className="bg-purple-400 rounded-full size-5/6 blur-[70px] opacity-90"
+          className="bg-purple-400 rounded-full size-5/6 blur-[70px] opacity-90 custom-cursor-hidden"
           initial={{
             opacity: 0,
             scale: 0,
@@ -34,7 +34,7 @@ function HomePageLeft({ heroImage }: { heroImage: any }) {
           fill
           priority
           loading="eager"
-          className="rounded-full"
+          className="rounded-full custom-cursor-hidden"
         />
       </div>
 

@@ -7,9 +7,9 @@ import { cva } from 'class-variance-authority'
 const TextUnderlineVariants = cva('inline-block relative w-fit', {
   variants: {
     textType: {
-      pageHeading: 'text-4xl sm:text-[3.2vw] font-bold', //for page title
-      skill: 'text-[9.1px]', //for skill page
-      default: 'text-sm', //for project tool and navbar items
+      pageHeading: 'text-4xl sm:text-[3.2vw] font-bold pink-cursor-md', //for page title
+      skill: 'text-[9.1px] custom-cursor-hidden', //for skill page
+      default: 'text-sm custom-cursor-hidden', //for project tool and navbar items
     },
   },
   defaultVariants: {

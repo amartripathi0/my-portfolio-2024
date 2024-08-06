@@ -53,34 +53,29 @@ export function ContactMeForm() {
             id="message"
             name="message"
             placeholder="Please enter your message here"
-            className="w-full min-h-20 max-h-[135px] max-sm:max-h-24 border-none bg-zinc-800 text-white shadow-input rounded-[6px] px-3 py-2 text-sm  file:border-0 file:bg-transparent 
-          file:text-sm file:font-medium placeholder:text-neutral-400 dark:placeholder-text-neutral-600 
-          focus-visible:outline-none focus-visible:ring-[2px]  focus-visible:ring-neutral-400 dark:focus-visible:ring-neutral-600
-          disabled:cursor-not-allowed disabled:opacity-50
-          dark:shadow-[0px_0px_1px_1px_var(--neutral-700)]
-          group-hover/input:shadow-none transition duration-400"
+            className="dark:placeholder-text-neutral-600 duration-400 max-h-[135px] min-h-20 w-full rounded-[6px] border-none bg-zinc-800 px-3 py-2 text-sm text-white shadow-input transition file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral-400 focus-visible:outline-none focus-visible:ring-[2px] focus-visible:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50 group-hover/input:shadow-none dark:shadow-[0px_0px_1px_1px_var(--neutral-700)] dark:focus-visible:ring-neutral-600 max-sm:max-h-24"
           ></textarea>
         </LabelInputContainer>
 
         <button
-          className="my-6 bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-semibold shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+          className="group/btn from-black relative my-6 block h-10 w-full rounded-md bg-gradient-to-br to-neutral-600 font-semibold text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
           type="submit"
         >
-          Let&apos;s Connect
+          <p className='pink-cursor-sm'>Let&apos;s Connect</p>
           <BottomGradient />
         </button>
 
-        <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-6 h-[1px] w-full" />
+        <div className="my-6 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
 
         <div className="flex items-center justify-between gap-4 max-sm:flex-col max-sm:gap-2">
           {socialMediaLinks.map(({ label, url, icon: SocialIcon }) => (
             <Link
               key={label}
-              className=" relative group/btn flex space-x-2 items-center justify-center px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
+              className="group/btn text-black relative flex h-10 w-full items-center justify-center space-x-2 rounded-md bg-zinc-900 px-4 font-medium shadow-input dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
               href={url}
             >
               <SocialIcon className="h-4 w-4 text-neutral-300" />
-              <span className="text-neutral-300 text-sm">{label}</span>
+              <span className="text-sm text-neutral-300">{label}</span>
               <BottomGradient />
             </Link>
           ))}
@@ -93,8 +88,8 @@ export function ContactMeForm() {
 const BottomGradient = () => {
   return (
     <div>
-      <span className="group-hover/btn:opacity-100 block transition duration-500 opacity-0 absolute h-px w-full -bottom-px inset-x-0 bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
-      <span className="group-hover/btn:opacity-100 blur-sm block transition duration-500 opacity-0 absolute h-px w-1/2 mx-auto -bottom-px inset-x-10 bg-gradient-to-r from-transparent via-indigo-500 to-transparent" />
+      <span className="absolute inset-x-0 -bottom-px block h-px w-full bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-0 transition duration-500 group-hover/btn:opacity-100" />
+      <span className="absolute inset-x-10 -bottom-px mx-auto block h-px w-1/2 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-0 blur-sm transition duration-500 group-hover/btn:opacity-100" />
     </div>
   )
 }
@@ -107,7 +102,7 @@ const LabelInputContainer = ({
   className?: string
 }) => {
   return (
-    <div className={cn('flex flex-col space-y-2 w-full', className)}>
+    <div className={cn('flex w-full flex-col space-y-2', className)}>
       {children}
     </div>
   )

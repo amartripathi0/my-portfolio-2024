@@ -13,12 +13,12 @@ function HomePageRight({
 }) {
   return (
     <motion.div className="max-sm:flex-center mr-2 flex h-[28vw] flex-col items-center justify-between gap-[1vw] max-sm:mr-0 max-sm:h-80 sm:items-end">
-      <div className="flex-center flex flex-col text-6xl font-bold sm:items-end tablet:text-[10vw]">
+      <div className="flex-center relative flex flex-col text-6xl font-bold sm:items-end tablet:text-[10vw]">
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: 'easeInOut', duration: 1, delay: 1.5 }}
-          className="uppercase leading-none tracking-wider"
+          className="pink-cursor-lg bg-clip-text uppercase leading-none tracking-wider"
         >
           {firstName}{' '}
         </motion.h1>
@@ -26,7 +26,7 @@ function HomePageRight({
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: 'easeInOut', duration: 1, delay: 2 }}
-          className="bg-gradient-to-b from-neutral-200 to-neutral-700 bg-clip-text uppercase leading-none text-transparent max-tablet:m-0 tablet:leading-[110px]"
+          className="pink-cursor-lg bg-gradient-to-b from-neutral-200 to-neutral-700 bg-clip-text uppercase leading-none text-transparent max-tablet:m-0 tablet:leading-[110px]"
         >
           {lastName}
         </motion.h1>
@@ -43,7 +43,7 @@ function HomePageRight({
           I&apos;m a{' '}
           <TextUnderline
             text="Full-Stack Web Developer"
-            textStyles="text-purple-300 font-medium hover:text-purple-400 transition-colors duration-500 text-xl max-sm:text-sm"
+            textStyles="text-purple-300 font-medium hover:text-purple-400 transition-colors duration-500 sm:text-xl text-sm"
             underlineStyles="bg-purple-400"
           />
           , turning your ideas into reality.
