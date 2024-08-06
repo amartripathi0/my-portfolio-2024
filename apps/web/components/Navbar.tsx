@@ -1,12 +1,11 @@
 'use client'
-import React, { useState } from 'react'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { navbarItems, socialMediaLinks } from '@/constants'
+import React, { useCallback, useState } from 'react'
+import { navbarItems } from '@/constants'
 import WrapperContainer from './shared/WrapperContainer'
 import Link from 'next/link'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { IoCloseOutline } from 'react-icons/io5'
-import { easeInOut, motion, spring, stagger } from 'framer-motion'
+import { motion, spring } from 'framer-motion'
 import useScrollTop from '@/hooks/use-scroll-top'
 import usePageScroll from '@/hooks/use-page-scroll'
 import LocomotiveScroll from 'locomotive-scroll'
@@ -22,7 +21,9 @@ const Navbar = ({
   const [menubarOpen, setMenubarOpen] = useState(false)
   const { scrolled } = useScrollTop()
   const { pageSectionOnViewport } = usePageScroll()
-
+  const handleScrollTo = useCallback((link: string) => {
+    locomotiveScroll.scrollTo(link, { offset: -83 });
+  }, [locomotiveScroll]);
   return (
     <motion.nav
       initial={{ opacity: 0, y: -15 }}
@@ -56,14 +57,12 @@ const Navbar = ({
           <Link
             key={item.label}
             href={item.link}
-            onClick={() =>
-              locomotiveScroll.scrollTo(item.link, { offset: -83 })
-            }
-            className={`${
-              pageSectionOnViewport === item.label
-                ? 'transition-all duration-300 ease-in-out'
-                : ''
-            } flex-center relative z-30 h-3/4 w-1/3 rounded-full font-medium transition-all duration-150 hover:border-transparent hover:bg-slate-900`}
+            onClick={() => handleScrollTo(item.link)}
+            className={cn(
+              'flex-center relative z-30 h-3/4 w-1/3 rounded-full font-medium transition-all duration-150 hover:border-transparent hover:bg-slate-900',
+              pageSectionOnViewport === item.label &&
+                'transition-all duration-300 ease-in-out',
+            )}
           >
             {pageSectionOnViewport === item.label && (
               <motion.span
@@ -87,10 +86,10 @@ const Navbar = ({
             onClick={() =>
               locomotiveScroll.scrollTo('#contact-me', { offset: 0 })
             }
-            className={`${
-              pageSectionOnViewport === 'contact-me' &&
-              'rounded-full shadow-md shadow-violet-500'
-            } flex-center w-28 py-2 font-medium max-tablet:py-3 max-sm:w-32 max-sm:px-2`}
+            className={cn(
+              'flex-center w-28 py-2 font-medium max-tablet:py-3 max-sm:w-32 max-sm:px-2',
+              pageSectionOnViewport === 'contact-me' && 'rounded-full shadow-md shadow-violet-500'
+            )}
           >
             <TextUnderline text="Contact Me" />
           </Link>
