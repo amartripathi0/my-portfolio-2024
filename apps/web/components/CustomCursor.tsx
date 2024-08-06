@@ -20,20 +20,18 @@ function CustomCursor() {
     }
 
     const handleMouseEnter = () => {
-      console.log('mouseenter')
-
       if (cursorRef.current) {
         cursorRef.current.classList.remove('opacity-0')
         cursorRef.current.classList.add('opacity-100')
       }
     }
-    window.addEventListener('mousemove', handleMouseMove)
-    window.addEventListener('mouseleave', handleMouseLeave)
-    window.addEventListener('mouseenter', handleMouseEnter)
+    document.addEventListener('mousemove', handleMouseMove)
+    document.addEventListener('mouseleave', handleMouseLeave)
+    document.addEventListener('mouseenter', handleMouseEnter)
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove)
-      window.removeEventListener('mouseleave', handleMouseLeave)
-      window.removeEventListener('mouseenter', handleMouseEnter)
+      document.removeEventListener('mousemove', handleMouseMove)
+      document.removeEventListener('mouseleave', handleMouseLeave)
+      document.removeEventListener('mouseenter', handleMouseEnter)
     }
   }, [])
 
