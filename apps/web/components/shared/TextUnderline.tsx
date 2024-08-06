@@ -2,50 +2,36 @@
 import React, { useState } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { cn } from '@/lib/utils'
-import { cva } from "class-variance-authority";
+import { cva } from 'class-variance-authority'
 
-type textVariant = "skill" | "pageHeading"
+const TextUnderlineVariants = cva('inline-block relative w-fit', {
+  variants: {
+    textType: {
+      pageHeading: 'text-4xl sm:text-[3.2vw] font-bold', //for page title
+      skill: 'text-[9.1px]', //for skill page
+      default: 'text-sm', //for project tool and navbar items
+    },
+  },
+  defaultVariants: {
+    textType: 'default',
+  },
+})
 
-type TextUnderlineProps = {
-  textVariant: textVariant,
+interface TextUnderlineProps {
   text: string
+  textType?: 'skill' | 'pageHeading'
+  textStyles?: string
+  underlineStyles?: string
+  containerDivStyles?: string
 }
 
-type TextUnderlineVariantFunction = (props: TextUnderlineProps) => string;
-
-const TextUnderlineVariants = cva(
-  "inline-block relative w-fit",
-  {
-    variants: {
-      textType: {
-        pageHeading: 'text-4xl sm:text-[3.2vw] font-bold',
-        skill: 'text-[9.1px]',
-        default: 'text-sm'
-      },
-      containerType: {
-        pageHeading: 'w-full flex-center sm:w-fit',
-      },
-    },
-    defaultVariants: {
-      textType: "default"
-    }
-  }
-)
 const TextUnderline = ({
   text,
   textType,
   textStyles,
-  containerType,
   underlineStyles,
-  containerDivStyles,
-}: {
-  text: string
-  textType?: "skill" | "pageHeading"
-  textStyles?: string
-  containerType?: "skill" | "pageHeading"
-  underlineStyles?: string
-  containerDivStyles?: string
-}) => {
+  containerDivStyles, // container styles of entire div
+}: TextUnderlineProps) => {
   const [isHovered, setIsHovered] = useState(false)
   const controls = useAnimation()
 
@@ -71,26 +57,42 @@ const TextUnderline = ({
     <motion.div
       onHoverStart={handleHoverStart}
       onHoverEnd={handleHoverEnd}
-      className={cn("inline-block relative", containerDivStyles)}
+      className={cn('relative inline-block', containerDivStyles)}
     >
-      <h1
-        className={cn("inline-block relative", TextUnderlineVariants({ textType }), textStyles)}
-      >
-        {text}
-      </h1>
+      {textType === 'pageHeading' ? (
+        <h1
+          className={cn(
+            'relative inline-block',
+            TextUnderlineVariants({ textType }),
+            textStyles,
+          )}
+        >
+          {text}
+        </h1>
+      ) : (
+        <span
+          className={cn(
+            'relative inline-block',
+            TextUnderlineVariants({ textType }),
+            textStyles,
+          )}
+        >
+          {text}
+        </span>
+      )}
+      {/* underline div */}
       <motion.div
         initial={{
           scaleX: 0,
         }}
         animate={controls}
         transition={{ duration: 0.4, ease: 'easeInOut' }}
-        className={cn("absolute bottom-0 mb-1 left-0 h-[7%] w-full rounded-xl drop-shadow-lg bg-white ",
+        className={cn(
+          'absolute bottom-0 left-0 mb-1 h-[7%] w-full rounded-xl bg-white drop-shadow-lg',
           underlineStyles,
-          {
-            'h-[12%] -mb-1 -z-10' :  textType === 'pageHeading',
-            'h-[9%] mb-0' :  textType === 'skill',
-          }
-        )} 
+          textType === 'pageHeading' && '-z-10 -mb-1 h-[12%]',
+          textType === 'skill' && 'mb-0 h-[9%]',
+        )}
       ></motion.div>
     </motion.div>
   )

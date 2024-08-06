@@ -23,7 +23,6 @@ function PageTitle({
       <TextUnderline
         textType='pageHeading'
         text={pageTitle}
-        containerType='pageHeading'
         containerDivStyles={containerDivStyles} 
         underlineStyles={underlineStyles}
       />
