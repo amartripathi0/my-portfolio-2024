@@ -9,36 +9,36 @@ function ProjectCard() {
       containerClassName="sticky top-40"
       className=""
     >
-      <CardBody className="bg-gray-800 relative group/card h-full rounded-xl p-6 border  ">
+      <CardBody className="group/card relative h-full rounded-xl border bg-gray-800 p-6">
         <CardItem translateZ="50" className="text-xl font-bold text-white">
           Placement Nexus
         </CardItem>
         <CardItem
           as="p"
           translateZ="60"
-          className="text-white text-sm max-w-sm mt-2 dark:text-neutral-300"
+          className="mt-2 max-w-sm text-sm text-white dark:text-neutral-300"
         >
           Placement Nexus is an ongoing MERN stack-based project streamlining
           college hiring. It connects students, recruiters, and colleges for
           efficient recruitment. Stay tuned for major frontend and backend
           enhancements.{' '}
         </CardItem>
-        <CardItem translateZ="100" className="w-full mt-4">
+        <CardItem translateZ="100" className="mt-4 w-full">
           <Image
             src="/assets/placement-nexus.png"
             height="1000"
             width="1000"
-            className="h-3/5 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+            className="h-3/5 w-full rounded-xl object-cover group-hover/card:shadow-xl"
             alt="thumbnail"
           />
         </CardItem>
-        <div className="flex justify-between items-center mt-20">
+        <div className="mt-20 flex items-center justify-between">
           <CardItem
             translateZ={20}
             as={Link}
             href="https://github.com/amartripathi0/Web_Placement_Portal"
             target="__blank"
-            className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+            className="rounded-xl px-4 py-2 text-xs font-normal dark:text-white"
           >
             Source Code
           </CardItem>
@@ -48,7 +48,7 @@ function ProjectCard() {
             as={Link}
             href="https://placement-nexus.vercel.app/"
             target="__blank"
-            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+            className="bg-black dark:text-black rounded-xl px-4 py-2 text-xs font-bold text-white dark:bg-white"
           >
             See it live →
           </CardItem>

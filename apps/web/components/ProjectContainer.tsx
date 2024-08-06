@@ -82,19 +82,17 @@ const ProjectContainer = ({
           <div className="flex flex-wrap gap-4 max-sm:gap-2">
             {projectTools?.map((eachTool) => (
               <div key={eachTool}>
-                <ProjectTool tool={eachTool}/>
+                <ProjectTool tool={eachTool} />
               </div>
             ))}
           </div>
           <div className="flex flex-col gap-6">
-            {
-              projectDetail &&
-                projectDetail
-                  .slice(1)
-                  ?.map((detail, index: number) => (
-                    <PortableText key={index + 1} value={detail} />
-                  ))
-            }
+            {projectDetail &&
+              projectDetail
+                .slice(1)
+                ?.map((detail, index: number) => (
+                  <PortableText key={index + 1} value={detail} />
+                ))}
           </div>
         </div>
       </div>

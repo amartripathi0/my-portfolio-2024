@@ -12,7 +12,7 @@ export const ABOUT_PAGE_QUERY = `
     resume,
     aboutContent,
     heroImage,
-}[0]`;
+}[0]`
 
 export const PROJECTS_PAGE_QUERY = `
   *[_type == 'project']{

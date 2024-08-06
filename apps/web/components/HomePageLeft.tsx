@@ -8,17 +8,15 @@ import { urlFor } from '@/utils/urlFor'
 function HomePageLeft({ heroImage }: { heroImage: any }) {
   return (
     <motion.div
-      className=" flex-between flex-col max-sm:justify-end gap-4 sm:gap-10 w-full sm:w-[30%] h-2/5 sm:h-[28vw] sm:pt-4 pb-2"
+      className="flex-between h-2/5 w-full flex-col gap-4 pb-2 max-sm:justify-end sm:h-[28vw] sm:w-[30%] sm:gap-10 sm:pt-4"
       initial={{ opacity: 0, scale: 0.7 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ ease: 'easeInOut', duration: 1, delay: 0.6 }}
     >
       {/* Image with Purple Filter */}
-      <div
-        className=" rounded-full h-40 aspect-square tablet:size-[17vw] relative -z-10 flex-center custom-cursor-hidden"
-      >
+      <div className="flex-center custom-cursor-hidden relative -z-10 aspect-square h-40 rounded-full tablet:size-[17vw]">
         <motion.div
-          className="bg-purple-400 rounded-full size-5/6 blur-[70px] opacity-90 custom-cursor-hidden"
+          className="custom-cursor-hidden size-5/6 rounded-full bg-purple-400 opacity-90 blur-[70px]"
           initial={{
             opacity: 0,
             scale: 0,
@@ -34,12 +32,12 @@ function HomePageLeft({ heroImage }: { heroImage: any }) {
           fill
           priority
           loading="eager"
-          className="rounded-full custom-cursor-hidden"
+          className="custom-cursor-hidden rounded-full"
         />
       </div>
 
-      <div className="w-full sm:w-5/6 flex flex-col justify-end items-center gap-5 ">
-        <p className="text-base tablet:text-[1.3vw] w-full text-center">
+      <div className="flex w-full flex-col items-center justify-end gap-5 sm:w-5/6">
+        <p className="w-full text-center text-base tablet:text-[1.3vw]">
           Hey! 👋, Let&apos;s connect 🚀
         </p>
         <SocialHandles additionalStyle="flex-center gap-2 sm:gap-4 rounded-xl  max-sm:w-40 " />

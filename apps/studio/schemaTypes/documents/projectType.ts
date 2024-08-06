@@ -39,7 +39,7 @@ export const projectType = defineType({
         {
           type: 'block',
         },
-      ]
+      ],
     }),
     defineField({
       name: 'projectTools',

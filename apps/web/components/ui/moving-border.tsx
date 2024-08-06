@@ -44,7 +44,7 @@ export function Button({
         <MovingBorder duration={duration} rx="2%" ry="2%">
           <div
             className={cn(
-              'h-20 w-20 opacity-[0.8] bg-[radial-gradient(var(--sky-500)_40%,transparent_60%)]',
+              'h-20 w-20 bg-[radial-gradient(var(--sky-500)_40%,transparent_60%)] opacity-[0.8]',
               borderClassName,
             )}
           />
@@ -52,7 +52,7 @@ export function Button({
       </div>
 
       <div
-        className={cn('relative  backdrop-blur-xl w-full h-full', className)}
+        className={cn('relative h-full w-full backdrop-blur-xl', className)}
         style={{
           borderRadius: `calc(${borderRadius} * 0.96)`,
         }}

@@ -21,9 +21,9 @@ function PageTitle({
       variants={underlineAnimationVariant}
     >
       <TextUnderline
-        textType='pageHeading'
+        textType="pageHeading"
         text={pageTitle}
-        containerDivStyles={containerDivStyles} 
+        containerDivStyles={containerDivStyles}
         underlineStyles={underlineStyles}
       />
     </motion.div>

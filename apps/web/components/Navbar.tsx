@@ -21,9 +21,12 @@ const Navbar = ({
   const [menubarOpen, setMenubarOpen] = useState(false)
   const { scrolled } = useScrollTop()
   const { pageSectionOnViewport } = usePageScroll()
-  const handleScrollTo = useCallback((link: string) => {
-    locomotiveScroll.scrollTo(link, { offset: -83 });
-  }, [locomotiveScroll]);
+  const handleScrollTo = useCallback(
+    (link: string) => {
+      locomotiveScroll.scrollTo(link, { offset: -83 })
+    },
+    [locomotiveScroll],
+  )
   return (
     <motion.nav
       initial={{ opacity: 0, y: -15 }}
@@ -88,7 +91,8 @@ const Navbar = ({
             }
             className={cn(
               'flex-center w-28 py-2 font-medium max-tablet:py-3 max-sm:w-32 max-sm:px-2',
-              pageSectionOnViewport === 'contact-me' && 'rounded-full shadow-md shadow-violet-500'
+              pageSectionOnViewport === 'contact-me' &&
+                'rounded-full shadow-md shadow-violet-500',
             )}
           >
             <TextUnderline text="Contact Me" />

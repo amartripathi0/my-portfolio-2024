@@ -1,7 +1,7 @@
 import { IconType } from 'react-icons'
-import type { SanityImageAssetDocument } from "@sanity/client";
-import { ElementType } from 'react';
-import { TypedObject } from '@portabletext/types';
+import type { SanityImageAssetDocument } from '@sanity/client'
+import { ElementType } from 'react'
+import { TypedObject } from '@portabletext/types'
 
 export type SocialMediaLinkType = {
   label: string
@@ -36,7 +36,3 @@ export type SkillType = {
   name: string
   imageSrc: string
 }
-
-
-
-

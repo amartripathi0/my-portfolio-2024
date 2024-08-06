@@ -11,8 +11,6 @@ For any inquiries or collaborations, feel free to reach out to me:
 - [LinkedIn](https://www.linkedin.com/in/amar-tripathi)
 - Email: theamartripathi@gmail.com
 
-
-
 # Turborepo starter
 
 This is an official starter Turborepo.

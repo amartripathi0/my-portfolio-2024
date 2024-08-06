@@ -14,300 +14,299 @@
 
 // Source: schema.json
 export type SanityImagePaletteSwatch = {
-    _type: 'sanity.imagePaletteSwatch'
-    background?: string
-    foreground?: string
-    population?: number
-    title?: string
-  }
-  
-  export type SanityImagePalette = {
-    _type: 'sanity.imagePalette'
-    darkMuted?: SanityImagePaletteSwatch
-    lightVibrant?: SanityImagePaletteSwatch
-    darkVibrant?: SanityImagePaletteSwatch
-    vibrant?: SanityImagePaletteSwatch
-    dominant?: SanityImagePaletteSwatch
-    lightMuted?: SanityImagePaletteSwatch
-    muted?: SanityImagePaletteSwatch
-  }
-  
-  export type SanityImageDimensions = {
-    _type: 'sanity.imageDimensions'
-    height?: number
-    width?: number
-    aspectRatio?: number
-  }
-  
-  export type SanityFileAsset = {
-    _id: string
-    _type: 'sanity.fileAsset'
-    _createdAt: string
-    _updatedAt: string
-    _rev: string
-    originalFilename?: string
-    label?: string
-    title?: string
-    description?: string
-    altText?: string
-    sha1hash?: string
-    extension?: string
-    mimeType?: string
-    size?: number
-    assetId?: string
-    uploadId?: string
-    path?: string
-    url?: string
-    source?: SanityAssetSourceData
-  }
-  
-  export type Geopoint = {
-    _type: 'geopoint'
-    lat?: number
-    lng?: number
-    alt?: number
-  }
-  
-  export type Slug = {
-    _type: 'slug'
-    current?: string
-    source?: string
-  }
-  
-  export type Skills = {
-    _id: string
-    _type: 'skills'
-    _createdAt: string
-    _updatedAt: string
-    _rev: string
-    frontendSkills?: Array<{
+  _type: 'sanity.imagePaletteSwatch'
+  background?: string
+  foreground?: string
+  population?: number
+  title?: string
+}
+
+export type SanityImagePalette = {
+  _type: 'sanity.imagePalette'
+  darkMuted?: SanityImagePaletteSwatch
+  lightVibrant?: SanityImagePaletteSwatch
+  darkVibrant?: SanityImagePaletteSwatch
+  vibrant?: SanityImagePaletteSwatch
+  dominant?: SanityImagePaletteSwatch
+  lightMuted?: SanityImagePaletteSwatch
+  muted?: SanityImagePaletteSwatch
+}
+
+export type SanityImageDimensions = {
+  _type: 'sanity.imageDimensions'
+  height?: number
+  width?: number
+  aspectRatio?: number
+}
+
+export type SanityFileAsset = {
+  _id: string
+  _type: 'sanity.fileAsset'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  originalFilename?: string
+  label?: string
+  title?: string
+  description?: string
+  altText?: string
+  sha1hash?: string
+  extension?: string
+  mimeType?: string
+  size?: number
+  assetId?: string
+  uploadId?: string
+  path?: string
+  url?: string
+  source?: SanityAssetSourceData
+}
+
+export type Geopoint = {
+  _type: 'geopoint'
+  lat?: number
+  lng?: number
+  alt?: number
+}
+
+export type Slug = {
+  _type: 'slug'
+  current?: string
+  source?: string
+}
+
+export type Skills = {
+  _id: string
+  _type: 'skills'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  frontendSkills?: Array<{
+    _ref: string
+    _type: 'reference'
+    _weak?: boolean
+    _key: string
+    [internalGroqTypeReferenceTo]?: 'skill'
+  }>
+  backendSkills?: Array<{
+    _ref: string
+    _type: 'reference'
+    _weak?: boolean
+    _key: string
+    [internalGroqTypeReferenceTo]?: 'skill'
+  }>
+}
+
+export type Skill = {
+  _id: string
+  _type: 'skill'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  skill?: string
+  image?: {
+    asset?: {
       _ref: string
       _type: 'reference'
       _weak?: boolean
-      _key: string
-      [internalGroqTypeReferenceTo]?: 'skill'
-    }>
-    backendSkills?: Array<{
+      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
+    }
+    hotspot?: SanityImageHotspot
+    crop?: SanityImageCrop
+    _type: 'image'
+  }
+}
+
+export type Project = {
+  _id: string
+  _type: 'project'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  projectTitle?: string
+  projectBio?: string
+  projectThumbnail?: {
+    asset?: {
       _ref: string
       _type: 'reference'
       _weak?: boolean
-      _key: string
-      [internalGroqTypeReferenceTo]?: 'skill'
-    }>
-  }
-  
-  export type Skill = {
-    _id: string
-    _type: 'skill'
-    _createdAt: string
-    _updatedAt: string
-    _rev: string
-    skill?: string
-    image?: {
-      asset?: {
-        _ref: string
-        _type: 'reference'
-        _weak?: boolean
-        [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
-      }
-      hotspot?: SanityImageHotspot
-      crop?: SanityImageCrop
-      _type: 'image'
+      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
     }
+    hotspot?: SanityImageHotspot
+    crop?: SanityImageCrop
+    _type: 'image'
   }
-  
-  export type Project = {
-    _id: string
-    _type: 'project'
-    _createdAt: string
-    _updatedAt: string
-    _rev: string
-    projectTitle?: string
-    projectBio?: string
-    projectThumbnail?: {
-      asset?: {
-        _ref: string
-        _type: 'reference'
-        _weak?: boolean
-        [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
-      }
-      hotspot?: SanityImageHotspot
-      crop?: SanityImageCrop
-      _type: 'image'
-    }
-    projectGithubLink?: string
-    projectDeployedLink?: string
-    projectDetail?: Array<{
-      children?: Array<{
-        marks?: Array<string>
-        text?: string
-        _type: 'span'
-        _key: string
-      }>
-      style?: 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote'
-      listItem?: 'bullet' | 'number'
-      markDefs?: Array<{
-        href?: string
-        _type: 'link'
-        _key: string
-      }>
-      level?: number
-      _type: 'block'
+  projectGithubLink?: string
+  projectDeployedLink?: string
+  projectDetail?: Array<{
+    children?: Array<{
+      marks?: Array<string>
+      text?: string
+      _type: 'span'
       _key: string
     }>
-    projectTools?: Array<string>
-  }
-  
-  export type Projects = {
-    _id: string
-    _type: 'projects'
-    _createdAt: string
-    _updatedAt: string
-    _rev: string
-    projects?: Array<{
+    style?: 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote'
+    listItem?: 'bullet' | 'number'
+    markDefs?: Array<{
+      href?: string
+      _type: 'link'
+      _key: string
+    }>
+    level?: number
+    _type: 'block'
+    _key: string
+  }>
+  projectTools?: Array<string>
+}
+
+export type Projects = {
+  _id: string
+  _type: 'projects'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  projects?: Array<{
+    _ref: string
+    _type: 'reference'
+    _weak?: boolean
+    _key: string
+    [internalGroqTypeReferenceTo]?: 'project'
+  }>
+}
+
+export type About = {
+  _id: string
+  _type: 'about'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  title?: string
+  heroImage?: {
+    asset?: {
       _ref: string
       _type: 'reference'
       _weak?: boolean
-      _key: string
-      [internalGroqTypeReferenceTo]?: 'project'
-    }>
-  }
-  
-  export type About = {
-    _id: string
-    _type: 'about'
-    _createdAt: string
-    _updatedAt: string
-    _rev: string
-    title?: string
-    heroImage?: {
-      asset?: {
-        _ref: string
-        _type: 'reference'
-        _weak?: boolean
-        [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
-      }
-      hotspot?: SanityImageHotspot
-      crop?: SanityImageCrop
-      _type: 'image'
+      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
     }
-    resume?: string
-    aboutContent?: Array<{
-      children?: Array<{
-        marks?: Array<string>
-        text?: string
-        _type: 'span'
-        _key: string
-      }>
-      style?: 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote'
-      listItem?: 'bullet' | 'number'
-      markDefs?: Array<{
-        href?: string
-        _type: 'link'
-        _key: string
-      }>
-      level?: number
-      _type: 'block'
+    hotspot?: SanityImageHotspot
+    crop?: SanityImageCrop
+    _type: 'image'
+  }
+  resume?: string
+  aboutContent?: Array<{
+    children?: Array<{
+      marks?: Array<string>
+      text?: string
+      _type: 'span'
       _key: string
     }>
-  }
-  
-  export type Homepage = {
-    _id: string
-    _type: 'homepage'
-    _createdAt: string
-    _updatedAt: string
-    _rev: string
-    firstName?: string
-    lastName?: string
-    heroImage?: {
-      asset?: {
-        _ref: string
-        _type: 'reference'
-        _weak?: boolean
-        [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
-      }
-      hotspot?: SanityImageHotspot
-      crop?: SanityImageCrop
-      _type: 'image'
+    style?: 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote'
+    listItem?: 'bullet' | 'number'
+    markDefs?: Array<{
+      href?: string
+      _type: 'link'
+      _key: string
+    }>
+    level?: number
+    _type: 'block'
+    _key: string
+  }>
+}
+
+export type Homepage = {
+  _id: string
+  _type: 'homepage'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  firstName?: string
+  lastName?: string
+  heroImage?: {
+    asset?: {
+      _ref: string
+      _type: 'reference'
+      _weak?: boolean
+      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
     }
-    userDescription?: string
+    hotspot?: SanityImageHotspot
+    crop?: SanityImageCrop
+    _type: 'image'
   }
-  
-  export type SanityImageCrop = {
-    _type: 'sanity.imageCrop'
-    top?: number
-    bottom?: number
-    left?: number
-    right?: number
-  }
-  
-  export type SanityImageHotspot = {
-    _type: 'sanity.imageHotspot'
-    x?: number
-    y?: number
-    height?: number
-    width?: number
-  }
-  
-  export type SanityImageAsset = {
-    _id: string
-    _type: 'sanity.imageAsset'
-    _createdAt: string
-    _updatedAt: string
-    _rev: string
-    originalFilename?: string
-    label?: string
-    title?: string
-    description?: string
-    altText?: string
-    sha1hash?: string
-    extension?: string
-    mimeType?: string
-    size?: number
-    assetId?: string
-    uploadId?: string
-    path?: string
-    url?: string
-    metadata?: SanityImageMetadata
-    source?: SanityAssetSourceData
-  }
-  
-  export type SanityAssetSourceData = {
-    _type: 'sanity.assetSourceData'
-    name?: string
-    id?: string
-    url?: string
-  }
-  
-  export type SanityImageMetadata = {
-    _type: 'sanity.imageMetadata'
-    location?: Geopoint
-    dimensions?: SanityImageDimensions
-    palette?: SanityImagePalette
-    lqip?: string
-    blurHash?: string
-    hasAlpha?: boolean
-    isOpaque?: boolean
-  }
-  
-  export type AllSanitySchemaTypes =
-    | SanityImagePaletteSwatch
-    | SanityImagePalette
-    | SanityImageDimensions
-    | SanityFileAsset
-    | Geopoint
-    | Slug
-    | Skills
-    | Skill
-    | Project
-    | Projects
-    | About
-    | Homepage
-    | SanityImageCrop
-    | SanityImageHotspot
-    | SanityImageAsset
-    | SanityAssetSourceData
-    | SanityImageMetadata
-  export declare const internalGroqTypeReferenceTo: unique symbol
-  
+  userDescription?: string
+}
+
+export type SanityImageCrop = {
+  _type: 'sanity.imageCrop'
+  top?: number
+  bottom?: number
+  left?: number
+  right?: number
+}
+
+export type SanityImageHotspot = {
+  _type: 'sanity.imageHotspot'
+  x?: number
+  y?: number
+  height?: number
+  width?: number
+}
+
+export type SanityImageAsset = {
+  _id: string
+  _type: 'sanity.imageAsset'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  originalFilename?: string
+  label?: string
+  title?: string
+  description?: string
+  altText?: string
+  sha1hash?: string
+  extension?: string
+  mimeType?: string
+  size?: number
+  assetId?: string
+  uploadId?: string
+  path?: string
+  url?: string
+  metadata?: SanityImageMetadata
+  source?: SanityAssetSourceData
+}
+
+export type SanityAssetSourceData = {
+  _type: 'sanity.assetSourceData'
+  name?: string
+  id?: string
+  url?: string
+}
+
+export type SanityImageMetadata = {
+  _type: 'sanity.imageMetadata'
+  location?: Geopoint
+  dimensions?: SanityImageDimensions
+  palette?: SanityImagePalette
+  lqip?: string
+  blurHash?: string
+  hasAlpha?: boolean
+  isOpaque?: boolean
+}
+
+export type AllSanitySchemaTypes =
+  | SanityImagePaletteSwatch
+  | SanityImagePalette
+  | SanityImageDimensions
+  | SanityFileAsset
+  | Geopoint
+  | Slug
+  | Skills
+  | Skill
+  | Project
+  | Projects
+  | About
+  | Homepage
+  | SanityImageCrop
+  | SanityImageHotspot
+  | SanityImageAsset
+  | SanityAssetSourceData
+  | SanityImageMetadata
+export declare const internalGroqTypeReferenceTo: unique symbol

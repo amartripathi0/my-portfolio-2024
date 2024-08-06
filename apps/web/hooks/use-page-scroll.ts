@@ -56,11 +56,12 @@ function usePageScroll() {
         setPageSectionOnViewport('contact-me')
       }
     }
-    window.addEventListener('scroll', handlePageScroll);
+    window.addEventListener('scroll', handlePageScroll)
     return () => {
-      window.removeEventListener('scroll', handlePageScroll);
-      clearTimeout(scrollTimer); 
-    };  }, [windowHeight])
+      window.removeEventListener('scroll', handlePageScroll)
+      clearTimeout(scrollTimer)
+    }
+  }, [windowHeight])
 
   return { pageSectionOnViewport }
 }
