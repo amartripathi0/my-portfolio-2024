@@ -7,6 +7,8 @@ import { ProjectType } from '@/types'
 import { FaGithub } from 'react-icons/fa'
 import { PortableText } from 'next-sanity'
 import { urlFor } from '@/utils/urlFor'
+import { motion } from 'framer-motion'
+import ProjectTool from './shared/ProjectTool'
 
 const ProjectContainer = ({
   projectDetail,
@@ -17,48 +19,47 @@ const ProjectContainer = ({
   projectDeployedLink,
   projectTools,
 }: ProjectType) => {
-
   return (
-    <div className="flex justify-between min-h-[calc(100vh-5rem)] w-full border-l border-purple-600 max-sm:flex-col max-sm:flex-center max-sm:mt-10 max-sm:gap-10 mt-10">
+    <div className="max-sm:flex-center mt-10 flex min-h-[calc(100vh-5rem)] w-full justify-between border-l border-purple-600 max-sm:mt-10 max-sm:flex-col max-sm:gap-10">
       {/* Sticky Image */}
 
-      <div className="w-[30%] sm:sticky sm:top-40 max-sm:w-[90%] max-sm:h-96">
+      <div className="w-[30%] max-sm:h-96 max-sm:w-[90%] sm:sticky sm:top-40">
         {/* <IndigoVioletBlur /> */}
 
         <CardContainer
           data-scroll-sticky
           containerClassName="sm:sticky sm:top-40 max-sm:h-full max-sm:w-full w-5/6 m-auto py-6"
         >
-          <CardBody className="bg-gradient-to-b from-zinc-950 via-indigo-950 relative group/card h-full w-full rounded-xl p-6 border border-violet-950  ">
+          <CardBody className="group/card relative h-full w-full rounded-xl border border-violet-950 bg-gradient-to-b from-zinc-950 via-indigo-950 p-6">
             <CardItem
               translateZ="50"
-              className="text-2xl max-sm:text-xl font-bold text-white"
+              className="text-2xl font-bold text-white max-sm:text-xl"
             >
               {projectTitle}
             </CardItem>
             <CardItem
               as="p"
               translateZ="60"
-              className="text-white text-xs max-sm:text-xs max-w-sm mt-2 text-justify dark:text-neutral-300"
+              className="mt-2 max-w-sm text-justify text-xs text-white dark:text-neutral-300 max-sm:text-xs"
             >
               {projectBio}
             </CardItem>
-            <CardItem translateZ="100" className="w-full mt-4">
+            <CardItem translateZ="100" className="mt-4 w-full">
               <Image
                 src={urlFor(projectThumbnail).url()}
                 height="1000"
                 width="1000"
-                className="h-3/5 w-full object-cover rounded-[5px] group-hover/card:shadow-xl opacity-90 hover:opacity-100 transition-opacity duration-100"
+                className="h-3/5 w-full rounded-[5px] object-cover opacity-90 transition-opacity duration-100 hover:opacity-100 group-hover/card:shadow-xl"
                 alt="thumbnail"
               />
             </CardItem>
-            <div className="flex justify-between items-center max-sm:mt-6 mt-10 ">
+            <div className="mt-10 flex items-center justify-between max-sm:mt-6">
               <CardItem
                 translateZ={20}
                 as={Link}
                 href={projectGithubLink}
                 target="__blank"
-                className="flex items-center gap-1 px-3 py-2 rounded-xl text-sm font-normal  max-sm:text-xs  dark:text-white opacity-80 hover:opacity-100"
+                className="flex items-center gap-1 rounded-xl px-3 py-2 text-sm font-normal opacity-80 hover:opacity-100 dark:text-white max-sm:text-xs"
               >
                 Source Code
                 <FaGithub />
@@ -69,7 +70,7 @@ const ProjectContainer = ({
                 as={Link}
                 href={projectDeployedLink}
                 target="__blank"
-                className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-sm  max-sm:text-xs font-bold opacity-80 hover:opacity-100"
+                className="bg-black dark:text-black rounded-xl px-4 py-2 text-sm font-bold text-white opacity-80 hover:opacity-100 dark:bg-white max-sm:text-xs"
               >
                 See it live ↗
               </CardItem>
@@ -79,30 +80,28 @@ const ProjectContainer = ({
       </div>
 
       {/* Project Details */}
-      <div className="w-[70%] max-sm:w-full flex flex-col text-sm">
-        <div className="flex flex-col gap-6 p-10 pt-6 max-sm:p-2 pr-0 rounded-xl shadow-md h-full max-sm:text-sm text-justify">
+      <div className="flex w-[70%] flex-col text-sm max-sm:w-full">
+        <div className="flex h-full flex-col gap-6 rounded-xl p-10 pr-0 pt-6 text-justify shadow-md max-sm:p-2 max-sm:text-sm">
           {/*  @ts-ignore*/}
           {projectDetail && <PortableText value={projectDetail[0]} />}
 
-          <div className="flex gap-4 max-sm:gap-2 flex-wrap">
+          <div className="flex flex-wrap gap-4 max-sm:gap-2">
             {projectTools?.map((eachTool) => (
-              <Badge
-                className="max-sm:text-[3vw] max-sm:px-2 max-sm:py-1 p-2 px-4 bg-prelude-900"
-                key={eachTool}
-              >
-                <TextUnderline text={eachTool} textStyles="text-xs" />
-              </Badge>
+              <div key={eachTool}>
+                <ProjectTool tool={eachTool}/>
+              </div>
             ))}
           </div>
           <div className="flex flex-col gap-6">
             {
               // @ts-ignore
-              projectDetail && projectDetail.slice(1)?.map((detail, index) => (
-                <PortableText 
-                key={index + 1}
-                value={detail} 
-            />
-        ))}
+              projectDetail &&
+                projectDetail
+                  .slice(1)
+                  ?.map((detail, index: number) => (
+                    <PortableText key={index + 1} value={detail} />
+                  ))
+            }
           </div>
         </div>
       </div>
@@ -113,10 +112,6 @@ export default ProjectContainer
 
 function IndigoVioletBlur() {
   return (
-    <div
-      className="absolute opacity-50 h-2/3 top-1/4  w-1/5 blur-[100px]   rounded-full
-        bg-gradient-to-r from-violet-600 to-indigo-700  
-      "
-    />
+    <div className="absolute top-1/4 h-2/3 w-1/5 rounded-full bg-gradient-to-r from-violet-600 to-indigo-700 opacity-50 blur-[100px]" />
   )
 }
