@@ -26,4 +26,17 @@ export type ProjectContainerProps = {
   projectThumbnailSrc: string
 }
 
+export type ContactMeFormData = {
+  name: string
+  email: string
+  message: string
+}
+
+export type SkillType = {
+  name: string
+  imageSrc: string
+}
+
+
+
 
