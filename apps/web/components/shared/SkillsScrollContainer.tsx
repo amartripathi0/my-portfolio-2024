@@ -27,7 +27,7 @@ function SkillsScrollContainer({
     <motion.div
       ref={targetRef}
       style={{ translateX: leftSlide, opacity: opacity }}
-      className=" flex flex-wrap gap-4  px-10  max-sm:p-2  max-sm:justify-around"
+      className="flex flex-wrap gap-4  px-10 py-6 max-sm:p-2  max-sm:justify-around"
     >
       {skillsArray.map(({ name, imageSrc }) => (
         <Skill key={name} name={name} imageSrc={imageSrc} />
