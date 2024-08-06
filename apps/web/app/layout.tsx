@@ -11,7 +11,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "Amar's Portfolio",
-  description: 'This is a fullstack web developer portfilo of Amar Tripathi.',
+  description: 'This is a fullstack web developer portfolio of Amar Tripathi.',
   icons: {
     icon: '/favicon/favicon.ico',
   },
