@@ -1,35 +1,41 @@
 import ProjectContainer from '@/components/ProjectContainer'
 import PageTitle from '@/components/shared/PageTitle'
-import { projectsArray } from '@/constants'
+// import { projectsArray } from '@/constants'
+import { PROJECTS_PAGE_QUERY } from '@/sanity/queries'
+import { ProjectType } from '@/types'
+import { getSanityData } from '@/utils/getSanityData'
 
-function Projects() {
+async function Projects() {
+  const projectsArray: ProjectType[] = await getSanityData(PROJECTS_PAGE_QUERY)
+  console.log(projectsArray);
+  
   return (
     <div id="projects" className="min-h-screen " data-scroll-container>
       <div className="pt-10 shadow-md relative">
         <PageTitle
           pageTitle="My Projects"
-          
+
           underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-cyan-600"
         />
         {/* bg gradient Violet cyan */}
         <CyanVioletBlur />
-
-        {projectsArray.map(
+          
+        {projectsArray?.map(
           ({
             projectTitle,
             projectBio,
-            projectThumbnailSrc,
+            projectThumbnail,
             projectGithubLink,
             projectDeployedLink,
             projectDetail,
             projectTools,
-          }) => (
+          }: ProjectType) => (
             <ProjectContainer
               key={projectTitle}
               projectTitle={projectTitle}
               projectBio={projectBio}
               projectTools={projectTools}
-              projectThumbnailSrc={projectThumbnailSrc}
+              projectThumbnail={projectThumbnail}
               projectGithubLink={projectGithubLink}
               projectDeployedLink={projectDeployedLink}
               projectDetail={projectDetail}

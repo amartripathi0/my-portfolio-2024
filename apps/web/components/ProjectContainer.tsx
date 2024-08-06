@@ -3,18 +3,21 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Badge } from './ui/badge'
 import TextUnderline from './shared/TextUnderline'
-import { ProjectContainerProps } from '@/types'
+import { ProjectType } from '@/types'
 import { FaGithub } from 'react-icons/fa'
+import { PortableText } from 'next-sanity'
+import { urlFor } from '@/utils/urlFor'
 
 const ProjectContainer = ({
   projectDetail,
   projectTitle,
   projectBio,
-  projectThumbnailSrc,
+  projectThumbnail,
   projectGithubLink,
   projectDeployedLink,
   projectTools,
-}: ProjectContainerProps) => {
+}: ProjectType) => {
+
   return (
     <div className="flex justify-between min-h-[calc(100vh-5rem)] w-full border-l border-purple-600 max-sm:flex-col max-sm:flex-center max-sm:mt-10 max-sm:gap-10 mt-10">
       {/* Sticky Image */}
@@ -42,7 +45,7 @@ const ProjectContainer = ({
             </CardItem>
             <CardItem translateZ="100" className="w-full mt-4">
               <Image
-                src={projectThumbnailSrc}
+                src={urlFor(projectThumbnail).url()}
                 height="1000"
                 width="1000"
                 className="h-3/5 w-full object-cover rounded-[5px] group-hover/card:shadow-xl opacity-90 hover:opacity-100 transition-opacity duration-100"
@@ -78,10 +81,11 @@ const ProjectContainer = ({
       {/* Project Details */}
       <div className="w-[70%] max-sm:w-full flex flex-col text-sm">
         <div className="flex flex-col gap-6 p-10 pt-6 max-sm:p-2 pr-0 rounded-xl shadow-md h-full max-sm:text-sm text-justify">
-          <p>{projectDetail.topPara}</p>
+          {/*  @ts-ignore*/}
+          {projectDetail && <PortableText value={projectDetail[0]} />}
 
           <div className="flex gap-4 max-sm:gap-2 flex-wrap">
-            {projectTools.map((eachTool) => (
+            {projectTools?.map((eachTool) => (
               <Badge
                 className="max-sm:text-[3vw] max-sm:px-2 max-sm:py-1 p-2 px-4 bg-prelude-900"
                 key={eachTool}
@@ -91,9 +95,14 @@ const ProjectContainer = ({
             ))}
           </div>
           <div className="flex flex-col gap-6">
-            {projectDetail.parasArray?.map((projectDetailPara) => (
-              <p key={projectDetailPara}>{projectDetailPara}</p>
-            ))}
+            {
+              // @ts-ignore
+              projectDetail && projectDetail.slice(1)?.map((detail, index) => (
+                <PortableText 
+                key={index + 1}
+                value={detail} 
+            />
+        ))}
           </div>
         </div>
       </div>
