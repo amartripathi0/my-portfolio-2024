@@ -4,7 +4,7 @@ export const HOMEPAGE_QUERY = `
     lastName,
     userDescription,
     heroImage,
-}[0]`;
+}[0]`
 
 export const ABOUT_PAGE_QUERY = `
   *[_type == 'about']{
@@ -13,3 +13,14 @@ export const ABOUT_PAGE_QUERY = `
     aboutContent,
     heroImage,
 }[0]`;
+
+export const PROJECTS_PAGE_QUERY = `
+  *[_type == 'project']{
+    projectTitle,
+    projectBio,
+    projectThumbnail,
+    projectGithubLink,
+    projectDeployedLink,
+    projectDetail,
+    projectTools,
+}`
