@@ -5,7 +5,7 @@ import React from 'react'
 import SocialHandles from './shared/SocialHandles'
 import { urlFor } from '@/utils/urlFor'
 
-function HomePageLeft({heroImage}) {
+function HomePageLeft({heroImage}: {heroImage : any}) {
   return (
     <motion.div
       className=" flex-between flex-col max-sm:justify-end gap-10 max-sm:gap-4 w-[30%] h-[28vw] max-sm:h-2/5 max-sm:w-full sm:pt-4 pb-2 "
