@@ -1,4 +1,7 @@
 import { IconType } from 'react-icons'
+import type { SanityImageAssetDocument } from "@sanity/client";
+import { ElementType } from 'react';
+
 export type SocialMediaLinkType = {
   label: string
   url: string
@@ -46,3 +49,42 @@ export type AboutPageDataType = {
   heroImage: any
   aboutContent: any
 }
+
+export type ProjectType = {
+  projectDetail:BlockField
+  projectTitle: string
+  projectBio: string
+  projectGithubLink: string
+  projectTools: string[]
+  projectDeployedLink?: string
+  projectThumbnail: SanityImageAssetDocument
+}
+
+export type BlockField<Name extends string = string> =  {
+  name: Name;
+  type: 'block';
+  styles?: Array<{
+    title: string;
+    value: string;
+    blockEditor?: {
+      render: ElementType;
+    };
+    icon?: ElementType;
+  }>;
+  lists?: Array<{
+    title: string;
+    value: string;
+  }>;
+  marks?: {
+    // annotations?: ArrayOf[];
+    decorators?: Array<{
+      title: string;
+      value: string;
+      icon?: ElementType;
+    }>;
+  };
+  // of?: ArrayOf[];
+  icon?: ElementType;
+};
+
+
