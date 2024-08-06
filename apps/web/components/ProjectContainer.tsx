@@ -1,14 +1,11 @@
 import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-container'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Badge } from './ui/badge'
-import TextUnderline from './shared/TextUnderline'
-import { ProjectType } from '@/types'
 import { FaGithub } from 'react-icons/fa'
 import { PortableText } from 'next-sanity'
 import { urlFor } from '@/utils/urlFor'
-import { motion } from 'framer-motion'
 import ProjectTool from './shared/ProjectTool'
+import { Project } from '@/sanity/types'
 
 const ProjectContainer = ({
   projectDetail,
@@ -18,14 +15,11 @@ const ProjectContainer = ({
   projectGithubLink,
   projectDeployedLink,
   projectTools,
-}: ProjectType) => {
+}: Partial<Project>) => {
   return (
     <div className="max-sm:flex-center mt-10 flex min-h-[calc(100vh-5rem)] w-full justify-between border-l border-purple-600 max-sm:mt-10 max-sm:flex-col max-sm:gap-10">
       {/* Sticky Image */}
-
       <div className="w-[30%] max-sm:h-96 max-sm:w-[90%] sm:sticky sm:top-40">
-        {/* <IndigoVioletBlur /> */}
-
         <CardContainer
           data-scroll-sticky
           containerClassName="sm:sticky sm:top-40 max-sm:h-full max-sm:w-full w-5/6 m-auto py-6"
@@ -94,7 +88,6 @@ const ProjectContainer = ({
           </div>
           <div className="flex flex-col gap-6">
             {
-              // @ts-ignore
               projectDetail &&
                 projectDetail
                   .slice(1)

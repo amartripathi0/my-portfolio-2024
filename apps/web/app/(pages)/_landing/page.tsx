@@ -2,10 +2,10 @@ import { HOMEPAGE_QUERY } from '@/sanity/queries'
 import { getSanityData } from '@/utils/getSanityData'
 import HomePageLeft from '@/components/HomePageLeft'
 import HomePageRight from '@/components/HomePageRight'
-import { HomepageDataType } from '@/types'
+import { Homepage } from '@/sanity/types'
 
 const Landing = async () => {
-  const { firstName, lastName, heroImage }: HomepageDataType =
+  const { firstName, lastName, heroImage }: Homepage =
     await getSanityData(HOMEPAGE_QUERY)
   return (
     <div
@@ -13,7 +13,7 @@ const Landing = async () => {
       className="flex-between h-[calc(100vh-5rem)] max-tablet:flex-col max-sm:justify-start max-sm:pt-10"
     >
       <HomePageLeft heroImage={heroImage} />
-      <HomePageRight firstName={firstName} lastName={lastName} />
+      <HomePageRight firstName={firstName || ''} lastName={lastName || ''} />
     </div>
   )
 }
