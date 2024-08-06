@@ -1,6 +1,7 @@
 import { IconType } from 'react-icons'
 import type { SanityImageAssetDocument } from "@sanity/client";
 import { ElementType } from 'react';
+import { TypedObject } from '@portabletext/types';
 
 export type SocialMediaLinkType = {
   label: string
@@ -47,7 +48,7 @@ export type AboutPageDataType = {
   title: string
   resume: string
   heroImage: SanityImageAssetDocument
-  aboutContent: BlockField
+  aboutContent: TypedObject[]
 }
 
 export type ProjectType = {
