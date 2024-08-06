@@ -1,4 +1,5 @@
 import AboutPageRight from '@/components/AboutPageRight'
+import BackgroundBlur from '@/components/shared/BackgroundBlur'
 import IndigoBlurBackground from '@/components/shared/IndigoBlurBackground'
 import PageTitle from '@/components/shared/PageTitle'
 import { ABOUT_PAGE_QUERY } from '@/sanity/queries'
@@ -18,7 +19,12 @@ const About = async () => {
       {/* Left section */}
       <div className="flex flex-col w-3/4 sm:h-4/5 max-sm:w-full max-sm:gap-2">
         {/* bg gradient indigo cyan */}
-        <IndigoBlurBackground height="1/5" additionalStyles="max-sm:left-1/4" />
+        {/* <IndigoBlurBackground height="1/5" additionalStyles="max-sm:left-1/4" /> */}
+        <BackgroundBlur 
+        blurColor = 'indigo'
+        style = 'h-1/6 max-sm:left-1/4' 
+        />
+
         {/* About Me heading */}
         <PageTitle
           pageTitle={title}
