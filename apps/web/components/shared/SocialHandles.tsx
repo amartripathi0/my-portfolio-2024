@@ -1,4 +1,5 @@
 import { socialMediaLinks } from '@/constants'
+import { cn } from '@/utils/cn'
 import Link from 'next/link'
 import React from 'react'
 
@@ -10,16 +11,16 @@ function SocialHandles({
   size?: number
 }) {
   return (
-    <div className={`${additionalStyle} `}>
+    <div className={cn('', additionalStyle)}>
       {socialMediaLinks.map(({ label, url, icon: SocialIcon }) => (
         <Link
           key={label}
           target="_blank"
           href={url}
           aria-label={label.toLocaleUpperCase()}
-          className="px-2 hover:scale-105 transition-all duration-200 ease-in-out opacity-60 hover:opacity-100"
+          className="px-2 opacity-60 transition-all duration-200 ease-in-out hover:scale-105 hover:opacity-100"
         >
-          {<SocialIcon className={`h-6 w-6 `} />}
+          {<SocialIcon className={`size-6`} />}
         </Link>
       ))}
     </div>
