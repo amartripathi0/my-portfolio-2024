@@ -40,14 +40,14 @@ export type HomepageDataType = {
   firstName: string
   lastName: string
   userDescription: string
-  heroImage: any
+  heroImage: SanityImageAssetDocument
 }
 
 export type AboutPageDataType = {
   title: string
   resume: string
-  heroImage: any
-  aboutContent: any
+  heroImage: SanityImageAssetDocument
+  aboutContent: BlockField
 }
 
 export type ProjectType = {
