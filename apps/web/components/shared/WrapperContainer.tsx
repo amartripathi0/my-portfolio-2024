@@ -1,3 +1,4 @@
+import { cn } from '@/utils/cn'
 import React from 'react'
 
 const WrapperContainer = ({
@@ -9,7 +10,10 @@ const WrapperContainer = ({
 }) => {
   return (
     <div
-      className={`${additionalStyle}  border-prelude-600 border-2 rounded-full hover:shadow-md hover:shadow-violet-500 hover:border-rum-500 border-1 h-5/6  text-lg  transition-all duration-200`}
+      className={cn(
+        `border-1 h-5/6 rounded-full border-2 border-prelude-600 text-lg transition-all duration-200 hover:border-rum-500 hover:shadow-md hover:shadow-violet-500`,
+        additionalStyle,
+      )}
     >
       {children}
     </div>

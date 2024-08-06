@@ -6,7 +6,7 @@ function ProjectCard() {
   return (
     <CardContainer
       data-scroll-sticky
-      containerClassName="sticky top-40   "
+      containerClassName="sticky top-40"
       className=""
     >
       <CardBody className="bg-gray-800 relative group/card h-full rounded-xl p-6 border  ">

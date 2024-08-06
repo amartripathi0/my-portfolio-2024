@@ -12,6 +12,7 @@ import usePageScroll from '@/hooks/use-page-scroll'
 import LocomotiveScroll from 'locomotive-scroll'
 import TextUnderline from './shared/TextUnderline'
 import Image from 'next/image'
+import { cn } from '@/utils/cn'
 
 const Navbar = ({
   locomotiveScroll,
@@ -27,15 +28,14 @@ const Navbar = ({
       initial={{ opacity: 0, y: -15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ ease: 'easeInOut', duration: 1 }}
-      className={`flex-between fixed top-0 left-0 w-screen h-20 max-tablet:h-[70px]
-    px-10 max-mobile:px-4 py-2 max-mobile:py-1 backdrop-blur-md z-50 ${
-      scrolled && 'border-b border-violet-700'
-    }
-    `}
+      className={cn(
+        `flex-between fixed left-0 top-0 z-50 h-20 w-screen px-10 py-2 backdrop-blur-md max-tablet:h-[70px] max-mobile:px-4 max-mobile:py-1`,
+        scrolled && 'border-b border-violet-700',
+      )}
     >
       {/* Left: Avatar and Name section */}
       <WrapperContainer additionalStyle="flex-center  w-28 max-mobile:w-auto max-sm:px-1 sm:pr-1">
-        <Link href={'/'} className="flex-around-center w-full ">
+        <Link href={'/'} className="flex-around-center w-full">
           <Image
             src={'/assets/amar-img.png'}
             height={1000}
@@ -61,15 +61,14 @@ const Navbar = ({
             }
             className={`${
               pageSectionOnViewport === item.label
-                ? 'transition-all duration-300 ease-in-out '
+                ? 'transition-all duration-300 ease-in-out'
                 : ''
-            } 
-           relative z-30 w-1/3 h-3/4 font-medium flex-center rounded-full transition-all duration-150 hover:bg-slate-900 hover:border-transparent`}
+            } flex-center relative z-30 h-3/4 w-1/3 rounded-full font-medium transition-all duration-150 hover:border-transparent hover:bg-slate-900`}
           >
             {pageSectionOnViewport === item.label && (
               <motion.span
                 layoutId="bubble"
-                className="bg-gradient-to-r from-indigo-800 to-violet-500 h-full w-full absolute top-0 left-0 -z-10 "
+                className="absolute left-0 top-0 -z-10 h-full w-full bg-gradient-to-r from-indigo-800 to-violet-500"
                 style={{ borderRadius: 9999 }}
                 transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
               ></motion.span>
@@ -79,7 +78,7 @@ const Navbar = ({
         ))}
       </WrapperContainer>
 
-      <div className="flex items-center gap-3 relative">
+      <div className="relative flex items-center gap-3">
         {/* Contact Me */}
 
         <WrapperContainer additionalStyle="max-tablet:hidden">
@@ -90,8 +89,8 @@ const Navbar = ({
             }
             className={`${
               pageSectionOnViewport === 'contact-me' &&
-              'shadow-md shadow-violet-500 rounded-full'
-            } font-medium flex-center  w-28 py-2 max-tablet:py-3 max-sm:w-32 max-sm:px-2 `}
+              'rounded-full shadow-md shadow-violet-500'
+            } flex-center w-28 py-2 font-medium max-tablet:py-3 max-sm:w-32 max-sm:px-2`}
           >
             <TextUnderline text="Contact Me" />
           </Link>
@@ -105,7 +104,7 @@ const Navbar = ({
         />
 
         {menubarOpen && (
-          <div className="w-screen h-screen absolute -top-2 -right-4  bg-[#0C0404]  bg-opacity-75">
+          <div className="absolute -right-4 -top-2 h-screen w-screen bg-[#0C0404] bg-opacity-75">
             <motion.div
               animate={{
                 transition: {
@@ -113,10 +112,10 @@ const Navbar = ({
                   delayChildren: 0.5,
                 },
               }}
-              className="flex-col-center justify-center gap-10 rounded-3xl px-6 w-full h-1/2 mt-32 "
+              className="flex-col-center mt-32 h-1/2 w-full justify-center gap-10 rounded-3xl px-6"
             >
               <IoCloseOutline
-                className="absolute top-1 right-3 bg-slate-900 rounded-full text-purple-500 border border-gray-700"
+                className="absolute right-3 top-1 rounded-full border border-gray-700 bg-slate-900 text-purple-500"
                 onClick={() => setMenubarOpen((prev) => !prev)}
                 size={45}
               />
@@ -133,14 +132,12 @@ const Navbar = ({
                       staggerChildren: 0.4,
                     },
                   }}
-                  className={`${
+                  className={cn(
+                    'flex-center h-12 w-2/3 rounded-full border-rum-500 p-4 text-sm hover:bg-rum-600',
                     pageSectionOnViewport === item.label
                       ? 'bg-gradient-to-r from-indigo-800 to-violet-500'
-                      : 'bg-slate-900'
-                  }
-                  text-sm w-2/3 p-4 h-12  hover:bg-rum-600 border-rum-500 flex-center rounded-full
-
-                 `}
+                      : 'bg-slate-900',
+                  )}
                 >
                   <Link
                     scroll={true}
