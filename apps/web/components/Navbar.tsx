@@ -42,8 +42,8 @@ const Navbar = ({
         <Link href={'/'} className="flex-around-center w-full">
           <Image
             src={'/assets/amar-img.png'}
-            height={1000}
-            width={1000}
+            height={300}
+            width={300}
             alt={'amar-avatar'}
             className="h-10 w-10"
           />

@@ -41,8 +41,8 @@ const ProjectContainer = ({
             <CardItem translateZ="100" className="mt-4 w-full">
               <Image
                 src={urlFor(projectThumbnail).url()}
-                height="1000"
-                width="1000"
+                height="1080"
+                width="606"
                 className="h-3/5 w-full rounded-[5px] object-cover opacity-90 transition-opacity duration-100 hover:opacity-100 group-hover/card:shadow-xl"
                 alt="thumbnail"
               />
