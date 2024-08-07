@@ -37,6 +37,8 @@ function CustomCursor() {
           setCursorStyle('pink-cursor-sm')
         } else if (element.classList.contains('custom-cursor-hidden')) {
           setCursorStyle('custom-cursor-hidden')
+        } else if (element.classList.contains('custom-cursor-multiply')) {
+          setCursorStyle('custom-cursor-multiply')
         } else {
           setCursorStyle('default')
         }
@@ -70,6 +72,7 @@ function CustomCursor() {
           'size-7 bg-gradient-to-r from-indigo-800 via-pink-500 to-cyan-900 opacity-80 mix-blend-darken',
         cursorStyle === 'pink-cursor-sm' &&
           'size-6 bg-gradient-to-r from-indigo-800 via-pink-500 to-cyan-900 opacity-80 mix-blend-darken',
+        cursorStyle === 'custom-cursor-multiply' && 'size-5 mix-blend-multiply opacity-100',
         cursorStyle === 'custom-cursor-hidden' && 'hidden',
       )}
     />
