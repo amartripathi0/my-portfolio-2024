@@ -33,12 +33,12 @@ const Navbar = ({
       animate={{ opacity: 1, y: 0 }}
       transition={{ ease: 'easeInOut', duration: 1 }}
       className={cn(
-        `flex-between fixed left-0 top-0 z-50 h-20 w-screen px-10 py-2 backdrop-blur-md max-tablet:h-[70px] max-mobile:px-4 max-mobile:py-1`,
+        `flex-between max-md:h-[70px] fixed left-0 top-0 z-50 h-20 w-screen px-10 py-2 backdrop-blur-md max-sm:px-4 max-sm:py-1`,
         scrolled && 'border-b border-violet-700',
       )}
     >
       {/* Left: Avatar and Name section */}
-      <WrapperContainer additionalStyle="flex-center  w-28 max-mobile:w-auto max-sm:px-1 sm:pr-1">
+      <WrapperContainer additionalStyle="flex-center  w-28 max-sm:w-auto max-sm:px-1 sm:pr-1">
         <Link href={'/'} className="flex-around-center w-full">
           <Image
             src={'/assets/amar-img.png'}
@@ -49,13 +49,13 @@ const Navbar = ({
           />
           <TextUnderline
             text="Amar"
-            textStyles="font-medium opacity-90 hover:opacity-100 max-mobile:hidden"
+            textStyles="font-medium opacity-90 hover:opacity-100 max-sm:hidden"
           />
         </Link>
       </WrapperContainer>
 
       {/* Middle */}
-      <WrapperContainer additionalStyle="flex-center gap-8 rounded-full px-[7px] max-tablet:hidden w-1/3">
+      <WrapperContainer additionalStyle="flex-center gap-8 rounded-full px-[7px] max-md:hidden w-1/3">
         {navbarItems.map((item) => (
           <Link
             key={item.label}
@@ -83,14 +83,14 @@ const Navbar = ({
       <div className="relative flex items-center gap-3">
         {/* Contact Me */}
 
-        <WrapperContainer additionalStyle="max-tablet:hidden">
+        <WrapperContainer additionalStyle="max-md:hidden">
           <Link
             href={'#contact-me'}
             onClick={() =>
               locomotiveScroll.scrollTo('#contact-me', { offset: 0 })
             }
             className={cn(
-              'flex-center w-28 py-2 font-medium max-tablet:py-3 max-sm:w-32 max-sm:px-2',
+              'flex-center max-md:py-3 w-28 py-2 font-medium max-sm:w-32 max-sm:px-2',
               pageSectionOnViewport === 'contact-me' &&
                 'rounded-full shadow-md shadow-violet-500',
             )}
@@ -101,7 +101,7 @@ const Navbar = ({
 
         {/* Hamberger menubar */}
         <AiOutlineMenu
-          className="tablet:hidden"
+          className="md:hidden"
           size={36}
           onClick={() => setMenubarOpen((prev) => !prev)}
         />

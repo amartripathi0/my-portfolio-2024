@@ -20,8 +20,8 @@ const config = {
   theme: {
     screens: {
       sm: '620px',
-      tablet: '768px',
-      mobile: '620px',
+      md: '768px',
+      lg: '1024px'
     },
     container: {
       center: true,
