@@ -12,7 +12,6 @@ function CustomCursor() {
       setCurrentCursorPos({ x: e.clientX - 10, y: e.clientY - 10 })
     }
     const handleMouseLeave = () => {
-      console.log('mouseleave')
 
       if (cursorRef.current) {
         cursorRef.current.classList.remove('opacity-100')

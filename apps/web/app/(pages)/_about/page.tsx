@@ -9,7 +9,6 @@ import { PortableText } from '@portabletext/react'
 const About = async () => {
   const { title, resume, heroImage, aboutContent }: AboutType =
     await getSanityData(ABOUT_PAGE_QUERY)
-  console.log(aboutContent)
 
   return (
     <div
