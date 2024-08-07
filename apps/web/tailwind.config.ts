@@ -21,7 +21,7 @@ const config = {
     screens: {
       sm: '620px',
       md: '768px',
-      lg: '1024px'
+      lg: '1024px',
     },
     container: {
       center: true,

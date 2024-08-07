@@ -55,7 +55,7 @@ const Navbar = ({
       </WrapperContainer>
 
       {/* Middle */}
-      <WrapperContainer additionalStyle="flex-center gap-8 rounded-full px-[7px] max-md:hidden w-1/3">
+      <WrapperContainer additionalStyle="flex-center md:gap-3 lg:gap-6 rounded-full px-[7px] max-md:hidden md:w-1/2  lg:max-w-[490px]">
         {navbarItems.map((item) => (
           <Link
             key={item.label}
