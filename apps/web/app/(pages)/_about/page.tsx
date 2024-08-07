@@ -17,8 +17,6 @@ const About = async () => {
     >
       {/* Left section */}
       <div className="flex w-3/4 flex-col max-sm:w-full max-sm:gap-2 sm:h-4/5">
-        {/* bg gradient indigo cyan */}
-        {/* <IndigoBlurBackground height="1/5" additionalStyles="max-sm:left-1/4" /> */}
         <BackgroundBlur blurColor="indigo" style="h-1/6 max-sm:left-1/4" />
 
         {/* About Me heading */}
@@ -28,7 +26,7 @@ const About = async () => {
         />
 
         {/* About me paragraphs */}
-        <div className="flex-center w-full flex-col gap-4 py-4 text-justify text-base max-sm:px-2 max-sm:text-sm">
+        <div className="flex-center w-full flex-col gap-2 py-10 text-justify text-base max-sm:px-2 max-sm:text-sm">
           {aboutContent ? <PortableText value={aboutContent} /> : <></>}
         </div>
       </div>
