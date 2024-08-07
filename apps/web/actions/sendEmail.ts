@@ -49,6 +49,6 @@ export async function sendEmail(formData: FormData) {
 
     return res
   } catch (error) {
-    return { error: 'Error occured while sending the message!' }
+    return { error: 'Error occurred while sending the message!' }
   }
 }
