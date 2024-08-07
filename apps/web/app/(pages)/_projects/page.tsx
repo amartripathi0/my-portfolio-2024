@@ -1,4 +1,5 @@
 import ProjectContainer from '@/components/ProjectContainer'
+import BackgroundBlur from '@/components/shared/BackgroundBlur'
 import PageTitle from '@/components/shared/PageTitle'
 import { PROJECTS_PAGE_QUERY } from '@/sanity/queries'
 import { Project } from '@/sanity/types'
@@ -13,29 +14,41 @@ async function Projects() {
           pageTitle="My Projects"
           underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-cyan-600"
         />
-        {/* bg gradient Violet cyan */}
-        <CyanVioletBlur />
+        <BackgroundBlur
+          blurColor="indigo"
+          style="left-10 max-sm:left-1/3 -top-20 h-5 sm:h-40 sm:top-[32px]"
+        />
 
         {projectsArray?.map(
-          ({
-            projectTitle,
-            projectBio,
-            projectThumbnail,
-            projectGithubLink,
-            projectDeployedLink,
-            projectDetail,
-            projectTools,
-          }: Project) => (
-            <ProjectContainer
-              key={projectTitle}
-              projectTitle={projectTitle}
-              projectBio={projectBio}
-              projectTools={projectTools}
-              projectThumbnail={projectThumbnail}
-              projectGithubLink={projectGithubLink}
-              projectDeployedLink={projectDeployedLink}
-              projectDetail={projectDetail}
-            />
+          (
+            {
+              projectTitle,
+              projectBio,
+              projectThumbnail,
+              projectGithubLink,
+              projectDeployedLink,
+              projectDetail,
+              projectTools,
+            }: Project,
+          ) => (
+            <>
+              <ProjectContainer
+                key={projectTitle}
+                projectTitle={projectTitle}
+                projectBio={projectBio}
+                projectTools={projectTools}
+                projectThumbnail={projectThumbnail}
+                projectGithubLink={projectGithubLink}
+                projectDeployedLink={projectDeployedLink}
+                projectDetail={projectDetail}
+              />
+              {
+                <BackgroundBlur
+                  blurColor="purple"
+                  style="absolute bottom-3/5 -right-20 max-sm:opacity-0 sm:h-[280px] blur-[300px] bg-gradient-to-r from-indigo-500 to-purple-400 overflow-hidden"
+                />
+              }
+            </>
           ),
         )}
       </div>
@@ -44,9 +57,3 @@ async function Projects() {
 }
 
 export default Projects
-
-const CyanVioletBlur = () => {
-  return (
-    <div className="absolute top-20 -z-10 h-20 w-96 rounded-full bg-gradient-to-r from-cyan-400 to-violet-600 opacity-80 blur-[100px]" />
-  )
-}

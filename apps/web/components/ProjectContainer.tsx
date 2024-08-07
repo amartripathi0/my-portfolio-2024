@@ -17,7 +17,7 @@ const ProjectContainer = ({
   projectTools,
 }: Partial<Project>) => {
   return (
-    <div className="max-sm:flex-center mt-10 flex min-h-[calc(100vh-5rem)] w-full justify-between border-l border-purple-600 max-sm:mt-10 max-sm:flex-col max-sm:gap-10">
+    <div className="relative max-sm:flex-center mt-10 flex min-h-[calc(100vh-5rem)] w-full justify-between border-l border-purple-600 max-sm:mt-10 max-sm:flex-col max-sm:gap-10">
       {/* Sticky Image */}
       <div className="w-[30%] max-sm:h-96 max-sm:w-[90%] sm:sticky sm:top-40">
         <CardContainer
@@ -27,14 +27,14 @@ const ProjectContainer = ({
           <CardBody className="group/card relative h-full w-full rounded-xl border border-violet-950 bg-gradient-to-b from-zinc-950 via-indigo-950 p-6">
             <CardItem
               translateZ="50"
-              className="text-2xl font-bold text-white max-sm:text-xl"
+              className="text-xl font-bold text-white sm:text-2xl"
             >
               {projectTitle}
             </CardItem>
             <CardItem
               as="p"
               translateZ="60"
-              className="mt-2 max-w-sm text-justify text-xs text-white dark:text-neutral-300 max-sm:text-xs"
+              className="mt-2 max-w-sm text-justify line-clamp-5 text-sm font-normal text-zinc-200 dark:text-neutral-300 max-sm:text-xs"
             >
               {projectBio}
             </CardItem>
@@ -74,19 +74,19 @@ const ProjectContainer = ({
       </div>
 
       {/* Project Details */}
-      <div className="flex w-[70%] flex-col text-sm max-sm:w-full">
-        <div className="flex h-full flex-col gap-6 rounded-xl p-10 pr-0 pt-6 text-justify shadow-md max-sm:p-2 max-sm:text-sm">
+      <div className="relative  flex w-full flex-col text-pretty text-base sm:w-[70%]">
+        <div className="flex h-full flex-col gap-4 rounded-xl p-10 pr-0 pt-6 text-zinc-200 shadow-md max-sm:p-2 max-sm:text-sm">
           {/*  @ts-ignore*/}
           {projectDetail && <PortableText value={projectDetail[0]} />}
 
-          <div className="flex flex-wrap gap-4 max-sm:gap-2">
+          <div className="my-2 flex flex-wrap gap-2 sm:gap-4">
             {projectTools?.map((eachTool) => (
               <div key={eachTool}>
                 <ProjectTool tool={eachTool} />
               </div>
             ))}
           </div>
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-2">
             {projectDetail &&
               projectDetail
                 .slice(1)
