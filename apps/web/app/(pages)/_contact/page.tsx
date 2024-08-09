@@ -24,7 +24,7 @@ function Contact() {
       />
 
       <ContactMeForm />
-      <p className="absolute bottom-0 mb-1 flex items-center gap-1 text-sm sm:mb-2 sm:gap-2 md:text-lg">
+      <p className="absolute bottom-0 mb-1 flex items-center gap-1 text-sm sm:mb-2 sm:gap-2 md:text-base">
         <span className="text-lg font-bold">&copy;</span> 2024 Amar Tripathi
       </p>
     </div>
