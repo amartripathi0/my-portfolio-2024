@@ -18,7 +18,7 @@ const Home = ({ children }: { children: React.ReactNode }) => {
 
   return (
     mounted && (
-      <div className={`relative max-sm:overflow-x-hidden`}>
+      <div className={`relative`}>
         {locomotiveScroll && <Navbar locomotiveScroll={locomotiveScroll} />}
         <div className="mx-0 px-4 pt-20 sm:px-8 md:px-10 lg:mx-28">
           {children}
