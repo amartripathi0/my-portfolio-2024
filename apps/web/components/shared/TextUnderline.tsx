@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import { motion, useAnimation } from 'framer-motion'
-import { cn } from '@/lib/utils'
+import { cn } from '@/utils/cn'
 import { cva } from 'class-variance-authority'
 
 const TextUnderlineVariants = cva('inline-block relative w-fit', {

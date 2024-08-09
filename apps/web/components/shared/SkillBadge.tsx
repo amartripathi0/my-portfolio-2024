@@ -2,7 +2,7 @@ import React from 'react'
 import { Badge } from '../ui/badge'
 import TextUnderline from './TextUnderline'
 import { cva } from 'class-variance-authority'
-import { cn } from '@/lib/utils'
+import { cn } from '@/utils/cn'
 
 const SkillBadgeVariant = cva('bg-prelude-900', {
   variants: {
