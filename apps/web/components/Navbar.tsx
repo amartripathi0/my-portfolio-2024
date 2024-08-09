@@ -71,7 +71,7 @@ const Navbar = ({
                 layoutId="bubble"
                 className="absolute left-0 top-0 -z-10 h-full w-full bg-gradient-to-r from-indigo-800 to-violet-500"
                 style={{ borderRadius: 9999 }}
-                transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 30, duration: 0.8 }}
               ></motion.span>
             )}
             <TextUnderline text={item.label} />
