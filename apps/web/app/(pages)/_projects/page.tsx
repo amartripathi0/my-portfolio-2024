@@ -8,7 +8,11 @@ import { getSanityData } from '@/utils/getSanityData'
 async function Projects() {
   const projectsArray: Project[] = await getSanityData(PROJECTS_PAGE_QUERY)
   return (
-    <div id="projects" className="min-h-screen max-xl:mx-0" data-scroll-container>
+    <div
+      id="projects"
+      className="min-h-screen max-xl:mx-0"
+      data-scroll-container
+    >
       <div className="relative pt-10">
         <PageTitle
           pageTitle="My Projects"
@@ -20,17 +24,15 @@ async function Projects() {
         />
 
         {projectsArray?.map(
-          (
-            {
-              projectTitle,
-              projectBio,
-              projectThumbnail,
-              projectGithubLink,
-              projectDeployedLink,
-              projectDetail,
-              projectTools,
-            }: Project,
-          ) => (
+          ({
+            projectTitle,
+            projectBio,
+            projectThumbnail,
+            projectGithubLink,
+            projectDeployedLink,
+            projectDetail,
+            projectTools,
+          }: Project) => (
             <>
               <ProjectContainer
                 key={projectTitle}
@@ -42,12 +44,11 @@ async function Projects() {
                 projectDeployedLink={projectDeployedLink}
                 projectDetail={projectDetail}
               />
-              
-                <BackgroundBlur
-                  blurColor="purple"
-                  style="absolute bottom-3/5 lg:-right-20  h-48 md:h-[280px] blur-[300px] bg-gradient-to-r from-indigo-500 to-purple-400 overflow-hidden"
-                />
-              
+
+              <BackgroundBlur
+                blurColor="purple"
+                style="absolute bottom-3/5 lg:-right-20  h-48 md:h-[280px] blur-[300px] bg-gradient-to-r from-indigo-500 to-purple-400 overflow-hidden"
+              />
             </>
           ),
         )}

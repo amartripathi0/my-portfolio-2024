@@ -19,7 +19,7 @@ function Skills() {
         style="absolute opacity-80 left-2/5 md:left-16 h-1/5 top-10  aspect-square blur-[100px] rounded-full bg-gradient-to-r from-indigo-600 via-yellow-300 to-purple-400"
       />
 
-      <div className="flex-center w-full h-4/5 md:h-full flex-col overflow-hidden">
+      <div className="flex-center h-4/5 w-full flex-col overflow-hidden md:h-full">
         <SkillsScrollContainer
           frontendSkillsArray={frontendSkills}
           backendSkillsArray={backendSkills}

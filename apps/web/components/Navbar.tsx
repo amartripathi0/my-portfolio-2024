@@ -33,7 +33,7 @@ const Navbar = ({
       animate={{ opacity: 1, y: 0 }}
       transition={{ ease: 'easeInOut', duration: 1 }}
       className={cn(
-        `flex-between max-md:h-[70px] fixed left-0 top-0 z-50 h-20 w-screen px-10 py-2 backdrop-blur-md max-sm:px-4 max-sm:py-1`,
+        `flex-between fixed left-0 top-0 z-50 h-20 w-screen px-10 py-2 backdrop-blur-md max-md:h-[70px] max-sm:px-4 max-sm:py-1`,
         scrolled && 'border-b border-violet-700',
       )}
     >
@@ -90,7 +90,7 @@ const Navbar = ({
               locomotiveScroll.scrollTo('#contact-me', { offset: 0 })
             }
             className={cn(
-              'flex-center max-md:py-3 w-28 py-2 font-medium max-sm:w-32 max-sm:px-2',
+              'flex-center w-28 py-2 font-medium max-md:py-3 max-sm:w-32 max-sm:px-2',
               pageSectionOnViewport === 'contact-me' &&
                 'rounded-full shadow-md shadow-violet-500',
             )}

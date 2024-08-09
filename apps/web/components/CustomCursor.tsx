@@ -12,7 +12,6 @@ function CustomCursor() {
       setCurrentCursorPos({ x: e.clientX - 10, y: e.clientY - 10 })
     }
     const handleMouseLeave = () => {
-
       if (cursorRef.current) {
         cursorRef.current.classList.remove('opacity-100')
         cursorRef.current.classList.add('opacity-0')
@@ -72,7 +71,8 @@ function CustomCursor() {
           'size-7 bg-gradient-to-r from-indigo-800 via-pink-500 to-cyan-900 opacity-80 mix-blend-darken',
         cursorStyle === 'pink-cursor-sm' &&
           'size-6 bg-gradient-to-r from-indigo-800 via-pink-500 to-cyan-900 opacity-80 mix-blend-darken',
-        cursorStyle === 'custom-cursor-multiply' && 'size-5 mix-blend-multiply opacity-100',
+        cursorStyle === 'custom-cursor-multiply' &&
+          'size-5 opacity-100 mix-blend-multiply',
         cursorStyle === 'custom-cursor-hidden' && 'hidden',
       )}
     />

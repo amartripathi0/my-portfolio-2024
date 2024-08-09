@@ -53,7 +53,7 @@ export function ContactMeForm() {
             id="message"
             name="message"
             placeholder="Please enter your message here"
-            className="dark:placeholder-text-neutral-600 duration-400 max-h-[135px] min-h-20 w-full rounded-[6px] border-none bg-zinc-800 px-3 py-2 text-sm text-white shadow-input transition file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral-400 focus-visible:outline-none focus-visible:ring-[2px] focus-visible:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50 group-hover/input:shadow-none dark:shadow-[0px_0px_1px_1px_var(--neutral-700)] dark:focus-visible:ring-neutral-600 max-sm:max-h-24 custom-cursor-hidden"
+            className="dark:placeholder-text-neutral-600 duration-400 custom-cursor-hidden max-h-[135px] min-h-20 w-full rounded-[6px] border-none bg-zinc-800 px-3 py-2 text-sm text-white shadow-input transition file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral-400 focus-visible:outline-none focus-visible:ring-[2px] focus-visible:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50 group-hover/input:shadow-none dark:shadow-[0px_0px_1px_1px_var(--neutral-700)] dark:focus-visible:ring-neutral-600 max-sm:max-h-24"
           ></textarea>
         </LabelInputContainer>
 
@@ -74,8 +74,10 @@ export function ContactMeForm() {
               className="group/btn text-black relative flex h-10 w-full items-center justify-center space-x-2 rounded-md bg-zinc-900 px-4 font-medium shadow-input dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
               href={url}
             >
-              <SocialIcon className="h-4 w-4 text-neutral-300 pink-cursor-sm" />
-              <span className="text-sm text-neutral-300 pink-cursor-sm">{label}</span>
+              <SocialIcon className="pink-cursor-sm h-4 w-4 text-neutral-300" />
+              <span className="pink-cursor-sm text-sm text-neutral-300">
+                {label}
+              </span>
               <BottomGradient />
             </Link>
           ))}

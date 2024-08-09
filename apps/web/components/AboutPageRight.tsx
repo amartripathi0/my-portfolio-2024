@@ -33,7 +33,7 @@ function AboutPageRight({
         loading="eager"
         height={2844}
         width={1680}
-        className="z-10 aspect-auto md:max-w-44 lg:max-w-[16vw] rounded-xl object-cover opacity-80 backdrop:blur-sm max-md:hidden"
+        className="z-10 aspect-auto rounded-xl object-cover opacity-80 backdrop:blur-sm max-md:hidden md:max-w-44 lg:max-w-[16vw]"
       />
 
       <motion.div
@@ -53,8 +53,8 @@ function AboutPageRight({
         <Link href={resumeUrl} target="_blank">
           <Button className="relative inline-flex h-12 w-32 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 max-sm:h-12 max-sm:w-32">
             <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-            <span className="text-sm md:text-md flex h-full w-full cursor-pointer items-center justify-around rounded-full bg-slate-950 px-2 md:px-3 py-1 font-medium text-white backdrop-blur-3xl">
-              Resume <FaArrowCircleRight size={16} className='-rotate-45' />{' '}
+            <span className="md:text-md flex h-full w-full cursor-pointer items-center justify-around rounded-full bg-slate-950 px-2 py-1 text-sm font-medium text-white backdrop-blur-3xl md:px-3">
+              Resume <FaArrowCircleRight size={16} className="-rotate-45" />{' '}
             </span>
           </Button>
         </Link>

@@ -30,7 +30,7 @@ function SkillsScrollContainer({
       <motion.div
         ref={targetRef}
         style={{ translateX: leftSlide, opacity: opacity }}
-        className="flex flex-wrap justify-center gap-4 md:py-6 p-2 lg:py-10 "
+        className="flex flex-wrap justify-center gap-4 p-2 md:py-6 lg:py-10"
       >
         {frontendSkillsArray.map(({ name, imageSrc }) => (
           <Skill key={name} name={name} imageSrc={imageSrc} />
@@ -40,7 +40,7 @@ function SkillsScrollContainer({
       <motion.div
         ref={targetRef}
         style={{ translateX: rightSlide, opacity: opacity }}
-        className="flex flex-wrap justify-center gap-4 md:pb-12 max-sm:p-2"
+        className="flex flex-wrap justify-center gap-4 max-sm:p-2 md:pb-12"
       >
         {backendSkillsArray.map(({ name, imageSrc }) => (
           <Skill key={name} name={name} imageSrc={imageSrc} />

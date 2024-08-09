@@ -17,24 +17,24 @@ const ProjectContainer = ({
   projectTools,
 }: Partial<Project>) => {
   return (
-    <div className="relative max-md:flex-center flex min-h-[calc(100vh-5rem)] justify-between border-l border-purple-600 mt-10 max-md:flex-col max-md:gap-4 pl-4">
+    <div className="max-md:flex-center relative mt-10 flex min-h-[calc(100vh-5rem)] justify-between border-l border-purple-600 pl-4 max-md:flex-col max-md:gap-4">
       {/* Sticky Image */}
-      <div className="max-md:h-96 max-w-[310px] md:max-w-72 lg:max-w-80 md:sticky md:top-40">
+      <div className="max-w-[310px] max-md:h-96 md:sticky md:top-40 md:max-w-72 lg:max-w-80">
         <CardContainer
           data-scroll-sticky
           containerClassName="md:sticky md:top-40 max-md:h-full max-md:mx-auto md:w-full py-2 sm:py-4"
         >
-          <CardBody className="group/card relative h-full w-full rounded-xl border border-violet-950 bg-gradient-to-b from-zinc-950 via-indigo-950 lg:p-6 p-4">
+          <CardBody className="group/card relative h-full w-full rounded-xl border border-violet-950 bg-gradient-to-b from-zinc-950 via-indigo-950 p-4 lg:p-6">
             <CardItem
               translateZ="50"
-              className="text-lg md:text-xl font-bold text-white lg:text-2xl pink-cursor-md"
+              className="pink-cursor-md text-lg font-bold text-white md:text-xl lg:text-2xl"
             >
               {projectTitle}
             </CardItem>
             <CardItem
               as="p"
               translateZ="60"
-              className="mt-2 max-w-sm text-justify line-clamp-5 md:text-sm font-normal text-zinc-200 dark:text-neutral-300 text-xs"
+              className="mt-2 line-clamp-5 max-w-sm text-justify text-xs font-normal text-zinc-200 dark:text-neutral-300 md:text-sm"
             >
               {projectBio}
             </CardItem>
@@ -74,7 +74,7 @@ const ProjectContainer = ({
       </div>
 
       {/* Project Details */}
-      <div className="relative  flex w-full flex-col text-pretty text-base md:w-[70%]">
+      <div className="relative flex w-full flex-col text-pretty text-base md:w-[70%]">
         <div className="flex h-full flex-col gap-4 rounded-xl text-neutral-200 shadow-md max-md:text-sm md:p-2 md:px-8 lg:px-0">
           {/*  @ts-ignore*/}
           {projectDetail && <PortableText value={projectDetail[0]} />}
