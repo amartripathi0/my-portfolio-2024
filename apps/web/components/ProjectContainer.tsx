@@ -17,7 +17,7 @@ const ProjectContainer = ({
   projectTools,
 }: Partial<Project>) => {
   return (
-    <div className="max-md:flex-center relative mt-10 flex min-h-[calc(100vh-5rem)] justify-between border-l border-purple-600 pl-4 max-md:flex-col max-md:gap-4">
+    <div className="max-md:flex-center relative mt-10 flex min-h-[calc(100vh-5rem)] justify-between border-l border-purple-600 pl-4 max-md:flex-col gap-4 md:gap-8">
       {/* Sticky Image */}
       <div className="max-w-[310px] max-md:h-96 md:sticky md:top-40 md:max-w-72 lg:max-w-80">
         <CardContainer
