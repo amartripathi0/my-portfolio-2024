@@ -13,10 +13,10 @@ const About = async () => {
   return (
     <div
       id="about-me"
-      className="flex-between relative h-[calc(100vh-5rem)] max-sm:h-[calc(100vh-5rem)] max-sm:flex-col max-sm:pt-0"
+      className="relative flex h-[calc(100vh-6rem)] items-center gap-4 max-md:flex-col max-sm:pt-0 sm:h-[calc(100vh-10rem)] md:gap-[8vw]"
     >
       {/* Left section */}
-      <div className="flex w-3/4 flex-col max-sm:w-full max-sm:gap-2 sm:h-4/5">
+      <div className="md:max-w-1/2 flex w-full flex-col items-center md:h-4/5 md:items-start lg:w-[70%]">
         <BackgroundBlur blurColor="indigo" style="h-1/6 max-sm:left-1/4" />
 
         {/* About Me heading */}
@@ -26,7 +26,7 @@ const About = async () => {
         />
 
         {/* About me paragraphs */}
-        <div className="flex-center w-full flex-col gap-2 py-10 text-justify text-base max-sm:px-2 max-sm:text-sm">
+        <div className="flex-center w-full flex-col gap-2 text-pretty py-4 text-justify text-base text-neutral-200 max-md:text-sm sm:py-6 md:py-6">
           {aboutContent ? <PortableText value={aboutContent} /> : <></>}
         </div>
       </div>
