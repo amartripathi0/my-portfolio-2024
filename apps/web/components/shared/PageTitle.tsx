@@ -19,6 +19,7 @@ function PageTitle({
       whileInView={'inView'}
       viewport={{ once: true }}
       variants={underlineAnimationVariant}
+      className='max-md:flex-center'
     >
       <TextUnderline
         textType="pageHeading"

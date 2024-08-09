@@ -139,6 +139,17 @@ export const fadeAnimationVariant = {
 }
 
 export const underlineAnimationVariant = {
-  initial: { x: -100 },
-  inView: { x: 0, transition: { duration: 1, bounce: 1 } },
+  initial: { y: 60, opacity: 0 },
+  inView: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      spring: 1,
+      mass: 1,
+      stiffness: 200,
+      duration: 0.6,
+      bounce: 0.25,
+      delay: 0.2,
+    },
+  },
 }
