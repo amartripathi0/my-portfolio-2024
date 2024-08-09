@@ -17,24 +17,24 @@ const ProjectContainer = ({
   projectTools,
 }: Partial<Project>) => {
   return (
-    <div className="relative max-sm:flex-center mt-10 flex min-h-[calc(100vh-5rem)] w-full justify-between border-l border-purple-600 max-sm:mt-10 max-sm:flex-col max-sm:gap-10">
+    <div className="relative max-md:flex-center flex min-h-[calc(100vh-5rem)] justify-between border-l border-purple-600 mt-10 max-md:flex-col max-md:gap-4 pl-4">
       {/* Sticky Image */}
-      <div className="w-[30%] max-sm:h-96 max-sm:w-[90%] sm:sticky sm:top-40">
+      <div className="max-md:h-96 max-w-[310px] md:max-w-72 lg:max-w-80 md:sticky md:top-40">
         <CardContainer
           data-scroll-sticky
-          containerClassName="sm:sticky sm:top-40 max-sm:h-full max-sm:w-full w-5/6 m-auto py-6"
+          containerClassName="md:sticky md:top-40 max-md:h-full max-md:mx-auto md:w-full py-2 sm:py-4"
         >
-          <CardBody className="group/card relative h-full w-full rounded-xl border border-violet-950 bg-gradient-to-b from-zinc-950 via-indigo-950 p-6">
+          <CardBody className="group/card relative h-full w-full rounded-xl border border-violet-950 bg-gradient-to-b from-zinc-950 via-indigo-950 lg:p-6 p-4">
             <CardItem
               translateZ="50"
-              className="text-xl font-bold text-white sm:text-2xl"
+              className="text-lg md:text-xl font-bold text-white lg:text-2xl pink-cursor-md"
             >
               {projectTitle}
             </CardItem>
             <CardItem
               as="p"
               translateZ="60"
-              className="mt-2 max-w-sm text-justify line-clamp-5 text-sm font-normal text-zinc-200 dark:text-neutral-300 max-sm:text-xs"
+              className="mt-2 max-w-sm text-justify line-clamp-5 md:text-sm font-normal text-zinc-200 dark:text-neutral-300 text-xs"
             >
               {projectBio}
             </CardItem>
@@ -47,13 +47,13 @@ const ProjectContainer = ({
                 alt="thumbnail"
               />
             </CardItem>
-            <div className="mt-10 flex items-center justify-between max-sm:mt-6">
+            <div className="mt-10 flex items-center justify-between max-md:mt-6">
               <CardItem
                 translateZ={20}
                 as={Link}
                 href={projectGithubLink}
                 target="__blank"
-                className="flex items-center gap-1 rounded-xl px-3 py-2 text-sm font-normal opacity-80 hover:opacity-100 dark:text-white max-sm:text-xs"
+                className="flex items-center gap-1 rounded-xl px-3 py-2 text-sm font-normal opacity-80 hover:opacity-100 dark:text-white max-md:text-xs"
               >
                 Source Code
                 <FaGithub />
@@ -64,7 +64,7 @@ const ProjectContainer = ({
                 as={Link}
                 href={projectDeployedLink}
                 target="__blank"
-                className="bg-black dark:text-black rounded-xl px-4 py-2 text-sm font-bold text-white opacity-80 hover:opacity-100 dark:bg-white max-sm:text-xs"
+                className="bg-black dark:text-black rounded-xl px-4 py-2 text-sm font-bold text-white opacity-80 hover:opacity-100 dark:bg-white max-md:text-xs"
               >
                 See it live ↗
               </CardItem>
@@ -74,12 +74,12 @@ const ProjectContainer = ({
       </div>
 
       {/* Project Details */}
-      <div className="relative  flex w-full flex-col text-pretty text-base sm:w-[70%]">
-        <div className="flex h-full flex-col gap-4 rounded-xl p-10 pr-0 pt-6 text-zinc-200 shadow-md max-sm:p-2 max-sm:text-sm">
+      <div className="relative  flex w-full flex-col text-pretty text-base md:w-[70%]">
+        <div className="flex h-full flex-col gap-4 rounded-xl text-neutral-200 shadow-md max-md:text-sm md:p-2 md:px-8 lg:px-0">
           {/*  @ts-ignore*/}
           {projectDetail && <PortableText value={projectDetail[0]} />}
 
-          <div className="my-2 flex flex-wrap gap-2 sm:gap-4">
+          <div className="my-2 flex flex-wrap gap-2 md:gap-4">
             {projectTools?.map((eachTool) => (
               <div key={eachTool}>
                 <ProjectTool tool={eachTool} />
