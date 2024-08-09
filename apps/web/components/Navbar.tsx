@@ -36,6 +36,7 @@ const Navbar = ({
         `flex-between fixed left-0 top-0 z-50 h-20 w-screen px-10 py-2 backdrop-blur-md max-md:h-[70px] max-sm:px-4 max-sm:py-1`,
         scrolled && 'border-b border-violet-700',
       )}
+      role="navigation"
     >
       {/* Left: Avatar and Name section */}
       <WrapperContainer additionalStyle="flex-center  w-28 max-sm:w-auto max-sm:px-1 sm:pr-1">

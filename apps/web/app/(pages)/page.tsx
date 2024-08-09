@@ -7,7 +7,7 @@ import CustomCursor from '@/components/CustomCursor'
 
 function MainPage() {
   return (
-    <div className="relative">
+    <div className="relative" role="main">
       <CustomCursor />
       <Landing />
       <About />
