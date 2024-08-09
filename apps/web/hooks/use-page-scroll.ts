@@ -1,9 +1,10 @@
 'use client'
 import { useEffect, useState } from 'react'
-function usePageScroll() {
+function usePageScroll(threshold = 10) {
   const [pageSectionOnViewport, setPageSectionOnViewport] = useState('home')
   const [windowHeight, setWindowHeight] = useState(0)
   const [isScrolling, setIsScrolling] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     if (isScrolling) {
@@ -23,6 +24,7 @@ function usePageScroll() {
     function handlePageScroll() {
       handlePageNavigation()
       handleScrollbar()
+      handleScroll()
     }
 
     function handleScrollbar() {
@@ -56,14 +58,21 @@ function usePageScroll() {
         setPageSectionOnViewport('contact-me')
       }
     }
+    function handleScroll() {
+      if (window.scrollY > threshold) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
+      }
+    }
     window.addEventListener('scroll', handlePageScroll)
     return () => {
       window.removeEventListener('scroll', handlePageScroll)
       clearTimeout(scrollTimer)
     }
-  }, [windowHeight])
+  }, [windowHeight, threshold])
 
-  return { pageSectionOnViewport }
+  return { pageSectionOnViewport, scrolled }
 }
 
 export default usePageScroll

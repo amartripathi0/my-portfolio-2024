@@ -6,7 +6,6 @@ import Link from 'next/link'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { IoCloseOutline } from 'react-icons/io5'
 import { motion, spring } from 'framer-motion'
-import useScrollTop from '@/hooks/use-scroll-top'
 import usePageScroll from '@/hooks/use-page-scroll'
 import LocomotiveScroll from 'locomotive-scroll'
 import TextUnderline from './shared/TextUnderline'
@@ -19,8 +18,7 @@ const Navbar = ({
   locomotiveScroll: LocomotiveScroll
 }) => {
   const [menubarOpen, setMenubarOpen] = useState(false)
-  const { scrolled } = useScrollTop()
-  const { pageSectionOnViewport } = usePageScroll()
+  const { scrolled, pageSectionOnViewport } = usePageScroll()
   const handleScrollTo = useCallback(
     (link: string) => {
       locomotiveScroll.scrollTo(link, { offset: -83 })
@@ -29,12 +27,12 @@ const Navbar = ({
   )
   return (
     <motion.nav
-      initial={{ opacity: 0, y: -15 }}
+      initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ ease: 'easeInOut', duration: 1 }}
       className={cn(
         `flex-between fixed left-0 top-0 z-50 h-20 w-screen px-10 py-2 backdrop-blur-md max-md:h-[70px] max-sm:px-4 max-sm:py-1`,
-        scrolled && 'border-b border-violet-700',
+        scrolled && 'border-b border-purple-950',
       )}
       role="navigation"
     >
