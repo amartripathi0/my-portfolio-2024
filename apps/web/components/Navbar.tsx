@@ -95,17 +95,14 @@ const Navbar = ({
       <div className="relative flex h-full items-center">
         {/* Contact Me */}
 
-        <WrapperContainer additionalStyle="max-md:hidden flex-center w-32 sm:w-28">
+        <WrapperContainer
+          additionalStyle={`max-md:hidden flex-center w-32 sm:w-28 ${pageSectionOnViewport === 'contact-me' && 'rounded-full shadow-md shadow-violet-500'}`}
+        >
           <Link
             href={'#contact-me'}
             onClick={() =>
               locomotiveScroll.scrollTo('#contact-me', { offset: 0 })
             }
-            className={cn(
-              '',
-              pageSectionOnViewport === 'contact-me' &&
-                'rounded-full shadow-md shadow-violet-500',
-            )}
           >
             <TextUnderline text="Contact Me" />
           </Link>
