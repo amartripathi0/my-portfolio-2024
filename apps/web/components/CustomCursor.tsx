@@ -28,19 +28,13 @@ function CustomCursor() {
     const handleMouseOver = (e: MouseEvent) => {
       if (e.target instanceof Element) {
         const element = e.target
-        if (element.classList.contains('pink-cursor-lg')) {
-          setCursorStyle('pink-cursor-lg')
-        } else if (element.classList.contains('pink-cursor-md')) {
-          setCursorStyle('pink-cursor-md')
-        } else if (element.classList.contains('pink-cursor-sm')) {
-          setCursorStyle('pink-cursor-sm')
-        } else if (element.classList.contains('custom-cursor-hidden')) {
-          setCursorStyle('custom-cursor-hidden')
-        } else if (element.classList.contains('custom-cursor-multiply')) {
-          setCursorStyle('custom-cursor-multiply')
-        } else {
-          setCursorStyle('default')
-        }
+        const newStyle = element.classList.contains('pink-cursor-lg') ? 'pink-cursor-lg'
+          : element.classList.contains('pink-cursor-md') ? 'pink-cursor-md'
+          : element.classList.contains('pink-cursor-sm') ? 'pink-cursor-sm'
+          : element.classList.contains('custom-cursor-hidden') ? 'custom-cursor-hidden'
+          : element.classList.contains('custom-cursor-multiply') ? 'custom-cursor-multiply'
+          : 'default'
+        setCursorStyle(newStyle)
       }
     }
 
