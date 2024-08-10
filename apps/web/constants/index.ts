@@ -11,7 +11,7 @@ export const navbarItems: NavbarItemType[] = [
     label: 'home',
     link: '#home',
   },
-  { label: 'about-me', link: '#about-me' },
+  { label: 'about me', link: '#about-me' },
   { label: 'skills', link: '#skills' },
   { label: 'projects', link: '#projects' },
 ]

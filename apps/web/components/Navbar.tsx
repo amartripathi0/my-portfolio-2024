@@ -54,42 +54,55 @@ const Navbar = ({
       </WrapperContainer>
 
       {/* Middle */}
-      <WrapperContainer additionalStyle="flex-center md:gap-3 lg:gap-6 rounded-full px-[7px] max-md:hidden md:w-1/2  lg:max-w-[490px]">
+      <WrapperContainer additionalStyle="flex-center md:gap-3 p-1.5 lg:gap-6 rounded-full max-md:hidden md:w-1/2  lg:max-w-[490px]">
         {navbarItems.map((item) => (
           <Link
             key={item.label}
             href={item.link}
             onClick={() => handleScrollTo(item.link)}
             className={cn(
-              'flex-center relative z-30 h-3/4 w-1/3 rounded-full font-medium transition-all duration-150 hover:border-transparent hover:bg-slate-900',
+              'flex-center relative z-30 h-full w-1/3 rounded-full transition-all duration-150 hover:bg-neutral-900',
               pageSectionOnViewport === item.label &&
                 'transition-all duration-300 ease-in-out',
             )}
           >
-            {pageSectionOnViewport === item.label && (
+            {pageSectionOnViewport.replace(/\s+/g, '-') ===
+              item.label.replace(/\s+/g, '-') && (
               <motion.span
                 layoutId="bubble"
-                className="absolute left-0 top-0 -z-10 h-full w-full bg-gradient-to-r from-indigo-800 to-violet-500"
-                style={{ borderRadius: 9999 }}
-                transition={{ type: 'spring', stiffness: 300, damping: 30, duration: 0.8 }}
-              ></motion.span>
+                className="absolute z-[-60] size-full rounded-full bg-gradient-to-r from-indigo-800 to-violet-500 font-medium"
+                transition={{
+                  type: 'spring',
+                  stiffness: 300,
+                  damping: 30,
+                  duration: 0.8,
+                }}
+              />
             )}
-            <TextUnderline text={item.label} />
+            <TextUnderline
+              text={item.label}
+              textStyles={
+                pageSectionOnViewport.replace(/\s+/g, '-') ===
+                item.label.replace(/\s+/g, '-')
+                  ? 'font-medium'
+                  : 'font-normal'
+              }
+            />
           </Link>
         ))}
       </WrapperContainer>
 
-      <div className="relative flex items-center gap-3">
+      <div className="relative flex h-full items-center">
         {/* Contact Me */}
 
-        <WrapperContainer additionalStyle="max-md:hidden">
+        <WrapperContainer additionalStyle="max-md:hidden flex-center w-32 sm:w-28">
           <Link
             href={'#contact-me'}
             onClick={() =>
               locomotiveScroll.scrollTo('#contact-me', { offset: 0 })
             }
             className={cn(
-              'flex-center w-28 py-2 font-medium max-md:py-3 max-sm:w-32 max-sm:px-2',
+              '',
               pageSectionOnViewport === 'contact-me' &&
                 'rounded-full shadow-md shadow-violet-500',
             )}
@@ -98,7 +111,7 @@ const Navbar = ({
           </Link>
         </WrapperContainer>
 
-        {/* Hamberger menubar */}
+        {/* Hamburger menu */}
         <AiOutlineMenu
           className="md:hidden"
           size={36}
