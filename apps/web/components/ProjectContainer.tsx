@@ -34,7 +34,7 @@ const ProjectContainer = ({
             <CardItem
               as="p"
               translateZ="60"
-              className="mt-2 line-clamp-5 max-w-sm text-justify text-xs font-normal text-zinc-200 dark:text-neutral-300 md:text-sm"
+              className="mt-2 line-clamp-5 max-w-sm text-justify text-xs text-zinc-200 dark:text-neutral-300 md:text-sm font-poppins font-light"
             >
               {projectBio}
             </CardItem>
@@ -75,9 +75,9 @@ const ProjectContainer = ({
 
       {/* Project Details */}
       <div className="relative flex w-full flex-col text-pretty text-base md:w-[70%]">
-        <div className="flex h-full flex-col gap-4 rounded-xl text-neutral-200 shadow-md max-md:text-sm md:p-2 md:px-8 lg:px-0">
+        <div className="flex h-full flex-col gap-4 rounded-xl text-neutral-100 shadow-md max-md:text-sm md:p-2 md:px-8 lg:px-0 font-raleway">
           {/*  @ts-ignore*/}
-          {projectDetail && <PortableText value={projectDetail[0]} />}
+          {projectDetail && <PortableText value={projectDetail[0]}/>}
 
           <div className="my-2 flex flex-wrap gap-2 md:gap-4">
             {projectTools?.map((eachTool) => (

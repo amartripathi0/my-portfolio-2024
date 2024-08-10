@@ -22,12 +22,12 @@ const About = async () => {
         {/* About Me heading */}
         <PageTitle
           pageTitle={title || ''}
-          underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-cyan-600"
+          underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-cyan-600 "
         />
 
         {/* About me paragraphs */}
-        <div className="flex-center w-full flex-col gap-2 text-pretty py-4 text-justify text-base text-neutral-200 max-md:text-sm sm:py-6 md:py-6">
-          {aboutContent ? <PortableText value={aboutContent} /> : <></>}
+        <div className="flex-center w-full flex-col gap-2 text-pretty py-4 text-justify text-sm text-neutral-100 sm:text-base sm:py-6 font-raleway">
+          {aboutContent ? <PortableText value={aboutContent} /> : null}
         </div>
       </div>
 
