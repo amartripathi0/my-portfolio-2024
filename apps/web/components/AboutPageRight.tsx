@@ -1,5 +1,4 @@
 'use client'
-import React from 'react'
 import IndigoBlurBackground from './shared/IndigoBlurBackground'
 import { motion } from 'framer-motion'
 import { fadeAnimationVariant } from '@/constants'

@@ -1,7 +1,6 @@
 import { socialMediaLinks } from '@/constants'
 import { cn } from '@/utils/cn'
 import Link from 'next/link'
-import React from 'react'
 
 function SocialHandles({
   additionalStyle,

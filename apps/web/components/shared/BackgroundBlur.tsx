@@ -1,6 +1,5 @@
 import { cn } from '@/utils/cn'
 import { cva } from 'class-variance-authority'
-import React from 'react'
 
 const BackgroundBlurVariants = cva(
   'aspect-square blur-[100px] rounded-full absolute opacity-80',

@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import React from 'react'
 // import { Badge } from './ui/badge'
 // import TextUnderline from './shared/TextUnderline'
 import { BackgroundGradient } from './ui/BackgroundGradient'

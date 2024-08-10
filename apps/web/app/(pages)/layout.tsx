@@ -1,7 +1,7 @@
 'use client'
 
 import Navbar from '@/components/Navbar'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import '../globals.css'
 const Home = ({ children }: { children: React.ReactNode }) => {
   const [locomotiveScroll, setLocomotiveScroll] = useState<LocomotiveScroll>()

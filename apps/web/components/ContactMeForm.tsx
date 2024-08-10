@@ -1,5 +1,4 @@
 'use client'
-import React from 'react'
 import { cn } from '@/utils/cn'
 import { Label } from './ui/label'
 import { Input } from './ui/input'
