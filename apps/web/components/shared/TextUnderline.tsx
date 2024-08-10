@@ -7,7 +7,7 @@ import { cva } from 'class-variance-authority'
 const TextUnderlineVariants = cva('inline-block relative w-fit', {
   variants: {
     textType: {
-      pageHeading: 'text-4xl md:text-5xl font-bold pink-cursor-md', //for page title
+      pageHeading: 'text-4xl md:text-5xl font-bold pink-cursor-md font-poppins', //for page title
       skill: 'text-[9.1px] custom-cursor-hidden', //for skill page
       default: 'text-sm custom-cursor-hidden', //for project tool and navbar items
     },
@@ -57,12 +57,12 @@ const TextUnderline = ({
     <motion.div
       onHoverStart={handleHoverStart}
       onHoverEnd={handleHoverEnd}
-      className={cn('relative inline-block', containerDivStyles)}
+      className={cn('relative inline-block mt-[2px]', containerDivStyles)}
     >
       {textType === 'pageHeading' ? (
         <h1
           className={cn(
-            'relative inline-block',
+            'relative',
             TextUnderlineVariants({ textType }),
             textStyles,
           )}
@@ -88,7 +88,7 @@ const TextUnderline = ({
         animate={controls}
         transition={{ duration: 0.4, ease: 'easeInOut' }}
         className={cn(
-          'absolute bottom-0 left-0 mb-1 h-[7%] w-full rounded-xl bg-white drop-shadow-lg',
+          'absolute bottom-[2px] h-[1.5px] w-full rounded-xl bg-purple-100 drop-shadow-lg',
           underlineStyles,
           textType === 'pageHeading' && '-z-10 -mb-1 h-[12%]',
           textType === 'skill' && 'mb-0 h-[9%]',
