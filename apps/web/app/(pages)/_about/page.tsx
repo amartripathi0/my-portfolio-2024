@@ -1,6 +1,8 @@
 import AboutPageRight from '@/components/AboutPageRight'
 import BackgroundBlur from '@/components/shared/BackgroundBlur'
+import { MotionSection } from '@/components/shared/Motion'
 import PageTitle from '@/components/shared/PageTitle'
+import { underlineAnimationVariant } from '@/constants'
 import { ABOUT_PAGE_QUERY } from '@/sanity/queries'
 import { About as AboutType } from '@/sanity/types'
 import { getSanityData } from '@/utils/getSanityData'
@@ -11,7 +13,11 @@ const About = async () => {
     await getSanityData(ABOUT_PAGE_QUERY)
 
   return (
-    <div
+    <MotionSection
+      initial={'initial'}
+      whileInView={'inView'}
+      viewport={{ once: true }}
+      variants={underlineAnimationVariant}
       id="about-me"
       className="relative flex h-[calc(100vh-6rem)] items-center gap-4 max-md:flex-col max-sm:pt-0 sm:h-[calc(100vh-10rem)] md:gap-[8vw]"
     >
@@ -26,14 +32,14 @@ const About = async () => {
         />
 
         {/* About me paragraphs */}
-        <div className="flex-center w-full flex-col gap-2 text-pretty py-4 text-justify text-sm text-neutral-100 sm:text-base sm:py-6 font-raleway">
+        <div className="flex-center w-full flex-col gap-2 text-pretty py-4 text-justify font-raleway text-sm text-neutral-100 sm:py-6 sm:text-base">
           {aboutContent ? <PortableText value={aboutContent} /> : null}
         </div>
       </div>
 
       {/* Right section */}
       <AboutPageRight heroImage={heroImage} resumeUrl={resume || ''} />
-    </div>
+    </MotionSection>
   )
 }
 

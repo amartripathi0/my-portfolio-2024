@@ -16,10 +16,6 @@ function PageTitle({
 }: PageTitleProps) {
   return (
     <MotionDiv
-      initial={'initial'}
-      whileInView={'inView'}
-      viewport={{ once: true }}
-      variants={underlineAnimationVariant}
       className="max-md:flex-center"
     >
       <TextUnderline

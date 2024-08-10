@@ -1,10 +1,16 @@
 import { ContactMeForm } from '@/components/ContactMeForm'
 import BackgroundBlur from '@/components/shared/BackgroundBlur'
+import { MotionSection } from '@/components/shared/Motion'
 import PageTitle from '@/components/shared/PageTitle'
+import { underlineAnimationVariant } from '@/constants'
 
 function Contact() {
   return (
-    <div
+    <MotionSection
+    initial={'initial'}
+    whileInView={'inView'}
+    viewport={{ once: true }}
+    variants={underlineAnimationVariant}
       id="contact-me"
       className="relative flex h-[calc(100vh-3rem)] flex-col gap-4 py-10 sm:h-[calc(100vh-4rem)] sm:gap-2"
     >
@@ -27,7 +33,7 @@ function Contact() {
       <p className="absolute bottom-0 mb-1 flex items-center gap-1 text-sm sm:mb-2 sm:gap-2 md:text-base">
         <span className="text-lg font-bold">&copy;</span> 2024 Amar Tripathi
       </p>
-    </div>
+    </MotionSection>
   )
 }
 

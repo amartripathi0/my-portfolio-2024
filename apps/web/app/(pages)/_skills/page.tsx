@@ -1,10 +1,19 @@
 import BackgroundBlur from '@/components/shared/BackgroundBlur'
+import { MotionSection } from '@/components/shared/Motion'
 import PageTitle from '@/components/shared/PageTitle'
 import SkillsScrollContainer from '@/components/shared/SkillsScrollContainer'
-import { backendSkills, frontendSkills } from '@/constants'
+import {
+  backendSkills,
+  frontendSkills,
+  underlineAnimationVariant,
+} from '@/constants'
 function Skills() {
   return (
-    <div
+    <MotionSection
+      initial={'initial'}
+      whileInView={'inView'}
+      viewport={{ once: true }}
+      variants={underlineAnimationVariant}
       id="skills"
       className="relative flex h-[calc(100vh-4rem)] flex-col items-center gap-4 pt-10 sm:pt-20 md:items-start md:gap-0"
     >
@@ -26,7 +35,7 @@ function Skills() {
           // slideSide="leftSlide"
         />
       </div>
-    </div>
+    </MotionSection>
   )
 }
 
