@@ -2,7 +2,6 @@ import type { Config } from 'tailwindcss'
 
 const svgToDataUri = require('mini-svg-data-uri')
 
-const colors = require('tailwindcss/colors')
 
 const {
   default: flattenColorPalette,
@@ -134,6 +133,11 @@ const config = {
           foreground: 'hsl(var(--card-foreground))',
         },
       },
+      fontFamily: {
+        montserrat: ['var(--font-montserrat)', 'sans-serif'],
+        raleway: ['var(--font-raleway)', 'sans-serif'],
+        poppins: ['var(--font-poppins)', 'sans-serif'],
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
@@ -156,16 +160,6 @@ const config = {
         'accordion-up': {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
-        },
-        spotlight: {
-          '0%': {
-            opacity: '0',
-            transform: 'translate(-72%, -62%) scale(0.5)',
-          },
-          '100%': {
-            opacity: '1',
-            transform: 'translate(-50%,-40%) scale(1)',
-          },
         },
       },
       animation: {
