@@ -11,7 +11,7 @@ function HomePageLeft({ heroImage }: { heroImage: any }) {
       className="flex-between h-2/5 w-full flex-col gap-4 max-sm:justify-end md:h-1/2 md:w-fit md:gap-0 lg:h-[27.6vw] lg:w-[30%] lg:gap-8"
       initial={{ opacity: 0, scale: 0.7 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ ease: 'easeInOut', duration: 1, delay: 0.6 }}
+      transition={{ ease: 'easeInOut', duration: 1, delay: 1.2 }}
     >
       {/* Image with Purple Filter */}
       <div className="flex-center custom-cursor-hidden relative -z-10 aspect-square h-40 rounded-full md:size-48 lg:size-[17vw]">

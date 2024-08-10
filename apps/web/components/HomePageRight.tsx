@@ -1,6 +1,5 @@
 'use client'
 import { motion } from 'framer-motion'
-import React from 'react'
 import TextUnderline from './shared/TextUnderline'
 import { TextGenerateEffect } from './ui/TextGenEffect'
 
@@ -17,15 +16,15 @@ function HomePageRight({
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ ease: 'easeInOut', duration: 1, delay: 1.5 }}
+          transition={{ ease: 'easeInOut', duration: 1, delay: 2 }}
           className="pink-cursor-lg bg-clip-text uppercase leading-none tracking-wider"
         >
           {firstName}{' '}
         </motion.h1>
         <motion.h1
-          initial={{ opacity: 0, y: -30 }}
+          initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ ease: 'easeInOut', duration: 1, delay: 2 }}
+          transition={{ ease: 'easeInOut', duration: 1, delay: 2.5 }}
           className="pink-cursor-lg bg-gradient-to-b from-neutral-200 to-neutral-700 bg-clip-text uppercase leading-none text-transparent max-md:m-0 md:leading-[110px]"
         >
           {lastName}
@@ -35,7 +34,7 @@ function HomePageRight({
       <motion.div
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ ease: 'easeInOut', duration: 1.5, delay: 3 }}
+        transition={{ ease: 'easeInOut', duration: 1.5, delay: 4 }}
         className="text-right text-[1.3vw] max-md:mt-6 max-md:text-center max-md:text-sm"
       >
         <div>
