@@ -1,6 +1,6 @@
 import { underlineAnimationVariant } from '@/constants'
 import TextUnderline from './TextUnderline'
-import { Motion, MotionDiv } from './Motion'
+import { MotionDiv } from './Motion'
 
 interface PageTitleProps {
   pageTitle: string

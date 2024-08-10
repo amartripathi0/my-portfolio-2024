@@ -33,7 +33,7 @@ function HomePageRight({
       <MotionDiv
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ ease: 'easeInOut', duration: 1.5, delay: 4 }}
+        transition={{ ease: 'easeInOut', duration: 1.5, delay: 3 }}
         className="text-right text-[1.3vw] max-md:mt-6 max-md:text-center max-md:text-sm"
       >
         <div>
