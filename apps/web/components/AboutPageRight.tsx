@@ -1,12 +1,11 @@
-'use client'
 import IndigoBlurBackground from './shared/IndigoBlurBackground'
-import { motion } from 'framer-motion'
 import { fadeAnimationVariant } from '@/constants'
 import Image from 'next/image'
 import { FaArrowCircleRight } from 'react-icons/fa'
 import Link from 'next/link'
 import { Button } from './ui/button'
 import { urlFor } from '@/utils/urlFor'
+import { MotionDiv } from './shared/Motion'
 
 function AboutPageRight({
   heroImage,
@@ -16,7 +15,7 @@ function AboutPageRight({
   resumeUrl: string
 }) {
   return (
-    <motion.div
+    <MotionDiv
       initial={'beforeView'}
       whileInView={'inView'}
       variants={fadeAnimationVariant}
@@ -35,7 +34,7 @@ function AboutPageRight({
         className="z-10 aspect-auto rounded-xl object-cover opacity-80 backdrop:blur-sm max-md:hidden md:max-w-44 lg:max-w-[16vw]"
       />
 
-      <motion.div
+      <MotionDiv
         initial={{
           y: 0,
         }}
@@ -57,8 +56,8 @@ function AboutPageRight({
             </span>
           </Button>
         </Link>
-      </motion.div>
-    </motion.div>
+      </MotionDiv>
+    </MotionDiv>
   )
 }
 

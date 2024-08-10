@@ -1,16 +1,15 @@
-'use client'
 import React, { useCallback, useState } from 'react'
 import { navbarItems } from '@/constants'
 import WrapperContainer from './shared/WrapperContainer'
 import Link from 'next/link'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { IoCloseOutline } from 'react-icons/io5'
-import { motion, spring } from 'framer-motion'
 import usePageScroll from '@/hooks/use-page-scroll'
 import LocomotiveScroll from 'locomotive-scroll'
 import TextUnderline from './shared/TextUnderline'
 import Image from 'next/image'
 import { cn } from '@/utils/cn'
+import { MotionDiv, MotionNav, MotionSpan } from './shared/Motion'
 
 const Navbar = ({
   locomotiveScroll,
@@ -26,7 +25,7 @@ const Navbar = ({
     [locomotiveScroll],
   )
   return (
-    <motion.nav
+    <MotionNav
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ ease: 'easeInOut', duration: 1 }}
@@ -68,7 +67,7 @@ const Navbar = ({
           >
             {pageSectionOnViewport.replace(/\s+/g, '-') ===
               item.label.replace(/\s+/g, '-') && (
-              <motion.span
+              <MotionSpan
                 layoutId="bubble"
                 className="absolute z-[-60] size-full rounded-full bg-gradient-to-r from-indigo-800 to-violet-500 font-medium"
                 transition={{
@@ -77,7 +76,7 @@ const Navbar = ({
                   damping: 30,
                   duration: 0.8,
                 }}
-              />
+              ></MotionSpan>
             )}
             <TextUnderline
               text={item.label}
@@ -117,7 +116,7 @@ const Navbar = ({
 
         {menubarOpen && (
           <div className="absolute -right-4 -top-2 h-screen w-screen bg-[#0C0404] bg-opacity-75">
-            <motion.div
+            <MotionDiv
               animate={{
                 transition: {
                   staggerChildren: 0.5,
@@ -133,7 +132,7 @@ const Navbar = ({
               />
 
               {navbarItems.map((item) => (
-                <motion.div
+                <MotionDiv
                   key={item.label}
                   initial={{ opacity: 0, x: -60 }}
                   animate={{
@@ -158,13 +157,13 @@ const Navbar = ({
                   >
                     {item.label}
                   </Link>
-                </motion.div>
+                </MotionDiv>
               ))}
-            </motion.div>
+            </MotionDiv>
           </div>
         )}
       </div>
-    </motion.nav>
+    </MotionNav>
   )
 }
 

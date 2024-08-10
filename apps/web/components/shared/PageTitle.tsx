@@ -1,7 +1,6 @@
-'use client'
 import { underlineAnimationVariant } from '@/constants'
-import { motion } from 'framer-motion'
 import TextUnderline from './TextUnderline'
+import { Motion, MotionDiv } from './Motion'
 
 interface PageTitleProps {
   pageTitle: string
@@ -16,7 +15,7 @@ function PageTitle({
   textStyles,
 }: PageTitleProps) {
   return (
-    <motion.div
+    <MotionDiv
       initial={'initial'}
       whileInView={'inView'}
       viewport={{ once: true }}
@@ -30,7 +29,7 @@ function PageTitle({
         containerDivStyles={containerDivStyles}
         underlineStyles={underlineStyles}
       />
-    </motion.div>
+    </MotionDiv>
   )
 }
 

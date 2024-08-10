@@ -1,13 +1,12 @@
-'use client'
-import { motion } from 'framer-motion'
 import Image from 'next/image'
 import React from 'react'
 import SocialHandles from './shared/SocialHandles'
 import { urlFor } from '@/utils/urlFor'
+import { MotionDiv } from './shared/Motion'
 
 function HomePageLeft({ heroImage }: { heroImage: any }) {
   return (
-    <motion.div
+    <MotionDiv
       className="flex-between h-2/5 w-full flex-col gap-4 max-sm:justify-end md:h-1/2 md:w-fit md:gap-0 lg:h-[27.6vw] lg:w-[30%] lg:gap-8"
       initial={{ opacity: 0, scale: 0.7 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -15,7 +14,7 @@ function HomePageLeft({ heroImage }: { heroImage: any }) {
     >
       {/* Image with Purple Filter */}
       <div className="flex-center custom-cursor-hidden relative -z-10 aspect-square h-40 rounded-full md:size-48 lg:size-[17vw]">
-        <motion.div
+        <MotionDiv
           className="size-5/6 rounded-full bg-purple-400 opacity-90 blur-[70px]"
           initial={{
             opacity: 0,
@@ -23,7 +22,7 @@ function HomePageLeft({ heroImage }: { heroImage: any }) {
           }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: 'circInOut' }}
-        ></motion.div>
+        ></MotionDiv>
 
         <Image
           src={urlFor(heroImage).url()}
@@ -42,7 +41,7 @@ function HomePageLeft({ heroImage }: { heroImage: any }) {
         </p>
         <SocialHandles additionalStyle="flex-center gap-2 lg:gap-4 rounded-xl max-sm:w-40 " />
       </div>
-    </motion.div>
+    </MotionDiv>
   )
 }
 
