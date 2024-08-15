@@ -10,7 +10,7 @@ const Landing = async () => {
   return (
     <div
       id="home"
-      className="flex-between h-[calc(100vh-5rem)] pt-10 max-md:flex-col max-md:justify-start md:pt-0"
+      className="flex-between h-[calc(100vh-5rem)] max-md:flex-col max-md:justify-start"
     >
       <HomePageLeft heroImage={heroImage} />
       <HomePageRight firstName={firstName || ''} lastName={lastName || ''} />
