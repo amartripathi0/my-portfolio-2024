@@ -9,7 +9,7 @@ import LocomotiveScroll from 'locomotive-scroll'
 import TextUnderline from './shared/TextUnderline'
 import Image from 'next/image'
 import { cn } from '@/utils/cn'
-import { MotionDiv, MotionNav, MotionSpan } from './shared/Motion'
+import { MotionDiv, MotionLink, MotionNav, MotionSpan } from './shared/Motion'
 
 const Navbar = ({
   locomotiveScroll,
@@ -18,6 +18,27 @@ const Navbar = ({
 }) => {
   const [menubarOpen, setMenubarOpen] = useState(false)
   const { scrolled, pageSectionOnViewport } = usePageScroll()
+  const menubarVariant = {
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1, when: 'beforeChildren' },
+    },
+    hide: {
+      opacity: 0,
+    },
+  }
+  const menubarItemVariant = {
+    show: {
+      opacity: 1,
+      scale: 1,
+      y:0
+    },
+    hide: {
+      opacity: 0,
+      scale: 0.4,
+      y:-40
+    },
+  }
   const handleScrollTo = useCallback(
     (link: string) => {
       locomotiveScroll.scrollTo(link, { offset: -83 })
@@ -114,54 +135,55 @@ const Navbar = ({
           onClick={() => setMenubarOpen((prev) => !prev)}
         />
 
-        {menubarOpen && (
-          <div className="absolute -right-4 -top-2 h-screen w-screen bg-[#0C0404] bg-opacity-75">
-            <MotionDiv
-              animate={{
-                transition: {
-                  staggerChildren: 0.5,
-                  delayChildren: 0.5,
-                },
-              }}
-              className="flex-col-center mt-32 h-1/2 w-full justify-center gap-10 rounded-3xl px-6"
-            >
-              <IoCloseOutline
-                className="absolute right-3 top-1 rounded-full border border-gray-700 bg-slate-900 text-purple-500"
-                onClick={() => setMenubarOpen((prev) => !prev)}
-                size={45}
-              />
+        {
+          <MotionDiv
+            variants={menubarVariant}
+            animate={menubarOpen ? 'show' : 'hide'}
+            className="flex-center absolute -right-4 -top-2 h-screen w-screen flex-col space-y-4 bg-[#0C0404] bg-opacity-75"
+          >
+            <IoCloseOutline
+              className="absolute right-3 top-4 rounded-full border border-gray-700 bg-neutral-900 p-1 text-purple-500"
+              onClick={() => setMenubarOpen((prev) => !prev)}
+              size={45}
+            />
 
-              {navbarItems.map((item) => (
-                <MotionDiv
-                  key={item.label}
-                  initial={{ opacity: 0, x: -60 }}
-                  animate={{
-                    opacity: 1,
-                    x: 0,
-                    transition: {
-                      duration: 0.5,
-                      staggerChildren: 0.4,
-                    },
-                  }}
-                  className={cn(
-                    'flex-center h-12 w-2/3 rounded-full border-rum-500 p-4 text-sm hover:bg-rum-600',
-                    pageSectionOnViewport === item.label
-                      ? 'bg-gradient-to-r from-indigo-800 to-violet-500'
-                      : 'bg-slate-900',
-                  )}
-                >
-                  <Link
-                    scroll={true}
-                    href={item.link}
-                    onClick={() => setMenubarOpen((prev) => !prev)}
-                  >
-                    {item.label}
-                  </Link>
-                </MotionDiv>
-              ))}
+            {navbarItems.map((item) => (
+              <MotionLink
+                key={item.label}
+                variants={menubarItemVariant}
+                onClick={() => setMenubarOpen((prev) => !prev)}
+                scroll={true}
+                href={item.link}
+                className={cn(
+                  'flex-center h-12 w-3/5 rounded-full text-sm',
+                  pageSectionOnViewport.replace(/\s+/g, '-') ===
+                    item.label.replace(/\s+/g, '-')
+                    ? 'bg-gradient-to-r from-indigo-800 to-violet-500 font-semibold'
+                    : 'bg-neutral-900',
+                )}
+              >
+                {item.label}
+              </MotionLink>
+            ))}
+            <MotionDiv
+              variants={menubarItemVariant}
+              className={cn(
+                'flex-center h-12 w-3/5 rounded-full text-sm',
+                pageSectionOnViewport === 'contact-me'
+                  ? 'bg-gradient-to-r from-indigo-800 to-violet-500 font-semibold'
+                  : 'bg-neutral-900',
+              )}
+            >
+              <Link
+                scroll={true}
+                href={'#contact-me'}
+                onClick={() => setMenubarOpen((prev) => !prev)}
+              >
+                contact me
+              </Link>
             </MotionDiv>
-          </div>
-        )}
+          </MotionDiv>
+        }
       </div>
     </MotionNav>
   )
