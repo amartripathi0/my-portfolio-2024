@@ -22,10 +22,25 @@ const Navbar = ({
   const menubarVariant = {
     show: {
       opacity: 1,
-      transition: { staggerChildren: 0.1, when: 'beforeChildren' },
+      y: 0,
+      transition: {
+        type: 'spring',
+        stiffness: 300,
+        damping: 30,
+        when: 'beforeChildren',
+        staggerChildren: 0.1,
+      },
     },
     hide: {
       opacity: 0,
+      y: '-100%',
+      transition: {
+        type: 'spring',
+        stiffness: 300,
+        damping: 30,
+        when: 'afterChildren',
+        staggerChildren: 0.1, 
+      },
     },
   }
   const menubarItemVariant = {
@@ -140,8 +155,10 @@ const Navbar = ({
           {menubarOpen && (
             <MotionDiv
               variants={menubarVariant}
-              animate={menubarOpen ? 'show' : 'hide'}
-              className="flex-center absolute -right-4 -top-2 h-screen w-screen flex-col space-y-4 bg-[#0C0404] bg-opacity-75"
+              initial="hide"
+              animate="show"
+              exit="hide"
+              className="flex-center fixed right-0 top-0 h-screen w-screen flex-col space-y-4 bg-[#0C0404] bg-opacity-75"
             >
               <IoCloseOutline
                 className="absolute right-3 top-4 rounded-full border border-gray-700 bg-neutral-900 p-1 text-purple-500"
