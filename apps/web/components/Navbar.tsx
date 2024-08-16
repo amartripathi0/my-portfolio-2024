@@ -9,7 +9,8 @@ import LocomotiveScroll from 'locomotive-scroll'
 import TextUnderline from './shared/TextUnderline'
 import Image from 'next/image'
 import { cn } from '@/utils/cn'
-import { MotionDiv, MotionLink, MotionNav, MotionSpan } from './shared/Motion'
+import { MotionDiv, MotionNav, MotionSpan, MotionLink } from './shared/Motion'
+import { AnimatePresence } from 'framer-motion'
 
 const Navbar = ({
   locomotiveScroll,
@@ -31,12 +32,12 @@ const Navbar = ({
     show: {
       opacity: 1,
       scale: 1,
-      y:0
+      y: 0,
     },
     hide: {
       opacity: 0,
       scale: 0.4,
-      y:-40
+      y: -40,
     },
   }
   const handleScrollTo = useCallback(
@@ -132,58 +133,57 @@ const Navbar = ({
         <AiOutlineMenu
           className="md:hidden"
           size={36}
-          onClick={() => setMenubarOpen((prev) => !prev)}
+          onClick={() => setMenubarOpen(true)}
         />
 
-        {
-          <MotionDiv
-            variants={menubarVariant}
-            animate={menubarOpen ? 'show' : 'hide'}
-            className="flex-center absolute -right-4 -top-2 h-screen w-screen flex-col space-y-4 bg-[#0C0404] bg-opacity-75"
-          >
-            <IoCloseOutline
-              className="absolute right-3 top-4 rounded-full border border-gray-700 bg-neutral-900 p-1 text-purple-500"
-              onClick={() => setMenubarOpen((prev) => !prev)}
-              size={45}
-            />
+        <AnimatePresence>
+          {menubarOpen && (
+            <MotionDiv
+              variants={menubarVariant}
+              animate={menubarOpen ? 'show' : 'hide'}
+              className="flex-center absolute -right-4 -top-2 h-screen w-screen flex-col space-y-4 bg-[#0C0404] bg-opacity-75"
+            >
+              <IoCloseOutline
+                className="absolute right-3 top-4 rounded-full border border-gray-700 bg-neutral-900 p-1 text-purple-500"
+                onClick={() => setMenubarOpen((prev) => !prev)}
+                size={45}
+              />
 
-            {navbarItems.map((item) => (
+              {navbarItems.map((item) => (
+                <MotionLink
+                  key={item.label}
+                  variants={menubarItemVariant}
+                  onClick={() => setMenubarOpen((prev) => !prev)}
+                  scroll={true}
+                  href={item.link}
+                  className={cn(
+                    'flex-center h-12 w-3/5 rounded-full text-sm',
+                    pageSectionOnViewport.replace(/\s+/g, '-') ===
+                      item.label.replace(/\s+/g, '-')
+                      ? 'bg-gradient-to-r from-indigo-800 to-violet-500 font-semibold'
+                      : 'bg-neutral-900',
+                  )}
+                >
+                  {item.label}
+                </MotionLink>
+              ))}
               <MotionLink
-                key={item.label}
                 variants={menubarItemVariant}
                 onClick={() => setMenubarOpen((prev) => !prev)}
                 scroll={true}
-                href={item.link}
+                href={'#contact-me'}
                 className={cn(
                   'flex-center h-12 w-3/5 rounded-full text-sm',
-                  pageSectionOnViewport.replace(/\s+/g, '-') ===
-                    item.label.replace(/\s+/g, '-')
+                  pageSectionOnViewport === 'contact-me'
                     ? 'bg-gradient-to-r from-indigo-800 to-violet-500 font-semibold'
                     : 'bg-neutral-900',
                 )}
               >
-                {item.label}
-              </MotionLink>
-            ))}
-            <MotionDiv
-              variants={menubarItemVariant}
-              className={cn(
-                'flex-center h-12 w-3/5 rounded-full text-sm',
-                pageSectionOnViewport === 'contact-me'
-                  ? 'bg-gradient-to-r from-indigo-800 to-violet-500 font-semibold'
-                  : 'bg-neutral-900',
-              )}
-            >
-              <Link
-                scroll={true}
-                href={'#contact-me'}
-                onClick={() => setMenubarOpen((prev) => !prev)}
-              >
                 contact me
-              </Link>
+              </MotionLink>
             </MotionDiv>
-          </MotionDiv>
-        }
+          )}
+        </AnimatePresence>
       </div>
     </MotionNav>
   )
