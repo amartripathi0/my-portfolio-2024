@@ -1,15 +1,29 @@
+'use client'
+import { SkillType } from '@/types'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { useRef } from 'react'
 import BackgroundBlur from '@/components/shared/BackgroundBlur'
 import { MotionSection } from '@/components/shared/Motion'
 import PageTitle from '@/components/shared/PageTitle'
-import SkillsScrollContainer from '@/components/shared/SkillsScrollContainer'
 import {
   backendSkills,
   frontendSkills,
   underlineAnimationVariant,
 } from '@/constants'
+import Skill from '@/components/Skill'
+
 function Skills() {
+  const targetRef = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ['start end', '0.2 0.4'],
+  })
+  const leftSlide = useTransform(scrollYProgress, [0, 1], ['-20vw', '0%'])
+  const rightSlide = useTransform(scrollYProgress, [0, 1], ['20vw', '0%'])
+  const opacity = useTransform(scrollYProgress, [0.3, 1], [0, 1])
   return (
     <MotionSection
+      ref={targetRef}
       initial={'initial'}
       whileInView={'inView'}
       viewport={{ once: true }}
@@ -29,11 +43,23 @@ function Skills() {
       />
 
       <div className="flex-center h-4/5 w-full flex-col overflow-hidden md:h-full">
-        <SkillsScrollContainer
-          frontendSkillsArray={frontendSkills}
-          backendSkillsArray={backendSkills}
-          // slideSide="leftSlide"
-        />
+        <motion.div
+          style={{ translateX: leftSlide, opacity: opacity }}
+          className="flex flex-wrap justify-center gap-4 p-2 md:py-6 lg:py-10"
+        >
+          {frontendSkills.map(({ name, imageSrc }: SkillType) => (
+            <Skill key={name} name={name} imageSrc={imageSrc} />
+          ))}
+        </motion.div>
+
+        <motion.div
+          style={{ translateX: rightSlide, opacity: opacity }}
+          className="flex flex-wrap justify-center gap-4 max-sm:p-2 md:pb-12"
+        >
+          {backendSkills.map(({ name, imageSrc }: SkillType) => (
+            <Skill key={name} name={name} imageSrc={imageSrc} />
+          ))}
+        </motion.div>
       </div>
     </MotionSection>
   )
