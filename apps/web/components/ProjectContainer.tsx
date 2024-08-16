@@ -80,9 +80,9 @@ const ProjectContainer = ({
           {projectDetail && <PortableText value={projectDetail[0]}/>}
 
           <div className="my-2 flex flex-wrap gap-2 md:gap-4">
-            {projectTools?.map((eachTool) => (
+            {projectTools?.map((eachTool,index) => (
               <div key={eachTool}>
-                <ProjectTool tool={eachTool} />
+                <ProjectTool tool={eachTool} i = {index}/>
               </div>
             ))}
           </div>
