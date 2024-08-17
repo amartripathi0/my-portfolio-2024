@@ -69,6 +69,7 @@ export function ContactMeForm() {
         <div className="flex items-center justify-between gap-4 max-sm:flex-col max-sm:gap-2">
           {socialMediaLinks.map(({ label, url, icon: SocialIcon }) => (
             <Link
+              target='_blank'
               key={label}
               className="group/btn text-black relative flex h-10 w-full items-center justify-center space-x-2 rounded-md bg-zinc-900 px-4 font-medium shadow-input dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
               href={url}
