@@ -1,7 +1,7 @@
 import ProjectContainer from '@/components/ProjectContainer'
 import BackgroundBlur from '@/components/shared/BackgroundBlur'
 import { MotionSection } from '@/components/shared/Motion'
-import PageTitle from '@/components/shared/PageTitle'
+import TextUnderline from '@/components/shared/TextUnderline'
 import { pageSectionVariant } from '@/constants'
 import { PROJECTS_PAGE_QUERY } from '@/sanity/queries'
 import { Project } from '@/sanity/types'
@@ -20,8 +20,9 @@ async function Projects() {
       data-scroll-container
     >
       <div className="relative pt-10">
-        <PageTitle
-          pageTitle="My Projects"
+        <TextUnderline
+        textType='pageHeading'
+          text="My Projects"
           underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-cyan-600"
         />
         <BackgroundBlur

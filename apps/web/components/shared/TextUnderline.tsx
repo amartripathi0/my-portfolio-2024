@@ -62,7 +62,7 @@ const TextUnderline = ({
       {textType === 'pageHeading' ? (
         <h1
           className={cn(
-            'relative',
+            'relative inline-block',
             TextUnderlineVariants({ textType }),
             textStyles,
           )}
@@ -86,7 +86,7 @@ const TextUnderline = ({
           scaleX: 0,
         }}
         animate={controls}
-        transition={{ duration: 0.4, ease: 'easeInOut' }}
+        transition={{ duration: 0.65, ease: 'anticipate' }}
         className={cn(
           'absolute bottom-[2px] h-[1.5px] w-full rounded-xl bg-purple-100 drop-shadow-lg',
           underlineStyles,

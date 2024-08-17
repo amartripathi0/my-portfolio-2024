@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import BackgroundBlur from '@/components/shared/BackgroundBlur'
 import { MotionSection } from '@/components/shared/Motion'
-import PageTitle from '@/components/shared/PageTitle'
+import TextUnderline from '@/components/shared/TextUnderline'
 import { backendSkills, frontendSkills, pageSectionVariant } from '@/constants'
 import Skill from '@/components/Skill'
 
@@ -27,8 +27,9 @@ function Skills() {
       id="skills"
       className="relative flex h-[calc(100vh-4rem)] flex-col items-center gap-4 pt-10 sm:pt-20 md:items-start md:gap-0"
     >
-      <PageTitle
-        pageTitle="Skills & Tools"
+      <TextUnderline
+        textType='pageHeading'
+        text="Skills & Tools"
         underlineStyles="bg-gradient-to-r from-indigo-600 via-purple-400"
       />
 

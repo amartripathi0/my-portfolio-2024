@@ -1,7 +1,7 @@
 import AboutPageRight from '@/components/AboutPageRight'
 import BackgroundBlur from '@/components/shared/BackgroundBlur'
 import { MotionSection } from '@/components/shared/Motion'
-import PageTitle from '@/components/shared/PageTitle'
+import TextUnderline from '@/components/shared/TextUnderline'
 import { pageSectionVariant } from '@/constants'
 import { ABOUT_PAGE_QUERY } from '@/sanity/queries'
 import { About as AboutType } from '@/sanity/types'
@@ -26,8 +26,9 @@ const About = async () => {
         <BackgroundBlur blurColor="indigo" style="h-1/6 max-sm:left-1/4" />
 
         {/* About Me heading */}
-        <PageTitle
-          pageTitle={title || ''}
+        <TextUnderline
+          textType='pageHeading'
+          text={title || ''}
           underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-cyan-600 "
         />
 
