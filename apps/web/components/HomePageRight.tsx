@@ -21,7 +21,7 @@ function HomePageRight({
           {firstName}{' '}
         </MotionH1>
         <MotionH1
-          initial={{ opacity: 0, y: -50 }}
+          initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: 'easeInOut', duration: 1, delay: 2.5 }}
           className="pink-cursor-lg bg-gradient-to-b from-neutral-200 to-neutral-700 bg-clip-text uppercase leading-none text-transparent max-md:m-0 md:leading-[110px]"

@@ -2,7 +2,7 @@ import AboutPageRight from '@/components/AboutPageRight'
 import BackgroundBlur from '@/components/shared/BackgroundBlur'
 import { MotionSection } from '@/components/shared/Motion'
 import PageTitle from '@/components/shared/PageTitle'
-import { underlineAnimationVariant } from '@/constants'
+import { pageSectionVariant } from '@/constants'
 import { ABOUT_PAGE_QUERY } from '@/sanity/queries'
 import { About as AboutType } from '@/sanity/types'
 import { getSanityData } from '@/utils/getSanityData'
@@ -17,7 +17,7 @@ const About = async () => {
       initial={'initial'}
       whileInView={'inView'}
       viewport={{ once: true }}
-      variants={underlineAnimationVariant}
+      variants={pageSectionVariant}
       id="about-me"
       className="relative flex h-[calc(100vh-6rem)] items-center gap-4 max-md:flex-col max-sm:pt-0 sm:h-[calc(100vh-10rem)] md:gap-[8vw]"
     >

@@ -138,11 +138,10 @@ export const fadeAnimationVariant = {
   inView: { opacity: 1, transition: { duration: 1.5 } },
 }
 
-export const underlineAnimationVariant = {
-  initial: { y: 60, opacity: 0, scale:0.95 },
+export const pageSectionVariant = {
+  initial: { y: 50, opacity: 0 },
   inView: {
     y: 0,
-    scale: 1,
     opacity: 1,
     transition: {
       spring: 1,
@@ -150,7 +149,7 @@ export const underlineAnimationVariant = {
       stiffness: 200,
       duration: 0.8,
       bounce: 0.25,
-      delay: 0.3,
+      delay: 0.8,
     },
   },
 }

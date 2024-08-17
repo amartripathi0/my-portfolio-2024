@@ -2,7 +2,7 @@ import ProjectContainer from '@/components/ProjectContainer'
 import BackgroundBlur from '@/components/shared/BackgroundBlur'
 import { MotionSection } from '@/components/shared/Motion'
 import PageTitle from '@/components/shared/PageTitle'
-import { underlineAnimationVariant } from '@/constants'
+import { pageSectionVariant } from '@/constants'
 import { PROJECTS_PAGE_QUERY } from '@/sanity/queries'
 import { Project } from '@/sanity/types'
 import { getSanityData } from '@/utils/getSanityData'
@@ -14,7 +14,7 @@ async function Projects() {
       initial={'initial'}
       whileInView={'inView'}
       viewport={{ once: true }}
-      variants={underlineAnimationVariant}
+      variants={pageSectionVariant}
       id="projects"
       className="min-h-screen max-xl:mx-0"
       data-scroll-container

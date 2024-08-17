@@ -8,13 +8,13 @@ const Landing = async () => {
   const { firstName, lastName, heroImage }: Homepage =
     await getSanityData(HOMEPAGE_QUERY)
   return (
-    <div
+    <section
       id="home"
       className="flex-between h-[calc(100vh-5rem)] max-md:flex-col max-md:justify-start"
     >
       <HomePageLeft heroImage={heroImage} />
       <HomePageRight firstName={firstName || ''} lastName={lastName || ''} />
-    </div>
+    </section>
   )
 }
 

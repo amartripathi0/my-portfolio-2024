@@ -1,4 +1,4 @@
-import { underlineAnimationVariant } from '@/constants'
+import { pageSectionVariant } from '@/constants'
 import TextUnderline from './TextUnderline'
 import { MotionDiv } from './Motion'
 
@@ -15,9 +15,7 @@ function PageTitle({
   textStyles,
 }: PageTitleProps) {
   return (
-    <MotionDiv
-      className="max-md:flex-center"
-    >
+    <MotionDiv className="max-md:flex-center">
       <TextUnderline
         textType="pageHeading"
         text={pageTitle}

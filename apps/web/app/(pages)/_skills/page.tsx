@@ -5,11 +5,7 @@ import { useRef } from 'react'
 import BackgroundBlur from '@/components/shared/BackgroundBlur'
 import { MotionSection } from '@/components/shared/Motion'
 import PageTitle from '@/components/shared/PageTitle'
-import {
-  backendSkills,
-  frontendSkills,
-  underlineAnimationVariant,
-} from '@/constants'
+import { backendSkills, frontendSkills, pageSectionVariant } from '@/constants'
 import Skill from '@/components/Skill'
 
 function Skills() {
@@ -27,7 +23,7 @@ function Skills() {
       initial={'initial'}
       whileInView={'inView'}
       viewport={{ once: true }}
-      variants={underlineAnimationVariant}
+      variants={pageSectionVariant}
       id="skills"
       className="relative flex h-[calc(100vh-4rem)] flex-col items-center gap-4 pt-10 sm:pt-20 md:items-start md:gap-0"
     >

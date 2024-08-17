@@ -2,15 +2,15 @@ import { ContactMeForm } from '@/components/ContactMeForm'
 import BackgroundBlur from '@/components/shared/BackgroundBlur'
 import { MotionSection } from '@/components/shared/Motion'
 import PageTitle from '@/components/shared/PageTitle'
-import { underlineAnimationVariant } from '@/constants'
+import { pageSectionVariant } from '@/constants'
 
 function Contact() {
   return (
     <MotionSection
-    initial={'initial'}
-    whileInView={'inView'}
-    viewport={{ once: true }}
-    variants={underlineAnimationVariant}
+      initial={'initial'}
+      whileInView={'inView'}
+      viewport={{ once: true }}
+      variants={pageSectionVariant}
       id="contact-me"
       className="relative flex h-[calc(100vh-3rem)] flex-col gap-4 py-10 sm:h-[calc(100vh-4rem)] sm:gap-2"
     >
