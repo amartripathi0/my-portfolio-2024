@@ -60,7 +60,7 @@ function CustomCursor() {
       className={cn(
         `pointer-events-none fixed left-0 top-0 z-[9999] size-4 rounded-full bg-purple-600 mix-blend-plus-lighter blur-[1px] drop-shadow-glow max-sm:hidden`,
         cursorStyle === 'pink-cursor-lg' &&
-          'size-10 bg-gradient-to-r from-indigo-800 to-pink-500 opacity-80 mix-blend-darken',
+          'size-14 bg-gradient-to-r from-indigo-800 to-pink-500 opacity-80 mix-blend-darken',
         cursorStyle === 'pink-cursor-md' &&
           'size-7 bg-gradient-to-r from-indigo-800 via-pink-500 to-cyan-900 opacity-80 mix-blend-darken',
         cursorStyle === 'pink-cursor-sm' &&
