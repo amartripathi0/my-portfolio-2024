@@ -24,10 +24,25 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Amar's Portfolio",
-  description: 'This is a fullstack web developer portfolio of Amar Tripathi.',
+  title: "Amar Tripathi | Full Stack Web Developer",
+  description: "Experienced full stack web developer specializing in modern web technologies. View Amar Tripathi's portfolio showcasing innovative projects and technical expertise.",
+  keywords: "full stack developer, web development, React, Node.js, JavaScript, portfolio, Amar Tripathi",
+  authors: [{ name: "Amar Tripathi" }],
+  openGraph: {
+    title: "Amar Tripathi | Full Stack Web Developer Portfolio",
+    description: "Explore the projects and skills of Amar Tripathi, a passionate full stack web developer creating innovative web solutions.",
+    type: "website",
+    url: "https://www.amartripathi.vercel.app",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@amartripathi_", 
+    creator: "@amartripathi_",
+  },
   icons: {
     icon: '/favicon/favicon.ico',
+    apple: '/favicon/apple-touch-icon.png',
+    shortcut: '/favicon/favicon-16x16.png',
   },
 }
 
