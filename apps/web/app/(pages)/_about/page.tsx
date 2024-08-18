@@ -19,7 +19,7 @@ const About = async () => {
       viewport={{ once: true }}
       variants={pageSectionVariant}
       id="about-me"
-      className="relative flex h-[calc(100vh-6rem)] items-center gap-4 max-md:flex-col max-sm:pt-0 sm:h-[calc(100vh-10rem)] md:gap-[8vw]"
+      className="relative flex h-[calc(100vh-6rem)] gap-4 max-md:flex-col items-center max-sm:pt-0 sm:h-[calc(100vh-10rem)] md:gap-[8vw]"
     >
       {/* Left section */}
       <div className="md:max-w-1/2 flex w-full flex-col items-center md:h-4/5 md:items-start lg:w-[70%]">
