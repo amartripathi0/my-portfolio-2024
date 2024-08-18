@@ -27,7 +27,7 @@ function HomePageLeft({ heroImage }: { heroImage: any }) {
         <Image
           src={urlFor(heroImage).url()}
           alt="Main Profile picture"
-          sizes="3464"
+          sizes="300"
           fill
           priority
           loading="eager"
