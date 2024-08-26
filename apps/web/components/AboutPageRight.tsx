@@ -17,12 +17,12 @@ function AboutPageRight({
   return (
     <MotionDiv
       data-scroll
-      data-scroll-speed={0.26}
+      data-scroll-speed={0.4}
       initial={'beforeView'}
       whileInView={'inView'}
       variants={fadeAnimationVariant}
       viewport={{ once: true }}
-      className="rounded-4xl relative mb-14 flex h-full flex-col items-center justify-center gap-6"
+      className="rounded-4xl relative flex h-4/5 mb-10 flex-col items-center gap-6"
     >
       <IndigoBlurBackground height="1/2 max-md:hidden" />
 
