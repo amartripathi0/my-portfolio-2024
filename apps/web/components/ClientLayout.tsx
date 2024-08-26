@@ -11,7 +11,13 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
     setMounted(true)
     ;(async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default
-      const scroll = new LocomotiveScroll({ scrollbarClass: 'scrollbar' })
+      const scroll = new LocomotiveScroll({
+        scrollbarClass: 'scrollbar',
+        smooth: true,
+        smartphone: { smooth: false },
+        tablet: { smooth: false , breakpoint : 768},
+        lerp: 0.08
+      })
       setLocomotiveScroll(scroll)
     })()
   }, [])
