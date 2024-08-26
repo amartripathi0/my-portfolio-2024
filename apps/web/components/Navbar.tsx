@@ -67,7 +67,7 @@ const Navbar = ({
       animate={{ opacity: 1, y: 0 }}
       transition={{ ease: 'easeInOut', duration: 1 }}
       className={cn(
-        `flex-between fixed left-0 top-0 z-50 h-20 w-screen px-10 py-2 backdrop-blur-md max-md:h-[70px] max-sm:px-4 max-sm:py-1`,
+        `flex-between fixed left-0 top-0 z-50 h-[70px] w-screen px-4 py-1 sm:py-2 backdrop-blur-sm sm:px-10 md:h-20`,
         scrolled && 'border-b border-purple-950',
       )}
       role="navigation"
@@ -90,7 +90,7 @@ const Navbar = ({
       </WrapperContainer>
 
       {/* Middle */}
-      <WrapperContainer additionalStyle="flex-center md:gap-3 p-1.5 lg:gap-6 rounded-full max-md:hidden md:w-1/2  lg:max-w-[490px]">
+      <WrapperContainer additionalStyle="flex-center md:gap-3 p-1.5 lg:gap-6 rounded-full max-md:hidden md:w-1/2  lg:max-w-[490px]  bg-[#0C0910]">
         {navbarItems.map((item) => (
           <Link
             key={item.label}
