@@ -17,7 +17,7 @@ function AboutPageRight({
   return (
     <MotionDiv
       data-scroll
-      data-scroll-speed={0.4}
+      data-scroll-speed={0.26}
       initial={'beforeView'}
       whileInView={'inView'}
       variants={fadeAnimationVariant}
