@@ -6,8 +6,8 @@ export const projectsPageType = defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'projects',
-      title: 'Projects',
+      name: 'projectsArray',
+      title: 'Projects Array',
       type: 'array',
       of: [
         {
@@ -15,6 +15,9 @@ export const projectsPageType = defineType({
           to: [{type: 'project'}],
         },
       ],
+      options: {
+        sortable: true
+      },
     }),
   ],
 })

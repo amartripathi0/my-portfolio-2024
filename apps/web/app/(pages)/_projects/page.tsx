@@ -8,7 +8,9 @@ import { Project } from '@/sanity/types'
 import { getSanityData } from '@/utils/getSanityData'
 
 async function Projects() {
-  const projectsArray: Project[] = await getSanityData(PROJECTS_PAGE_QUERY)
+  const { projectsArray }: { projectsArray: Project[] } =
+    await getSanityData(PROJECTS_PAGE_QUERY)
+
   return (
     <MotionSection
       initial={'initial'}
@@ -21,7 +23,7 @@ async function Projects() {
     >
       <div className="relative pt-10">
         <TextUnderline
-        textType='pageHeading'
+          textType="pageHeading"
           text="My Projects"
           underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-cyan-600"
         />
@@ -40,9 +42,8 @@ async function Projects() {
             projectDetail,
             projectTools,
           }: Project) => (
-            <>
+            <div key={projectTitle}>
               <ProjectContainer
-                key={projectTitle}
                 projectTitle={projectTitle}
                 projectBio={projectBio}
                 projectTools={projectTools}
@@ -56,7 +57,7 @@ async function Projects() {
                 blurColor="purple"
                 style="absolute bottom-3/5 lg:-right-20  h-48 md:h-[280px] blur-[300px] bg-gradient-to-r from-indigo-500 to-purple-400 overflow-hidden"
               />
-            </>
+            </div>
           ),
         )}
       </div>

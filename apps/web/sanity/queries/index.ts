@@ -15,7 +15,8 @@ export const ABOUT_PAGE_QUERY = `
 }[0]`
 
 export const PROJECTS_PAGE_QUERY = `
-  *[_type == 'project']{
+  *[_type == 'projects']{
+   projectsArray[]->{
     projectTitle,
     projectBio,
     projectThumbnail,
@@ -23,4 +24,5 @@ export const PROJECTS_PAGE_QUERY = `
     projectDeployedLink,
     projectDetail,
     projectTools,
-}`
+  }
+}[0]`
