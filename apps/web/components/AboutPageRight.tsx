@@ -43,12 +43,12 @@ function AboutPageRight({
         animate={{
           y: 16,
         }}
-        transition={{
-          duration: 0.8,
-          repeat: Infinity,
-          repeatType: 'reverse',
-          ease: 'easeInOut',
-        }}
+        // transition={{
+        //   duration: 0.8,
+        //   repeat: Infinity,
+        //   repeatType: 'reverse',
+        //   ease: 'easeInOut',
+        // }}
       >
         <Link href={resumeUrl} target="_blank">
           <Button className="relative inline-flex h-12 w-32 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 max-sm:h-12 max-sm:w-32">
