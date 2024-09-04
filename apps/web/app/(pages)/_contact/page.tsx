@@ -3,6 +3,7 @@ import BackgroundBlur from '@/components/shared/BackgroundBlur'
 import { MotionSection } from '@/components/shared/Motion'
 import PageTitle from '@/components/shared/PageTitle'
 import { pageSectionVariant } from '@/constants'
+import { IoMail } from 'react-icons/io5'
 
 function Contact() {
   return (
@@ -31,7 +32,7 @@ function Contact() {
 
       <ContactMeForm />
       <p className="absolute bottom-0 mb-1 flex items-center gap-1 text-sm sm:mb-2 sm:gap-2 md:text-base">
-        <span className="text-lg font-bold">&copy;</span> 2024 Amar Tripathi
+        <span className="text-lg font-bold">&copy;</span> 2024 Amar Tripathi | <IoMail/> theamartripathi@gmail.com
       </p>
     </MotionSection>
   )
