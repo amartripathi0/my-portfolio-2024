@@ -3,17 +3,20 @@ import React from 'react'
 import SocialHandles from './shared/SocialHandles'
 import { urlFor } from '@/utils/urlFor'
 import { MotionDiv } from './shared/Motion'
+import { IoReturnDownForwardOutline } from 'react-icons/io5'
+import Link from 'next/link'
+import { FaArrowCircleRight } from 'react-icons/fa'
 
 function HomePageLeft({ heroImage }: { heroImage: any }) {
   return (
     <MotionDiv
-      className="flex-between h-2/5 w-full flex-col gap-4 max-sm:justify-end md:h-1/2 md:w-fit md:gap-0 lg:h-[27.6vw] lg:w-[30%] lg:gap-8"
+      className="flex-between h-2/5 w-full flex-col gap-4 max-sm:justify-end md:h-1/2 md:w-fit md:gap-0 lg:h-[27.9vw] lg:w-[30%] lg:gap-4 lg:pt-5"
       initial={{ opacity: 0, scale: 0.7 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ ease: 'easeInOut', duration: 1, delay: 1.2 }}
     >
       {/* Image with Purple Filter */}
-      <div className="flex-center custom-cursor-hidden relative -z-10 aspect-square h-40 rounded-full md:size-48 lg:size-[17vw]">
+      <div className="flex-center custom-cursor-hidden relative -z-10 aspect-square h-40 rounded-full md:size-48 lg:size-[16vw]">
         <MotionDiv
           className="size-5/6 rounded-full bg-purple-400 opacity-90 blur-[70px]"
           initial={{
@@ -31,15 +34,26 @@ function HomePageLeft({ heroImage }: { heroImage: any }) {
           fill
           priority
           loading="eager"
-          className="custom-cursor-hidden aspect-square rounded-full md:size-40"
+          className="custom-cursor-hidden aspect-square rounded-full"
         />
       </div>
 
-      <div className="flex w-full flex-col items-center justify-end gap-2 sm:w-5/6 md:gap-2 lg:gap-5">
-        <p className="w-full text-center text-sm md:text-[1.3vw]">
+      <div className="flex-between w-full flex-col gap-4 sm:w-5/6">
+        <p className="text-sm md:text-[1.3vw]">
           Hey! 👋, Let&apos;s connect 🚀
         </p>
-        <SocialHandles additionalStyle="flex-center gap-2 lg:gap-4 rounded-xl max-sm:w-40 " />
+        <div className="flex gap-4 lg:gap-5 lg:mr-1">
+          <SocialHandles additionalStyle="flex-between gap-4 lg:gap-5"/>
+          <Link
+            target="_blank"
+            href={
+              'https://drive.google.com/file/d/14LllIrxUx5QdwLCOTNBtblXg4wE5mfHx/edit'
+            }
+            className="flex-center opacity-76 gap-2 rounded border px-2 py-1.5 text-sm md:text-[1vw] font-medium transition-all duration-200 hover:scale-105 hover:text-purple-300 hover:opacity-100"
+          >
+            Resume <FaArrowCircleRight className="-rotate-45 text-sm md:text-[1vw]" />
+          </Link>
+        </div>
       </div>
     </MotionDiv>
   )

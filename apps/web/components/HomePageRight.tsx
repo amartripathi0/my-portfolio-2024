@@ -10,8 +10,8 @@ function HomePageRight({
   lastName: string
 }) {
   return (
-    <MotionDiv className="max-md:flex-center flex flex-col items-center justify-between gap-[1vw] max-md:h-80 sm:items-end lg:h-[28vw]">
-      <div className="flex flex-col text-6xl font-bold uppercase leading-none max-md:mx-auto md:items-end md:text-8xl lg:text-[10vw]">
+    <MotionDiv className="max-md:flex-center flex flex-col items-center justify-between gap-[1vw] max-md:h-72 sm:items-end lg:h-[28vw]">
+      <div className="flex flex-col text-6xl font-bold uppercase leading-none max-md:mx-auto items-center md:items-end md:text-8xl lg:text-[10vw]">
         <MotionH1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -43,18 +43,18 @@ function HomePageRight({
             text="Full-Stack Web Developer"
             textStyles="text-purple-300 font-medium hover:text-purple-400 transition-colors duration-500 md:text-[1.3vw] text-sm"
             underlineStyles="bg-purple-400"
-          />
-          {' '}  based in {' '}
+          />{' '}
+          based in{' '}
           <TextUnderline
             text="India"
             textStyles="font-medium transition-colors duration-500 md:text-[1.3vw] text-sm"
             underlineStyles="bg-gradient-to-r from-orange-500 via-blue-600 to-green-700"
           />
-           , turning your ideas into reality.
+          , turning your ideas into reality.
         </div>
         <TextGenerateEffect
           className="text-right text-[1.3vw] max-md:text-center max-md:text-sm"
-          words="Passionate about Coding 👨‍💻, Music  🎵, Video 🎥 ."
+          words="Passionate about Coding 👨‍💻, Music 🎵, and Video 🎥."
         />
       </MotionDiv>
     </MotionDiv>

@@ -4,10 +4,10 @@ import Link from 'next/link'
 
 function SocialHandles({
   additionalStyle,
-  size = 20,
+  iconStyle,
 }: {
   additionalStyle?: string
-  size?: number
+  iconStyle?: string
 }) {
   return (
     <div className={cn('', additionalStyle)}>
@@ -17,9 +17,11 @@ function SocialHandles({
           target="_blank"
           href={url}
           aria-label={label.toLocaleUpperCase()}
-          className="px-2 opacity-60 transition-all duration-200 ease-in-out hover:scale-105 hover:opacity-100"
+          className="opacity-80 md:opacity-70 transition-all duration-200 ease-in-out hover:scale-105 hover:opacity-100"
         >
-          {<SocialIcon className={`size-6`} />}
+          {<SocialIcon className={cn(`text-2xl md:text-[1.4vw] `,
+            iconStyle
+          )} />}
         </Link>
       ))}
     </div>

@@ -20,7 +20,7 @@ export const TextGenerateEffect = ({
       },
       {
         duration: 2,
-        delay: stagger(0.2),
+        delay: stagger(0.2, {startDelay: 4}),
       },
     )
   }, [scope.current])
@@ -45,7 +45,7 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn(className)}>
       <div className="mt-4">
-        <div className="">{renderWords()}</div>
+        <motion.div className="">{renderWords()}</motion.div>
       </div>
     </div>
   )
