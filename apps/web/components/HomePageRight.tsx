@@ -11,12 +11,12 @@ function HomePageRight({
 }) {
   return (
     <MotionDiv className="max-md:flex-center flex flex-col items-center justify-between gap-[1vw] max-md:h-80 sm:items-end lg:h-[28vw]">
-      <div className="text-center text-6xl font-bold uppercase leading-none max-md:mx-auto md:items-end md:text-right md:text-8xl lg:text-[10vw]">
+      <div className="flex flex-col text-6xl font-bold uppercase leading-none max-md:mx-auto md:items-end md:text-8xl lg:text-[10vw]">
         <MotionH1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: 'easeInOut', duration: 1, delay: 2 }}
-          className="pink-cursor-lg tracking-wider"
+          className="pink-cursor-lg w-fit tracking-wider"
         >
           {firstName}{' '}
         </MotionH1>
@@ -24,7 +24,7 @@ function HomePageRight({
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: 'easeInOut', duration: 1, delay: 2.5 }}
-          className="pink-cursor-lg -z-10 select-text bg-gradient-to-b from-neutral-200 to-neutral-700 bg-clip-text leading-[0.75] text-transparent selection:text-white"
+          className="pink-cursor-lg select-text bg-gradient-to-b from-neutral-200 to-neutral-700 bg-clip-text leading-[0.75] text-transparent selection:text-white"
         >
           {lastName}
         </MotionH1>
