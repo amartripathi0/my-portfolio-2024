@@ -13,7 +13,7 @@ body ::selection {
 }
 
 /* while scrolling: scrollbar styles */
-.on-scroll::-webkit-scrollbar {
+/* .on-scroll::-webkit-scrollbar {
   width: 6px !important;
   background-color: transparent;
 }
@@ -29,7 +29,7 @@ body ::selection {
 }
 
 /* while not scrolling: scrollbar styles */
-body.on-not-scroll::-webkit-scrollbar {
+/* body.on-not-scroll::-webkit-scrollbar {
   width: 6px;
   opacity: 0;
   -webkit-box-shadow: none !important;
@@ -39,6 +39,16 @@ body.on-not-scroll::-webkit-scrollbar {
 .on-not-scroll::-webkit-scrollbar-thumb {
   background-color: #acacac;
   border-radius: 10px;
+}  */
+body::-webkit-scrollbar-thumb {
+  background-color: hsl(266, 55%, 64%);
+  border-radius: 10px;
+}  
+body::-webkit-scrollbar {
+  width: 6px;
+  opacity: 0;
+  -webkit-box-shadow: none !important;
+  background-color: transparent !important;
 }
 
 input:-webkit-autofill,
