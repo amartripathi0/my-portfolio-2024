@@ -2,7 +2,7 @@ import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-container'
 
 import Image from 'next/image'
 import Link from 'next/link'
-function ProjectCard() {
+function ProjectDetailsCard() {
   return (
     <CardContainer
       data-scroll-sticky
@@ -58,4 +58,4 @@ function ProjectCard() {
   )
 }
 
-export default ProjectCard
+export default ProjectDetailsCard
