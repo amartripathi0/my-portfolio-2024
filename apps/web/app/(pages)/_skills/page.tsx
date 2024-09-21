@@ -25,7 +25,7 @@ function Skills() {
       viewport={{ once: true }}
       variants={pageSectionVariant}
       id="skills"
-      className="relative flex h-[calc(100vh-4rem)] flex-col items-center gap-4 pt-10 sm:pt-20 md:items-start md:gap-0"
+      className="relative flex h-[calc(100vh-4rem)] flex-col items-center gap-4 pt-10 sm:pt-20 md:gap-0"
     >
       <TextUnderline
         textType='pageHeading'
@@ -36,7 +36,7 @@ function Skills() {
       {/* bg gradient purple */}
       <BackgroundBlur
         blurColor="purple"
-        style="absolute opacity-80 left-2/5 md:left-16 h-1/5 top-10  aspect-square blur-[100px] rounded-full bg-gradient-to-r from-indigo-600 via-yellow-300 to-purple-400"
+        style="absolute opacity-80 h-1/5 top-10  aspect-square blur-[110px] rounded-full bg-gradient-to-r from-indigo-600 via-yellow-300 to-purple-400"
       />
 
       <div className="flex-center h-4/5 w-full flex-col overflow-hidden md:h-full">
