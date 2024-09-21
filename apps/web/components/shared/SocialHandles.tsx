@@ -19,7 +19,7 @@ function SocialHandles({
           aria-label={label.toLocaleUpperCase()}
           className="opacity-80 md:opacity-70 transition-all duration-200 ease-in-out hover:scale-105 hover:opacity-100"
         >
-          {<SocialIcon className={cn(`text-2xl md:text-[1.4vw] `,
+          {<SocialIcon className={cn(`text-2xl md:text-[1.4vw] hover:text-purple-300`,
             iconStyle
           )} />}
         </Link>
