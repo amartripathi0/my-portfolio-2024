@@ -11,9 +11,9 @@ export const navbarItems: NavbarItemType[] = [
     label: 'home',
     link: '#home',
   },
-  { label: 'about me', link: '#about-me' },
-  { label: 'skills', link: '#skills' },
+  { label: 'work exp', link: '#work-exp' },
   { label: 'projects', link: '#projects' },
+  { label: 'skills', link: '#skills' },
 ]
 
 export const socialMediaLinks: SocialMediaLinkType[] = [
