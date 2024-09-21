@@ -93,11 +93,3 @@ function WorkExp() {
 }
 
 export default WorkExp
-
-export function WorkExpDemo() {
-  return (
-    <div className="container mx-auto px-4 py-8">
-      <h2 className="mb-8 text-center text-3xl font-bold">Work Experience</h2>
-    </div>
-  )
-}

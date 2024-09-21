@@ -82,7 +82,7 @@ const ProjectContainer = ({
           <div className="my-2 flex flex-wrap gap-2 md:gap-4">
             {projectTools?.map((eachTool,index) => (
               <div key={eachTool}>
-                <ProjectTool tool={eachTool} i = {index}/>
+                <ProjectTool tool={eachTool} i = {index} toolVariant='projectCardTool'/>
               </div>
             ))}
           </div>
