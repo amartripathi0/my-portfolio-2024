@@ -2,6 +2,7 @@ import { ContactMeForm } from '@/components/ContactMeForm'
 import BackgroundBlur from '@/components/shared/BackgroundBlur'
 import { MotionSection } from '@/components/shared/Motion'
 import PageTitle from '@/components/shared/PageTitle'
+import TextUnderline from '@/components/shared/TextUnderline'
 import { pageSectionVariant } from '@/constants'
 import { IoMail } from 'react-icons/io5'
 
@@ -13,16 +14,20 @@ function Contact() {
       viewport={{ once: true }}
       variants={pageSectionVariant}
       id="contact-me"
-      className="relative flex h-[calc(100vh-3rem)] flex-col gap-4 py-10 sm:h-[calc(100vh-4rem)] sm:gap-2"
+      className="relative flex h-[calc(100vh-3rem)] flex-col gap-4 py-10 sm:h-[calc(100vh-4rem)] sm:gap-2 items-center"
     >
-      <PageTitle
+      {/* <PageTitle
         pageTitle="Contact Me"
-        underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-yellow-500"
-      />
-
+        underlineStyles=""
+      /> */}
+        <TextUnderline
+          textType="pageHeading"
+          text="Contact Me"
+          underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-yellow-500"
+        />
       <BackgroundBlur
         blurColor="indigo"
-        style="left-1/3 top-20 h-5 sm:left-10 sm:top-0 sm:h-1/6"
+        style="left-1/3 top-20 h-5 sm:left-[45%] sm:top-0 sm:h-20"
       />
 
       <BackgroundBlur
@@ -31,9 +36,10 @@ function Contact() {
       />
 
       <ContactMeForm />
-      <p className="absolute bottom-0 mb-1 flex items-center gap-1 text-sm sm:mb-2 sm:gap-2 md:text-base">
-        <span className="text-lg font-bold">&copy;</span> 2024 Amar Tripathi | <IoMail/> theamartripathi@gmail.com
-      </p>
+      <div className="absolute bottom-0 flex max-sm:flex-col items-center text-sm  3xl:text-lg sm:mb-2 sm:gap-2 md:text-base">
+        <p className='flex items-center gap-2'><span className="text-lg font-bold">&copy;</span> 2024 Amar Tripathi</p>
+        <p className='flex items-center gap-2'><IoMail/> theamartripathi@gmail.com</p>
+      </div>
     </MotionSection>
   )
 }
