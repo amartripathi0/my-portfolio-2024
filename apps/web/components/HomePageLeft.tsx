@@ -47,7 +47,7 @@ function HomePageLeft({ heroImage }: { heroImage: any }) {
           <Link
             target="_blank"
             href={
-              'https://drive.google.com/file/d/14LllIrxUx5QdwLCOTNBtblXg4wE5mfHx/edit'
+              'https://drive.google.com/file/d/1jYqHQJ93cNthsEKBRLF7tXHaP2v52pmE'
             }
             className="flex-center opacity-76 gap-2 rounded border px-2 py-1.5 text-sm md:text-[1vw] font-medium transition-all duration-200 hover:scale-105 hover:text-purple-300 hover:opacity-100"
           >
