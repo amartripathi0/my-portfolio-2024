@@ -19,19 +19,19 @@ async function ProjectCard({
     <CardContainer containerClassName="sm:w-2/3 lg:w-1/2  xl:w-[36%]">
       <CardBody className="group/card relative size-full rounded-xl border border-violet-950 bg-gradient-to-b from-zinc-950 via-indigo-950 p-4 lg:p-6">
         <CardItem
-          translateZ="50"
+          translateZ="30"
           className="pink-cursor-md text-lg font-bold text-white md:text-xl lg:text-2xl 3xl:text-3xl"
         >
           {projectTitle}
         </CardItem>
         <CardItem
           as="p"
-          translateZ="60"
+          translateZ="40"
           className="mt-2 line-clamp-3 text-justify font-poppins text-xs font-light text-zinc-200 3xl:text-lg dark:text-neutral-300 md:text-sm"
         >
           {projectBio}
         </CardItem>
-        <CardItem translateZ="100" className="mt-4 w-full">
+        <CardItem translateZ="60" className="mt-4 w-full">
           <div className="flex flex-wrap gap-2">
             {projectTools?.slice(0, 6).map((eachTool, index) => (
               <div key={eachTool}>
@@ -45,7 +45,7 @@ async function ProjectCard({
             {projectTools && projectTools?.length > 6 && <p>...</p>}
           </div>
         </CardItem>
-        <CardItem translateZ="100" className="mt-4 w-full">
+        <CardItem translateZ="60" className="mt-4 w-full">
           <Image
             src={urlFor(projectThumbnail).url()}
             height="1080"
