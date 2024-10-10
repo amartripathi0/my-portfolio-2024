@@ -6,6 +6,7 @@ import WorkExpCard from '@/components/WorkExp'
 import { pageSectionVariant } from '@/constants'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
+
 const workExperiences = [
   {
     companyName: 'Roboto Studio',
@@ -21,7 +22,8 @@ const workExperiences = [
   },
   {
     companyName: 'GCT Pvt Ltd',
-    companyImg: 'https://media.licdn.com/dms/image/v2/D560BAQGVPRvj-OLaHg/company-logo_200_200/company-logo_200_200/0/1700211863272/galaxycard_logo?e=2147483647&v=beta&t=i29J-_tuI2uQzEkuJ43Rl8IdIDC_vvUwF-jFtPD7afU',
+    companyImg:
+      'https://media.licdn.com/dms/image/v2/D560BAQGVPRvj-OLaHg/company-logo_200_200/company-logo_200_200/0/1700211863272/galaxycard_logo?e=2147483647&v=beta&t=i29J-_tuI2uQzEkuJ43Rl8IdIDC_vvUwF-jFtPD7afU',
     designation: 'Software Developer Engineer',
     workType: 'Intern',
     description:
@@ -33,20 +35,19 @@ const workExperiences = [
   },
 ]
 
-
 function WorkExp() {
-    const targetRef = useRef(null)
-    const { scrollYProgress } = useScroll({
-      target: targetRef,
-      offset: ['start end', '0.2 0.4'],
-    })
-    const leftSlide = useTransform(scrollYProgress, [0, 1], ['-20vw', '0%'])
-    const rightSlide = useTransform(scrollYProgress, [0, 1], ['20vw', '0%'])
-    const opacity = useTransform(scrollYProgress, [0.3, 1], [0, 1])
+  const targetRef = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ['start end', '0.2 0.4'],
+  })
+  const leftSlide = useTransform(scrollYProgress, [0, 1], ['-20vw', '0%'])
+  const rightSlide = useTransform(scrollYProgress, [0, 1], ['20vw', '0%'])
+  const opacity = useTransform(scrollYProgress, [0.3, 1], [0, 1])
 
   return (
     <MotionSection
-    ref={targetRef}
+      ref={targetRef}
       initial={'initial'}
       whileInView={'inView'}
       viewport={{ once: true }}
@@ -65,12 +66,14 @@ function WorkExp() {
           style="left-2/5 max-md:left-1/3 -top-6 h-28 blur-[120px] sm:h-40 sm:top-0"
         />
 
-        <div className="flex w-full flex-col space-y-8 pt-10 overflow-hidden ">
+        <div className="flex w-full flex-col space-y-8 overflow-hidden pt-10">
           {workExperiences.map((exp, index) => (
             <motion.div
               key={index}
-            style={{ translateX: index % 2 === 0 ? leftSlide : rightSlide, opacity: opacity }}
-
+              style={{
+                translateX: index % 2 === 0 ? leftSlide : rightSlide,
+                opacity: opacity,
+              }}
               className={`flex w-full ${index % 2 === 0 ? 'justify-start md:pl-40' : 'justify-end md:pr-40'}`}
             >
               <WorkExpCard
@@ -83,6 +86,7 @@ function WorkExp() {
                 location={exp.location}
                 workMode={exp.workMode as 'Remote' | 'Onsite'}
                 description={exp.description}
+                index={index}
               />
             </motion.div>
           ))}
