@@ -42,16 +42,17 @@ function HomePageLeft({ heroImage }: { heroImage: any }) {
         <p className="text-sm md:text-[1.3vw]">
           Hey! 👋, Let&apos;s connect 🚀
         </p>
-        <div className="flex gap-4 lg:gap-5 lg:mr-1">
-          <SocialHandles additionalStyle="flex-between gap-4 lg:gap-5"/>
+        <div className="flex gap-4 lg:mr-1 lg:gap-5">
+          <SocialHandles additionalStyle="flex-between gap-4 lg:gap-5" />
           <Link
             target="_blank"
             href={
               'https://drive.google.com/file/d/1jYqHQJ93cNthsEKBRLF7tXHaP2v52pmE'
             }
-            className="flex-center opacity-76 gap-2 rounded border px-2 py-1.5 text-sm md:text-[1vw] font-medium transition-all duration-200 hover:scale-105 hover:text-purple-300 hover:opacity-100"
+            className="flex-center opacity-76 gap-2 rounded border px-2 py-1.5 text-sm font-medium transition-all duration-200 hover:scale-105 hover:text-purple-300 hover:opacity-100 md:text-[1vw]"
           >
-            Resume <FaArrowCircleRight className="-rotate-45 text-sm md:text-[1vw]" />
+            Resume{' '}
+            <FaArrowCircleRight className="-rotate-45 text-sm md:text-[1vw]" />
           </Link>
         </div>
       </div>

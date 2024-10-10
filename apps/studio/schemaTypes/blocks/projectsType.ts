@@ -16,7 +16,7 @@ export const projectsPageType = defineType({
         },
       ],
       options: {
-        sortable: true
+        sortable: true,
       },
     }),
   ],

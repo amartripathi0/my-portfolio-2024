@@ -11,4 +11,12 @@ const MotionNav = motion.nav
 const MotionH3 = motion.h3
 const MotionLink = motion(Link)
 
-export { MotionDiv, MotionSection, MotionSpan, MotionH1, MotionNav, MotionH3, MotionLink }
+export {
+  MotionDiv,
+  MotionSection,
+  MotionSpan,
+  MotionH1,
+  MotionNav,
+  MotionH3,
+  MotionLink,
+}

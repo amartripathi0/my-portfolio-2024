@@ -28,7 +28,7 @@ function Skills() {
       className="relative flex h-[calc(100vh-4rem)] flex-col items-center gap-4 pt-10 sm:pt-20 md:gap-0"
     >
       <TextUnderline
-        textType='pageHeading'
+        textType="pageHeading"
         text="Skills & Tools"
         underlineStyles="bg-gradient-to-r from-indigo-600 via-purple-400"
       />

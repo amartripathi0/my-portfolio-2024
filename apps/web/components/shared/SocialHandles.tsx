@@ -17,11 +17,16 @@ function SocialHandles({
           target="_blank"
           href={url}
           aria-label={label.toLocaleUpperCase()}
-          className="opacity-80 md:opacity-70 transition-all duration-200 ease-in-out hover:scale-105 hover:opacity-100"
+          className="opacity-80 transition-all duration-200 ease-in-out hover:scale-105 hover:opacity-100 md:opacity-70"
         >
-          {<SocialIcon className={cn(`text-2xl md:text-[1.4vw] hover:text-purple-300`,
-            iconStyle
-          )} />}
+          {
+            <SocialIcon
+              className={cn(
+                `text-2xl hover:text-purple-300 md:text-[1.4vw]`,
+                iconStyle,
+              )}
+            />
+          }
         </Link>
       ))}
     </div>

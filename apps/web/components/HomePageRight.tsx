@@ -11,7 +11,7 @@ function HomePageRight({
 }) {
   return (
     <MotionDiv className="max-md:flex-center flex flex-col items-center justify-between gap-[1vw] max-md:h-72 sm:items-end lg:h-[28vw]">
-      <div className="flex flex-col text-6xl font-bold uppercase leading-none max-md:mx-auto items-center md:items-end md:text-8xl lg:text-[10vw]">
+      <div className="flex flex-col items-center text-6xl font-bold uppercase leading-none max-md:mx-auto md:items-end md:text-8xl lg:text-[10vw]">
         <MotionH1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}

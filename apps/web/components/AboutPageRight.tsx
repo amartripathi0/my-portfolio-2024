@@ -22,7 +22,7 @@ function AboutPageRight({
       whileInView={'inView'}
       variants={fadeAnimationVariant}
       viewport={{ once: true }}
-      className="rounded-4xl relative flex h-4/5 mb-10 flex-col items-center gap-6"
+      className="rounded-4xl relative mb-10 flex h-4/5 flex-col items-center gap-6"
     >
       <IndigoBlurBackground height="1/2 max-md:hidden" />
 

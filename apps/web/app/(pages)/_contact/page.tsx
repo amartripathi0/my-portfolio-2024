@@ -14,17 +14,17 @@ function Contact() {
       viewport={{ once: true }}
       variants={pageSectionVariant}
       id="contact-me"
-      className="relative flex h-[calc(100vh-3rem)] flex-col gap-4 py-10 sm:h-[calc(100vh-4rem)] sm:gap-2 items-center"
+      className="relative flex h-[calc(100vh-3rem)] flex-col items-center gap-4 py-10 sm:h-[calc(100vh-4rem)] sm:gap-2"
     >
       {/* <PageTitle
         pageTitle="Contact Me"
         underlineStyles=""
       /> */}
-        <TextUnderline
-          textType="pageHeading"
-          text="Contact Me"
-          underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-yellow-500"
-        />
+      <TextUnderline
+        textType="pageHeading"
+        text="Contact Me"
+        underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-yellow-500"
+      />
       <BackgroundBlur
         blurColor="indigo"
         style="left-1/3 top-20 h-5 sm:left-[45%] sm:top-0 sm:h-20"
@@ -36,9 +36,13 @@ function Contact() {
       />
 
       <ContactMeForm />
-      <div className="absolute bottom-0 flex max-sm:flex-col items-center text-sm  3xl:text-lg sm:mb-2 sm:gap-2 md:text-base">
-        <p className='flex items-center gap-2'><span className="text-lg font-bold">&copy;</span> 2024 Amar Tripathi</p>
-        <p className='flex items-center gap-2'><IoMail/> theamartripathi@gmail.com</p>
+      <div className="absolute bottom-0 flex items-center text-sm max-sm:flex-col sm:mb-2 sm:gap-2 md:text-base 3xl:text-lg">
+        <p className="flex items-center gap-2">
+          <span className="text-lg font-bold">&copy;</span> 2024 Amar Tripathi
+        </p>
+        <p className="flex items-center gap-2">
+          <IoMail /> theamartripathi@gmail.com
+        </p>
       </div>
     </MotionSection>
   )

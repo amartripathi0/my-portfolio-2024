@@ -15,8 +15,8 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
         scrollbarClass: 'scrollbar',
         smooth: true,
         smartphone: { smooth: false },
-        tablet: { smooth: false , breakpoint : 768},
-        lerp: 0.08
+        tablet: { smooth: false, breakpoint: 768 },
+        lerp: 0.08,
       })
       setLocomotiveScroll(scroll)
     })()

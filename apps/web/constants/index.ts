@@ -141,7 +141,8 @@ export const fadeAnimationVariant = {
 export const pageSectionVariant = {
   initial: {
     //  y: 50,
-     opacity: 0 },
+    opacity: 0,
+  },
   inView: {
     // y: 0,
     opacity: 1,

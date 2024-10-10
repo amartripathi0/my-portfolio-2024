@@ -28,12 +28,17 @@ function CustomCursor() {
     const handleMouseOver = (e: MouseEvent) => {
       if (e.target instanceof Element) {
         const element = e.target
-        const newStyle = element.classList.contains('pink-cursor-lg') ? 'pink-cursor-lg'
-          : element.classList.contains('pink-cursor-md') ? 'pink-cursor-md'
-          : element.classList.contains('pink-cursor-sm') ? 'pink-cursor-sm'
-          : element.classList.contains('custom-cursor-hidden') ? 'custom-cursor-hidden'
-          : element.classList.contains('custom-cursor-multiply') ? 'custom-cursor-multiply'
-          : 'default'
+        const newStyle = element.classList.contains('pink-cursor-lg')
+          ? 'pink-cursor-lg'
+          : element.classList.contains('pink-cursor-md')
+            ? 'pink-cursor-md'
+            : element.classList.contains('pink-cursor-sm')
+              ? 'pink-cursor-sm'
+              : element.classList.contains('custom-cursor-hidden')
+                ? 'custom-cursor-hidden'
+                : element.classList.contains('custom-cursor-multiply')
+                  ? 'custom-cursor-multiply'
+                  : 'default'
         setCursorStyle(newStyle)
       }
     }
@@ -60,7 +65,7 @@ function CustomCursor() {
       className={cn(
         `pointer-events-none fixed left-0 top-0 z-[9999] size-4 rounded-full bg-purple-600 mix-blend-plus-lighter blur-[1px] drop-shadow-glow max-sm:hidden`,
         cursorStyle === 'pink-cursor-lg' &&
-          'size-12 -top-4 -left-4 bg-gradient-to-r from-indigo-800 to-pink-500 opacity-80 mix-blend-darken',
+          '-left-4 -top-4 size-12 bg-gradient-to-r from-indigo-800 to-pink-500 opacity-80 mix-blend-darken',
         cursorStyle === 'pink-cursor-md' &&
           'size-7 bg-gradient-to-r from-indigo-800 via-pink-500 to-cyan-900 opacity-80 mix-blend-darken',
         cursorStyle === 'pink-cursor-sm' &&

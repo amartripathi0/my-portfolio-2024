@@ -22,7 +22,7 @@ async function Projects() {
       className="min-h-screen max-xl:mx-0"
       // data-scroll-container
     >
-      <div className="relative pt-10 flex flex-col items-center">
+      <div className="relative flex flex-col items-center pt-10">
         <TextUnderline
           textType="pageHeading"
           text="My Projects"
@@ -32,32 +32,29 @@ async function Projects() {
           blurColor="indigo"
           style="left-2/5 max-md:left-1/3 -top-6 h-40 blur-[150px] sm:h-60 sm:top-1/4"
         />
-        <div className='flex max-sm:flex-col justify-center py-10 md:px-10 xl:gap-20 gap-4 sm:gap-8 lg:gap-10'  >
-
-        {projectsArray?.map(
-          ({
-            projectTitle,
-            projectBio,
-            projectThumbnail,
-            projectGithubLink,
-            projectDeployedLink,
-            projectDetail,
-            projectTools,
-          }: Project) => (
-
+        <div className="flex justify-center gap-4 py-10 max-sm:flex-col sm:gap-8 md:px-10 lg:gap-10 xl:gap-20">
+          {projectsArray?.map(
+            ({
+              projectTitle,
+              projectBio,
+              projectThumbnail,
+              projectGithubLink,
+              projectDeployedLink,
+              projectDetail,
+              projectTools,
+            }: Project) => (
               <ProjectCard
-              key={projectTitle}
-              projectTitle={projectTitle}
-              projectBio={projectBio}
-              projectTools={projectTools}
-              projectThumbnail={projectThumbnail}
-              projectGithubLink={projectGithubLink}
-              projectDeployedLink={projectDeployedLink}
-              projectDetail={projectDetail}
+                key={projectTitle}
+                projectTitle={projectTitle}
+                projectBio={projectBio}
+                projectTools={projectTools}
+                projectThumbnail={projectThumbnail}
+                projectGithubLink={projectGithubLink}
+                projectDeployedLink={projectDeployedLink}
+                projectDetail={projectDetail}
               />
-              
-          ),
-        )}
+            ),
+          )}
         </div>
       </div>
     </MotionSection>
@@ -66,7 +63,8 @@ async function Projects() {
 
 export default Projects
 
-              {/* <ProjectContainer
+{
+  /* <ProjectContainer
                 projectTitle={projectTitle}
                 projectBio={projectBio}
                 projectTools={projectTools}
@@ -74,4 +72,5 @@ export default Projects
                 projectGithubLink={projectGithubLink}
                 projectDeployedLink={projectDeployedLink}
                 projectDetail={projectDetail}
-                /> */}
+                /> */
+}

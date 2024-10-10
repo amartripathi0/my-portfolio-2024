@@ -39,7 +39,7 @@ const Navbar = ({
         stiffness: 300,
         damping: 30,
         when: 'afterChildren',
-        staggerChildren: 0.1, 
+        staggerChildren: 0.1,
       },
     },
   }
@@ -67,7 +67,7 @@ const Navbar = ({
       animate={{ opacity: 1, y: 0 }}
       transition={{ ease: 'easeInOut', duration: 1 }}
       className={cn(
-        `flex-between fixed left-0 top-0 z-50 h-[70px] w-screen px-4 py-1 sm:py-2 backdrop-blur-sm sm:px-10 md:h-20`,
+        `flex-between fixed left-0 top-0 z-50 h-[70px] w-screen px-4 py-1 backdrop-blur-sm sm:px-10 sm:py-2 md:h-20`,
         scrolled && 'border-b border-purple-950',
       )}
       role="navigation"

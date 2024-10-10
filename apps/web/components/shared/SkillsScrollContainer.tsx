@@ -1,6 +1,12 @@
 'use client'
 import { SkillType } from '@/types'
-import { motion, MotionValue, useMotionValueEvent, useScroll, useTransform } from 'framer-motion'
+import {
+  motion,
+  MotionValue,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+} from 'framer-motion'
 import { MutableRefObject, useRef } from 'react'
 import Skill from '../Skill'
 
@@ -15,11 +21,9 @@ function SkillsScrollContainer({
   frontendSkillsArray,
   backendSkillsArray,
   ref,
-  scrollYProgress
+  scrollYProgress,
   // slideSide,
 }: SkillsScrollContainerProps) {
-
-
   // const { scrollYProgress } = useScroll({
   //   target: ref,
   //   offset: ['start 0.9', 'start end'],
@@ -31,7 +35,6 @@ function SkillsScrollContainer({
   // useMotionValueEvent(scrollYProgress, "change", (latest) => {
   //   console.log("Page scroll: ", latest)
   // })
-
 
   return (
     <>

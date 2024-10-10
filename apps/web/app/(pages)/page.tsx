@@ -13,7 +13,7 @@ function MainPage() {
       <CustomCursor />
       <Landing />
       {/* <About /> */}
-      <WorkExp/>
+      <WorkExp />
       <Projects />
       <Skills />
       <Contact />
