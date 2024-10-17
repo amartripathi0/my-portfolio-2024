@@ -19,7 +19,7 @@ async function Projects() {
       viewport={{ once: true }}
       variants={pageSectionVariant}
       id="projects"
-      className="min-h-screen max-xl:mx-0"
+      className="min-h-screen  lg:-mx-28 lg:px-0 xl:mx-0"
       // data-scroll-container
     >
       <div className="relative flex flex-col items-center pt-10">
@@ -32,7 +32,7 @@ async function Projects() {
           blurColor="indigo"
           style="left-2/5 max-md:left-1/3 -top-6 h-40 blur-[150px] sm:h-60 sm:top-1/4"
         />
-        <div className="flex justify-center gap-4 py-10 max-sm:flex-col sm:gap-8 md:px-10 lg:gap-10 xl:gap-20">
+        <div className="flex justify-center gap-4 py-10 max-md:flex-col sm:gap-4 md:px-8 xl:gap-10">
           {projectsArray?.map(
             ({
               projectTitle,
