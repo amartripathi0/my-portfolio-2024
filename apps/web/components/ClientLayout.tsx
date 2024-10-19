@@ -25,7 +25,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
   if (!mounted) return null
 
   return (
-    <div className={`relative`}>
+    <div className={`relative mx-0 px-4 pt-20 sm:px-8 md:px-10 lg:mx-28`}>
       {locomotiveScroll && <Navbar locomotiveScroll={locomotiveScroll} />}
       {children}
     </div>
