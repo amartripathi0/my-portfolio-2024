@@ -3,7 +3,7 @@
 import Navbar from '@/components/Navbar'
 import { useEffect, useState } from 'react'
 
-const ClientLayout = ({ children }: { children: React.ReactNode }) => {
+const Appbar = () => {
   const [locomotiveScroll, setLocomotiveScroll] = useState<LocomotiveScroll>()
   const [mounted, setMounted] = useState(false)
 
@@ -24,12 +24,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
 
   if (!mounted) return null
 
-  return (
-    <div className={`relative mx-0 px-4 pt-20 sm:px-8 md:px-10 lg:mx-28`}>
-      {locomotiveScroll && <Navbar locomotiveScroll={locomotiveScroll} />}
-      {children}
-    </div>
-  )
+  return locomotiveScroll && <Navbar locomotiveScroll={locomotiveScroll} />
 }
 
-export default ClientLayout
+export default Appbar

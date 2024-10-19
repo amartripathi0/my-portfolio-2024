@@ -7,7 +7,7 @@ import WorkExp from './(pages)/_work/page'
 
 function MainPage() {
   return (
-    <main className="relative">
+    <main className="relative mx-0 px-4 pt-20 sm:px-8 md:px-10 lg:mx-28">
       <CustomCursor />
       <Landing />
       {/* <About /> */}

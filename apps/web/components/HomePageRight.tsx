@@ -36,22 +36,20 @@ function HomePageRight({
         transition={{ ease: 'easeInOut', duration: 1.5, delay: 3 }}
         className="text-right text-[1.3vw] max-md:mt-6 max-md:text-center max-md:text-sm"
       >
-        <div>
-          {/* {' '} */}
-          {/* I&apos;m a{' '} */}
-          <TextUnderline
-            text="Full-Stack Web Developer"
-            textStyles="text-purple-300 font-medium hover:text-purple-400 transition-colors duration-500 md:text-[1.3vw] text-sm"
-            underlineStyles="bg-purple-400"
-          />{' '}
-          based in{' '}
-          <TextUnderline
-            text="India"
-            textStyles="font-medium transition-colors duration-500 md:text-[1.3vw] text-sm"
-            underlineStyles="bg-gradient-to-r from-orange-500 via-blue-600 to-green-700"
-          />
-          , turning your ideas into reality.
-        </div>
+        {/* {' '} */}
+        {/* I&apos;m a{' '} */}
+        <TextUnderline
+          text="Full-Stack Web Developer"
+          textStyles="text-purple-300 font-medium hover:text-purple-400 transition-colors duration-500 md:text-[1.3vw] text-sm"
+          underlineStyles="bg-purple-400"
+        />{' '}
+        based in{' '}
+        <TextUnderline
+          text="India"
+          textStyles="font-medium transition-colors duration-500 md:text-[1.3vw] text-sm"
+          underlineStyles="bg-gradient-to-r from-orange-500 via-blue-600 to-green-700"
+        />
+        , turning your ideas into reality.
         <TextGenerateEffect
           className="text-right text-[1.3vw] max-md:text-center max-md:text-sm"
           words="Passionate about Coding 👨‍💻, Music 🎵, and Video 🎥."

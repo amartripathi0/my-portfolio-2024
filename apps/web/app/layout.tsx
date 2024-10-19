@@ -4,7 +4,7 @@ import './globals.css'
 import { Toaster } from 'sonner'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import ClientLayout from '@/components/ClientLayout'
+import Appbar from '@/components/Appbar'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -59,7 +59,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${raleway.variable}`}>
       <body className={`${montserrat.variable} font-montserrat`}>
-        <ClientLayout>{children}</ClientLayout>
+        <Appbar/>
+        {children}
         <Toaster richColors closeButton theme="dark" />
         <Analytics />
         <SpeedInsights />
