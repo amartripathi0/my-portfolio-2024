@@ -1,9 +1,9 @@
-import Landing from './_landing/page'
-import Skills from './_skills/page'
-import Projects from './_projects/page'
-import Contact from './_contact/page'
+import Landing from './(pages)/_landing/page'
+import Skills from './(pages)/_skills/page'
+import Projects from './(pages)/_projects/page'
+import Contact from './(pages)/_contact/page'
 import CustomCursor from '@/components/CustomCursor'
-import WorkExp from './_work/page'
+import WorkExp from './(pages)/_work/page'
 
 function MainPage() {
   return (

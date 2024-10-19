@@ -4,6 +4,7 @@ import './globals.css'
 import { Toaster } from 'sonner'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import ClientLayout from '@/components/ClientLayout'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -25,6 +26,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: 'Amar Tripathi | Full Stack Web Developer',
+  metadataBase: new URL('https://amartripathi.vercel.app/'),
   description:
     "Experienced full stack web developer specializing in modern web technologies. View Amar Tripathi's portfolio showcasing innovative projects and technical expertise.",
   keywords:
@@ -57,7 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${raleway.variable}`}>
       <body className={`${montserrat.variable} font-montserrat`}>
-        {children}
+        <ClientLayout>{children}</ClientLayout>
         <Toaster richColors closeButton theme="dark" />
         <Analytics />
         <SpeedInsights />
