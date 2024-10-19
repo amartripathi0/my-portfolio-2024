@@ -1,6 +1,6 @@
 'use client'
 import BackgroundBlur from '@/components/shared/BackgroundBlur'
-import { MotionDiv, MotionSection } from '@/components/shared/Motion'
+import { MotionSection } from '@/components/shared/Motion'
 import TextUnderline from '@/components/shared/TextUnderline'
 import WorkExpCard from '@/components/WorkExp'
 import { pageSectionVariant } from '@/constants'
@@ -87,6 +87,7 @@ function WorkExp() {
                 workMode={exp.workMode as 'Remote' | 'Onsite'}
                 description={exp.description}
                 index={index}
+                
               />
             </motion.div>
           ))}

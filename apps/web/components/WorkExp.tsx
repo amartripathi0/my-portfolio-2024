@@ -32,8 +32,8 @@ export default function WorkExpCard({
   return (
     <Card
       className={cn(
-        'w-full rounded border-violet-950 bg-gradient-to-b from-zinc-950 via-black-950 to-violet-950 transition-all duration-300 sm:h-60 md:max-w-2xl 3xl:h-64',
-        index % 2 === 0 ? 'hover:ml-5' : 'hover:mr-5',
+        'w-full rounded border-violet-950 bg-gradient-to-b from-zinc-950 via-black-950 to-violet-950 transition-all duration-300 sm:h-60 md:max-w-2xl 3xl:h-64 hover:-translate-y-2',
+        
       )}
     >
       <CardHeader className="flex flex-row items-center space-x-2 p-3 sm:space-x-4 sm:p-6">

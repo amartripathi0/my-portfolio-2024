@@ -1,7 +1,7 @@
 import { ContactMeForm } from '@/components/ContactMeForm'
 import BackgroundBlur from '@/components/shared/BackgroundBlur'
 import { MotionSection } from '@/components/shared/Motion'
-import PageTitle from '@/components/shared/PageTitle'
+// import PageTitle from '@/components/shared/PageTitle'
 import TextUnderline from '@/components/shared/TextUnderline'
 import { pageSectionVariant } from '@/constants'
 import { IoMail } from 'react-icons/io5'

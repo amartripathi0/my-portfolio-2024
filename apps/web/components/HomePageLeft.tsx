@@ -3,7 +3,6 @@ import React from 'react'
 import SocialHandles from './shared/SocialHandles'
 import { urlFor } from '@/utils/urlFor'
 import { MotionDiv } from './shared/Motion'
-import { IoReturnDownForwardOutline } from 'react-icons/io5'
 import Link from 'next/link'
 import { FaArrowCircleRight } from 'react-icons/fa'
 
