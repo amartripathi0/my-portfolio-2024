@@ -31,19 +31,18 @@ async function ProjectCard({
         >
           {projectBio}
         </CardItem>
-        <CardItem translateZ="60" className="mt-4 w-full">
-          <div className="flex flex-wrap gap-2">
-            {projectTools?.slice(0, 7).map((eachTool, index) => (
-              <div key={eachTool}>
+        <CardItem translateZ="60" className="mt-4 w-full flex flex-wrap gap-2">
+            {projectTools
+              ?.slice(0, 7)
+              .map((eachTool, index) => (
                 <ProjectTool
+                  key={eachTool}
                   tool={eachTool}
                   i={index}
                   toolVariant="projectCardTool"
                 />
-              </div>
-            ))}
+              ))}
             {projectTools && projectTools?.length > 6 && <p>...</p>}
-          </div>
         </CardItem>
         <CardItem translateZ="60" className="mt-4 w-full">
           <Image
