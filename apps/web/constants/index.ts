@@ -141,18 +141,18 @@ export const fadeAnimationVariant = {
 export const pageSectionVariant = {
   initial: {
     //  y: 50,
-    opacity: 0,
+    // opacity: 0,
   },
   inView: {
     // y: 0,
-    opacity: 1,
-    transition: {
-      spring: 1,
-      mass: 1,
-      stiffness: 200,
-      duration: 0.8,
-      bounce: 0.25,
-      delay: 0.8,
-    },
+    // opacity: 1,
+    // transition: {
+    //   spring: 1,
+    //   mass: 1,
+    //   stiffness: 200,
+    //   duration: 0,
+    //   bounce: 0.25,
+    //   delay: 0.0,
+    // },
   },
 }

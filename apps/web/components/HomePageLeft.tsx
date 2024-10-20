@@ -17,7 +17,7 @@ function HomePageLeft({ heroImage }: { heroImage: any }) {
       {/* Image with Purple Filter */}
       <div className="flex-center custom-cursor-hidden relative -z-10 aspect-square h-40 rounded-full md:size-48 lg:size-[16vw]">
         <MotionDiv
-          className="size-5/6 rounded-full bg-purple-400 opacity-90 blur-[70px]"
+          className="size-3/4 rounded-full bg-purple-500 blur-[70px]"
           initial={{
             opacity: 0,
             scale: 0,
