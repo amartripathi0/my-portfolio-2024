@@ -63,7 +63,7 @@ function WorkExp() {
         />
         <BackgroundBlur
           blurColor="indigo"
-          style="left-2/5 max-md:left-1/3 -top-6 h-28 blur-[120px] sm:h-40 sm:top-0"
+          style="left-2/5 max-md:left-1/3 -top-6 h-28 blur-[180px] sm:h-48 -z-20 sm:top-16"
         />
 
         <div className="flex w-full flex-col space-y-8 overflow-hidden pt-10">
