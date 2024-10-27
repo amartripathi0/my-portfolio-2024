@@ -81,6 +81,7 @@ const Navbar = ({
             width={300}
             alt={'amar-avatar'}
             className="h-10 w-10"
+            priority
           />
           <TextUnderline
             text="Amar"
