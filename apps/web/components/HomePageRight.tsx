@@ -15,7 +15,7 @@ function HomePageRight({
         <MotionH1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ ease: 'easeInOut', duration: 1, delay: 2 }}
+          transition={{ ease: 'easeInOut', duration: 1 }}
           className="pink-cursor-lg w-fit tracking-wider"
         >
           {firstName}{' '}
@@ -23,7 +23,7 @@ function HomePageRight({
         <MotionH1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ ease: 'easeInOut', duration: 1, delay: 2.5 }}
+          transition={{ ease: 'easeInOut', duration: 1, delay: 0.8}}
           className="pink-cursor-lg select-text bg-gradient-to-b from-neutral-200 to-neutral-700 bg-clip-text leading-[0.75] text-transparent selection:text-white"
         >
           {lastName}
@@ -31,9 +31,9 @@ function HomePageRight({
       </div>
 
       <MotionDiv
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ ease: 'easeInOut', duration: 1.5, delay: 3 }}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ ease: 'easeInOut', duration: 1.5, delay: 1.5 }}
         className="text-right text-[1.3vw] max-md:mt-6 max-md:text-center max-md:text-sm"
       >
         {/* {' '} */}

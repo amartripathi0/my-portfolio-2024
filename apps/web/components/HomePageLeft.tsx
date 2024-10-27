@@ -10,9 +10,9 @@ function HomePageLeft({ heroImage }: { heroImage: any }) {
   return (
     <MotionDiv
       className="flex-between h-2/5 w-full flex-col gap-4 max-sm:justify-end md:h-1/2 md:w-fit md:gap-0 lg:h-[27.9vw] lg:w-[30%] lg:gap-4 lg:pt-5"
-      initial={{ opacity: 0, scale: 0.7 }}
+      initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ ease: 'easeInOut', duration: 1, delay: 1.2 }}
+      transition={{ ease: 'easeInOut', duration: 1, delay: 0 }}
     >
       {/* Image with Purple Filter */}
       <div className="flex-center custom-cursor-hidden relative -z-10 aspect-square h-40 rounded-full md:size-48 lg:size-[16vw]">
