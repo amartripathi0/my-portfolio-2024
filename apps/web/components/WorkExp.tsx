@@ -48,9 +48,9 @@ export default function WorkExpCard({
         />
         <div className="flex w-full justify-between">
           <div>
-            <h3 className="text-lg font-bold md:text-2xl 3xl:text-3xl">
+            <h2 className="text-lg font-bold md:text-2xl 3xl:text-3xl">
               {companyName}
-            </h3>
+            </h2>
             <h3 className="text-base font-medium text-neutral-100 md:text-lg 3xl:text-xl">
               {designation}
             </h3>
