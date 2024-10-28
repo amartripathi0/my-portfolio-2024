@@ -23,7 +23,7 @@ export function ContactMeForm() {
       duration={15000}
       borderClassName="h-16 w-16 blur-[20px]"
       borderRadius="6px"
-      containerClassName="mx-auto border border-slate-800 p-6 max-sm:w-full 3xl:w-1/3 3xl:h-3/4 shadow-input"
+      containerClassName="mx-auto border border-slate-800 p-6 max-sm:w-full 3xl:max-w-1/3  3xl:h-auto shadow-input"
     >
       <form action={clientAction}>
         <LabelInputContainer className="mb-4">

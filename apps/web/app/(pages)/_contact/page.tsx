@@ -14,7 +14,7 @@ function Contact() {
       viewport={{ once: true }}
       variants={pageSectionVariant}
       id="contact-me"
-      className="relative flex h-[calc(100vh-3rem)] flex-col items-center gap-4 py-10 sm:h-[calc(100vh-4rem)] sm:gap-2"
+      className="relative flex h-[calc(100vh-3rem)] flex-col items-center gap-4 3xl:gap-10 py-10 sm:h-[calc(100vh-4rem)] sm:gap-2"
     >
       {/* <PageTitle
         pageTitle="Contact Me"
