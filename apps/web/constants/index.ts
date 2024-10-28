@@ -156,3 +156,31 @@ export const pageSectionVariant = {
     // },
   },
 }
+
+export const workExperiences = [
+  {
+    companyName: 'Roboto Studio',
+    companyImg: 'https://roboto.studio/logo.svg',
+    designation: 'Web Developer',
+    workType: 'Intern',
+    description:
+      'I had the opportunity to work remotely with a friendly and highly skilled team of developers from the UK and India. This experience introduced me to SanityUI, Slack, and Linear project management tool, while also deepening my understanding of Next.js, Figma, Tailwind CSS, and frontend best practices.',
+    location: 'London, United Kingdom',
+    workMode: 'Remote',
+    startDate: 'Jun 2024',
+    endDate: 'Aug 2024',
+  },
+  {
+    companyName: 'GCT Pvt Ltd',
+    companyImg:
+      'https://media.licdn.com/dms/image/v2/D560BAQGVPRvj-OLaHg/company-logo_200_200/company-logo_200_200/0/1700211863272/galaxycard_logo?e=2147483647&v=beta&t=i29J-_tuI2uQzEkuJ43Rl8IdIDC_vvUwF-jFtPD7afU',
+    designation: 'Software Developer Engineer',
+    workType: 'Intern',
+    description:
+      'I began by writing GraphQL queries before moving into frontend development, gaining experience with Next.js, React Expo, Monorepo setups, Tamagui CSS, and Grafana. I also learned about microservices and effective collaboration in a shared GitHub repository, including resolving merge conflicts and managing PRs.',
+    location: 'Delhi, India',
+    workMode: 'Remote',
+    startDate: 'Apr 2024',
+    endDate: 'Jun 2024',
+  },
+]

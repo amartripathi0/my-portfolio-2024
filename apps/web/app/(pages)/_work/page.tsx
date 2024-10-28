@@ -1,39 +1,12 @@
 'use client'
 import BackgroundBlur from '@/components/shared/BackgroundBlur'
-import { MotionSection } from '@/components/shared/Motion'
+import { MotionDiv, MotionSection } from '@/components/shared/Motion'
 import TextUnderline from '@/components/shared/TextUnderline'
 import WorkExpCard from '@/components/WorkExp'
-import { pageSectionVariant } from '@/constants'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { pageSectionVariant, workExperiences } from '@/constants'
+import { cn } from '@/utils/cn'
+import { useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
-
-const workExperiences = [
-  {
-    companyName: 'Roboto Studio',
-    companyImg: 'https://roboto.studio/logo.svg',
-    designation: 'Web Developer',
-    workType: 'Intern',
-    description:
-      'I had the opportunity to work remotely with a friendly and highly skilled team of developers from the UK and India. This experience introduced me to SanityUI, Slack, and Linear project management tool, while also deepening my understanding of Next.js, Figma, Tailwind CSS, and frontend best practices.',
-    location: 'London, United Kingdom',
-    workMode: 'Remote',
-    startDate: 'Jun 2024',
-    endDate: 'Aug 2024',
-  },
-  {
-    companyName: 'GCT Pvt Ltd',
-    companyImg:
-      'https://media.licdn.com/dms/image/v2/D560BAQGVPRvj-OLaHg/company-logo_200_200/company-logo_200_200/0/1700211863272/galaxycard_logo?e=2147483647&v=beta&t=i29J-_tuI2uQzEkuJ43Rl8IdIDC_vvUwF-jFtPD7afU',
-    designation: 'Software Developer Engineer',
-    workType: 'Intern',
-    description:
-      'I began by writing GraphQL queries before moving into frontend development, gaining experience with Next.js, React Expo, Monorepo setups, Tamagui CSS, and Grafana. I also learned about microservices and effective collaboration in a shared GitHub repository, including resolving merge conflicts and managing PRs.',
-    location: 'Delhi, India',
-    workMode: 'Remote',
-    startDate: 'Apr 2024',
-    endDate: 'Jun 2024',
-  },
-]
 
 function WorkExp() {
   const targetRef = useRef(null)
@@ -66,15 +39,20 @@ function WorkExp() {
           style="left-2/5 max-md:left-1/3 -top-6 h-28 blur-[180px] sm:h-48 -z-20 sm:top-16"
         />
 
-        <div className="flex w-full flex-col space-y-8 overflow-hidden pt-10">
+        <div className="flex w-full max-w-7xl flex-col space-y-8 overflow-hidden pt-10">
           {workExperiences.map((exp, index) => (
-            <motion.div
+            <MotionDiv
               key={index}
               style={{
                 translateX: index % 2 === 0 ? leftSlide : rightSlide,
                 opacity: opacity,
               }}
-              className={`flex w-full ${index % 2 === 0 ? 'justify-start md:pl-40' : 'justify-end md:pr-40'}`}
+              className={cn(
+                `flex w-full`,
+                index % 2 === 0
+                  ? 'justify-start md:pl-10 xl:pl-40'
+                  : 'justify-end md:pr-10 xl:pl-40',
+              )}
             >
               <WorkExpCard
                 companyName={exp.companyName}
@@ -87,9 +65,8 @@ function WorkExp() {
                 workMode={exp.workMode as 'Remote' | 'Onsite'}
                 description={exp.description}
                 index={index}
-                
               />
-            </motion.div>
+            </MotionDiv>
           ))}
         </div>
       </div>

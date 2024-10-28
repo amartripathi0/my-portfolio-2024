@@ -33,7 +33,7 @@ export default function WorkExpCard({
   return (
     <Card
       className={cn(
-        'relative w-full rounded border-violet-950 bg-gradient-to-b from-zinc-950 via-black-950 to-violet-950 transition-all duration-300 hover:-translate-y-2 sm:h-60 md:max-w-2xl 3xl:h-64',
+        'relative w-full rounded border-violet-950 bg-gradient-to-b from-zinc-950 via-black-950 to-violet-950 transition-all duration-300 hover:-translate-y-2 sm:h-60 md:max-w-2xl 3xl:h-72 3xl:max-w-3xl',
       )}
     >
       <BorderBeam colorFrom="#BF00BF" />
@@ -54,7 +54,7 @@ export default function WorkExpCard({
             <h3 className="text-base font-medium text-neutral-100 md:text-lg 3xl:text-xl">
               {designation}
             </h3>
-            <p className="font-poppins text-xs font-normal italic text-neutral-300 sm:text-sm">
+            <p className="font-poppins text-xs font-normal italic text-neutral-300 sm:text-sm 3xl:text-base">
               {location}
             </p>
             <p className="font-poppins text-xs font-medium text-neutral-300 sm:hidden sm:text-sm">
@@ -77,7 +77,7 @@ export default function WorkExpCard({
               </Badge>
             </div>
 
-            <p className="font-poppins text-xs font-medium text-gray-300 max-sm:hidden sm:text-sm">
+            <p className="font-poppins text-xs font-medium text-gray-300 max-sm:hidden sm:text-sm 3xl:text-base">
               {startDate} <span className="mx-1">-</span> {endDate}{' '}
             </p>
           </div>

@@ -5,7 +5,6 @@ import { urlFor } from '@/utils/urlFor'
 import { MotionDiv, MotionSpan } from './shared/Motion'
 import Link from 'next/link'
 import { FaArrowCircleRight } from 'react-icons/fa'
-import { MovingBorder } from './ui/moving-border'
 import { BorderBeam } from './ui/border-beam'
 
 function HomePageLeft({ heroImage }: { heroImage: any }) {
