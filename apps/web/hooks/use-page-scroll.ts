@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState } from 'react'
 
 function usePageScroll(threshold = 10) {
   const [pageSectionOnViewport, setPageSectionOnViewport] = useState('home')
@@ -31,7 +31,7 @@ function usePageScroll(threshold = 10) {
         { name: 'home', threshold: 0.8 },
         { name: 'work-exp', threshold: 1.4 },
         { name: 'projects', threshold: 2.4 },
-        { name: 'skills', threshold: 4 },
+        { name: 'skills', threshold: 3.2 },
         { name: 'contact-me', threshold: Infinity },
       ]
 

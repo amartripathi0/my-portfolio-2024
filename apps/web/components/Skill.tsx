@@ -22,7 +22,7 @@ function Skill({ name, imageSrc }: { name: string; imageSrc: string }) {
         <div className="custom-cursor-hidden invisible absolute w-4/5 rounded-xl bg-prelude-900 p-2 text-center text-[11px] font-bold max-sm:text-[3vw] md:group-hover:visible">
           {name}
         </div>
-      </div>
+        </div>
     </BackgroundGradient>
   )
 }
