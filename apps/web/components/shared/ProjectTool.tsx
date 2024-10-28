@@ -23,7 +23,7 @@ function ProjectTool({
         projectDetailTool:
           'bg-prelude-900 px-2 py-1 font-montserrat max-sm:text-[3vw] sm:p-2 sm:px-4',
         projectCardTool:
-          'bg-prelude-900 px-2 py-1 font-montserrat max-sm:text-[3vw]',
+          'bg-prelude-900 px-2 py-1 font-montserrat max-sm:text-[3vw] 3xl:text-base font-medium',
       },
     },
   })
@@ -36,7 +36,7 @@ function ProjectTool({
       >
         <TextUnderline
           text={tool}
-          textStyles={cn('text-xs text-zinc-200', textStyles)}
+          textStyles={cn('text-xs text-zinc-200 3xl:text-base', textStyles)}
         />
       </Badge>
     </MotionDiv>
