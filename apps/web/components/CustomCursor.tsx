@@ -63,13 +63,13 @@ function CustomCursor() {
         transition: 'transform 0.75s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
       }}
       className={cn(
-        `pointer-events-none fixed left-0 top-0 z-[9999] size-4 rounded-full bg-purple-600 mix-blend-plus-lighter blur-[1px] drop-shadow-glow max-sm:hidden`,
+        `pointer-events-none fixed left-0 top-0 z-[9999] hidden size-4 rounded-full bg-purple-600 mix-blend-plus-lighter blur-[1px] drop-shadow-glow`,
         cursorStyle === 'pink-cursor-lg' &&
-          '-left-4 -top-4 size-14 bg-gradient-to-r from-indigo-800 to-pink-500 opacity-80 mix-blend-darken',
+          '-left-4 -top-4 block size-14 bg-gradient-to-r from-indigo-800 to-pink-500 opacity-80 mix-blend-darken',
         cursorStyle === 'pink-cursor-md' &&
-          'size-7 bg-gradient-to-r from-indigo-800 via-pink-500 to-cyan-900 opacity-80 mix-blend-darken',
+          'block size-7 bg-gradient-to-r from-indigo-800 via-pink-500 to-cyan-900 opacity-80 mix-blend-darken',
         cursorStyle === 'pink-cursor-sm' &&
-          'size-6 bg-gradient-to-r from-indigo-800 via-pink-500 to-cyan-900 opacity-80 mix-blend-darken',
+          'block size-6 bg-gradient-to-r from-indigo-800 via-pink-500 to-cyan-900 opacity-80 mix-blend-darken',
         cursorStyle === 'custom-cursor-multiply' &&
           'size-5 opacity-100 mix-blend-multiply',
         cursorStyle === 'custom-cursor-hidden' && 'hidden',
