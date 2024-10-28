@@ -17,7 +17,7 @@ function HomePageLeft({ heroImage }: { heroImage: any }) {
       transition={{ ease: 'easeInOut', duration: 1, delay: 0 }}
     >
       <span className="left-2/5 absolute -top-3 -rotate-6 rounded-full p-2 text-sm font-medium md:left-0 md:top-0 md:-rotate-12 md:px-2.5 md:text-base lg:left-[4vw]">
-        <BorderBeam size={60} duration={5} borderWidth={2} delay={5.6}/>
+        <BorderBeam size={60} duration={5} borderWidth={2} delay={4.6}/>
         Open to Work!
       </span>
       {/* Image with Purple Filter */}
