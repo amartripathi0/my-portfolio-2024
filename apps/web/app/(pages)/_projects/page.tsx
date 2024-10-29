@@ -18,7 +18,7 @@ async function Projects() {
       viewport={{ once: true }}
       variants={pageSectionVariant}
       id="projects"
-      className="min-h-screen lg:-mx-28 lg:px-0 xl:mx-0"
+      className="lg:-mx-28 xl:mx-0 lg:px-0"
       // data-scroll-container
     >
       <div className="relative flex flex-col items-center pt-10">
@@ -31,7 +31,7 @@ async function Projects() {
           blurColor="indigo"
           style="left-2/5 max-md:left-1/3 -top-6 h-40 blur-[150px] sm:h-60 sm:top-1/4"
         />
-        <div className="mt-6 flex justify-between gap-4 max-md:flex-col sm:gap-4 lg:justify-center lg:px-8 sm:py-4 xl:gap-10">
+        <div className="mt-6 flex justify-between gap-4 max-md:flex-col sm:gap-4 sm:py-4 lg:justify-center lg:px-8 xl:gap-10">
           {projectsArray?.map(
             ({
               projectTitle,

@@ -16,7 +16,7 @@ async function ProjectCard({
   projectTools,
 }: Partial<Project>) {
   return (
-    <CardContainer containerClassName="w-full sm:w-1/3 max-w-lg 3xl:max-w-xl">
+    <CardContainer containerClassName="w-full md:w-1/3 max-w-lg max-h-4/5">
       <CardBody className="group/card relative size-full rounded-xl border border-violet-950 bg-gradient-to-b from-zinc-950 via-indigo-950 p-4 lg:p-6 3xl:p-8">
         <CardItem
           translateZ="30"
@@ -33,7 +33,7 @@ async function ProjectCard({
         </CardItem>
         <CardItem translateZ="60" className="mt-4 flex w-full flex-wrap gap-2">
           {projectTools
-            ?.slice(0, 7)
+            ?.slice(0, 8)
             .map((eachTool, index) => (
               <ProjectTool
                 key={eachTool}
@@ -42,7 +42,7 @@ async function ProjectCard({
                 toolVariant="projectCardTool"
               />
             ))}
-          {projectTools && projectTools?.length > 6 && <p>...</p>}
+          {projectTools && projectTools?.length >7 && <p>...</p>}
         </CardItem>
         <CardItem translateZ="60" className="mt-4 w-full">
           <Image

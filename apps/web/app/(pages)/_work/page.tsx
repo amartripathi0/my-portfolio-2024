@@ -26,7 +26,7 @@ function WorkExp() {
       viewport={{ once: true }}
       variants={pageSectionVariant}
       id="work-exp"
-      className="relative h-[calc(100vh-4rem)]"
+      className="relative"
     >
       <div className="relative flex size-full flex-col items-center md:pt-10">
         <TextUnderline

@@ -1,7 +1,6 @@
 import { ContactMeForm } from '@/components/ContactMeForm'
 import BackgroundBlur from '@/components/shared/BackgroundBlur'
 import { MotionSection } from '@/components/shared/Motion'
-// import PageTitle from '@/components/shared/PageTitle'
 import TextUnderline from '@/components/shared/TextUnderline'
 import { pageSectionVariant } from '@/constants'
 import { IoMail } from 'react-icons/io5'
@@ -14,12 +13,8 @@ function Contact() {
       viewport={{ once: true }}
       variants={pageSectionVariant}
       id="contact-me"
-      className="relative flex h-[calc(100vh-3rem)] flex-col items-center gap-4 3xl:gap-10 py-10 sm:h-[calc(100vh-4rem)] sm:gap-2"
+      className="relative flex flex-col items-center gap-8 sm:gap-10 3xl:gap-16 justify-center"
     >
-      {/* <PageTitle
-        pageTitle="Contact Me"
-        underlineStyles=""
-      /> */}
       <TextUnderline
         textType="pageHeading"
         text="Contact Me"
@@ -36,7 +31,7 @@ function Contact() {
       />
 
       <ContactMeForm />
-      <div className="absolute bottom-0 flex items-center text-sm max-sm:flex-col sm:mb-2 sm:gap-2 md:text-base 3xl:text-lg">
+      <div className=" flex items-center text-sm max-sm:flex-col  sm:gap-2 md:text-base 3xl:text-lg">
         <p className="flex items-center gap-2">
           <span className="text-lg font-bold">&copy;</span> 2024 Amar Tripathi
         </p>

@@ -25,7 +25,7 @@ function Skills() {
       viewport={{ once: true }}
       variants={pageSectionVariant}
       id="skills"
-      className="relative flex flex-col items-center gap-4 py-10 sm:py-20 md:gap-0"
+      className="relative flex flex-col items-center gap-4 py-10 sm:py-16 md:gap-0"
     >
       <TextUnderline
         textType="pageHeading"
