@@ -1,6 +1,6 @@
 'use client'
 import { SkillType } from '@/types'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, MotionValue, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import BackgroundBlur from '@/components/shared/BackgroundBlur'
 import { MotionSection } from '@/components/shared/Motion'
@@ -20,16 +20,17 @@ function Skills() {
   return (
     <MotionSection
       ref={targetRef}
-      initial={'initial'}
-      whileInView={'inView'}
-      viewport={{ once: true }}
-      variants={pageSectionVariant}
+      // initial={'initial'}
+      // whileInView={'inView'}
+      // viewport={{ once: true }}
+      // variants={pageSectionVariant}
       id="skills"
-      className="relative flex flex-col items-center gap-4 py-10 sm:py-16 md:gap-0"
+      className="relative flex flex-col items-center gap-4 md:gap-0 lg:-mx-24"
     >
       <TextUnderline
         textType="pageHeading"
         text="Skills & Tools"
+        containerDivStyles="my-4 md:my-8 lg:my-10"
         underlineStyles="bg-gradient-to-r from-indigo-600 via-purple-400"
       />
 
@@ -39,27 +40,41 @@ function Skills() {
         style="absolute opacity-80 h-1/5 top-10  aspect-square blur-[110px] rounded-full bg-gradient-to-r from-indigo-600 via-yellow-300 to-purple-400"
       />
 
-      <div className="flex-center h-4/5 w-full flex-col overflow-hidden md:h-full">
-        <motion.div
-          style={{ translateX: leftSlide, opacity: opacity }}
-          className="flex flex-wrap justify-center gap-4 p-2 md:py-6 lg:py-10"
-        >
-          {frontendSkills.map(({ name, imageSrc }: SkillType) => (
-            <Skill key={name} name={name} imageSrc={imageSrc} />
-          ))}
-        </motion.div>
-
-        <motion.div
-          style={{ translateX: rightSlide, opacity: opacity }}
-          className="flex flex-wrap justify-center gap-4 max-sm:p-2 md:pb-12"
-        >
-          {backendSkills.map(({ name, imageSrc }: SkillType) => (
-            <Skill key={name} name={name} imageSrc={imageSrc} />
-          ))}
-        </motion.div>
+      <div className="flex-center w-full flex-col gap-4 overflow-hidden py-4 lg:gap-8 lg:py-8">
+        <SkillsContainer
+          skillsArray={frontendSkills}
+          translateXSide={leftSlide}
+          opacity={opacity}
+        />
+        <SkillsContainer
+          skillsArray={backendSkills}
+          translateXSide={rightSlide}
+          opacity={opacity}
+        />
       </div>
     </MotionSection>
   )
 }
 
 export default Skills
+
+function SkillsContainer({
+  translateXSide,
+  opacity,
+  skillsArray,
+}: {
+  translateXSide: MotionValue<string>
+  opacity: MotionValue<number>
+  skillsArray: SkillType[]
+}) {
+  return (
+    <motion.div
+      style={{ translateX: translateXSide, opacity }}
+      className="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-5 lg:flex md:grid-rows-none"
+    >
+      {skillsArray.map(({ name, imageSrc }: SkillType) => (
+        <Skill key={name} name={name} imageSrc={imageSrc} />
+      ))}
+    </motion.div>
+  )
+}
