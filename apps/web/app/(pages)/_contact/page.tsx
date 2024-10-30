@@ -8,10 +8,10 @@ import { IoMail } from 'react-icons/io5'
 function Contact() {
   return (
     <MotionSection
-      initial={'initial'}
-      whileInView={'inView'}
-      viewport={{ once: true }}
-      variants={pageSectionVariant}
+      // initial={'initial'}
+      // whileInView={'inView'}
+      // viewport={{ once: true }}
+      // variants={pageSectionVariant}
       id="contact-me"
       className="relative flex flex-col items-center gap-8 sm:gap-10 3xl:gap-16 justify-center"
     >
