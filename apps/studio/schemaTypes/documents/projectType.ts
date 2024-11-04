@@ -17,9 +17,10 @@ export const projectType = defineType({
       type: 'string',
     }),
     defineField({
-      name: 'projectThumbnail',
-      title: 'Project Image',
-      type: 'image',
+      name: 'projectThumbnails',
+      title: 'Project Images',
+      type: 'array',
+      of: [{type: 'image'}],
     }),
     defineField({
       name: 'projectGithubLink',
