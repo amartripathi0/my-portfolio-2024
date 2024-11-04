@@ -124,7 +124,7 @@ export type Project = {
   _rev: string
   projectTitle?: string
   projectBio?: string
-  projectThumbnail?: {
+  projectThumbnails?: Array<{
     asset?: {
       _ref: string
       _type: 'reference'
@@ -134,7 +134,8 @@ export type Project = {
     hotspot?: SanityImageHotspot
     crop?: SanityImageCrop
     _type: 'image'
-  }
+    _key: string
+  }>
   projectGithubLink?: string
   projectDeployedLink?: string
   projectDetail?: Array<{
@@ -164,7 +165,7 @@ export type Projects = {
   _createdAt: string
   _updatedAt: string
   _rev: string
-  projects?: Array<{
+  projectsArray?: Array<{
     _ref: string
     _type: 'reference'
     _weak?: boolean
