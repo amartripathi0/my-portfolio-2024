@@ -7,7 +7,7 @@ function Skill({ name, imageSrc }: { name: string; imageSrc: string }) {
   return (
     <BackgroundGradient className="custom-cursor-hidden">
       {/* <div className="max-sm:flex-center flex-between aspect-square md:h-24  lg:h-32 flex-col rounded-3xl bg-zinc-800 p-2 max-sm:h-16 max-sm:p-2"> */}
-      <div className="custom-cursor-hidden flex-center group relative aspect-square h-16 flex-col rounded bg-zinc-800 p-2 hover:opacity-90 max-sm:p-2 sm:rounded-3xl md:h-16 lg:h-20">
+      <div className="custom-cursor-hidden flex-center group relative aspect-square h-16 flex-col  bg-zinc-800 p-2 hover:opacity-90 max-sm:p-2 rounded-3xl md:h-16 lg:h-20">
         <Image
           src={imageSrc}
           alt={name}
