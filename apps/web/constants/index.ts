@@ -2,7 +2,6 @@ import { FaGithub, FaTwitter } from 'react-icons/fa'
 import { FaLinkedin } from 'react-icons/fa'
 import {
   NavbarItemType,
-  ProjectContainerProps,
   SkillType,
   SocialMediaLinkType,
 } from '@/types'
@@ -33,7 +32,7 @@ export const socialMediaLinks: SocialMediaLinkType[] = [
 export const resumeLink: string =
   'https://drive.google.com/file/d/1DwHgcXxXGi1e96Y8UuLhln5To5iCspwj/view'
 
-export const projectsArray: ProjectContainerProps[] = [
+export const projectsArray = [
   {
     projectTitle: 'Placement Nexus',
     projectBio:

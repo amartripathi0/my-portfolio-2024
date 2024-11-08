@@ -19,7 +19,7 @@ export const PROJECTS_PAGE_QUERY = `
    projectsArray[]->{
     projectTitle,
     projectBio,
-    projectThumbnail,
+    projectThumbnails,
     projectGithubLink,
     projectDeployedLink,
     projectDetail,

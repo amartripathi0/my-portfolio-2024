@@ -2,6 +2,7 @@ import { IconType } from 'react-icons'
 import type { SanityImageAssetDocument } from '@sanity/client'
 import { ElementType } from 'react'
 import { TypedObject } from '@portabletext/types'
+import { Project } from '@/sanity/types'
 
 export type SocialMediaLinkType = {
   label: string
@@ -25,6 +26,7 @@ export type ProjectContainerProps = {
   projectDeployedLink?: string
   projectThumbnailSrc: string
 }
+export type ProjectCardProps = Partial<Project>
 
 export type ContactMeFormData = {
   name: string
