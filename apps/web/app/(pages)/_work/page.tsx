@@ -39,7 +39,7 @@ function WorkExp() {
         style="left-2/5 max-md:left-1/3 -top-6 h-28 blur-[180px] sm:h-48 -z-20 sm:top-16"
       />
 
-      <div className="flex w-full max-w-7xl flex-col space-y-4 md:space-y-8 overflow-hidden pt-2">
+      <div className="flex w-full max-w-7xl flex-col space-y-4 md:space-y-8 overflow-hidden pt-2 ">
         {workExperiences.map((exp, index) => (
           <MotionDiv
             key={index}
