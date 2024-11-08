@@ -92,7 +92,7 @@ const TextUnderline = ({
           'absolute bottom-[2px] h-[1.5px] w-full rounded-xl bg-purple-100 drop-shadow-lg',
           underlineStyles,
           textType === 'pageHeading' && '-z-10 -mb-1 h-[12%]',
-          textType === 'skill' && 'mb-0 h-[9%]',
+          textType === 'skill' && '-mb-[2px] h-[8%]',
         )}
       ></motion.div>
     </motion.div>

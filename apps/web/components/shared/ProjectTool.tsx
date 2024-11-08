@@ -21,7 +21,7 @@ function ProjectTool({
     variants: {
       toolVariant: {
         projectDetailTool:
-          'bg-prelude-900 px-2 py-1 font-montserrat max-sm:text-[3vw] sm:p-2 sm:px-4',
+          'bg-prelude-950 px-2 py-1 font-montserrat max-sm:text-[3vw] sm:p-2 sm:px-4',
         projectCardTool:
           'bg-prelude-900 px-2 py-1 font-montserrat max-sm:text-[3vw] 3xl:text-base font-medium',
       },
@@ -36,6 +36,7 @@ function ProjectTool({
       >
         <TextUnderline
           text={tool}
+          textType='skill'
           textStyles={cn('text-xs text-zinc-200 3xl:text-base', textStyles)}
         />
       </Badge>

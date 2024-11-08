@@ -91,7 +91,7 @@ const ProjectDetails = ({
               key={eachTool}
               tool={eachTool}
               i={index}
-              toolVariant="projectCardTool"
+              toolVariant="projectDetailTool"
             />
           ))}
         </div>
