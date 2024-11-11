@@ -4,11 +4,7 @@ import Link from 'next/link'
 import { FaGithub } from 'react-icons/fa'
 import { urlFor } from '@/utils/urlFor'
 import ProjectTool from './shared/ProjectTool'
-import {
-  Dialog,
-  DialogContent,
-  DialogTrigger,
-} from './ui/dialog'
+import { Dialog, DialogContent, DialogTrigger } from './ui/dialog'
 import ProjectDetails from './project-details'
 import { ProjectCardProps } from '@/types'
 
@@ -66,10 +62,7 @@ async function ProjectCard({
                 alt="thumbnail"
               />
             </DialogTrigger>
-            <DialogContent
-              className="mt-10 max-w-screen-xl"
-              data-scroll-container
-            >
+            <DialogContent className="mt-10 max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 3xl:max-w-screen-2xl">
               <ProjectDetails
                 projectDetail={projectDetail}
                 projectTitle={projectTitle}
