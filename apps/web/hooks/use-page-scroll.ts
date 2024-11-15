@@ -28,10 +28,10 @@ function usePageScroll(threshold = 10) {
     const handlePageNavigation = () => {
       const scrollY = window.scrollY
       const sections = [
-        { name: 'home', threshold: 0.8 },
-        { name: 'work-exp', threshold: 1.4 },
+        { name: 'home', threshold: 0.5 },
+        { name: 'work-exp', threshold: 1.5 },
         { name: 'projects', threshold: 2.4 },
-        { name: 'skills', threshold: 3.2 },
+        { name: 'skills', threshold: 2.8 },
         { name: 'contact-me', threshold: Infinity },
       ]
 
