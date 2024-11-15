@@ -23,7 +23,7 @@ export default function ProjectThumbnails({
           View Project Details
         </span>
         <Carousel
-          className="w-full max-w-xs"
+          className="w-full"
           plugins={[
             Autoplay({
               delay: 2800,
