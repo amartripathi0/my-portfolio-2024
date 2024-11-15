@@ -1,12 +1,9 @@
 import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-container'
-import Image from 'next/image'
 import Link from 'next/link'
 import { FaGithub } from 'react-icons/fa'
-import { urlFor } from '@/utils/urlFor'
 import ProjectTool from './shared/ProjectTool'
-import { Dialog, DialogContent, DialogTrigger } from './ui/dialog'
-import ProjectDetails from './project-details'
 import { ProjectCardProps } from '@/types'
+import ProjectThumbnails from './ui/project-thumbnails'
 
 async function ProjectCard({
   projectDetail,
@@ -47,33 +44,15 @@ async function ProjectCard({
           {projectTools && projectTools?.length > 7 && <p>...</p>}
         </CardItem>
         <CardItem translateZ="60" className="group relative mt-4 w-full">
-          <Dialog>
-            <DialogTrigger>
-              <span className="absolute left-1/2 top-1/2 z-40 hidden -translate-x-1/2 -translate-y-1/2 cursor-pointer rounded-full bg-prelude-700 p-2 px-2.5 text-xs font-medium backdrop-blur-sm hover:bg-prelude-800 group-hover:block">
-                View Project Details
-              </span>
-              <Image
-                src={
-                  projectThumbnails ? urlFor(projectThumbnails[0]).url() : ''
-                }
-                height="1080"
-                width="606"
-                className="w-full rounded-[5px] object-cover opacity-90 transition-opacity duration-100 group-hover:opacity-70"
-                alt="thumbnail"
-              />
-            </DialogTrigger>
-            <DialogContent className="mt-10 max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 3xl:max-w-screen-2xl">
-              <ProjectDetails
-                projectDetail={projectDetail}
-                projectTitle={projectTitle}
-                projectBio={projectBio}
-                projectThumbnails={projectThumbnails}
-                projectGithubLink={projectGithubLink}
-                projectDeployedLink={projectDeployedLink}
-                projectTools={projectTools}
-              />
-            </DialogContent>
-          </Dialog>
+          <ProjectThumbnails
+            projectTitle={projectTitle}
+            projectBio={projectBio}
+            projectTools={projectTools}
+            projectThumbnails={projectThumbnails}
+            projectGithubLink={projectGithubLink}
+            projectDeployedLink={projectDeployedLink}
+            projectDetail={projectDetail}
+          />
         </CardItem>
 
         <div className="mt-4 flex items-center justify-between">
