@@ -59,7 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${raleway.variable}`}>
       <body className={`${montserrat.variable} font-montserrat`}>
-        <Appbar/>
+        <Appbar />
         {children}
         <Toaster richColors closeButton theme="dark" />
         <Analytics />

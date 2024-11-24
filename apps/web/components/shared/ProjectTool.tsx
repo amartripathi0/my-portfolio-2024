@@ -36,7 +36,7 @@ function ProjectTool({
       >
         <TextUnderline
           text={tool}
-          textType='skill'
+          textType="skill"
           textStyles={cn('text-xs text-zinc-200 3xl:text-base', textStyles)}
         />
       </Badge>

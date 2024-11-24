@@ -70,7 +70,7 @@ function SkillsContainer({
   return (
     <motion.div
       style={{ translateX: translateXSide, opacity }}
-      className="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-5 lg:flex md:grid-rows-none"
+      className="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-5 md:grid-rows-none lg:flex"
     >
       {skillsArray.map(({ name, imageSrc }: SkillType) => (
         <Skill key={name} name={name} imageSrc={imageSrc} />

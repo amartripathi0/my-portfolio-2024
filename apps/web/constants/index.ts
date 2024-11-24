@@ -1,10 +1,6 @@
 import { FaGithub, FaTwitter } from 'react-icons/fa'
 import { FaLinkedin } from 'react-icons/fa'
-import {
-  NavbarItemType,
-  SkillType,
-  SocialMediaLinkType,
-} from '@/types'
+import { NavbarItemType, SkillType, SocialMediaLinkType } from '@/types'
 export const navbarItems: NavbarItemType[] = [
   {
     label: 'home',

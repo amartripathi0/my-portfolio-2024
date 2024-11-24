@@ -43,7 +43,7 @@ body ::selection {
 *::-webkit-scrollbar-thumb {
   background-color: hsl(266, 55%, 64%);
   border-radius: 10px;
-}  
+}
 *::-webkit-scrollbar {
   width: 10px;
   opacity: 0;
@@ -68,15 +68,15 @@ input[data-autocompleted] {
 }
 @layer utilities {
   .flex-center {
-    @apply flex justify-center items-center;
+    @apply flex items-center justify-center;
   }
   .flex-col-center {
     @apply flex flex-col items-center;
   }
   .flex-between {
-    @apply flex justify-between items-center;
+    @apply flex items-center justify-between;
   }
   .flex-around-center {
-    @apply flex justify-around items-center;
+    @apply flex items-center justify-around;
   }
 }

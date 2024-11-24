@@ -13,7 +13,7 @@ function Contact() {
       // viewport={{ once: true }}
       // variants={pageSectionVariant}
       id="contact-me"
-      className="relative flex flex-col items-center gap-8 sm:gap-10 3xl:gap-16 justify-center"
+      className="relative flex flex-col items-center justify-center gap-8 sm:gap-10 3xl:gap-16"
     >
       <TextUnderline
         textType="pageHeading"
@@ -31,7 +31,7 @@ function Contact() {
       />
 
       <ContactMeForm />
-      <div className=" flex items-center text-sm max-sm:flex-col  sm:gap-2 md:text-base 3xl:text-lg">
+      <div className="flex items-center text-sm max-sm:flex-col sm:gap-2 md:text-base 3xl:text-lg">
         <p className="flex items-center gap-2">
           <span className="text-lg font-bold">&copy;</span> 2024 Amar Tripathi
         </p>

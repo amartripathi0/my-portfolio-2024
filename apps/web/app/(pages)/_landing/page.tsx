@@ -10,7 +10,7 @@ const Landing = async () => {
   return (
     <section
       id="home"
-      className="flex-between py-12 md:py-28 max-md:flex-col max-md:justify-start"
+      className="flex-between py-12 max-md:flex-col max-md:justify-start md:py-28"
     >
       <HomePageLeft heroImage={heroImage} />
       <HomePageRight firstName={firstName || ''} lastName={lastName || ''} />

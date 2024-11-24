@@ -23,7 +23,7 @@ function HomePageRight({
         <MotionH1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ ease: 'easeInOut', duration: 1, delay: 0.2}}
+          transition={{ ease: 'easeInOut', duration: 1, delay: 0.2 }}
           className="pink-cursor-lg select-text bg-gradient-to-b from-neutral-200 to-neutral-700 bg-clip-text leading-[0.75] text-transparent selection:text-white"
         >
           {lastName}
