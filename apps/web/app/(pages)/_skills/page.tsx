@@ -30,7 +30,7 @@ function Skills() {
       <TextUnderline
         textType="pageHeading"
         text="Skills & Tools"
-        containerDivStyles="my-4 md:my-8 lg:my-10"
+        containerDivStyles="my-4 md:mt-8 lg:mt-10"
         underlineStyles="bg-gradient-to-r from-indigo-600 via-purple-400"
       />
 
@@ -40,7 +40,7 @@ function Skills() {
         style="absolute opacity-80 h-1/5 top-10  aspect-square blur-[110px] rounded-full bg-gradient-to-r from-indigo-600 via-yellow-300 to-purple-400"
       />
 
-      <div className="flex-center w-full flex-col gap-4 overflow-hidden py-4 lg:gap-8 lg:py-8">
+      <div className="flex-center w-full flex-col gap-4 overflow-hidden py-4 lg:gap-8 lg:py-14">
         <SkillsContainer
           skillsArray={frontendSkills}
           translateXSide={leftSlide}
