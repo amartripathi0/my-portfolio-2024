@@ -25,7 +25,7 @@ function Skills() {
       // viewport={{ once: true }}
       // variants={pageSectionVariant}
       id="skills"
-      className="relative flex flex-col items-center gap-4 md:gap-0 lg:-mx-24"
+      className="relative flex flex-col items-center lg:-mx-24"
     >
       <TextUnderline
         textType="pageHeading"
@@ -40,13 +40,13 @@ function Skills() {
         style="absolute opacity-80 h-1/5 top-10  aspect-square blur-[110px] rounded-full bg-gradient-to-r from-indigo-600 via-yellow-300 to-purple-400"
       />
 
-      <div className="flex-center w-full flex-col gap-4 overflow-hidden py-4 lg:gap-8 lg:py-14">
+      <div className="flex-center w-full flex-col gap-4 overflow-hidden py-8 lg:gap-8 lg:py-12">
         <SkillsContainer
           skillsArray={frontendSkills}
           translateXSide={leftSlide}
           opacity={opacity}
         />
-        <SkillsContainer
+        <SkillsContainer  
           skillsArray={backendSkills}
           translateXSide={rightSlide}
           opacity={opacity}

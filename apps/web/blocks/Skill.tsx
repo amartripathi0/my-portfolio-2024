@@ -5,8 +5,7 @@ import { BackgroundGradient } from '../components/ui/BackgroundGradient'
 
 function Skill({ name, imageSrc }: { name: string; imageSrc: string }) {
   return (
-    <BackgroundGradient className="custom-cursor-hidden">
-      {/* <div className="max-sm:flex-center flex-between aspect-square md:h-24  lg:h-32 flex-col rounded-3xl bg-zinc-800 p-2 max-sm:h-16 max-sm:p-2"> */}
+    <BackgroundGradient >
       <div className="custom-cursor-hidden flex-center group relative aspect-square h-16 flex-col rounded-3xl bg-zinc-800 p-2 hover:opacity-90 max-sm:p-2 md:h-16 lg:h-20">
         <Image
           src={imageSrc}
@@ -14,7 +13,7 @@ function Skill({ name, imageSrc }: { name: string; imageSrc: string }) {
           width={200}
           height={200}
           // className="aspect square h-2/3 rounded-2xl object-contain max-lg:h-full"
-          className="custom-cursor-hidden aspect square rounded object-contain sm:rounded-2xl"
+          className="custom-cursor-hidden aspect-square size-full rounded object-contain text-sm sm:rounded-2xl"
         />
         {/* <Badge className="flex-center h-6 w-full bg-prelude-900 max-lg:hidden">
           <TextUnderline text={name} textType="skill" />
