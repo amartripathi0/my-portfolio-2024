@@ -1,6 +1,6 @@
-import TextUnderline from './shared/TextUnderline'
-import { TextGenerateEffect } from './ui/TextGenEffect'
-import { MotionDiv, MotionH1 } from './shared/Motion'
+import TextUnderline from '../components/shared/TextUnderline'
+import { TextGenerateEffect } from '../components/ui/TextGenEffect'
+import { MotionDiv, MotionH1 } from '../components/shared/Motion'
 
 function HomePageRight({
   firstName,

@@ -1,12 +1,12 @@
 'use client'
 import { cn } from '@/utils/cn'
-import { Label } from './ui/label'
-import { Input } from './ui/input'
+import { Label } from '../components/ui/label'
+import { Input } from '../components/ui/input'
 import Link from 'next/link'
 import { socialMediaLinks } from '@/constants'
 import { sendEmail } from '@/actions/sendEmail'
 import { toast } from 'sonner'
-import { Button } from './ui/moving-border'
+import { Button } from '../components/ui/moving-border'
 
 const clientAction = async (formData: FormData) => {
   const emailResponse = await sendEmail(formData)

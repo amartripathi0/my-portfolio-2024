@@ -1,4 +1,4 @@
-import { ContactMeForm } from '@/components/ContactMeForm'
+import { ContactMeForm } from '@/blocks/ContactMeForm'
 import BackgroundBlur from '@/components/shared/BackgroundBlur'
 import { MotionSection } from '@/components/shared/Motion'
 import TextUnderline from '@/components/shared/TextUnderline'

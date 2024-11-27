@@ -6,7 +6,7 @@ import BackgroundBlur from '@/components/shared/BackgroundBlur'
 import { MotionSection } from '@/components/shared/Motion'
 import TextUnderline from '@/components/shared/TextUnderline'
 import { backendSkills, frontendSkills, pageSectionVariant } from '@/constants'
-import Skill from '@/components/Skill'
+import Skill from '@/blocks/Skill'
 
 function Skills() {
   const targetRef = useRef(null)

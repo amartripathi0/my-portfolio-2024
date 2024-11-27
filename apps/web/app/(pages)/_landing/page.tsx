@@ -1,7 +1,7 @@
 import { HOMEPAGE_QUERY } from '@/sanity/queries'
 import { getSanityData } from '@/utils/getSanityData'
-import HomePageLeft from '@/components/HomePageLeft'
-import HomePageRight from '@/components/HomePageRight'
+import HomePageLeft from '@/blocks/HomePageLeft'
+import HomePageRight from '@/blocks/HomePageRight'
 import { Homepage } from '@/sanity/types'
 
 const Landing = async () => {

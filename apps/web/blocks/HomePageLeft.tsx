@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
-import SocialHandles from './shared/SocialHandles'
+import SocialHandles from '../components/shared/SocialHandles'
 import { urlFor } from '@/utils/urlFor'
-import { MotionDiv, MotionSpan } from './shared/Motion'
+import { MotionDiv, MotionSpan } from '../components/shared/Motion'
 import Link from 'next/link'
 import { FaArrowCircleRight } from 'react-icons/fa'
-import { BorderBeam } from './ui/border-beam'
+import { BorderBeam } from '../components/ui/border-beam'
 
 function HomePageLeft({ heroImage }: { heroImage: any }) {
   return (

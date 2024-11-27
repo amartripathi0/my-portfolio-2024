@@ -8,7 +8,7 @@ import {
   useTransform,
 } from 'framer-motion'
 import { MutableRefObject, useRef } from 'react'
-import Skill from '../Skill'
+import Skill from '../../blocks/Skill'
 
 interface SkillsScrollContainerProps {
   frontendSkillsArray: SkillType[]

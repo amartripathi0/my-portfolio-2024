@@ -1,7 +1,7 @@
 import Image from 'next/image'
 // import { Badge } from './ui/badge'
 // import TextUnderline from './shared/TextUnderline'
-import { BackgroundGradient } from './ui/BackgroundGradient'
+import { BackgroundGradient } from '../components/ui/BackgroundGradient'
 
 function Skill({ name, imageSrc }: { name: string; imageSrc: string }) {
   return (

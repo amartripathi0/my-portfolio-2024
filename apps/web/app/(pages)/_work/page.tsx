@@ -2,7 +2,7 @@
 import BackgroundBlur from '@/components/shared/BackgroundBlur'
 import { MotionDiv, MotionSection } from '@/components/shared/Motion'
 import TextUnderline from '@/components/shared/TextUnderline'
-import WorkExpCard from '@/components/WorkExp'
+import WorkExpCard from '@/blocks/WorkExp'
 import { pageSectionVariant, workExperiences } from '@/constants'
 import { cn } from '@/utils/cn'
 import { useScroll, useTransform } from 'framer-motion'

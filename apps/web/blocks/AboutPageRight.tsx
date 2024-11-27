@@ -1,11 +1,11 @@
-import IndigoBlurBackground from './shared/IndigoBlurBackground'
+import IndigoBlurBackground from '../components/shared/IndigoBlurBackground'
 import { fadeAnimationVariant } from '@/constants'
 import Image from 'next/image'
 import { FaArrowCircleRight } from 'react-icons/fa'
 import Link from 'next/link'
-import { Button } from './ui/button'
+import { Button } from '../components/ui/button'
 import { urlFor } from '@/utils/urlFor'
-import { MotionDiv } from './shared/Motion'
+import { MotionDiv } from '../components/shared/Motion'
 
 function AboutPageRight({
   heroImage,

@@ -4,7 +4,7 @@ import './globals.css'
 import { Toaster } from 'sonner'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import Appbar from '@/components/Appbar'
+import Appbar from '@/blocks/Appbar'
 
 const montserrat = Montserrat({
   subsets: ['latin'],

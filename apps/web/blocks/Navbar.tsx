@@ -1,15 +1,20 @@
 import React, { useCallback, useState } from 'react'
 import { navbarItems } from '@/constants'
-import WrapperContainer from './shared/WrapperContainer'
+import WrapperContainer from '../components/shared/WrapperContainer'
 import Link from 'next/link'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { IoCloseOutline } from 'react-icons/io5'
 import usePageScroll from '@/hooks/use-page-scroll'
 import LocomotiveScroll from 'locomotive-scroll'
-import TextUnderline from './shared/TextUnderline'
+import TextUnderline from '../components/shared/TextUnderline'
 import Image from 'next/image'
 import { cn } from '@/utils/cn'
-import { MotionDiv, MotionNav, MotionSpan, MotionLink } from './shared/Motion'
+import {
+  MotionDiv,
+  MotionNav,
+  MotionSpan,
+  MotionLink,
+} from '../components/shared/Motion'
 import { AnimatePresence } from 'framer-motion'
 
 const Navbar = ({

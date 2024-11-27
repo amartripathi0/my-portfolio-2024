@@ -1,4 +1,4 @@
-import AboutPageRight from '@/components/AboutPageRight'
+import AboutPageRight from '@/blocks/AboutPageRight'
 import BackgroundBlur from '@/components/shared/BackgroundBlur'
 import { MotionSection } from '@/components/shared/Motion'
 import TextUnderline from '@/components/shared/TextUnderline'

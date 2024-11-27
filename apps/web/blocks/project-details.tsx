@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { FaGithub } from 'react-icons/fa'
 import { PortableText } from 'next-sanity'
 import { urlFor } from '@/utils/urlFor'
-import ProjectTool from './shared/ProjectTool'
+import ProjectTool from '../components/shared/ProjectTool'
 import { ProjectCardProps } from '@/types'
 
 const ProjectDetails = ({
