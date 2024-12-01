@@ -8,7 +8,7 @@ import Freelance from './(pages)/_freelance/page'
 
 function MainPage() {
   return (
-    <main className="relative mx-0 flex flex-col gap-8 sm:gap-24 px-4 pt-20 sm:px-8 md:px-10 lg:mx-28 3xl:gap-28">
+    <main className="relative mx-0 flex flex-col gap-12 sm:gap-24 px-4 pt-20 sm:px-8 md:px-10 lg:mx-28 3xl:gap-28">
       <CustomCursor />
       <Landing />
       {/* <About /> */}

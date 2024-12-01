@@ -27,6 +27,7 @@ function Contact() {
         <p className="flex items-center gap-2">
           <span className="text-lg font-bold">&copy;</span> 2024 Amar Tripathi
         </p>
+       <span className='max-sm:hidden'>|</span>
         <p className="flex items-center gap-2">
           <IoMail /> theamartripathi@gmail.com
         </p>
