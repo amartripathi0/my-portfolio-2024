@@ -25,7 +25,7 @@ export default async function Freelance() {
         <Link
           href={'#contact-me'}
           scroll
-          className="-z-5 -top-24 right-6 hidden rotate-6 rounded-full p-2 text-sm font-semibold text-neutral-200 sm:absolute md:rotate-6 md:px-2.5 md:text-base"
+          className="-z-5 -top-24 right-6 max-sm:hidden rotate-6 rounded-full p-2 text-sm font-semibold text-neutral-200 absolute md:rotate-6 md:px-2.5 md:text-base"
         >
           <BorderBeam size={60} duration={5} borderWidth={2} delay={4.6} />
           <span className="underline decoration-purple-400">HIRE ME</span> — and
