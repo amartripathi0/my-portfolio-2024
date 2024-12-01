@@ -15,10 +15,10 @@ function HomePageLeft({ heroImage }: { heroImage: any }) {
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ ease: 'easeInOut', duration: 1, delay: 0 }}
     >
-      <span className="left-2/5 absolute -top-3 -rotate-6 rounded-full p-2 text-sm font-medium md:left-0 md:top-0 md:-rotate-12 md:px-2.5 md:text-base lg:left-[4vw]">
+      <Link href={"#contact-me"} scroll className="left-2/5 absolute -top-3 -rotate-6 rounded-full p-2 text-sm font-medium md:left-0 md:top-0 md:-rotate-12 md:px-2.5 md:text-base lg:left-[4vw]">
         <BorderBeam size={60} duration={5} borderWidth={2} delay={4.6} />
         Open to Work!
-      </span>
+      </Link>
       {/* Image with Purple Filter */}
       <div className="flex-center custom-cursor-hidden relative -z-10 aspect-square h-40 rounded-full md:size-48 lg:size-[16vw]">
         <MotionDiv

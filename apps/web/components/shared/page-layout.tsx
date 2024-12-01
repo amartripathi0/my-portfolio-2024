@@ -17,7 +17,7 @@ export default function PageLayout({
   return (
     <MotionSection
       id={pageId}
-      className="relative flex flex-col items-center justify-center gap-8 3xl:gap-16"
+      className="relative flex flex-col items-center justify-center gap-6 3xl:gap-16"
     >
       <TextUnderline textType="pageHeading" text={pageTitle} />
       {children}
