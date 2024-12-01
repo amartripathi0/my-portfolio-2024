@@ -8,7 +8,7 @@ const TextUnderlineVariants = cva('inline-block relative w-fit', {
   variants: {
     textType: {
       pageHeading:
-        'text-4xl md:text-5xl 3xl:text-6xl font-bold pink-cursor-md font-poppins text-center', //for page title
+        'text-3xl md:text-5xl 3xl:text-6xl font-bold pink-cursor-md font-poppins text-center', //for page title
       skill: 'text-[9.1px] custom-cursor-hidden', //for skill page
       default: 'text-sm custom-cursor-hidden', //for project tool and navbar items
     },
@@ -91,7 +91,8 @@ const TextUnderline = ({
         className={cn(
           'absolute bottom-[2px] h-[1.5px] w-full rounded-xl bg-purple-100 drop-shadow-lg',
           underlineStyles,
-          textType === 'pageHeading' && '-z-10 -mb-1 h-[12%]',
+          textType === 'pageHeading' &&
+            '-z-10 -mb-1 h-[12%] bg-gradient-to-r from-indigo-600 via-purple-400 to-yellow-500',
           textType === 'skill' && '-mb-[2px] h-[8%]',
         )}
       ></motion.div>

@@ -6,7 +6,7 @@ import BackgroundBlur from '@/components/shared/BackgroundBlur'
 import { MotionSection } from '@/components/shared/Motion'
 import TextUnderline from '@/components/shared/TextUnderline'
 import { backendSkills, frontendSkills, pageSectionVariant } from '@/constants'
-import Skill from '@/blocks/Skill'
+import Skill from '@/components/Skill'
 
 function Skills() {
   const targetRef = useRef(null)
@@ -39,14 +39,13 @@ function Skills() {
         blurColor="purple"
         style="absolute opacity-80 h-1/5 top-10  aspect-square blur-[110px] rounded-full bg-gradient-to-r from-indigo-600 via-yellow-300 to-purple-400"
       />
-
       <div className="flex-center w-full flex-col gap-4 overflow-hidden py-8 lg:gap-8 lg:py-12">
         <SkillsContainer
           skillsArray={frontendSkills}
           translateXSide={leftSlide}
           opacity={opacity}
         />
-        <SkillsContainer  
+        <SkillsContainer
           skillsArray={backendSkills}
           translateXSide={rightSlide}
           opacity={opacity}

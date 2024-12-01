@@ -70,8 +70,51 @@ export type Geopoint = {
 
 export type Slug = {
   _type: 'slug'
-  current?: string
+  current: string
   source?: string
+}
+
+export type Freelance = {
+  _id: string
+  _type: 'freelance'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  freelanceTitle?: string
+  freelanceBio?: string
+  freelanceThumbnails?: Array<{
+    asset?: {
+      _ref: string
+      _type: 'reference'
+      _weak?: boolean
+      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
+    }
+    hotspot?: SanityImageHotspot
+    crop?: SanityImageCrop
+    _type: 'image'
+    _key: string
+  }>
+  freelanceGithubLink?: string
+  freelanceDeployedLink?: string
+  freelanceDetail?: Array<{
+    children?: Array<{
+      marks?: Array<string>
+      text?: string
+      _type: 'span'
+      _key: string
+    }>
+    style?: 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote'
+    listItem?: 'bullet' | 'number'
+    markDefs?: Array<{
+      href?: string
+      _type: 'link'
+      _key: string
+    }>
+    level?: number
+    _type: 'block'
+    _key: string
+  }>
+  freelanceTools?: Array<string>
 }
 
 export type Skills = {
@@ -299,6 +342,7 @@ export type AllSanitySchemaTypes =
   | SanityFileAsset
   | Geopoint
   | Slug
+  | Freelance
   | Skills
   | Skill
   | Project

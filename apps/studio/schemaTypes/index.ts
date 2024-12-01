@@ -1,4 +1,5 @@
 import {aboutPageType} from './blocks/aboutPageType'
+import { freelancePage } from './blocks/freelancePage'
 import {homepageType} from './blocks/homepageType'
 import {projectsPageType} from './blocks/projectsType'
 import {skillsPageType} from './blocks/skillsPage'
@@ -13,5 +14,6 @@ export const schemaTypes = [
   projectType,
   skillType,
   skillsPageType,
-  freelanceType
+  freelanceType,
+  freelancePage
 ]

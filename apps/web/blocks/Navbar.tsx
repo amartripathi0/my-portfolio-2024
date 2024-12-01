@@ -96,28 +96,28 @@ const Navbar = ({
       </WrapperContainer>
 
       {/* Middle */}
-      <WrapperContainer additionalStyle="flex-center md:gap-3 p-1.5 lg:gap-6 rounded-full max-md:hidden md:w-1/2  lg:max-w-[490px]  bg-[#0C0910]">
+      <WrapperContainer additionalStyle="flex-center md:gap-1 p-1 rounded-full max-md:hidden bg-[#0C0910]">
         {navbarItems.map((item) => (
           <Link
             key={item.label}
             href={item.link}
             onClick={() => handleScrollTo(item.link)}
             className={cn(
-              'flex-center relative z-30 h-full w-1/3 rounded-full transition-all duration-150 hover:bg-neutral-900',
+              'flex-center relative z-30 h-full w-fit rounded-full px-4 transition-all duration-150 hover:bg-neutral-900 lg:w-32 lg:px-2',
               pageSectionOnViewport === item.label &&
-                'transition-all duration-300 ease-in-out',
+                'transition-all duration-200 ease-in-out',
             )}
           >
             {pageSectionOnViewport.replace(/\s+/g, '-') ===
               item.label.replace(/\s+/g, '-') && (
               <MotionSpan
                 layoutId="bubble"
-                className="absolute z-[-60] size-full rounded-full bg-gradient-to-r from-indigo-800 to-violet-500 font-medium"
+                className="absolute z-[-10] size-full rounded-full bg-gradient-to-r from-indigo-800 to-violet-500"
                 transition={{
                   type: 'spring',
                   stiffness: 300,
                   damping: 30,
-                  duration: 0.8,
+                  duration: 1,
                 }}
               ></MotionSpan>
             )}

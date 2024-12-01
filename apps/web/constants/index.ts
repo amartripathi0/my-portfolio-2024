@@ -8,6 +8,7 @@ export const navbarItems: NavbarItemType[] = [
   },
   { label: 'work exp', link: '#work-exp' },
   { label: 'projects', link: '#projects' },
+  { label: 'freelance work', link: '#freelance-work' },
   { label: 'skills', link: '#skills' },
 ]
 

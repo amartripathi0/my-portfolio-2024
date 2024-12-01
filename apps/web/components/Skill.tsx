@@ -1,11 +1,11 @@
 import Image from 'next/image'
 // import { Badge } from './ui/badge'
 // import TextUnderline from './shared/TextUnderline'
-import { BackgroundGradient } from '../components/ui/BackgroundGradient'
+import { BackgroundGradient } from './ui/BackgroundGradient'
 
 function Skill({ name, imageSrc }: { name: string; imageSrc: string }) {
   return (
-    <BackgroundGradient >
+    <BackgroundGradient>
       <div className="custom-cursor-hidden flex-center group relative aspect-square h-16 flex-col rounded-3xl bg-zinc-800 p-2 hover:opacity-90 max-sm:p-2 md:h-16 lg:h-20">
         <Image
           src={imageSrc}

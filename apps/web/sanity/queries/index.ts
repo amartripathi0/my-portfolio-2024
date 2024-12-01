@@ -26,3 +26,11 @@ export const PROJECTS_PAGE_QUERY = `
     projectTools,
   }
 }[0]`
+export const FREELANCE_PAGE_QUERY = `
+  *[_type == 'freelanceWorks']{
+    freelancesArray[]->{
+    freelanceTitle,
+    freelanceThumbnails,
+    freelanceDeployedLink
+  }
+}[0]`

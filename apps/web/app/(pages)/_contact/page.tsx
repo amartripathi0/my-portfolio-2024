@@ -1,25 +1,17 @@
 import { ContactMeForm } from '@/blocks/ContactMeForm'
 import BackgroundBlur from '@/components/shared/BackgroundBlur'
 import { MotionSection } from '@/components/shared/Motion'
+import PageLayout from '@/components/shared/page-layout'
 import TextUnderline from '@/components/shared/TextUnderline'
 import { pageSectionVariant } from '@/constants'
 import { IoMail } from 'react-icons/io5'
 
 function Contact() {
   return (
-    <MotionSection
-      // initial={'initial'}
-      // whileInView={'inView'}
-      // viewport={{ once: true }}
-      // variants={pageSectionVariant}
-      id="contact-me"
-      className="relative flex flex-col items-center justify-center gap-8 sm:gap-10 3xl:gap-16"
+    <PageLayout 
+    pageId='contact-me'
+    pageTitle='Contact Me'
     >
-      <TextUnderline
-        textType="pageHeading"
-        text="Contact Me"
-        underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-yellow-500"
-      />
       <BackgroundBlur
         blurColor="indigo"
         style="left-1/3 top-20 h-5 sm:left-[45%] sm:top-0 sm:h-20"
@@ -39,7 +31,7 @@ function Contact() {
           <IoMail /> theamartripathi@gmail.com
         </p>
       </div>
-    </MotionSection>
+    </PageLayout>
   )
 }
 

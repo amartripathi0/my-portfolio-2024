@@ -2,7 +2,7 @@
 import { Dialog, DialogClose, DialogContent, DialogTrigger } from './dialog'
 import { Carousel, CarouselContent, CarouselItem } from './carousel'
 import Image from 'next/image'
-import ProjectDetails from '../../blocks/project-details'
+import ProjectDetails from '../project-details'
 import Autoplay from 'embla-carousel-autoplay'
 import { ProjectCardProps } from '@/types'
 import { urlFor } from '@/utils/urlFor'

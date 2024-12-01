@@ -1,6 +1,7 @@
-import ProjectCard from '@/blocks/project-card'
+import ProjectCard from '@/components/project-card'
 import BackgroundBlur from '@/components/shared/BackgroundBlur'
 import { MotionSection } from '@/components/shared/Motion'
+import PageLayout from '@/components/shared/page-layout'
 import TextUnderline from '@/components/shared/TextUnderline'
 import { pageSectionVariant } from '@/constants'
 import { PROJECTS_PAGE_QUERY } from '@/sanity/queries'
@@ -12,20 +13,7 @@ async function Projects() {
     await getSanityData(PROJECTS_PAGE_QUERY)
 
   return (
-    <MotionSection
-      initial={'initial'}
-      whileInView={'inView'}
-      viewport={{ once: true }}
-      variants={pageSectionVariant}
-      id="projects"
-      className="relative flex flex-col items-center lg:-mx-28 lg:px-0 xl:mx-0"
-    >
-      <TextUnderline
-        textType="pageHeading"
-        text="My Projects"
-        containerDivStyles="my-4 md:my-8 lg:my-10"
-        underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-cyan-600"
-      />
+    <PageLayout pageId="projects" pageTitle="My Projects">
       <BackgroundBlur
         blurColor="indigo"
         style="left-2/5 max-md:left-1/3 -top-6 h-40 blur-[150px] sm:h-60 sm:top-1/4"
@@ -54,7 +42,7 @@ async function Projects() {
           ),
         )}
       </div>
-    </MotionSection>
+    </PageLayout>
   )
 }
 

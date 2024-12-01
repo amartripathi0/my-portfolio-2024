@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     creator: '@amartripathi_',
   },
   icons: {
-    icon: '/favicon/favicon.ico',
+    icon: '/favicon/android-chrome-512x512.png',
     apple: '/favicon/apple-touch-icon.png',
     shortcut: '/favicon/favicon-16x16.png',
   },

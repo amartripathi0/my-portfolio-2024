@@ -1,9 +1,9 @@
 import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-container'
 import Link from 'next/link'
 import { FaGithub } from 'react-icons/fa'
-import ProjectTool from '../components/shared/ProjectTool'
+import ProjectTool from './shared/ProjectTool'
 import { ProjectCardProps } from '@/types'
-import ProjectThumbnails from '../components/ui/project-thumbnails'
+import ProjectThumbnails from './ui/project-thumbnails'
 
 async function ProjectCard({
   projectDetail,

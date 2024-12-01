@@ -4,6 +4,7 @@ import Projects from './(pages)/_projects/page'
 import Contact from './(pages)/_contact/page'
 import CustomCursor from '@/blocks/CustomCursor'
 import WorkExp from './(pages)/_work/page'
+import Freelance from './(pages)/_freelance/page'
 
 function MainPage() {
   return (
@@ -13,6 +14,7 @@ function MainPage() {
       {/* <About /> */}
       <WorkExp />
       <Projects />
+      <Freelance/>
       <Skills />
       <Contact />
     </main>
