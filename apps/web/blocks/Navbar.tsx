@@ -62,7 +62,7 @@ const Navbar = ({
   }
   const handleScrollTo = useCallback(
     (link: string) => {
-      locomotiveScroll.scrollTo(link, { offset: -83 })
+      locomotiveScroll.scrollTo(link, { offset: -110 })
     },
     [locomotiveScroll],
   )

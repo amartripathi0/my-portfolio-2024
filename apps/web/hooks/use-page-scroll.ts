@@ -31,7 +31,8 @@ function usePageScroll(threshold = 10) {
         { name: 'home', threshold: 0.5 },
         { name: 'work-exp', threshold: 1.5 },
         { name: 'projects', threshold: 2.4 },
-        { name: 'skills', threshold: 2.8 },
+        { name: 'freelance-work', threshold: 3 },
+        { name: 'skills', threshold: 4.2},
         { name: 'contact-me', threshold: Infinity },
       ]
 
