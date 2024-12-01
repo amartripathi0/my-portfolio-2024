@@ -31,7 +31,7 @@ function WorkExp() {
       <TextUnderline
         textType="pageHeading"
         text="Work Experiences"
-        containerDivStyles="my-4 md:my-8 lg:my-10"
+        containerDivStyles="my-4 md:my-8"
         underlineStyles=" bg-gradient-to-r from-indigo-600 via-purple-400 to-cyan-600 text-center"
       />
       <BackgroundBlur
@@ -39,7 +39,7 @@ function WorkExp() {
         style="left-2/5 max-md:left-1/3 -top-6 h-28 blur-[180px] sm:h-48 -z-20 sm:top-16"
       />
 
-      <div className="flex w-full max-w-7xl flex-col space-y-4 overflow-hidden pt-2 md:space-y-8">
+      <div className="flex w-full max-w-7xl flex-col space-y-4 overflow-hidden pt-2 md:space-y-6">
         {workExperiences.map((exp, index) => (
           <MotionDiv
             key={index}
